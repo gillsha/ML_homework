@@ -1,85 +1,351 @@
-You are an expert full-stack web developer specializing in in-browser machine learning with TensorFlow.js.
+# HW3: user-based и item-based collaborative filtering
 
-Your task is to generate the complete code for a "Matrix Factorization Movie Recommender" web application. The application will load and parse data, define and train a Matrix Factorization model using TensorFlow.js, and then use the trained model to predict movie ratings. Please provide the code for each of the four files—`index.html`, `style.css`, `data.js`, and `script.js`—separately and clearly labeled.
+Критическое ревью реализации, сравнение стратегий пропусков и сложности методов:
+[review.md](review.md).
 
----
+Рабочее браузерное приложение на **MovieLens 100K**: выбрать пользователя, получить
+два списка неоценённых фильмов и сравнить качество алгоритмов на одинаковом test.
+Используются приложенные `u.data` и `u.item`. Это **neighborhood-based CF**,
+а не matrix factorization. TensorFlow.js, CDN, npm и серверная модель для запуска не нужны.
 
-### **Project Specification: Matrix Factorization Recommender with TensorFlow.js**
+## Запуск
 
-#### **1. CONTEXT**
+Требуются Python 3 для локального HTTP-сервера и современный браузер с Web Worker.
+Из папки `week3`:
 
-The goal is to build a web application that demonstrates Matrix Factorization for collaborative filtering. It will parse the MovieLens 100K dataset (`u.item`, `u.data` from the same url), train a model entirely in the browser using TensorFlow.js, and predict a user's rating for a selected movie. The logic must be modular, split between `data.js` and `script.js`.
+```bash
+python3 -m http.server 8000 --bind 127.0.0.1
+```
 
-#### **2. OUTPUT FORMAT**
+Открыть **http://127.0.0.1:8000/**. Если сервер запущен из корня репозитория,
+открыть `/week3/`. Открытие `index.html` через `file://` не подходит:
+браузер ограничивает загрузку локальных файлов и Worker; приложение показывает инструкцию.
 
-Provide four separate, complete code blocks for the following files:
-1.  `index.html`
-2.  `style.css`
-3.  `data.js`
-4.  `script.js`
+1. Дождаться загрузки и подготовки сходства.
+2. Выбрать пользователя: слева user-based, справа item-based, по 10 фильмов.
+3. Звёздочкой отмечены фильмы, присутствующие в обоих списках. Показаны прогноз 1–5,
+   число соседей, пересечение с ближайшим соседом и количество оценок фильма.
+4. Пункт **«Новый пользователь · cold start»** демонстрирует общий fallback.
+5. **«Оценить на test»** запускает отдельный эксперимент без утечки test в модель.
+   Рекомендации используют полный датасет, метрики — отдельную train-модель.
 
-#### **3. `index.html` INSTRUCTIONS**
+Вычисления идут локально в Web Worker. Во время операции управляющие элементы
+отключены, статус показывает текущую фазу. Ошибка загрузки/парсинга/Worker скрывает
+старые результаты, отключает расчёт и предлагает повторить загрузку. Данные никуда
+не отправляются. Внешние библиотеки в браузер не загружаются.
 
--   The page must have a title, a main heading, and two dropdown menus: one for selecting a user (`#user-select`) and one for selecting a movie (`#movie-select`).
--   Include a "Predict Rating" button that calls a `predictRating()` function.
--   A result area (`#result`) should display status messages and prediction outcomes.
--   Critically, it must load the TensorFlow.js library from a CDN, followed by `data.js`, and then `script.js` at the end of the `<body>`.
-    ```
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
-    <script src="data.js"></script>
-    <script src="script.js"></script>
-    ```
+## Данные и ориентация матрицы
 
-#### **4. `style.css` INSTRUCTIONS**
+**`R[i][u]`: строки — фильмы, столбцы — пользователи.**
 
--   Create a clean, modern, and centered layout. The design should be professional and user-friendly. (Detailed styling specifications are the same as previous exercises).
+| Метод | Что сравнивается | Общие координаты |
+|---|---|---|
+| User-based | Столбцы пользователей | Фильмы, оценённые обоими пользователями |
+| Item-based | Строки фильмов | Пользователи, оценившие оба фильма |
 
-#### **5. `data.js` INSTRUCTIONS**
+Две разреженные проекции одной матрицы: `byMovie[i]: Map(u → rating)` и
+`byUser[u]: Map(i → rating)`. В них есть **только наблюдаемые оценки**.
+Отсутствующий ключ означает пропуск; число 0 не является ни оценкой, ни заполнителем.
+Настоящая оценка 0 отклоняется валидатором.
 
--   This file is responsible for loading and parsing data.
--   It must contain the `loadData()`, `parseItemData(text)`, and `parseRatingData(text)` functions as specified previously.
--   It should also contain two variables to store the number of unique users and movies after parsing, for example: `numUsers` and `numMovies`.
+Внешний ID не равен индексу. `movieIndex` и `userIndex` явно сопоставляют сортированные
+ID плотным внутренним индексам. Например, пользователи `{2, 8, 50}` получают индексы
+`{0, 1, 2}`. Каталог может содержать фильмы без единой оценки: их строки существуют,
+но пусты. Список пользователей строится по реальным ID, а не диапазону `1..N`.
 
-#### **6. `script.js` INSTRUCTIONS**
+В приложенных данных: **943 пользователя, 1 682 фильма, 100 000 уникальных пар**.
+Разреженность:
 
-This file contains the TensorFlow.js model definition, training, and prediction logic.
+```text
+1 − 100000 / (1682 × 943) = 93,6953%
+```
 
-1.  **Global Variables:**
-    -   Declare a global variable `model` to hold the trained TensorFlow.js model.
+`u.item` декодируется как Latin-1 через `arrayBuffer()` и `TextDecoder('iso-8859-1')`.
+Так сохраняются `Misérables`, `Véronique` и другие названия. `u.data` содержит четыре
+поля: user ID, movie ID, целочисленная оценка 1–5 и timestamp. Проверяются HTTP-статус,
+пустые файлы, ID, диапазон оценок, повторы и ссылки на каталог. Повреждение данных
+прерывает загрузку с понятной ошибкой, а не молча меняет обучающую выборку.
 
-2.  **Initialization (`window.onload`):**
-    -   Create an `async` function that first `await`s `loadData()` from `data.js`.
-    -   After data is loaded, it should call functions to populate the user and movie dropdowns.
-    -   Then, it must call a new `trainModel()` function to start the training process. Update the UI to show that the model is training.
+## Основной способ работы с пропусками
 
-3.  **Model Definition Function: `createModel(numUsers, numMovies, latentDim)`**
-    -   This function will define the Matrix Factorization architecture.
-    -   **Inputs:** Create two input layers, one for user IDs (`userInput`) and one for movie IDs (`movieInput`).
-    -   **Embedding Layers:**
-        -   ?????
-        -   ?????
-    -   **Latent Vectors:** ????
-    -   **Prediction:** ????
-    -   **Model Creation:** Create the `tf.model` with the defined inputs and the prediction output.
-    -   **Return** the created model.
+Выбран **расчёт по имеющимся совместным оценкам, с маской пропусков и центрированием**.
+Не заполняем пропуски нулями или средними до расчёта сходства.
 
-4.  **Training Function: `trainModel()`**
-    -   This must be an `async` function.
-    -   **Step 1:** Call `createModel()` to get the model architecture.
-    -   **Step 2:** Compile the model using `model.compile()`.
-        -   Set the `optimizer` to `tf.train.adam(0.001)`.
-        -   Set the `loss` function to `'meanSquaredError'`.
-    -   **Step 3:** Prepare the training data. Convert the `ratings` data (user IDs, item IDs) and the actual ratings into TensorFlow tensors (`tf.tensor2d`).
-    -   **Step 4:** Train the model by calling `await model.fit()`. Train for a suitable number of epochs (e.g., 5-10) with a reasonable batch size (e.g., 64).
-    -   **Step 5:** After training is complete, update the UI to indicate that the model is ready for predictions.
+Почему: при почти 94% пропусков массовая импутация создала бы гораздо больше
+искусственных наблюдений, чем настоящих. Нули дополнительно означали бы сильное
+неодобрение фильма, хотя пользователь мог просто его не видеть. Центрирование
+учитывает различия в шкале оценок пользователей или средней оценке фильмов.
 
-5.  **Prediction Function: `predictRating()`**
-    -   This `async` function is called when the user clicks the button.
-    -   Get the selected user ID and movie ID from the dropdowns.
-    -   Create input tensors for the selected user and movie IDs.
-    -   Call `model.predict()` with these tensors.
-    -   Use `.data()` to extract the predicted rating value from the output tensor.
-    -   Display the predicted rating in the `#result` area in a user-friendly format.
+Цена этого выбора — небольшие пересечения и отсутствие соседей для части пар.
+Поэтому нужны фильтр пересечения, shrinkage и явно отмеченный fallback.
+Средние и fallback вычисляются по наблюдениям; это **не заполнение матрицы**.
 
----
-Now generate the complete code for `index.html`, `style.css`, `data.js`, and `script.js` based on these final, detailed specifications for a TensorFlow.js implementation.
+## Сходство и прогноз
+
+Все параметры находятся в `CF.SETTINGS` (`cf.js`):
+
+| Параметр | Значение |
+|---|---:|
+| Максимальное число соседей `k` | 30 |
+| Минимум общих оценок | 3 |
+| Shrinkage сходства | 10 |
+| Регуляризация baseline | 10 |
+| Seed разбиения | 20261002 |
+
+Для сущности `a` (пользователя или фильма) `m_a` — среднее всех её наблюдаемых
+**train-оценок**. На пересечении `C(a,b)` считаем:
+
+```text
+x_a,t = r_a,t − m_a
+s_raw(a,b) = Σ_C x_a,t x_b,t / sqrt(Σ_C x_a,t² × Σ_C x_b,t²)
+s(a,b) = s_raw(a,b) × |C| / (|C| + 10)
+```
+
+Это косинус центрированных профилей на пересечении; **не точный pairwise Pearson**:
+средние берутся по всему профилю, а не заново по каждой паре на её пересечении.
+
+- При менее чем трёх общих оценках сходство не используется.
+- Нулевые нормы и отрицательные/нулевые сходства не используются.
+- Самосходство не используется.
+- Даже идеальное сырое сходство на трёх оценках получает вес только `3/13 ≈ 0,231`.
+- Выбираем до 30 соседей **из тех, кто может участвовать в конкретном прогнозе**,
+  а не сначала глобальные top-k с последующим удалением недоступных.
+
+User-based для пользователя `u` и фильма `i`:
+
+```text
+N = ближайшие пользователи v, действительно оценившие i
+prediction(u,i) = meanUser[u] + Σ_N s(u,v) × (r[v,i] − meanUser[v]) / Σ_N s(u,v)
+```
+
+Item-based:
+
+```text
+N = ближайшие фильмы j, действительно оценённые пользователем u
+prediction(u,i) = meanMovie[i] + Σ_N s(i,j) × (r[u,j] − meanMovie[j]) / Σ_N s(i,j)
+```
+
+Для обеих формул сохраняется исходный конечный **rawScore** для ранжирования.
+Только отображаемая оценка и значение для RMSE/MAE ограничиваются `[1, 5]` (`score`).
+Неконечный прогноз переводится в конечный fallback. Shrinkage защищает сходство,
+но не превращает одинокого соседа в достоверный прогноз: при одном соседе его вес
+сокращается в дроби. Интерфейс поэтому показывает число соседей, а прогноз не
+называет вероятностью или уверенностью.
+
+### Fallback и cold start
+
+Один общий baseline применяется при отсутствии надёжных соседей, новом пользователе
+или фильме без train-оценок:
+
+```text
+μ = среднее всех train-оценок
+b_user = Σ(r_user − μ) / (count_user + 10)
+b_movie = Σ(r_movie − μ) / (count_movie + 10)
+fallbackRaw(u,i) = μ + b_user + b_movie
+fallbackRating(u,i) = clip(fallbackRaw(u,i), 1, 5)
+```
+
+Для неизвестной сущности поправка равна нулю. Это простая регуляризованная модель
+смещений, а не итеративно оптимизированная bias-модель.
+
+- **Новый пользователь:** остаётся среднее с поправкой фильма; персонализации нет,
+  списки обоих методов совпадают. Для улучшения нужны стартовые оценки/предпочтения.
+- **Новый фильм / пустая строка:** API прогноза возвращает конечный baseline с причиной.
+  Такой фильм исключён из кандидатов рекомендателя: без оценок CF не имеет основания
+  ранжировать его. Для реального решения item cold start нужны контентные признаки
+  или отдельная политика знакомства с новинками.
+- **Нет положительных соседей / постоянные профили:** baseline с явной пометкой,
+  без деления на ноль и без NaN.
+- **Все доступные фильмы просмотрены:** пустой список с объяснением.
+
+### Воспроизводимость и рекомендации
+
+Оценённые пользователем фильмы всегда исключаются. Ранжируем по **неокруглённому
+rawScore до clipping**, при равенстве — по возрастанию movie ID. Соседи при равном сходстве
+упорядочиваются по внешнему ID. Округление происходит только при отображении.
+До вычислений данные канонически сортируются; случайной инициализации и `Math.random()` нет.
+Перестановка строк входных файлов не меняет модели и выдачу. Время выполнения,
+в отличие от прогнозов, воспроизводимым числом не является.
+
+## Честное сравнение качества
+
+Для каждого пользователя оценки сортируются по фиксированному 32-битному hash от
+seed, user ID и movie ID; ID разрешает коллизии. В test уходит `floor(20% × count)`
+оценок, минимум одна, если у пользователя их хотя бы две. Минимум одна остаётся
+в train; единственная оценка целиком остаётся в train.
+
+Получается **80 367 train / 19 633 test**. Среди test есть **33 оценки фильмов без
+train-истории**; они не удаляются и обслуживаются fallback. Пользовательского cold
+start в этом split нет по построению — он проверяется отдельно функционально.
+Набор ID/названий каталога известен заранее, но все средние, соседства и поправки
+считаются исключительно по train. Для test создаётся отдельная модель, полная
+рекомендательная модель не переиспользуется.
+
+Параметры фиксированы, подбор на test не выполняется. Если понадобится тюнинг,
+нужно выделить validation внутри train и оставить test для финального сравнения.
+
+Результат на приложенных файлах (проверен также в Chromium):
+
+| Метод | RMSE ↓ | MAE ↓ | Warm RMSE ↓ | Прогнозы с соседями |
+|---|---:|---:|---:|---:|
+| Общий baseline | 0,9551 | 0,7530 | 0,9546 | — |
+| User-based CF | 0,9386 | 0,7313 | 0,9380 | 99,74% |
+| Item-based CF | **0,9250** | **0,7248** | **0,9244** | 99,21% |
+
+RMSE и MAE включают fallback. Warm RMSE исключает фильмы без train-оценок.
+User-based использовал fallback 52 раза, item-based — 156 раз.
+Оба метода лучше baseline на этом разбиении; item-based здесь точнее user-based,
+хотя реже находит допустимых соседей. Это результат конкретной конфигурации,
+а не универсальное превосходство item-based и не проверка статистической значимости.
+
+### Top-10: воспроизводимый offline-эксперимент
+
+Полный протокол и сохранённые результаты: **[results/README.md](results/README.md)**,
+машиночитаемый отчёт — `results/offline.json`, выдачи и метрики каждого пользователя —
+`results/offline-users.tsv`. Подробный TSV остаётся локальным и не хранится в Git;
+после клонирования следующая команда восстанавливает его перед проверкой. Запуск:
+
+```bash
+node evaluate.cjs --offline --output results
+node verify-results.cjs
+```
+
+Используется тот же train/test. Релевантны test-оценки **>=4**; кандидаты — все
+фильмы с train-оценками, кроме истории данного пользователя в train, без negative
+sampling. Метрики усредняются по общим **924 пользователям** с релевантным test.
+Точный фильтр: число test-оценок >=4 больше нуля. Из 943 пользователей 19 исключены
+одинаково для user/item/popularity: это **отобранная positive-test когорта**.
+Recall/NDCG для этих 19 неопределены и сохранены как null, не как 0. Precision
+и HitRate определены, поэтому дополнительно показаны по всем 943 в отчёте.
+Cold-start релевантные фильмы остаются в знаменателях Recall/NDCG.
+
+| Метрика | User-based raw | Item-based raw | Train popularity |
+|---|---:|---:|---:|
+| Precision@10 ↑ | 0,000758 | 0,028680 | **0,128463** |
+| Recall@10 ↑ | 0,000570 | 0,019936 | **0,133819** |
+| NDCG@10 ↑ | 0,000746 | 0,025174 | **0,168187** |
+| HitRate@10 ↑ | 0,007576 | 0,214286 | **0,629870** |
+
+Popularity — число train-оценок фильма (любых значений), с теми же кандидатами и
+исключением train-истории. **Popularity лучше обоих CF по всем top-N метрикам**;
+item-based лучше user-based, но оба проигрывают простому baseline.
+Рейтинг-baseline в таблице RMSE — другой алгоритм; у counts нет рейтинговой ошибки.
+
+Прежние **0,85% и 2,99% Precision@10 были получены при ошибочном ранжировании по
+clipped score**. Исправление изменило их на **0,076% и 2,868%**, то есть снизило:
+clipping не объяснял низкое качество как устранимое ухудшение, а фактически завышал
+метрики относительно исходного score. Старые выдачи воспроизводятся в legacy-аудите,
+исторический отчёт сохранён в `results/clipped-reference.json`.
+
+Для сравнения NDCG выполнен paired bootstrap: 5 000 повторов, seed 20261003,
+924 общих пользователя, три контраста с Bonferroni-интервалами 98,333% каждый.
+Все интервалы разностей item−user, popularity−user и popularity−item выше нуля.
+Это условная оценка на данном split/когорте, не доказательство на других данных.
+
+Ненаблюдавшиеся кандидаты считаются нерелевантными для метрики, хотя это не означает
+реального отсутствия интереса. Это ограничение offline-оценки. Параметры CF не
+менялись по результатам test. Формулы, знаменатели и равенства до/после — в отчёте.
+В браузере кнопка test по-прежнему выполняет более короткую оценку RMSE/MAE;
+полный ranking-эксперимент запускается CLI.
+
+### Скорость и масштабирование
+
+Основной offline-замер: Node.js v25.9.0 / V8 14.1.146.11-node.25, Darwin 25.6.0
+arm64, Apple M3, 24 GiB RAM, один процесс CPU. Медиана трёх повторов после прогрева:
+
+| Этап на train/test | User-based | Item-based | Popularity |
+|---|---:|---:|---:|
+| Подготовка сходства | 96,11 мс | 139,77 мс | Не требуется |
+| Все 943 top-10 выдачи | 4,650 с | 6,214 с | 0,357 с |
+| Среднее на пользователя (медиана суммы / 943) | 4,931 мс | 6,590 мс | 0,379 мс |
+
+Общая подготовка разреженных train-данных и popularity counts: медиана 25,73 мс.
+Выдача включает фильтрацию кандидатов, все прогнозы и подбор соседей, сортировку
+и срез top-10. Legacy-sort, bootstrap, аудит, метрики, загрузка, сериализация и UI
+не входят. Порядок трёх методов при замере выдачи циклически меняется. Интерфейс отдельно показывает браузерные замеры
+на текущем устройстве. Это локальный бенчмарк: влияют JIT, устройство, GC и фоновые
+процессы. Сырые повторы и точный протокол сохранены в `results/offline.json`.
+
+Разреженные обратные индексы позволяют накапливать сходство только по реальным
+совместным оценкам: работа порядка суммы квадратов числа оценок фильма для user-based
+и суммы квадратов числа оценок пользователя для item-based, плюс проходы по матрицам
+сходства. В MovieLens фильмов больше пользователей, а длинные пользовательские
+истории делают item-based подготовку дороже. Это соотношение зависит от данных.
+
+Сами сходства и счётчики пересечений хранятся в плотных typed arrays:
+`O(U² + I²)` памяти, примерно **43 MiB** для полной модели, без учёта Maps и прочих
+объектов. Во время оценки одновременно существует ещё train-модель, поэтому пик
+памяти выше. Для MovieLens 100K это приемлемо; для большого каталога понадобятся
+разреженные top-k соседства/пакетная подготовка, а не просто увеличение массива.
+Worker сохраняет отзывчивость страницы, но не устраняет сложность алгоритмов.
+
+### Ограничения эксперимента
+
+- Случайно-подобный split восстанавливает скрытые оценки, а не моделирует будущее:
+  timestamp сохраняется, но не используется. Для будущих рекомендаций нужен временной split.
+- RMSE/MAE не измеряют полезность top-10. Дополнительно рассчитанные Precision/Recall/NDCG@10
+  используют неполную наблюдаемую релевантность и также не заменяют онлайн-эксперимент.
+  Совпадение двух списков в UI — описательное сравнение, не метрика качества.
+- Оценки наблюдаются неслучайно; игнорирование пропусков не устраняет selection bias.
+- Малые пересечения отбрасываются, что уменьшает покрытие. Порог и shrinkage дают
+  компромисс между надёжностью и количеством прогнозов; fallback обеспечивает конечный
+  прогноз, но не равнозначен персонализированному CF.
+- Не используются жанры и другие контентные признаки из `u.item`; это чистый CF.
+- Bootstrap условен на одном split и готовых моделях; нет repeated splits,
+  temporal validation или оценки cold-user качества. Неопределённые Recall/NDCG
+  не заполнены нулями, но positive-test когорта всё равно отобрана.
+
+## Проверки
+
+Для CLI нужен **Node.js 18+** (встроенные `fetch`, `Response`, `TextDecoder`, test runner).
+Выполнять из `week3`:
+
+```bash
+node --test test.cjs
+node evaluate.cjs
+node evaluate.cjs --offline --output results
+node verify-results.cjs
+```
+
+`test.cjs` проверяет реальный MovieLens и маленькие контрольные примеры:
+строгий парсинг, HTTP/network errors, Latin-1, произвольные ID, ориентацию матрицы,
+независимый расчёт сходства на пересечениях, shrinkage, пустые/постоянные профили,
+cold start, фильтрацию просмотренного, стабильные ties и отсутствие пересечения train/test.
+`evaluate.cjs` без флагов печатает JSON с тем же экспериментом, что запускается
+кнопкой в браузере; `--offline` добавляет top-10, повторные тайминги и сохранение
+артефактов. В `test.cjs` также проверяется неизменность train-модели при замене
+test-оценок, а `verify-results.cjs` независимо пересчитывает ranking-метрики из TSV.
+
+Дополнительная браузерная проверка требует Playwright и Chromium. Можно установить
+их во временную папку, не добавляя зависимости приложению:
+
+```bash
+npm install --prefix /tmp/hw3-browser-check --no-audit --no-fund playwright
+/tmp/hw3-browser-check/node_modules/.bin/playwright install chromium
+NODE_PATH=/tmp/hw3-browser-check/node_modules node browser-check.cjs
+```
+
+Скрипт сам запускает и закрывает HTTP-сервер на свободном локальном порту. Проверяет
+два списка, воспроизводимость, численные метрики, мобильную ширину, нового пользователя,
+HTTP 404 → retry, разрывы ID, пустой фильм, Latin-1, безопасный вывод названий и ошибку Worker.
+
+## Файлы и исправления исходного проекта
+
+| Файл | Назначение |
+|---|---|
+| `index.html`, `style.css` | Два списка рекомендаций, статусы и таблица метрик |
+| `data.js` | Проверенная загрузка и парсинг MovieLens |
+| `cf.js` | Разреженные данные, обе CF-модели, fallback, holdout и метрики |
+| `worker.js` | Фоновые вычисления без блокировки UI |
+| `script.js` | Управление состоянием и безопасная отрисовка |
+| `test.cjs`, `browser-check.cjs` | Алгоритмические и браузерные проверки |
+| `evaluate.cjs`, `offline.cjs` | CLI-эксперимент: ошибки оценок, top-N, повторы времени и сохранение |
+| `verify-results.cjs` | Независимая проверка сохранённых результатов и повторного запуска |
+| `results/` | Протокол, результаты JSON, пользовательские выдачи TSV и выводы |
+
+Исправлены подтверждённые проблемы старого приложения: неверная кодировка,
+игнорирование HTTP-ошибок, невалидные строки и повторы, предположение `ID = индекс`,
+необученные эмбеддинги у cold-start фильмов, выход за шкалу, зависший/неверный UI
+после ошибки. TensorFlow и обучение эмбеддингов удалены вместе с путями утечки
+тензоров; при ошибке/повторной загрузке старый Worker завершается. Названия фильмов
+отображаются через `textContent`. Старый промпт генерации MF заменён этой документацией.

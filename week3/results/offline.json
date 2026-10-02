@@ -1,0 +1,625 @@
+{
+  "generatedAt": "2026-10-02T13:36:36.668Z",
+  "environment": {
+    "node": "v25.9.0",
+    "v8": "14.1.146.11-node.25",
+    "platform": "darwin",
+    "arch": "arm64",
+    "osRelease": "25.6.0",
+    "cpu": "Apple M3",
+    "logicalCpus": 8,
+    "memoryGiB": 24,
+    "execution": "Single Node.js process, JavaScript on CPU; no GPU or worker threads"
+  },
+  "protocol": {
+    "split": "Per-user hash(seed,userId,movieId); floor(20%) held out, at least one test row for count>=2, at least one train row. Not chronological.",
+    "candidates": "All catalog movies with at least one TRAIN rating minus the user's TRAIN-rated movies; no negative sampling or test-aware filtering.",
+    "relevant": "Held-out rating >=4. All other candidates count as non-relevant for this offline metric, including unobserved items.",
+    "aggregation": "Primary: macro average over the same positive-test cohort for all THREE methods. Recall/NDCG are null for zero-positive users, never zero-filled. Supplemental precision and hit rate are also reported over all test users.",
+    "ranking": "CF: finite rawScore before clipping, descending; ties by ascending movie ID. score=clip(rawScore,1,5) only for rating metrics and display. Legacy clipped sorting is recomputed on the SAME scored candidates as an audit, outside timings.",
+    "popularity": "Descending number of observed TRAIN ratings of the movie, regardless of rating value; tie by ID. Same user history filter and candidate set. No rating prediction/RMSE for counts.",
+    "precision": "Hits in first 10 / 10; missing slots count as misses.",
+    "recall": "Hits in first 10 / all relevant test items, including cold items excluded from candidates.",
+    "ndcg": "Binary gain, discount 1/log2(rank+1), IDCG from min(10, all relevant test items).",
+    "hitRate": "Fraction of eligible users with at least one relevant recommendation.",
+    "fitting": "Only train enters buildModel, means, similarities, neighbour selection and fallback. Hyperparameters fixed; no tuning on test.",
+    "timing": "performance.now(): shared buildData separately; each similarity matrix separately. Recommend time includes candidate filtering, all candidate predictions, sorting and top-10 slicing; excludes audits, metrics, serialization, loading, UI and warm-up.",
+    "repetitions": "1 unmeasured model build + recommendations for first 10 users/method; 3 measured builds; 3 recommendation passes per method on same last train model, method order rotates. Similarity build order is user then item. Popularity counts are prepared in shared buildData, no similarity. Report median/min/max; no forced GC.",
+    "inference": "Paired bootstrap of users on the primary positive-test cohort: fixed seed 20261003, 5000 replicates, NDCG primary. 3 primary pairwise contrasts use Bonferroni-adjusted percentile intervals. Conditional uncertainty, not across new splits or retrained models."
+  },
+  "checksums": {
+    "u.data": "06416e597f82b7342361e41163890c81036900f418ad91315590814211dca490",
+    "u.item": "553841ebc7de3a0fd0d6b62a204ea30c1e651aacfb2814c7a6584ac52f2c5701",
+    "data.js": "897a150472d894747cdffbf1c02888e2b2e6f0a39c25695312739b485f0d220b",
+    "cf.js": "bf83fd2f5db7d4b06c38f90923ac1f3b00d1511f4e439d562979dad255959aa2",
+    "offline.cjs": "5f2614a6244bc2f7f3d9f66439f9495697808d0a96165ea49d89378be12a9ffc",
+    "evaluate.cjs": "a5c7061b4a3df08b074e3514a04885586cc986b849b25c83e3f706c6cbf7d85f"
+  },
+  "schemaVersion": 2,
+  "settings": {
+    "k": 30,
+    "minCommon": 3,
+    "shrinkage": 10,
+    "prior": 10,
+    "seed": 20261002
+  },
+  "topN": 10,
+  "relevantRatingAtLeast": 4,
+  "cohort": {
+    "criterion": "Include user iff count(test ratings >=4) > 0, independent of method/candidates/hits.",
+    "before": 943,
+    "after": 924,
+    "excluded": [
+      {
+        "userId": 17,
+        "testCount": 5,
+        "maxTestRating": 3
+      },
+      {
+        "userId": 51,
+        "testCount": 4,
+        "maxTestRating": 3
+      },
+      {
+        "userId": 61,
+        "testCount": 4,
+        "maxTestRating": 3
+      },
+      {
+        "userId": 155,
+        "testCount": 4,
+        "maxTestRating": 3
+      },
+      {
+        "userId": 229,
+        "testCount": 6,
+        "maxTestRating": 2
+      },
+      {
+        "userId": 302,
+        "testCount": 4,
+        "maxTestRating": 3
+      },
+      {
+        "userId": 418,
+        "testCount": 4,
+        "maxTestRating": 3
+      },
+      {
+        "userId": 461,
+        "testCount": 4,
+        "maxTestRating": 3
+      },
+      {
+        "userId": 626,
+        "testCount": 6,
+        "maxTestRating": 3
+      },
+      {
+        "userId": 635,
+        "testCount": 6,
+        "maxTestRating": 3
+      },
+      {
+        "userId": 646,
+        "testCount": 7,
+        "maxTestRating": 3
+      },
+      {
+        "userId": 685,
+        "testCount": 4,
+        "maxTestRating": 3
+      },
+      {
+        "userId": 723,
+        "testCount": 4,
+        "maxTestRating": 3
+      },
+      {
+        "userId": 726,
+        "testCount": 4,
+        "maxTestRating": 3
+      },
+      {
+        "userId": 729,
+        "testCount": 4,
+        "maxTestRating": 3
+      },
+      {
+        "userId": 797,
+        "testCount": 5,
+        "maxTestRating": 3
+      },
+      {
+        "userId": 814,
+        "testCount": 7,
+        "maxTestRating": 3
+      },
+      {
+        "userId": 822,
+        "testCount": 5,
+        "maxTestRating": 3
+      },
+      {
+        "userId": 874,
+        "testCount": 6,
+        "maxTestRating": 3
+      }
+    ],
+    "denominators": {
+      "precision": {
+        "perUser": 10,
+        "macroUsers": 924,
+        "slots": 9240
+      },
+      "recall": {
+        "perUser": "All relevant test items of that user, including unreachable cold items",
+        "macroUsers": 924
+      },
+      "ndcg": {
+        "perUser": "Sum 1/log2(rank+1) for rank=1..min(10, relevant_count)",
+        "macroUsers": 924
+      },
+      "hitRate": {
+        "users": 924
+      },
+      "ratingError": {
+        "testPairs": 19633
+      },
+      "supplementalAllUsersPrecision": {
+        "perUser": 10,
+        "macroUsers": 943
+      },
+      "supplementalAllUsersHitRate": {
+        "users": 943
+      }
+    }
+  },
+  "split": {
+    "train": 80367,
+    "test": 19633,
+    "trainPairsSha256": "4ba34f6ed7c0c746874d17c6d5838e537dc0767466a58b63c26d05d108d583d3",
+    "testPairsSha256": "793f805949e2c8750c248208d1dfa865e7da915a7fff1a89d7306a32eed4a7b6",
+    "coldItemTestRatings": 33,
+    "coldUserTestRatings": 0,
+    "trainUsers": 943,
+    "catalogMovies": 1682,
+    "trainMovies": 1651
+  },
+  "ranking": {
+    "evaluatedUsers": 924,
+    "usersWithoutRelevantTestRatings": 19,
+    "timedUsers": 943,
+    "relevantTestRatings": 10898,
+    "unreachableRelevantTestRatings": 13,
+    "candidatesMin": 1061,
+    "candidatesMax": 1635,
+    "candidatesMean": 1565.7751855779427,
+    "commonCandidatesSha256": "8528b5e39d891dcaf98ffb0c4593b310cec1de805dc53273cf79dbd37a576dcd"
+  },
+  "benchmark": {
+    "repeats": 3,
+    "warmupBuilds": 1,
+    "warmupRecommendationUsers": 10,
+    "sharedDataBuild": {
+      "samplesMs": [
+        25.726709000000028,
+        27.863042000000064,
+        23.249833999999964
+      ],
+      "medianMs": 25.726709000000028,
+      "minMs": 23.249833999999964,
+      "maxMs": 27.863042000000064
+    }
+  },
+  "legacyClipped": {
+    "user": {
+      "topN": {
+        "precision": 0.008549783549783543,
+        "recall": 0.007146980691296287,
+        "ndcg": 0.011919656740773625,
+        "hitRate": 0.07034632034632035,
+        "hits": 79,
+        "fallbackSlots": 0
+      },
+      "ties": {
+        "usersWithTies": 818,
+        "tiedSlots": 6221,
+        "equalPairs": 23882,
+        "adjacentTies": 5351
+      },
+      "tiesAllUsers": {
+        "usersWithTies": 833,
+        "tiedSlots": 6283,
+        "equalPairs": 24016,
+        "adjacentTies": 5395
+      },
+      "predictionSha256": "79729a03b4bafc765a84a56eac228eeade14b618b713a418f9863d7b9856d932",
+      "changedTop10Users": 704
+    },
+    "item": {
+      "topN": {
+        "precision": 0.029870129870129943,
+        "recall": 0.020774090001000448,
+        "ndcg": 0.0268546471848386,
+        "hitRate": 0.22402597402597402,
+        "hits": 276,
+        "fallbackSlots": 0
+      },
+      "ties": {
+        "usersWithTies": 465,
+        "tiedSlots": 2487,
+        "equalPairs": 7701,
+        "adjacentTies": 2004
+      },
+      "tiesAllUsers": {
+        "usersWithTies": 473,
+        "tiedSlots": 2518,
+        "equalPairs": 7769,
+        "adjacentTies": 2027
+      },
+      "predictionSha256": "9ebf68bf3c6d164af561c9cc90e96535c25f914d8cd378f777f80907f1e5afa2",
+      "changedTop10Users": 365
+    }
+  },
+  "baselineRating": {
+    "rmse": 0.9551361039820536,
+    "mae": 0.7530135601490144,
+    "warmRmse": 0.954585024621775,
+    "warmMae": 0.7525899510163309,
+    "fallbackCount": 19633,
+    "ms": 1.8551659999939147
+  },
+  "methods": {
+    "user": {
+      "rating": {
+        "rmse": 0.9385945341517948,
+        "mae": 0.7312958962835274,
+        "warmRmse": 0.9380056237054034,
+        "warmMae": 0.7308357216963766,
+        "fallbackCount": 52,
+        "ms": 228.3070000000007
+      },
+      "topN": {
+        "precision": 0.0007575757575757576,
+        "recall": 0.0005695120989299006,
+        "ndcg": 0.0007455453943812507,
+        "hitRate": 0.007575757575757576,
+        "hits": 7,
+        "fallbackSlots": 0
+      },
+      "allUsers": {
+        "users": 943,
+        "precision": 0.0007423117709437964,
+        "hitRate": 0.007423117709437964,
+        "recall": null,
+        "ndcg": null,
+        "note": "Recall/NDCG undefined for zero-positive users; not imputed with zero."
+      },
+      "ties": {
+        "usersWithTies": 268,
+        "tiedSlots": 678,
+        "equalPairs": 376,
+        "adjacentTies": 351
+      },
+      "tiesAllUsers": {
+        "usersWithTies": 281,
+        "tiedSlots": 709,
+        "equalPairs": 393,
+        "adjacentTies": 367
+      },
+      "similarityBuild": {
+        "samplesMs": [
+          96.10620799999992,
+          95.81141600000001,
+          96.12012500000014
+        ],
+        "medianMs": 96.10620799999992,
+        "minMs": 95.81141600000001,
+        "maxMs": 96.12012500000014
+      },
+      "recommendations": {
+        "samplesMs": [
+          4698.558451000007,
+          4650.080361999921,
+          4624.102579999948
+        ],
+        "medianMs": 4650.080361999921,
+        "minMs": 4624.102579999948,
+        "maxMs": 4698.558451000007
+      },
+      "recommendationPerUserMeanMs": 4.931156269353044,
+      "perUserTiming": [
+        {
+          "medianMs": 5.015124999999898,
+          "minMs": 1.719000000000051,
+          "maxMs": 36.071874999999636
+        },
+        {
+          "medianMs": 5.008165999999619,
+          "minMs": 1.6831250000032014,
+          "maxMs": 31.1974999999984
+        },
+        {
+          "medianMs": 4.990209000003233,
+          "minMs": 1.6438750000015716,
+          "maxMs": 22.22137499999735
+        }
+      ],
+      "predictionSha256": [
+        "5efb4b98ecf3ad0aa719b157b8e0636eb859f945881e502e3a110b8b3007d548",
+        "5efb4b98ecf3ad0aa719b157b8e0636eb859f945881e502e3a110b8b3007d548",
+        "5efb4b98ecf3ad0aa719b157b8e0636eb859f945881e502e3a110b8b3007d548"
+      ]
+    },
+    "item": {
+      "rating": {
+        "rmse": 0.9249726008419664,
+        "mae": 0.724776788081327,
+        "warmRmse": 0.9243518930411183,
+        "warmMae": 0.7243056374446517,
+        "fallbackCount": 156,
+        "ms": 283.8869580000028
+      },
+      "topN": {
+        "precision": 0.028679653679653742,
+        "recall": 0.01993552237213603,
+        "ndcg": 0.02517428486585298,
+        "hitRate": 0.21428571428571427,
+        "hits": 265,
+        "fallbackSlots": 0
+      },
+      "allUsers": {
+        "users": 943,
+        "precision": 0.028101802757158068,
+        "hitRate": 0.20996818663838812,
+        "recall": null,
+        "ndcg": null,
+        "note": "Recall/NDCG undefined for zero-positive users; not imputed with zero."
+      },
+      "ties": {
+        "usersWithTies": 56,
+        "tiedSlots": 126,
+        "equalPairs": 75,
+        "adjacentTies": 67
+      },
+      "tiesAllUsers": {
+        "usersWithTies": 59,
+        "tiedSlots": 136,
+        "equalPairs": 83,
+        "adjacentTies": 73
+      },
+      "similarityBuild": {
+        "samplesMs": [
+          139.77187500000002,
+          135.161333,
+          163.4491250000001
+        ],
+        "medianMs": 139.77187500000002,
+        "minMs": 135.161333,
+        "maxMs": 163.4491250000001
+      },
+      "recommendations": {
+        "samplesMs": [
+          6241.909937999981,
+          6213.994372000016,
+          6182.762460000053
+        ],
+        "medianMs": 6213.994372000016,
+        "minMs": 6182.762460000053,
+        "maxMs": 6241.909937999981
+      },
+      "recommendationPerUserMeanMs": 6.589601667020165,
+      "perUserTiming": [
+        {
+          "medianMs": 4.6944579999999405,
+          "minMs": 1.458625000000211,
+          "maxMs": 37.023707999998805
+        },
+        {
+          "medianMs": 4.754124999999476,
+          "minMs": 1.2272499999999127,
+          "maxMs": 27.050084000000425
+        },
+        {
+          "medianMs": 4.592333000000508,
+          "minMs": 1.357584000001225,
+          "maxMs": 22.100625000002765
+        }
+      ],
+      "predictionSha256": [
+        "7114e327f6df9e4a5c56dd2b432a2ac9419df30e6c349cb16ab016860dc5effd",
+        "7114e327f6df9e4a5c56dd2b432a2ac9419df30e6c349cb16ab016860dc5effd",
+        "7114e327f6df9e4a5c56dd2b432a2ac9419df30e6c349cb16ab016860dc5effd"
+      ]
+    },
+    "popularity": {
+      "rating": null,
+      "topN": {
+        "precision": 0.128463203463203,
+        "recall": 0.13381887459513417,
+        "ndcg": 0.16818652192688824,
+        "hitRate": 0.6298701298701299,
+        "hits": 1187,
+        "fallbackSlots": 0
+      },
+      "allUsers": {
+        "users": 943,
+        "precision": 0.12587486744432616,
+        "hitRate": 0.6171792152704135,
+        "recall": null,
+        "ndcg": null,
+        "note": "Recall/NDCG undefined for zero-positive users; not imputed with zero."
+      },
+      "ties": {
+        "usersWithTies": 431,
+        "tiedSlots": 909,
+        "equalPairs": 456,
+        "adjacentTies": 455
+      },
+      "tiesAllUsers": {
+        "usersWithTies": 436,
+        "tiedSlots": 919,
+        "equalPairs": 461,
+        "adjacentTies": 460
+      },
+      "similarityBuild": null,
+      "recommendations": {
+        "samplesMs": [
+          347.6539470000225,
+          385.1644170000145,
+          357.1371169999875
+        ],
+        "medianMs": 357.1371169999875,
+        "minMs": 347.6539470000225,
+        "maxMs": 385.1644170000145
+      },
+      "recommendationPerUserMeanMs": 0.37872440827146076,
+      "perUserTiming": [
+        {
+          "medianMs": 0.3337499999997817,
+          "minMs": 0.23754200000075798,
+          "maxMs": 5.533499999999549
+        },
+        {
+          "medianMs": 0.3354170000020531,
+          "minMs": 0.2387090000011085,
+          "maxMs": 15.371040999998513
+        },
+        {
+          "medianMs": 0.3315419999998994,
+          "minMs": 0.23916600000302424,
+          "maxMs": 13.185832999999548
+        }
+      ],
+      "predictionSha256": [
+        "8c3ade907e7c624c19456ea75ca1ac5fefd10f5bbc54d84b28e8624133828694",
+        "8c3ade907e7c624c19456ea75ca1ac5fefd10f5bbc54d84b28e8624133828694",
+        "8c3ade907e7c624c19456ea75ca1ac5fefd10f5bbc54d84b28e8624133828694"
+      ]
+    }
+  },
+  "bootstrap": {
+    "seed": 20261003,
+    "samples": 5000,
+    "users": 924,
+    "primaryMetric": "ndcg",
+    "primaryContrasts": 3,
+    "primaryPerContrastConfidence": 0.9833333333333333,
+    "method": "Paired user bootstrap, same resampled indices for every method/metric; percentile intervals, linear quantile interpolation. Three primary NDCG contrasts use Bonferroni 98.333% intervals. Other 95% intervals are exploratory. Conditional on this fitted model, split and positive-test cohort.",
+    "comparisons": {
+      "item_minus_user": {
+        "precision": {
+          "delta": 0.027922077922077976,
+          "ci95": [
+            0.023917748917748945,
+            0.03203463203463209
+          ],
+          "primaryFamilyCI": null
+        },
+        "recall": {
+          "delta": 0.01936601027320613,
+          "ci95": [
+            0.01622425538535674,
+            0.02269247490555952
+          ],
+          "primaryFamilyCI": null
+        },
+        "ndcg": {
+          "delta": 0.024428739471471728,
+          "ci95": [
+            0.020889080506472403,
+            0.02810917045295218
+          ],
+          "primaryFamilyCI": [
+            0.020142907160053968,
+            0.028970566773423974
+          ]
+        },
+        "hitRate": {
+          "delta": 0.2067099567099567,
+          "ci95": [
+            0.18073593073593072,
+            0.2326839826839827
+          ],
+          "primaryFamilyCI": null
+        }
+      },
+      "popularity_minus_user": {
+        "precision": {
+          "delta": 0.12770562770562727,
+          "ci95": [
+            0.11883116883116858,
+            0.1369047619047615
+          ],
+          "primaryFamilyCI": null
+        },
+        "recall": {
+          "delta": 0.13324936249620428,
+          "ci95": [
+            0.12205204871644654,
+            0.14489054014200592
+          ],
+          "primaryFamilyCI": null
+        },
+        "ndcg": {
+          "delta": 0.16744097653250703,
+          "ci95": [
+            0.15568074721107683,
+            0.17929236033933255
+          ],
+          "primaryFamilyCI": [
+            0.15332579035153374,
+            0.1817782461592954
+          ]
+        },
+        "hitRate": {
+          "delta": 0.6222943722943723,
+          "ci95": [
+            0.5909090909090909,
+            0.6526244588744585
+          ],
+          "primaryFamilyCI": null
+        }
+      },
+      "popularity_minus_item": {
+        "precision": {
+          "delta": 0.09978354978354963,
+          "ci95": [
+            0.09101731601731601,
+            0.10887445887445872
+          ],
+          "primaryFamilyCI": null
+        },
+        "recall": {
+          "delta": 0.11388335222299799,
+          "ci95": [
+            0.10232018968436447,
+            0.1258478008631417
+          ],
+          "primaryFamilyCI": null
+        },
+        "ndcg": {
+          "delta": 0.1430122370610351,
+          "ci95": [
+            0.1310879378408125,
+            0.15484048012251345
+          ],
+          "primaryFamilyCI": [
+            0.1283863577385543,
+            0.1580204244054428
+          ]
+        },
+        "hitRate": {
+          "delta": 0.4155844155844156,
+          "ci95": [
+            0.37987012987012986,
+            0.45346320346320346
+          ],
+          "primaryFamilyCI": null
+        }
+      }
+    }
+  },
+  "usersTsvSha256": "7a446b12b33810f47c9a024ec10f91d89c407dee23d96023ed409e429dd0b7a3"
+}

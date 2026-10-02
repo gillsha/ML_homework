@@ -1,0 +1,20 @@
+# Local environments, credentials and OS files.
+.DS_Store
+node_modules/
+.venv/
+venv/
+__pycache__/
+.env
+.env.*
+
+# Reports and conversation exports stay local unless explicitly requested.
+*.pdf
+*dialog*.json
+*conversation*.json
+
+# Large, reproducible per-user output. Small aggregate JSON reports are tracked.
+results/offline-users.tsv
+playwright-report/
+test-results/
+*.tmp
+*.log

@@ -1,206 +1,169 @@
-// Global variables
-let model;
-let isTraining = false;
+let worker;
+let moviesById = new Map();
+let ready = false;
 
-// Initialize application when window loads
-window.onload = async function() {
-    try {
-        // Update status
-        updateStatus('Loading MovieLens data...');
-        
-        // Load data first
-        await loadData();
-        
-        // Populate dropdowns
-        populateUserDropdown();
-        populateMovieDropdown();
-        
-        // Update status and start training
-        updateStatus('Data loaded. Training model...');
-        
-        // Train the model
-        await trainModel();
-        
-    } catch (error) {
-        console.error('Initialization error:', error);
-        updateStatus('Error initializing application: ' + error.message, true);
-    }
-};
+const element = id => document.getElementById(id);
+const milliseconds = value => `${value.toFixed(1)} мс`;
 
-function populateUserDropdown() {
-    const userSelect = document.getElementById('user-select');
-    userSelect.innerHTML = '';
-    
-    // Add users (assuming user IDs are sequential from 1 to numUsers)
-    for (let i = 1; i <= numUsers; i++) {
-        const option = document.createElement('option');
-        option.value = i;
-        option.textContent = `User ${i}`;
-        userSelect.appendChild(option);
-    }
-}
-
-function populateMovieDropdown() {
-    const movieSelect = document.getElementById('movie-select');
-    movieSelect.innerHTML = '';
-    
-    // Add movies
-    movies.forEach(movie => {
-        const option = document.createElement('option');
-        option.value = movie.id;
-        option.textContent = movie.year ? `${movie.title} (${movie.year})` : movie.title;
-        movieSelect.appendChild(option);
-    });
-}
-
-function createModel(numUsers, numMovies, latentDim = 10) {
-    // User input
-    const userInput = tf.input({shape: [1], name: 'userInput'});
-    
-    // Movie input  
-    const movieInput = tf.input({shape: [1], name: 'movieInput'});
-    
-    // User embedding
-    const userEmbedding = tf.layers.embedding({
-        inputDim: numUsers + 1,
-        outputDim: latentDim,
-        name: 'userEmbedding'
-    }).apply(userInput);
-    
-    // Movie embedding
-    const movieEmbedding = tf.layers.embedding({
-        inputDim: numMovies + 1,
-        outputDim: latentDim, 
-        name: 'movieEmbedding'
-    }).apply(movieInput);
-    
-    // Reshape embeddings to flatten them
-    const userVector = tf.layers.flatten().apply(userEmbedding);
-    const movieVector = tf.layers.flatten().apply(movieEmbedding);
-    
-    // Dot product of user and movie vectors
-    const dotProduct = tf.layers.dot({axes: 1}).apply([userVector, movieVector]);
-    
-    // Reshape to get a single output value
-    const prediction = tf.layers.reshape({targetShape: [1]}).apply(dotProduct);
-    
-    // Create model
-    const model = tf.model({
-        inputs: [userInput, movieInput],
-        outputs: prediction
-    });
-    
-    return model;
-}
-
-async function trainModel() {
-    try {
-        isTraining = true;
-        document.getElementById('predict-btn').disabled = true;
-        
-        // Create model
-        model = createModel(numUsers, numMovies, 10);
-        
-        // Compile model
-        model.compile({
-            optimizer: tf.train.adam(0.001),
-            loss: 'meanSquaredError'
-        });
-        
-        // Prepare training data
-        const userIds = ratings.map(r => r.userId);
-        const movieIds = ratings.map(r => r.movieId);
-        const ratingValues = ratings.map(r => r.rating);
-        
-        const userTensor = tf.tensor2d(userIds, [userIds.length, 1]);
-        const movieTensor = tf.tensor2d(movieIds, [movieIds.length, 1]);
-        const ratingTensor = tf.tensor2d(ratingValues, [ratingValues.length, 1]);
-        
-        // Train model
-        updateStatus('Training model... (This may take a moment)');
-        
-        await model.fit([userTensor, movieTensor], ratingTensor, {
-            epochs: 10,
-            batchSize: 64,
-            validationSplit: 0.1,
-            callbacks: {
-                onEpochEnd: (epoch, logs) => {
-                    updateStatus(`Training epoch ${epoch + 1}/10 - loss: ${logs.loss.toFixed(4)}`);
-                }
-            }
-        });
-        
-        // Clean up tensors
-        tf.dispose([userTensor, movieTensor, ratingTensor]);
-        
-        // Update UI
-        updateStatus('Model training completed successfully!');
-        document.getElementById('predict-btn').disabled = false;
-        isTraining = false;
-        
-    } catch (error) {
-        console.error('Training error:', error);
-        updateStatus('Error training model: ' + error.message, true);
-        isTraining = false;
-    }
-}
-
-async function predictRating() {
-    if (isTraining) {
-        updateResult('Model is still training. Please wait...', 'medium');
-        return;
-    }
-    
-    const userId = parseInt(document.getElementById('user-select').value);
-    const movieId = parseInt(document.getElementById('movie-select').value);
-    
-    if (!userId || !movieId) {
-        updateResult('Please select both a user and a movie.', 'medium');
-        return;
-    }
-    
-    try {
-        // Create input tensors
-        const userTensor = tf.tensor2d([[userId]]);
-        const movieTensor = tf.tensor2d([[movieId]]);
-        
-        // Make prediction
-        const prediction = model.predict([userTensor, movieTensor]);
-        const rating = await prediction.data();
-        const predictedRating = rating[0];
-        
-        // Clean up tensors
-        tf.dispose([userTensor, movieTensor, prediction]);
-        
-        // Display result
-        const movie = movies.find(m => m.id === movieId);
-        const movieTitle = movie ? (movie.year ? `${movie.title} (${movie.year})` : movie.title) : `Movie ${movieId}`;
-        
-        let ratingClass = 'medium';
-        if (predictedRating >= 4) ratingClass = 'high';
-        else if (predictedRating <= 2) ratingClass = 'low';
-        
-        updateResult(
-            `Predicted rating for User ${userId} on "${movieTitle}": <strong>${predictedRating.toFixed(2)}/5</strong>`,
-            ratingClass
-        );
-        
-    } catch (error) {
-        console.error('Prediction error:', error);
-        updateResult('Error making prediction: ' + error.message, 'low');
-    }
-}
-
-// UI helper functions
 function updateStatus(message, isError = false) {
-    const statusElement = document.getElementById('status');
-    statusElement.textContent = message;
-    statusElement.style.borderLeftColor = isError ? '#e74c3c' : '#3498db';
-    statusElement.style.background = isError ? '#fdedec' : '#f8f9fa';
+    element('status').textContent = message;
+    element('status').className = isError ? 'status error' : 'status';
 }
 
-function updateResult(message, className = '') {
-    const resultElement = document.getElementById('result');
-    resultElement.innerHTML = message;
-    resultElement.className = `result ${className}`;
+function setBusy(busy) {
+    element('user-select').disabled = busy || !ready;
+    element('recommend-btn').disabled = busy || !ready;
+    element('evaluate-btn').disabled = busy || !ready;
+    element('app').setAttribute('aria-busy', String(busy));
 }
+
+function fail(message) {
+    ready = false;
+    if (worker) worker.terminate();
+    worker = null;
+    setBusy(false);
+    element('recommendations').hidden = true;
+    element('evaluation').hidden = true;
+    element('stats').textContent = '';
+    element('retry-btn').hidden = false;
+    updateStatus(`Ошибка: ${message} Исправьте причину и нажмите «Повторить загрузку».`, true);
+}
+
+function movieTitle(id) {
+    const movie = moviesById.get(id);
+    return movie ? `${movie.title}${movie.year ? ` (${movie.year})` : ''}` : `Фильм ${id}`;
+}
+
+function renderList(method, result, shared) {
+    const body = element(`${method}-results`);
+    body.replaceChildren();
+    result.items.forEach((item, index) => {
+        const row = document.createElement('tr');
+        if (shared.has(item.movieId)) row.className = 'shared';
+        const values = [
+            `${index + 1}. ${movieTitle(item.movieId)}${shared.has(item.movieId) ? ' ★' : ''}`,
+            `${item.score.toFixed(3)} / 5 (score ${item.rawScore.toFixed(3)})`,
+            item.fallback ? `Fallback: ${item.reason}` : `${item.neighbors} соседей; ${item.strongestCommon} общих оценок с ближайшим`,
+            item.count
+        ];
+        values.forEach(value => {
+            const cell = document.createElement('td');
+            // Titles and errors are text, never HTML from a dataset.
+            cell.textContent = String(value);
+            row.appendChild(cell);
+        });
+        body.appendChild(row);
+    });
+    element(`${method}-summary`).textContent = result.items.length
+        ? `${result.candidates} кандидатов · расчёт и сортировка: ${milliseconds(result.ms)} · fallback в топе: ${result.items.filter(item => item.fallback).length}`
+        : 'Нет доступных неоценённых фильмов с обучающими оценками.';
+}
+
+function renderRecommendations(message) {
+    const shared = new Set(message.user.items.filter(userItem => message.item.items.some(item => item.movieId === userItem.movieId)).map(item => item.movieId));
+    renderList('user', message.user, shared);
+    renderList('item', message.item, shared);
+    const size = Math.min(message.user.items.length, message.item.items.length);
+    element('comparison').textContent = `${message.userId === null ? 'Новый пользователь' : `Пользователь ${message.userId}`} · общих фильмов в двух топах: ${shared.size}/${size}. ★ — есть в обоих списках. ` +
+        'Порядок определяется исходным конечным score без clipping; при равенстве — ID фильма. Оценка для показа ограничена 1–5. Совпадение списков не является метрикой качества.';
+    element('recommendations').hidden = false;
+    setBusy(false);
+    updateStatus('Рекомендации готовы. Уже оценённые фильмы исключены.');
+}
+
+function renderEvaluation(report) {
+    const body = element('metrics');
+    body.replaceChildren();
+    const names = { baseline: 'Baseline (без соседей)', user: 'User-based CF', item: 'Item-based CF' };
+    Object.entries(report.results).forEach(([method, result]) => {
+        const row = document.createElement('tr');
+        const values = [
+            names[method], result.rmse.toFixed(4), result.mae.toFixed(4),
+            result.warmRmse === null ? '—' : result.warmRmse.toFixed(4),
+            method === 'baseline' ? '—' : `${(100 * (1 - result.fallbackCount / report.test)).toFixed(2)}%`,
+            method === 'baseline' ? '—' : milliseconds(report.timing[`${method}Ms`]), milliseconds(result.ms)
+        ];
+        values.forEach(value => {
+            const cell = document.createElement('td');
+            cell.textContent = value;
+            row.appendChild(cell);
+        });
+        body.appendChild(row);
+    });
+    element('evaluation-summary').textContent = `Train: ${report.train.toLocaleString('ru-RU')}; test: ${report.test.toLocaleString('ru-RU')}. ` +
+        `Test-оценок cold-start фильмов: ${report.coldItems}. Общая подготовка разреженных данных: ${milliseconds(report.timing.dataMs)}. ` +
+        'Всё сходство, средние и fallback пересчитаны только на train. RMSE/MAE: меньше — лучше; покрытие — доля прогнозов с соседями. Warm RMSE исключает фильмы без train-оценок. Время зависит от устройства.';
+    element('evaluation').hidden = false;
+    setBusy(false);
+    updateStatus('Test-эксперимент завершён. Рекомендации выше по-прежнему используют полный датасет.');
+}
+
+function requestRecommendations() {
+    if (!ready || !worker) return;
+    setBusy(true);
+    element('recommendations').hidden = true;
+    updateStatus('Подбираем фильмы двумя методами…');
+    const value = element('user-select').value;
+    worker.postMessage({ type: 'recommend', userId: value === 'new' ? null : Number(value) });
+}
+
+async function initialize() {
+    ready = false;
+    if (worker) worker.terminate();
+    worker = null;
+    setBusy(true);
+    element('retry-btn').hidden = true;
+    element('recommendations').hidden = true;
+    element('evaluation').hidden = true;
+    element('stats').textContent = '';
+    element('user-select').replaceChildren();
+    updateStatus('Загружаем и проверяем MovieLens 100K…');
+    try {
+        if (location.protocol === 'file:') throw new Error('Откройте приложение через HTTP: python3 -m http.server 8000 (см. README).');
+        const data = await CFData.loadData();
+        moviesById = new Map(data.movies.map(movie => [movie.id, movie]));
+        worker = new Worker('worker.js');
+        worker.onerror = event => { event.preventDefault(); fail(event.message || 'Не удалось запустить Web Worker.'); };
+        worker.onmessageerror = () => fail('Не удалось прочитать ответ Web Worker.');
+        worker.onmessage = event => {
+            const message = event.data;
+            if (message.type === 'progress') updateStatus(message.message);
+            else if (message.type === 'error') fail(message.message);
+            else if (message.type === 'ready') {
+                message.users.forEach(user => {
+                    const option = document.createElement('option');
+                    option.value = user.id;
+                    option.textContent = `Пользователь ${user.id} · ${user.count} оценок`;
+                    element('user-select').appendChild(option);
+                });
+                const option = document.createElement('option');
+                option.value = 'new';
+                option.textContent = 'Новый пользователь · cold start';
+                element('user-select').appendChild(option);
+                element('stats').textContent = `${message.users.length} пользователей · ${message.movies} фильмов · ${message.ratings.toLocaleString('ru-RU')} оценок · ` +
+                    `пропусков ${(100 * message.sparsity).toFixed(2)}% · фильмов без оценок: ${message.unratedMovies}. ` +
+                    `Подготовка полного датасета: ${milliseconds(message.timing.dataMs)}; сходство user: ${milliseconds(message.timing.userMs)}, item: ${milliseconds(message.timing.itemMs)}.`;
+                ready = true;
+                requestRecommendations();
+            } else if (message.type === 'recommendations') renderRecommendations(message);
+            else if (message.type === 'evaluation') renderEvaluation(message.report);
+        };
+        worker.postMessage({ type: 'init', data });
+    } catch (error) {
+        fail(error.message);
+    }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    element('recommend-btn').addEventListener('click', requestRecommendations);
+    element('user-select').addEventListener('change', requestRecommendations);
+    element('retry-btn').addEventListener('click', initialize);
+    element('evaluate-btn').addEventListener('click', () => {
+        if (!ready || !worker) return;
+        setBusy(true);
+        element('evaluation').hidden = true;
+        updateStatus('Готовим независимый train/test-эксперимент…');
+        worker.postMessage({ type: 'evaluate' });
+    });
+    initialize();
+});

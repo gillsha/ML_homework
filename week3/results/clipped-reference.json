@@ -1,0 +1,214 @@
+{
+  "generatedAt": "2026-10-02T12:36:15.924Z",
+  "environment": {
+    "node": "v25.9.0",
+    "v8": "14.1.146.11-node.25",
+    "platform": "darwin",
+    "arch": "arm64",
+    "osRelease": "25.6.0",
+    "cpu": "Apple M3",
+    "logicalCpus": 8,
+    "memoryGiB": 24,
+    "execution": "Single Node.js process, JavaScript on CPU; no GPU or worker threads"
+  },
+  "protocol": {
+    "split": "Per-user hash(seed,userId,movieId); floor(20%) held out, at least one test row for count>=2, at least one train row. Not chronological.",
+    "candidates": "All catalog movies with at least one TRAIN rating minus the user's TRAIN-rated movies; no negative sampling or test-aware filtering.",
+    "relevant": "Held-out rating >=4. All other candidates count as non-relevant for this offline metric, including unobserved items.",
+    "aggregation": "Macro average over the same users with >=1 relevant test item. Users without positives excluded for BOTH methods.",
+    "precision": "Hits in first 10 / 10; missing slots count as misses.",
+    "recall": "Hits in first 10 / all relevant test items, including cold items excluded from candidates.",
+    "ndcg": "Binary gain, discount 1/log2(rank+1), IDCG from min(10, all relevant test items).",
+    "hitRate": "Fraction of eligible users with at least one relevant recommendation.",
+    "fitting": "Only train enters buildModel, means, similarities, neighbour selection and fallback. Hyperparameters fixed; no tuning on test.",
+    "timing": "performance.now(): shared buildData separately; each similarity matrix separately. Recommend time includes candidate filtering, all candidate predictions, sorting and top-10 slicing; excludes audits, metrics, serialization, loading, UI and warm-up.",
+    "repetitions": "1 unmeasured model build + recommendations for first 10 users/method; 3 measured builds; 3 recommendation passes per method on same last train model, method order alternates. Similarity build order is user then item. Report median/min/max; no forced GC."
+  },
+  "checksums": {
+    "u.data": "06416e597f82b7342361e41163890c81036900f418ad91315590814211dca490",
+    "u.item": "553841ebc7de3a0fd0d6b62a204ea30c1e651aacfb2814c7a6584ac52f2c5701",
+    "data.js": "897a150472d894747cdffbf1c02888e2b2e6f0a39c25695312739b485f0d220b",
+    "cf.js": "e8a56d7edc62bf3e05f75394faecca3a4327f56214f9413b8820ded6a279c0fd",
+    "offline.cjs": "73b22af99ecd5bf8f2ecbcee8af903f31cdcede17a8342781bd94de09c109834",
+    "evaluate.cjs": "789d9066b32a86e4157148c226a8214fbaa233efb99b89b98716d4ecc3c09d0d"
+  },
+  "settings": {
+    "k": 30,
+    "minCommon": 3,
+    "shrinkage": 10,
+    "prior": 10,
+    "seed": 20261002
+  },
+  "topN": 10,
+  "relevantRatingAtLeast": 4,
+  "split": {
+    "train": 80367,
+    "test": 19633,
+    "trainPairsSha256": "4ba34f6ed7c0c746874d17c6d5838e537dc0767466a58b63c26d05d108d583d3",
+    "testPairsSha256": "793f805949e2c8750c248208d1dfa865e7da915a7fff1a89d7306a32eed4a7b6",
+    "coldItemTestRatings": 33,
+    "coldUserTestRatings": 0,
+    "trainUsers": 943,
+    "catalogMovies": 1682,
+    "trainMovies": 1651
+  },
+  "ranking": {
+    "evaluatedUsers": 924,
+    "usersWithoutRelevantTestRatings": 19,
+    "timedUsers": 943,
+    "relevantTestRatings": 10898,
+    "unreachableRelevantTestRatings": 13,
+    "candidatesMin": 1061,
+    "candidatesMax": 1635,
+    "candidatesMean": 1565.7751855779427,
+    "commonCandidatesSha256": "8528b5e39d891dcaf98ffb0c4593b310cec1de805dc53273cf79dbd37a576dcd"
+  },
+  "benchmark": {
+    "repeats": 3,
+    "warmupBuilds": 1,
+    "warmupRecommendationUsers": 10,
+    "sharedDataBuild": {
+      "samplesMs": [
+        23.28966600000001,
+        27.754749999999945,
+        21.43079200000011
+      ],
+      "medianMs": 23.28966600000001,
+      "minMs": 21.43079200000011,
+      "maxMs": 27.754749999999945
+    }
+  },
+  "baselineRating": {
+    "rmse": 0.9551361039820536,
+    "mae": 0.7530135601490144,
+    "warmRmse": 0.954585024621775,
+    "warmMae": 0.7525899510163309,
+    "fallbackCount": 19633,
+    "ms": 2.1662500000020373
+  },
+  "methods": {
+    "user": {
+      "rating": {
+        "rmse": 0.9385945341517948,
+        "mae": 0.7312958962835274,
+        "warmRmse": 0.9380056237054034,
+        "warmMae": 0.7308357216963766,
+        "fallbackCount": 52,
+        "ms": 225.36441699999705
+      },
+      "topN": {
+        "precision": 0.008549783549783543,
+        "recall": 0.007146980691296287,
+        "ndcg": 0.011919656740773625,
+        "hitRate": 0.07034632034632035,
+        "hits": 79,
+        "fallbackSlots": 0
+      },
+      "similarityBuild": {
+        "samplesMs": [
+          95.15216700000008,
+          94.83845799999995,
+          98.84874999999988
+        ],
+        "medianMs": 95.15216700000008,
+        "minMs": 94.83845799999995,
+        "maxMs": 98.84874999999988
+      },
+      "recommendations": {
+        "samplesMs": [
+          4613.162877000001,
+          4604.151711000042,
+          4706.551752999978
+        ],
+        "medianMs": 4613.162877000001,
+        "minMs": 4604.151711000042,
+        "maxMs": 4706.551752999978
+      },
+      "recommendationPerUserMeanMs": 4.892007292682927,
+      "perUserTiming": [
+        {
+          "medianMs": 4.951666999999816,
+          "minMs": 1.6645829999999933,
+          "maxMs": 32.94616600000063
+        },
+        {
+          "medianMs": 5.003124999999272,
+          "minMs": 1.6934579999979178,
+          "maxMs": 10.610833000002458
+        },
+        {
+          "medianMs": 5.020667000000685,
+          "minMs": 1.6743749999986903,
+          "maxMs": 28.177584000000934
+        }
+      ],
+      "predictionSha256": [
+        "79729a03b4bafc765a84a56eac228eeade14b618b713a418f9863d7b9856d932",
+        "79729a03b4bafc765a84a56eac228eeade14b618b713a418f9863d7b9856d932",
+        "79729a03b4bafc765a84a56eac228eeade14b618b713a418f9863d7b9856d932"
+      ]
+    },
+    "item": {
+      "rating": {
+        "rmse": 0.9249726008419664,
+        "mae": 0.724776788081327,
+        "warmRmse": 0.9243518930411183,
+        "warmMae": 0.7243056374446517,
+        "fallbackCount": 156,
+        "ms": 283.28575000000274
+      },
+      "topN": {
+        "precision": 0.029870129870129943,
+        "recall": 0.020774090001000448,
+        "ndcg": 0.0268546471848386,
+        "hitRate": 0.22402597402597402,
+        "hits": 276,
+        "fallbackSlots": 0
+      },
+      "similarityBuild": {
+        "samplesMs": [
+          125.98766699999999,
+          130.48737499999993,
+          124.17570799999999
+        ],
+        "medianMs": 125.98766699999999,
+        "minMs": 124.17570799999999,
+        "maxMs": 130.48737499999993
+      },
+      "recommendations": {
+        "samplesMs": [
+          6154.069384999981,
+          6329.827506000063,
+          6279.399533999978
+        ],
+        "medianMs": 6279.399533999978,
+        "minMs": 6154.069384999981,
+        "maxMs": 6329.827506000063
+      },
+      "recommendationPerUserMeanMs": 6.658960269353106,
+      "perUserTiming": [
+        {
+          "medianMs": 4.637375000000247,
+          "minMs": 1.185457999999926,
+          "maxMs": 25.462665999999444
+        },
+        {
+          "medianMs": 4.747583000000304,
+          "minMs": 1.6012080000000424,
+          "maxMs": 58.53429200000028
+        },
+        {
+          "medianMs": 4.802290999999968,
+          "minMs": 1.2477079999989655,
+          "maxMs": 32.45079100000294
+        }
+      ],
+      "predictionSha256": [
+        "9ebf68bf3c6d164af561c9cc90e96535c25f914d8cd378f777f80907f1e5afa2",
+        "9ebf68bf3c6d164af561c9cc90e96535c25f914d8cd378f777f80907f1e5afa2",
+        "9ebf68bf3c6d164af561c9cc90e96535c25f914d8cd378f777f80907f1e5afa2"
+      ]
+    }
+  },
+  "usersTsvSha256": "343d99d36dc368fa609d34c4619dc2060a9279efeac10769fd5847aaabf7a55c"
+}
