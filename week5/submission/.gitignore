@@ -1,0 +1,4 @@
+# Authentic native export includes unrelated internal session titles/paths.
+# Keep it available locally for submission, but do not commit or edit it.
+a05_session.json
+session-export-check.json

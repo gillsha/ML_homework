@@ -1,0 +1,36 @@
+{"time":"2026-10-16T14:28:12.004Z","type":"starting"}
+{"time":"2026-10-16T14:28:15.544Z","type":"users-preselected","chosenUsers":[1,2],"substitution":false,"reason":"User instruction; eligibility only, before model performance or recommendations","eligibleUsers":861,"selectedRelevantCounts":[{"userId":1,"count":19},{"userId":2,"count":2}],"modelIsNull":true}
+{"time":"2026-10-16T14:28:22.282Z","type":"full-training-starting","testsMs":6674.806375000001,"loadingMs":3126.457375}
+{"time":"2026-10-16T14:28:23.290Z","type":"initialized","tensors":2}
+{"time":"2026-10-16T14:28:36.971Z","type":"epoch","epoch":1,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":13680.799999952316}
+{"time":"2026-10-16T14:28:48.938Z","type":"epoch","epoch":2,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":25646.099999904633}
+{"time":"2026-10-16T14:28:52.283Z","type":"runner-heartbeat","note":"Node runner alive; actual epoch progress recorded separately"}
+{"time":"2026-10-16T14:29:00.109Z","type":"epoch","epoch":3,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":36818.799999952316}
+{"time":"2026-10-16T14:29:11.672Z","type":"epoch","epoch":4,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":48382.199999928474}
+{"time":"2026-10-16T14:29:22.284Z","type":"runner-heartbeat","note":"Node runner alive; actual epoch progress recorded separately"}
+{"time":"2026-10-16T14:29:23.944Z","type":"epoch","epoch":5,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":60653.09999990463}
+{"time":"2026-10-16T14:29:36.515Z","type":"epoch","epoch":6,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":73224.69999992847}
+{"time":"2026-10-16T14:29:49.013Z","type":"epoch","epoch":7,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":85722.29999995232}
+{"time":"2026-10-16T14:29:52.285Z","type":"runner-heartbeat","note":"Node runner alive; actual epoch progress recorded separately"}
+{"time":"2026-10-16T14:30:00.755Z","type":"epoch","epoch":8,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":97464.69999992847}
+{"time":"2026-10-16T14:30:12.850Z","type":"epoch","epoch":9,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":109558.59999990463}
+{"time":"2026-10-16T14:30:22.286Z","type":"runner-heartbeat","note":"Node runner alive; actual epoch progress recorded separately"}
+{"time":"2026-10-16T14:30:26.198Z","type":"epoch","epoch":10,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":122907.5}
+{"time":"2026-10-16T14:30:38.762Z","type":"epoch","epoch":11,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":135471.19999992847}
+{"time":"2026-10-16T14:30:52.288Z","type":"runner-heartbeat","note":"Node runner alive; actual epoch progress recorded separately"}
+{"time":"2026-10-16T14:30:52.337Z","type":"epoch","epoch":12,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":149045.19999992847}
+{"time":"2026-10-16T14:31:06.859Z","type":"epoch","epoch":13,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":163566.79999995232}
+{"time":"2026-10-16T14:31:20.992Z","type":"epoch","epoch":14,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":177700.59999990463}
+{"time":"2026-10-16T14:31:22.289Z","type":"runner-heartbeat","note":"Node runner alive; actual epoch progress recorded separately"}
+{"time":"2026-10-16T14:31:35.247Z","type":"epoch","epoch":15,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":191954.79999995232}
+{"time":"2026-10-16T14:31:49.989Z","type":"epoch","epoch":16,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":206697.29999995232}
+{"time":"2026-10-16T14:31:52.291Z","type":"runner-heartbeat","note":"Node runner alive; actual epoch progress recorded separately"}
+{"time":"2026-10-16T14:32:04.178Z","type":"epoch","epoch":17,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":220885.69999992847}
+{"time":"2026-10-16T14:32:19.521Z","type":"epoch","epoch":18,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":236228.5}
+{"time":"2026-10-16T14:32:22.292Z","type":"runner-heartbeat","note":"Node runner alive; actual epoch progress recorded separately"}
+{"time":"2026-10-16T14:32:34.712Z","type":"epoch","epoch":19,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":251346.89999997616}
+{"time":"2026-10-16T14:32:49.786Z","type":"epoch","epoch":20,"trainRMSE":1.1052078640164102,"valRMSE":1.18002107464026,"elapsedTrainingMs":266493.7999999523}
+{"time":"2026-10-16T14:32:49.787Z","type":"training-returned","trainingWallMs":266494}
+{"time":"2026-10-16T14:32:50.026Z","type":"validation-decision-persisted","preference":"neither-demonstrated-improvement","deltaNewMinusDefault":0,"decisionSHA256":"f4dd4979e7d1260350e7faf06d07ee4bfb734a379c8be8fdd6307c0f98bc5666"}
+{"time":"2026-10-16T14:32:50.028Z","type":"new-model-test-evaluation-starting"}
+{"time":"2026-10-16T14:34:00.487Z","type":"browser-run-complete","selectedEpoch":1,"trainingWallMs":266494,"recall":0.021137488852036153}
