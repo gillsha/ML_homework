@@ -1,6 +1,0 @@
-{
-  "users": 128,
-  "top10AndHitsIdentical": true,
-  "maxNumericDifference": 1.908449933458664e-16,
-  "note": "Independent per-column BLAS shapes can change rounding at float64 precision."
-}
