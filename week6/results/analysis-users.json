@@ -1,0 +1,86 @@
+[
+  {
+    "userId": 1,
+    "reportSource": "week5/submission/a05_report.html",
+    "reportLines": [
+      45
+    ],
+    "positiveTrainDegree": 131,
+    "splits": {
+      "val": {
+        "eligibleRelevantCount": 13,
+        "eligibleRelevantMovieIds": [
+          9,
+          12,
+          16,
+          44,
+          51,
+          58,
+          66,
+          75,
+          76,
+          86,
+          87,
+          208,
+          241
+        ],
+        "eligible": true
+      },
+      "test": {
+        "eligibleRelevantCount": 19,
+        "eligibleRelevantMovieIds": [
+          6,
+          18,
+          20,
+          32,
+          100,
+          111,
+          129,
+          154,
+          169,
+          171,
+          178,
+          209,
+          221,
+          222,
+          228,
+          242,
+          256,
+          258,
+          270
+        ],
+        "eligible": true
+      }
+    }
+  },
+  {
+    "userId": 2,
+    "reportSource": "week5/submission/a05_report.html",
+    "reportLines": [
+      58
+    ],
+    "positiveTrainDegree": 32,
+    "splits": {
+      "val": {
+        "eligibleRelevantCount": 6,
+        "eligibleRelevantMovieIds": [
+          272,
+          300,
+          302,
+          310,
+          311,
+          313
+        ],
+        "eligible": true
+      },
+      "test": {
+        "eligibleRelevantCount": 2,
+        "eligibleRelevantMovieIds": [
+          304,
+          316
+        ],
+        "eligible": true
+      }
+    }
+  }
+]

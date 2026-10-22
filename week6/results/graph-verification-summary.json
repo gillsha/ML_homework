@@ -1,0 +1,842 @@
+{
+  "stage": "Graph implementation verification, not final HW6 report",
+  "source": {
+    "onlyPreexistingFileChanged": [
+      "week6/graph.js"
+    ],
+    "originalFilesUnchanged": 199,
+    "implementationSnapshotFiles": 232,
+    "unchangedStarterFiles": [
+      "week6/data.js",
+      "week6/index.html",
+      "week6/readme.md",
+      "week6/script.js",
+      "week6/style.css",
+      "week6/u.data",
+      "week6/u.item",
+      "week6/vendor/d3.min.js"
+    ],
+    "graphOutsideAuthorizedRegionIdentical": true,
+    "recommendationStubsStillThrow": true,
+    "unrelatedGitStatusUnchanged": true,
+    "gitHead": "945754e7024e324943ebafe059de748007c872be",
+    "sourceSHA256": "5df87007991d3db33d50cd56e441576b7d32a646eea30595e8922567b4a6f3cb"
+  },
+  "runtime": {
+    "tfjs": "4.22.0",
+    "backend": "webgl",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+    "browser": "153.0.8010.12"
+  },
+  "locations": {
+    "buildGraph": {
+      "file": "week6/graph.js",
+      "line": 343
+    },
+    "rowNormalize": {
+      "file": "week6/graph.js",
+      "line": 385
+    },
+    "pageRank": {
+      "file": "week6/graph.js",
+      "line": 416
+    },
+    "personalizedPageRank": {
+      "file": "week6/graph.js",
+      "line": 448
+    },
+    "graphPropagationCacheInfo": {
+      "file": "week6/graph.js",
+      "line": 522
+    },
+    "graphPropagateColumns": {
+      "file": "week6/graph.js",
+      "line": 548
+    }
+  },
+  "selfChecks": {
+    "passed": 11,
+    "failed": 0,
+    "pending": 1,
+    "checks": [
+      {
+        "name": "reference graph: uniform alpha=0.85 matches readme 4.1 values",
+        "status": "PASS",
+        "detail": "C>A>B>D; produced by student pageRank(alpha, {transition: REFERENCE_GRAPH.transition}), iterations 28"
+      },
+      {
+        "name": "reference graph: restart at A alpha=0.85 matches readme 4.1 values",
+        "status": "PASS",
+        "detail": "A>C>B>D (D stays 0); produced by student personalizedPageRank(seedNode, alpha, {transition: REFERENCE_GRAPH.transition})"
+      },
+      {
+        "name": "row normalization: every nonzero-degree row sums to 1",
+        "status": "PASS",
+        "detail": "6 positive-degree row(s) sum to 1; 2 dangling row(s) are zero"
+      },
+      {
+        "name": "restart distributions: nonnegative and summing to 1",
+        "status": "PASS",
+        "detail": "uniform + one-hot over 4 nodes"
+      },
+      {
+        "name": "iterations preserve total probability (sum approx 1)",
+        "status": "PASS",
+        "detail": "sum = 1.0000002682 over 3 synthetic nodes (graph.js)"
+      },
+      {
+        "name": "stationary scores are nonnegative",
+        "status": "PASS",
+        "detail": "3 scores nonnegative (graph.js)"
+      },
+      {
+        "name": "one extra update produces approximately the same distribution",
+        "status": "PASS",
+        "detail": "L1 = 7.972e-7"
+      },
+      {
+        "name": "zero-degree node fixture preserves probability mass",
+        "status": "PASS",
+        "detail": "danglingMask [false,true,false,false,true]; mass 1.00000028 / 1.00000000"
+      },
+      {
+        "name": "matrix orientation: probability collects at the pointed-to node, not the source",
+        "status": "PASS",
+        "detail": "p = [0.486486, 0.256757, 0.256757]"
+      },
+      {
+        "name": "recommendTopK: excludes previously rated movies and breaks ties by ascending id",
+        "status": "PENDING",
+        "detail": "TODO(hw6): not implemented yet."
+      },
+      {
+        "name": "graph mapping: node count equals observed users plus observed movies",
+        "status": "PASS",
+        "detail": "2554 nodes = 943 users + 1611 movies"
+      },
+      {
+        "name": "public surface: every required name is defined",
+        "status": "PASS",
+        "detail": "10 functions + ALPHA_GRID + MF_INFO"
+      }
+    ]
+  },
+  "focusedChecks": [
+    {
+      "name": "binary duplicate edge; all observed IDs including negatives",
+      "status": "PASS"
+    },
+    {
+      "name": "empty and nonarray graph",
+      "status": "PASS"
+    },
+    {
+      "name": "unknown raw IDs rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture out-of-range indices rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "reference first uniform update",
+      "status": "PASS"
+    },
+    {
+      "name": "reference first seeded update",
+      "status": "PASS"
+    },
+    {
+      "name": "one-iteration cap reports nonconvergence",
+      "status": "PASS"
+    },
+    {
+      "name": "alpha zero is exactly restart",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid options rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "explicit dangling seed stays one-hot",
+      "status": "PASS"
+    }
+  ],
+  "cacheChecks": {
+    "cacheHit": true,
+    "identityIsolation": true,
+    "iterationCapKey": true,
+    "toleranceKey": true,
+    "batchSizeKey": true,
+    "batchSizeNumericallyConsistent": true,
+    "independentFreezing": true,
+    "rawBoundaryIDMapsCorrectly": true
+  },
+  "graph": {
+    "nUsers": 943,
+    "nMovies": 1611,
+    "nodeCount": 2554,
+    "positiveEdges": 45602,
+    "zeroDegreeUsers": [
+      685
+    ],
+    "positiveEntries": 91204,
+    "maxRowError": 7.993605777301127e-15,
+    "negativeEntries": 0
+  },
+  "zeroDegreeMovieCount": 253,
+  "convergence": [
+    {
+      "alpha": 0.5,
+      "global": {
+        "iterations": 19,
+        "residual": 5.435867933556437e-07,
+        "converged": true,
+        "massError": 7.930793799459934e-09,
+        "minimum": 0.0002060156548395753,
+        "wallMs": 2019.0999999940395
+      },
+      "ppr": {
+        "denominator": 943,
+        "converged": 943,
+        "iterationsRange": [
+          1,
+          22
+        ],
+        "maxResidual": 9.994369065680075e-07,
+        "maxMassError": 2.595209878109017e-07,
+        "minimum": 0,
+        "minimumSeedBoundMargin": 0.0004768967628479004,
+        "wallMs": 1934.6000000089407,
+        "nonConvergedRawIds": []
+      }
+    },
+    {
+      "alpha": 0.7,
+      "global": {
+        "iterations": 36,
+        "residual": 7.796770660206676e-07,
+        "converged": true,
+        "massError": 7.08969309926033e-08,
+        "minimum": 0.00012625199451576918,
+        "wallMs": 211.40000000596046
+      },
+      "ppr": {
+        "denominator": 943,
+        "converged": 943,
+        "iterationsRange": [
+          1,
+          42
+        ],
+        "maxResidual": 9.999436088037328e-07,
+        "maxMassError": 2.9453485694830306e-07,
+        "minimum": 0,
+        "minimumSeedBoundMargin": 0.0005741238594054732,
+        "wallMs": 840,
+        "nonConvergedRawIds": []
+      }
+    },
+    {
+      "alpha": 0.85,
+      "global": {
+        "iterations": 78,
+        "residual": 9.414216037839651e-07,
+        "converged": true,
+        "massError": 2.9897637432441115e-07,
+        "minimum": 6.415466486942023e-05,
+        "wallMs": 347.20000000298023
+      },
+      "ppr": {
+        "denominator": 943,
+        "converged": 943,
+        "iterationsRange": [
+          1,
+          95
+        ],
+        "maxResidual": 9.997056622523814e-07,
+        "maxMassError": 6.238828973437194e-07,
+        "minimum": 0,
+        "minimumSeedBoundMargin": 0.00044283866882322,
+        "wallMs": 1699.5,
+        "nonConvergedRawIds": []
+      }
+    },
+    {
+      "alpha": 0.95,
+      "global": {
+        "iterations": 242,
+        "residual": 9.773466445039958e-07,
+        "converged": true,
+        "massError": 4.4516127672977746e-07,
+        "minimum": 2.161974953196477e-05,
+        "wallMs": 947.8999999910593
+      },
+      "ppr": {
+        "denominator": 943,
+        "converged": 914,
+        "iterationsRange": [
+          1,
+          500
+        ],
+        "maxResidual": 1.8227419786853716e-06,
+        "maxMassError": 8.401502782362513e-07,
+        "minimum": 0,
+        "minimumSeedBoundMargin": 0.00021207034587855667,
+        "wallMs": 8679.800000011921,
+        "nonConvergedRawIds": [
+          39,
+          54,
+          161,
+          178,
+          202,
+          295,
+          310,
+          318,
+          351,
+          367,
+          386,
+          401,
+          410,
+          426,
+          475,
+          519,
+          566,
+          572,
+          595,
+          648,
+          708,
+          710,
+          760,
+          812,
+          840,
+          846,
+          847,
+          903,
+          931
+        ]
+      }
+    }
+  ],
+  "numpy": [
+    {
+      "alpha": 0.5,
+      "all943Converged": true,
+      "iterationsRange": [
+        1,
+        21
+      ],
+      "vectorComparison": {
+        "maxAbs": 3.787614744066303e-08,
+        "maxL1": 6.030493186880972e-07,
+        "absoluteTolerance": 2e-06,
+        "l1Tolerance": 2e-05,
+        "pass": true
+      },
+      "top10ExactMatches": 943,
+      "fullRankingExactMatches": 923,
+      "maxNearTieInversion": 1.831112745630313e-10
+    },
+    {
+      "alpha": 0.7,
+      "all943Converged": true,
+      "iterationsRange": [
+        1,
+        41
+      ],
+      "vectorComparison": {
+        "maxAbs": 3.621375850582087e-08,
+        "maxL1": 7.578636925567821e-07,
+        "absoluteTolerance": 2e-06,
+        "l1Tolerance": 2e-05,
+        "pass": true
+      },
+      "top10ExactMatches": 943,
+      "fullRankingExactMatches": 933,
+      "maxNearTieInversion": 2.5478039952309475e-11
+    },
+    {
+      "alpha": 0.85,
+      "all943Converged": true,
+      "iterationsRange": [
+        1,
+        90
+      ],
+      "vectorComparison": {
+        "maxAbs": 3.233356458270942e-08,
+        "maxL1": 9.38510014650324e-07,
+        "absoluteTolerance": 2e-06,
+        "l1Tolerance": 2e-05,
+        "pass": true
+      },
+      "top10ExactMatches": 943,
+      "fullRankingExactMatches": 919,
+      "maxNearTieInversion": 1.450394532124047e-10
+    },
+    {
+      "alpha": 0.95,
+      "all943Converged": true,
+      "iterationsRange": [
+        1,
+        283
+      ],
+      "vectorComparison": {
+        "maxAbs": 1.537551625602207e-08,
+        "maxL1": 1.4004029457607984e-06,
+        "absoluteTolerance": 2e-06,
+        "l1Tolerance": 2e-05,
+        "pass": true
+      },
+      "top10ExactMatches": 943,
+      "fullRankingExactMatches": 915,
+      "maxNearTieInversion": 1.3961929854443278e-10
+    }
+  ],
+  "singleVsBatch": [
+    {
+      "alpha": 0.85,
+      "userIds": [
+        1,
+        2,
+        39,
+        178,
+        196,
+        684,
+        685,
+        686,
+        942,
+        943
+      ],
+      "maxAbs": 4.190951585769653e-09,
+      "maxL1": 8.915098987927195e-07,
+      "allTop10Equal": true,
+      "finalLiveTensors": 0,
+      "allocatedGpuPoolBytes": 245648904,
+      "poolFreeBytes": 245648904,
+      "cacheCopyProtected": true
+    },
+    {
+      "alpha": 0.95,
+      "userIds": [
+        1,
+        2,
+        39,
+        178,
+        196,
+        684,
+        685,
+        686,
+        942,
+        943
+      ],
+      "maxAbs": 6.28642737865448e-09,
+      "maxL1": 1.102071109926328e-06,
+      "allTop10Equal": true,
+      "finalLiveTensors": 0,
+      "allocatedGpuPoolBytes": 245648904,
+      "poolFreeBytes": 245648904,
+      "cacheCopyProtected": true
+    }
+  ],
+  "fixture": {
+    "uniform": {
+      "assignment": [
+        0.3725268513,
+        0.1958239118,
+        0.3941492369,
+        0.0375
+      ],
+      "browser": [
+        0.37252694368362427,
+        0.1958237588405609,
+        0.3941493332386017,
+        0.03750000149011612
+      ],
+      "maxAbsError": 1.5295943908699705e-07
+    },
+    "seeded": {
+      "assignment": [
+        0.4522328999,
+        0.1921989825,
+        0.3555681176,
+        0.0
+      ],
+      "browser": [
+        0.4522329568862915,
+        0.19219909608364105,
+        0.35556817054748535,
+        0
+      ],
+      "maxAbsError": 1.1358364104818719e-07
+    },
+    "independentFirstUpdate": {
+      "Q": [
+        [
+          0.0,
+          0.5,
+          0.5,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "uniformIncoming": [
+        0.25,
+        0.125,
+        0.625,
+        0.0
+      ],
+      "uniformFirst": [
+        0.25,
+        0.14375,
+        0.56875,
+        0.0375
+      ],
+      "seedFirst": [
+        0.15,
+        0.425,
+        0.425,
+        0.0
+      ],
+      "arithmetic": "Uniform incoming=(1/4,1/8,5/8,0); multiply by0.85, add0.15*(1/4 each) => (0.25,0.14375,0.56875,0.0375). Seed A incoming=(0,1/2,1/2,0); multiply by0.85, add0.15*(1,0,0,0) => (0.15,0.425,0.425,0).",
+      "uniform": {
+        "p": [
+          0.37252693031282125,
+          0.19582373990738838,
+          0.3941493297797897,
+          0.0375
+        ],
+        "iterations": 28,
+        "residual": 9.669438148229847e-07
+      },
+      "seedA": {
+        "p": [
+          0.4522328618993243,
+          0.19219906527794117,
+          0.35556807282273445,
+          0.0
+        ],
+        "iterations": 30,
+        "residual": 4.657446040501334e-07
+      }
+    }
+  },
+  "memory": {
+    "allAlphaCPUCache": {
+      "entries": 8,
+      "vectors": 3776,
+      "vectorBytes": 77151232,
+      "retainedGpuTensors": 0
+    },
+    "liveTensorsAfterCacheClear": 0,
+    "peakLogicalTensorBytes": 131354871,
+    "perIterationReadbackBytes": 3772,
+    "note": "CPU vector payload measured by byteLength; excludes JS objects, plain-array graph/Q and caller-owned copies. GPU allocated/free texture pool is not a live tensor leak."
+  },
+  "mf": {
+    "runtimeSeconds": 33.20129999999702,
+    "checkpoint": 1,
+    "historyFile": "graph-mf-train-0.5.json",
+    "config": {
+      "factors": 16,
+      "epochs": 30,
+      "learningRate": 0.01,
+      "regularization": 0.05,
+      "batchSize": 512,
+      "seed": 20261013,
+      "backend": "webgl",
+      "checkpoint": 1,
+      "validationRMSE": 1.1829944264078285,
+      "trainedAt": "2026-10-22T10:09:17.931Z"
+    },
+    "rmse": {
+      "train": 1.1052078640164102,
+      "val": 1.1829944264078285,
+      "test": 1.2288999214179168
+    },
+    "meanOnlyBaselineRMSE": {
+      "train": 1.105208514257592,
+      "val": 1.1829947710600353,
+      "test": 1.2289001371836759
+    },
+    "factorRowNormSummary": {
+      "user": {
+        "count": 944,
+        "min": 1.2136971010673814e-05,
+        "max": 6.210006860201328e-05,
+        "mean": 3.5270232702794553e-05,
+        "std": 9.01767025220469e-06,
+        "unique": 944
+      },
+      "item": {
+        "count": 1683,
+        "min": 1.2808970314427065e-05,
+        "max": 6.821378863562136e-05,
+        "mean": 3.516457869566678e-05,
+        "std": 8.878339193446817e-06,
+        "unique": 1683
+      }
+    },
+    "analysisUsers": [
+      {
+        "userId": 1,
+        "allCandidates": {
+          "count": 1611,
+          "min": 3.5806026458740234,
+          "max": 3.5806026458740234,
+          "mean": 3.5806026458740234,
+          "std": 0,
+          "unique": 1
+        },
+        "testEligible": {
+          "count": 1367,
+          "min": 3.5806026458740234,
+          "max": 3.5806026458740234,
+          "mean": 3.5806026458740234,
+          "std": 0,
+          "unique": 1
+        },
+        "userRowNorm": 3.532285919848931e-05
+      },
+      {
+        "userId": 2,
+        "allCandidates": {
+          "count": 1611,
+          "min": 3.5806026458740234,
+          "max": 3.5806026458740234,
+          "mean": 3.5806026458740234,
+          "std": 0,
+          "unique": 1
+        },
+        "testEligible": {
+          "count": 1556,
+          "min": 3.5806026458740234,
+          "max": 3.5806026458740234,
+          "mean": 3.5806026458740234,
+          "std": 0,
+          "unique": 1
+        },
+        "userRowNorm": 3.6864118101294774e-05
+      }
+    ],
+    "tensorCounts": {
+      "before": 0,
+      "afterTraining": 10,
+      "afterReuse": 10,
+      "afterSuppliedDisposal": 8
+    },
+    "afterDisposalLogicalBytes": 504392,
+    "independentEvaluation": {
+      "method": "independent raw parsing, chronological split, float64 evaluation of saved float32 factors; no training",
+      "globalMean": 3.5806026199776437,
+      "metrics": {
+        "train": {
+          "rows": 79619,
+          "float64RMSE": 1.1052085142560844,
+          "meanOnlyRMSE": 1.1052085142573125,
+          "mfMinusMeanOnly": -1.2281287098403482e-12,
+          "maximumAbsDotProduct": 2.176212998107343e-09,
+          "browserRMSE": 1.1052078640164102,
+          "browserMinusFloat64": -6.502396741048244e-07
+        },
+        "val": {
+          "rows": 9596,
+          "float64RMSE": 1.1829947710659372,
+          "meanOnlyRMSE": 1.1829947710600115,
+          "mfMinusMeanOnly": 5.9257043716343105e-12,
+          "maximumAbsDotProduct": 1.6495155860184372e-09,
+          "browserRMSE": 1.1829944264078285,
+          "browserMinusFloat64": -3.446581087196421e-07
+        },
+        "test": {
+          "rows": 10785,
+          "float64RMSE": 1.2289001371845054,
+          "meanOnlyRMSE": 1.2289001371836488,
+          "mfMinusMeanOnly": 8.566480858007708e-13,
+          "maximumAbsDotProduct": 1.7621286652731195e-09,
+          "browserRMSE": 1.2288999214179168,
+          "browserMinusFloat64": -2.157665885960114e-07
+        }
+      },
+      "selectedEpoch": 1,
+      "checkpointMatchesEarliestValidationMinimum": true,
+      "all30EpochsRecorded": true,
+      "uniqueValidationRMSE": 1,
+      "factorSHA256": {
+        "user": "bcb78a2a13a5baf5837a3ddbf3d7d08ba614a551800aec7929e07ae9bd64caf9",
+        "item": "550e56f0ac7f3067f4a7aa7c3dfffa91d9674c4af1065d812d8d19f6de79a253"
+      }
+    },
+    "interpretation": "No measured useful personalization. All30 validation values identical; restored epoch1. Constant browser scores forusers1/2; float64 RMSE matches mean-only within6e-12. Tiny browser-baseline RMSE gaps are numeric, not learning evidence. Whole-matrix L2 is a plausible explanation, not an isolated causal test."
+  },
+  "analysisUsers": [
+    {
+      "userId": 1,
+      "reportSource": "week5/submission/a05_report.html",
+      "reportLines": [
+        45
+      ],
+      "positiveTrainDegree": 131,
+      "splits": {
+        "val": {
+          "eligibleRelevantCount": 13,
+          "eligibleRelevantMovieIds": [
+            9,
+            12,
+            16,
+            44,
+            51,
+            58,
+            66,
+            75,
+            76,
+            86,
+            87,
+            208,
+            241
+          ],
+          "eligible": true
+        },
+        "test": {
+          "eligibleRelevantCount": 19,
+          "eligibleRelevantMovieIds": [
+            6,
+            18,
+            20,
+            32,
+            100,
+            111,
+            129,
+            154,
+            169,
+            171,
+            178,
+            209,
+            221,
+            222,
+            228,
+            242,
+            256,
+            258,
+            270
+          ],
+          "eligible": true
+        }
+      }
+    },
+    {
+      "userId": 2,
+      "reportSource": "week5/submission/a05_report.html",
+      "reportLines": [
+        58
+      ],
+      "positiveTrainDegree": 32,
+      "splits": {
+        "val": {
+          "eligibleRelevantCount": 6,
+          "eligibleRelevantMovieIds": [
+            272,
+            300,
+            302,
+            310,
+            311,
+            313
+          ],
+          "eligible": true
+        },
+        "test": {
+          "eligibleRelevantCount": 2,
+          "eligibleRelevantMovieIds": [
+            304,
+            316
+          ],
+          "eligible": true
+        }
+      }
+    }
+  ],
+  "jobs": [
+    {
+      "file": "graph-alpha-0.5.json",
+      "seconds": 5.771,
+      "start": "2026-10-22T09:58:57.558Z",
+      "end": "2026-10-22T09:59:03.329Z"
+    },
+    {
+      "file": "graph-alpha-0.7.json",
+      "seconds": 2.756,
+      "start": "2026-10-22T10:00:41.536Z",
+      "end": "2026-10-22T10:00:44.292Z"
+    },
+    {
+      "file": "graph-alpha-0.85.json",
+      "seconds": 3.737,
+      "start": "2026-10-22T10:01:30.823Z",
+      "end": "2026-10-22T10:01:34.560Z"
+    },
+    {
+      "file": "graph-alpha-0.95.json",
+      "seconds": 11.442,
+      "start": "2026-10-22T10:02:27.283Z",
+      "end": "2026-10-22T10:02:38.725Z"
+    },
+    {
+      "file": "graph-basics-0.5.json",
+      "seconds": 7.738,
+      "start": "2026-10-22T09:59:28.306Z",
+      "end": "2026-10-22T09:59:36.044Z"
+    },
+    {
+      "file": "graph-cache-0.5.json",
+      "seconds": 19.515,
+      "start": "2026-10-22T10:07:41.849Z",
+      "end": "2026-10-22T10:08:01.364Z"
+    },
+    {
+      "file": "graph-mf-timing-0.5.json",
+      "seconds": 5.447,
+      "start": "2026-10-22T10:08:22.420Z",
+      "end": "2026-10-22T10:08:27.867Z"
+    },
+    {
+      "file": "graph-mf-train-0.5.json",
+      "seconds": 35.86,
+      "start": "2026-10-22T10:08:43.515Z",
+      "end": "2026-10-22T10:09:19.375Z"
+    },
+    {
+      "file": "graph-single-0.85.json",
+      "seconds": 8.289,
+      "start": "2026-10-22T10:06:37.755Z",
+      "end": "2026-10-22T10:06:46.044Z"
+    },
+    {
+      "file": "graph-single-0.95.json",
+      "seconds": 30.596,
+      "start": "2026-10-22T10:06:58.247Z",
+      "end": "2026-10-22T10:07:28.843Z"
+    }
+  ],
+  "allGpuJobsSequential": true,
+  "unresolved": [
+    "29/943 PPR columns hit cap at alpha.95 on measured WebGL float32 backend; preserve converged:false. Float64 all943 converge. Do not relax tolerance or hide mass errors.",
+    "Unchanged supplied MF is effectively mean-only and leaves8 tensors after supplied disposal. Browser closed after evidence capture.",
+    "Three recommendation stubs remain untouched; no validation Recall alpha selection or final test retrieval comparison is claimed."
+  ]
+}

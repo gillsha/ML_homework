@@ -1,0 +1,509 @@
+{
+  "alpha": 0.7,
+  "numpy": "2.3.5",
+  "method": "float64 dense row-normalized Q; row-vector p@Q, independently parsed/split",
+  "graph": {
+    "users": 943,
+    "movies": 1611,
+    "nodes": 2554,
+    "edges": 45602,
+    "zeroUsers": 1,
+    "zeroMovies": 253,
+    "degreeMatchesBrowser": true,
+    "maxRowSumError": 2.220446049250313e-16,
+    "splitSizes": [
+      79619,
+      9596,
+      10785
+    ],
+    "smallUserExclusions": []
+  },
+  "denominator": 943,
+  "allConverged": true,
+  "iterationsRange": [
+    1,
+    41
+  ],
+  "maxResidual": 8.913528071066369e-07,
+  "maxMassError": 4.440892098500626e-16,
+  "minimum": 0.0,
+  "pprWallSeconds": 1.592499582999153,
+  "globalWallSeconds": 0.033229833003133535,
+  "global": {
+    "iterations": 36,
+    "residual": 7.856980284463508e-07,
+    "converged": true,
+    "maxAbsVsBrowser": 1.031271310101417e-09
+  },
+  "vectorComparison": {
+    "maxAbs": 3.621375850582087e-08,
+    "maxL1": 7.578636925567821e-07,
+    "absoluteTolerance": 2e-06,
+    "l1Tolerance": 2e-05,
+    "pass": true
+  },
+  "rankingComparison": {
+    "definition": "all training movie candidates minus train+val history; score desc/movieId asc",
+    "top10ExactMatches": 943,
+    "denominator": 943,
+    "top10Differences": [],
+    "fullRankingExactMatches": 933,
+    "fullRankingDifferences": [
+      {
+        "userId": 18,
+        "maxReferenceScoreInversion": 1.5725536336365256e-11
+      },
+      {
+        "userId": 22,
+        "maxReferenceScoreInversion": 9.08324869651673e-14
+      },
+      {
+        "userId": 66,
+        "maxReferenceScoreInversion": 1.4941131997261731e-12
+      },
+      {
+        "userId": 94,
+        "maxReferenceScoreInversion": 4.801469401887989e-12
+      },
+      {
+        "userId": 117,
+        "maxReferenceScoreInversion": 2.5478039952309475e-11
+      },
+      {
+        "userId": 142,
+        "maxReferenceScoreInversion": 3.935473278369236e-12
+      },
+      {
+        "userId": 313,
+        "maxReferenceScoreInversion": 9.4071225181585e-13
+      },
+      {
+        "userId": 632,
+        "maxReferenceScoreInversion": 7.811486517578323e-12
+      },
+      {
+        "userId": 890,
+        "maxReferenceScoreInversion": 3.5062839811488347e-12
+      },
+      {
+        "userId": 922,
+        "maxReferenceScoreInversion": 3.3140275784970244e-13
+      }
+    ],
+    "note": "Rank differences among near-equal float32 scores must be disclosed, never disguised by renormalization or forced order."
+  },
+  "representatives": [
+    {
+      "userId": 1,
+      "maxAbs": 2.5722549645834647e-08,
+      "l1": 7.21727318829605e-07,
+      "numpyIterations": 41,
+      "browserIterations": 42,
+      "numpyTop10": [
+        100,
+        258,
+        286,
+        318,
+        357,
+        483,
+        222,
+        288,
+        275,
+        475
+      ],
+      "browserTop10": [
+        100,
+        258,
+        286,
+        318,
+        357,
+        483,
+        222,
+        288,
+        275,
+        475
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 2,
+      "maxAbs": 9.469117490112922e-09,
+      "l1": 1.37185891625283e-07,
+      "numpyIterations": 41,
+      "browserIterations": 41,
+      "numpyTop10": [
+        181,
+        98,
+        7,
+        9,
+        174,
+        117,
+        121,
+        56,
+        172,
+        475
+      ],
+      "browserTop10": [
+        181,
+        98,
+        7,
+        9,
+        174,
+        117,
+        121,
+        56,
+        172,
+        475
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 196,
+      "maxAbs": 4.951982567058533e-09,
+      "l1": 9.542715088510071e-08,
+      "numpyIterations": 41,
+      "browserIterations": 41,
+      "numpyTop10": [
+        50,
+        100,
+        181,
+        127,
+        258,
+        1,
+        98,
+        174,
+        56,
+        172
+      ],
+      "browserTop10": [
+        50,
+        100,
+        181,
+        127,
+        258,
+        1,
+        98,
+        174,
+        56,
+        172
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 684,
+      "maxAbs": 1.3733674197879964e-08,
+      "l1": 1.1682238866256716e-07,
+      "numpyIterations": 41,
+      "browserIterations": 41,
+      "numpyTop10": [
+        174,
+        127,
+        258,
+        56,
+        79,
+        7,
+        318,
+        22,
+        69,
+        286
+      ],
+      "browserTop10": [
+        174,
+        127,
+        258,
+        56,
+        79,
+        7,
+        318,
+        22,
+        69,
+        286
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 685,
+      "maxAbs": 0.0,
+      "l1": 0.0,
+      "numpyIterations": 1,
+      "browserIterations": 1,
+      "numpyTop10": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "browserTop10": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 686,
+      "maxAbs": 1.3397591758224081e-08,
+      "l1": 9.69878629469372e-08,
+      "numpyIterations": 41,
+      "browserIterations": 41,
+      "numpyTop10": [
+        100,
+        181,
+        1,
+        64,
+        258,
+        286,
+        69,
+        483,
+        183,
+        7
+      ],
+      "browserTop10": [
+        100,
+        181,
+        1,
+        64,
+        258,
+        286,
+        69,
+        483,
+        183,
+        7
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 942,
+      "maxAbs": 2.3653997927031156e-08,
+      "l1": 1.0856134267585358e-07,
+      "numpyIterations": 41,
+      "browserIterations": 41,
+      "numpyTop10": [
+        100,
+        181,
+        98,
+        286,
+        127,
+        1,
+        302,
+        288,
+        56,
+        64
+      ],
+      "browserTop10": [
+        100,
+        181,
+        98,
+        286,
+        127,
+        1,
+        302,
+        288,
+        56,
+        64
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 943,
+      "maxAbs": 2.3783560676449156e-09,
+      "l1": 8.223758958888241e-08,
+      "numpyIterations": 41,
+      "browserIterations": 41,
+      "numpyTop10": [
+        1,
+        258,
+        7,
+        237,
+        183,
+        176,
+        288,
+        89,
+        357,
+        222
+      ],
+      "browserTop10": [
+        1,
+        258,
+        7,
+        237,
+        183,
+        176,
+        288,
+        89,
+        357,
+        222
+      ],
+      "fullRankingEqual": true
+    }
+  ],
+  "fixture": {
+    "Q": [
+      [
+        0.0,
+        0.5,
+        0.5,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "uniformIncoming": [
+      0.25,
+      0.125,
+      0.625,
+      0.0
+    ],
+    "uniformFirst": [
+      0.25,
+      0.14375,
+      0.56875,
+      0.0375
+    ],
+    "seedFirst": [
+      0.15,
+      0.425,
+      0.425,
+      0.0
+    ],
+    "arithmetic": "Uniform incoming=(1/4,1/8,5/8,0); multiply by0.85, add0.15*(1/4 each) => (0.25,0.14375,0.56875,0.0375). Seed A incoming=(0,1/2,1/2,0); multiply by0.85, add0.15*(1,0,0,0) => (0.15,0.425,0.425,0).",
+    "uniform": {
+      "p": [
+        0.37252693031282125,
+        0.19582373990738838,
+        0.3941493297797897,
+        0.0375
+      ],
+      "iterations": 28,
+      "residual": 9.669438148229847e-07
+    },
+    "seedA": {
+      "p": [
+        0.4522328618993243,
+        0.19219906527794117,
+        0.35556807282273445,
+        0.0
+      ],
+      "iterations": 30,
+      "residual": 4.657446040501334e-07
+    }
+  },
+  "analysisUsers": [
+    {
+      "userId": 1,
+      "reportSource": "week5/submission/a05_report.html",
+      "reportLines": [
+        45,
+        58
+      ],
+      "positiveTrainDegree": 131,
+      "splits": {
+        "val": {
+          "eligibleRelevantCount": 13,
+          "eligibleRelevantMovieIds": [
+            9,
+            12,
+            16,
+            44,
+            51,
+            58,
+            66,
+            75,
+            76,
+            86,
+            87,
+            208,
+            241
+          ],
+          "eligible": true
+        },
+        "test": {
+          "eligibleRelevantCount": 19,
+          "eligibleRelevantMovieIds": [
+            6,
+            18,
+            20,
+            32,
+            100,
+            111,
+            129,
+            154,
+            169,
+            171,
+            178,
+            209,
+            221,
+            222,
+            228,
+            242,
+            256,
+            258,
+            270
+          ],
+          "eligible": true
+        }
+      }
+    },
+    {
+      "userId": 2,
+      "reportSource": "week5/submission/a05_report.html",
+      "reportLines": [
+        45,
+        58
+      ],
+      "positiveTrainDegree": 32,
+      "splits": {
+        "val": {
+          "eligibleRelevantCount": 6,
+          "eligibleRelevantMovieIds": [
+            272,
+            300,
+            302,
+            310,
+            311,
+            313
+          ],
+          "eligible": true
+        },
+        "test": {
+          "eligibleRelevantCount": 2,
+          "eligibleRelevantMovieIds": [
+            304,
+            316
+          ],
+          "eligible": true
+        }
+      }
+    }
+  ],
+  "totalWallSeconds": 2.09357933299907
+}

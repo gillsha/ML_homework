@@ -1,0 +1,18 @@
+# HW6 local-only workbench, exports, private logs and backups
+/hw6-tools/
+/hw6-report/
+/A06_submit/*
+!/A06_submit/gill_elizaveta_a06_report.pdf
+# Native inputs are obtained with week6/tools/get_data.py
+/week6/u.data
+/week6/u.item
+/week6/results/regenerated/
+/week6/tools/node_modules/
+/week6/**/__pycache__/
+/week6/**/*.pyc
+/week6/**/session*.json
+/week6/**/session*.jsonl
+/week6/**/*.jsonl
+/week6/**/*.gz
+/week6/**/backup*/
+/week6/**/.DS_Store

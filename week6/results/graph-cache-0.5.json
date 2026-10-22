@@ -1,0 +1,136 @@
+{
+  "mode": "cache",
+  "alpha": 0.5,
+  "startedAt": "2026-10-22T10:07:41.849Z",
+  "runtime": {
+    "tfjs": "4.22.0",
+    "backend": "webgl",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+    "browser": "153.0.8010.12"
+  },
+  "result": {
+    "before": {
+      "unreliable": false,
+      "numBytesInGPU": 0,
+      "numBytesInGPUAllocated": 0,
+      "numBytesInGPUFree": 0,
+      "numTensors": 0,
+      "numDataBuffers": 0,
+      "numBytes": 0
+    },
+    "stages": [
+      {
+        "alpha": 0.5,
+        "cache": {
+          "entries": 2,
+          "vectors": 944,
+          "vectorBytes": 19287808,
+          "retainedGpuTensors": 0
+        },
+        "memory": {
+          "unreliable": false,
+          "numBytesInGPU": 0,
+          "numBytesInGPUAllocated": 245648904,
+          "numBytesInGPUFree": 245648904,
+          "numTensors": 0,
+          "numDataBuffers": 0,
+          "numBytes": 0
+        }
+      },
+      {
+        "alpha": 0.7,
+        "cache": {
+          "entries": 4,
+          "vectors": 1888,
+          "vectorBytes": 38575616,
+          "retainedGpuTensors": 0
+        },
+        "memory": {
+          "unreliable": false,
+          "numBytesInGPU": 0,
+          "numBytesInGPUAllocated": 245648904,
+          "numBytesInGPUFree": 245648904,
+          "numTensors": 0,
+          "numDataBuffers": 0,
+          "numBytes": 0
+        }
+      },
+      {
+        "alpha": 0.85,
+        "cache": {
+          "entries": 6,
+          "vectors": 2832,
+          "vectorBytes": 57863424,
+          "retainedGpuTensors": 0
+        },
+        "memory": {
+          "unreliable": false,
+          "numBytesInGPU": 0,
+          "numBytesInGPUAllocated": 245648904,
+          "numBytesInGPUFree": 245648904,
+          "numTensors": 0,
+          "numDataBuffers": 0,
+          "numBytes": 0
+        }
+      },
+      {
+        "alpha": 0.95,
+        "cache": {
+          "entries": 8,
+          "vectors": 3776,
+          "vectorBytes": 77151232,
+          "retainedGpuTensors": 0
+        },
+        "memory": {
+          "unreliable": false,
+          "numBytesInGPU": 0,
+          "numBytesInGPUAllocated": 245648904,
+          "numBytesInGPUFree": 245648904,
+          "numTensors": 0,
+          "numDataBuffers": 0,
+          "numBytes": 0
+        }
+      }
+    ],
+    "allAlphaCache": {
+      "entries": 8,
+      "vectors": 3776,
+      "vectorBytes": 77151232,
+      "retainedGpuTensors": 0
+    },
+    "hitMs": 0.10000000894069672,
+    "checks": {
+      "cacheHit": true,
+      "identityIsolation": true,
+      "iterationCapKey": true,
+      "toleranceKey": true,
+      "batchSizeKey": true,
+      "batchSizeNumericallyConsistent": true,
+      "independentFreezing": true,
+      "rawBoundaryIDMapsCorrectly": true
+    },
+    "batch32Vs943MaxAbs": 0,
+    "finalCache": {
+      "entries": 12,
+      "vectors": 4722,
+      "vectorBytes": 96479904,
+      "retainedGpuTensors": 0
+    },
+    "afterClear": {
+      "entries": 0,
+      "vectors": 0,
+      "vectorBytes": 0,
+      "retainedGpuTensors": 0
+    },
+    "after": {
+      "unreliable": false,
+      "numBytesInGPU": 0,
+      "numBytesInGPUAllocated": 255837824,
+      "numBytesInGPUFree": 255837824,
+      "numTensors": 0,
+      "numDataBuffers": 0,
+      "numBytes": 0
+    }
+  },
+  "finishedAt": "2026-10-22T10:08:01.364Z"
+}

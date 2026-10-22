@@ -1,0 +1,18 @@
+{
+  "dtype": "float32",
+  "byteOrder": "little-endian",
+  "userShape": [
+    944,
+    16
+  ],
+  "itemShape": [
+    1683,
+    16
+  ],
+  "globalMean": 3.5806026199776437,
+  "selectedEpoch": 1,
+  "hashes": {
+    "user": "f4fe6f0632c0c2f95b33a7454a4cc0dc097c84d67222c0e6f8032c682c385521",
+    "item": "af293f0bf629226a66d3ceefb307578db7ff84b2574a27f5fde43766cbf453f0"
+  }
+}

@@ -1,0 +1,2603 @@
+{
+  "panels": [
+    {
+      "label": "primary",
+      "userId": 1,
+      "method": "popularity",
+      "alpha": 0.5,
+      "rows": [
+        {
+          "rank": 1,
+          "movieId": 100,
+          "title": "Fargo (1996)",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "score": 377,
+          "popularity": 377,
+          "hit": true
+        },
+        {
+          "rank": 2,
+          "movieId": 258,
+          "title": "Contact (1997)",
+          "genres": [
+            "Drama",
+            "Sci-Fi"
+          ],
+          "score": 307,
+          "popularity": 307,
+          "hit": true
+        },
+        {
+          "rank": 3,
+          "movieId": 286,
+          "title": "English Patient, The (1996)",
+          "genres": [
+            "Drama",
+            "Romance",
+            "War"
+          ],
+          "score": 279,
+          "popularity": 279,
+          "hit": false
+        },
+        {
+          "rank": 4,
+          "movieId": 300,
+          "title": "Air Force One (1997)",
+          "genres": [
+            "Action",
+            "Thriller"
+          ],
+          "score": 235,
+          "popularity": 235,
+          "hit": false
+        },
+        {
+          "rank": 5,
+          "movieId": 288,
+          "title": "Scream (1996)",
+          "genres": [
+            "Horror",
+            "Thriller"
+          ],
+          "score": 226,
+          "popularity": 226,
+          "hit": false
+        },
+        {
+          "rank": 6,
+          "movieId": 318,
+          "title": "Schindler's List (1993)",
+          "genres": [
+            "Drama",
+            "War"
+          ],
+          "score": 224,
+          "popularity": 224,
+          "hit": false
+        },
+        {
+          "rank": 7,
+          "movieId": 313,
+          "title": "Titanic (1997)",
+          "genres": [
+            "Action",
+            "Drama",
+            "Romance"
+          ],
+          "score": 219,
+          "popularity": 219,
+          "hit": false
+        },
+        {
+          "rank": 8,
+          "movieId": 302,
+          "title": "L.A. Confidential (1997)",
+          "genres": [
+            "Crime",
+            "Film-Noir",
+            "Mystery",
+            "Thriller"
+          ],
+          "score": 202,
+          "popularity": 202,
+          "hit": false
+        },
+        {
+          "rank": 9,
+          "movieId": 357,
+          "title": "One Flew Over the Cuckoo's Nest (1975)",
+          "genres": [
+            "Drama"
+          ],
+          "score": 202,
+          "popularity": 202,
+          "hit": false
+        },
+        {
+          "rank": 10,
+          "movieId": 483,
+          "title": "Casablanca (1942)",
+          "genres": [
+            "Drama",
+            "Romance",
+            "War"
+          ],
+          "score": 197,
+          "popularity": 197,
+          "hit": false
+        }
+      ],
+      "meanPopularity": 246.8,
+      "hits": 2,
+      "relevant": 19,
+      "short": false,
+      "zeroScoreCount": 0,
+      "renderedRows": [
+        [
+          "1",
+          "100",
+          "Fargo (1996)",
+          "Crime, Drama, Thriller",
+          "377.0000",
+          "377"
+        ],
+        [
+          "2",
+          "258",
+          "Contact (1997)",
+          "Drama, Sci-Fi",
+          "307.0000",
+          "307"
+        ],
+        [
+          "3",
+          "286",
+          "English Patient, The (1996)",
+          "Drama, Romance, War",
+          "279.0000",
+          "279"
+        ],
+        [
+          "4",
+          "300",
+          "Air Force One (1997)",
+          "Action, Thriller",
+          "235.0000",
+          "235"
+        ],
+        [
+          "5",
+          "288",
+          "Scream (1996)",
+          "Horror, Thriller",
+          "226.0000",
+          "226"
+        ],
+        [
+          "6",
+          "318",
+          "Schindler's List (1993)",
+          "Drama, War",
+          "224.0000",
+          "224"
+        ],
+        [
+          "7",
+          "313",
+          "Titanic (1997)",
+          "Action, Drama, Romance",
+          "219.0000",
+          "219"
+        ],
+        [
+          "8",
+          "302",
+          "L.A. Confidential (1997)",
+          "Crime, Film-Noir, Mystery, Thriller",
+          "202.0000",
+          "202"
+        ],
+        [
+          "9",
+          "357",
+          "One Flew Over the Cuckoo's Nest (1975)",
+          "Drama",
+          "202.0000",
+          "202"
+        ],
+        [
+          "10",
+          "483",
+          "Casablanca (1942)",
+          "Drama, Romance, War",
+          "197.0000",
+          "197"
+        ]
+      ],
+      "panelText": "Method popularity, alpha 0.50, test-split exclusions (training + validation rated movies).\n\nRank\tMovie id\tTitle\tGenres\tScore\tTraining popularity\n1\t100\tFargo (1996)\tCrime, Drama, Thriller\t377.0000\t377\n2\t258\tContact (1997)\tDrama, Sci-Fi\t307.0000\t307\n3\t286\tEnglish Patient, The (1996)\tDrama, Romance, War\t279.0000\t279\n4\t300\tAir Force One (1997)\tAction, Thriller\t235.0000\t235\n5\t288\tScream (1996)\tHorror, Thriller\t226.0000\t226\n6\t318\tSchindler's List (1993)\tDrama, War\t224.0000\t224\n7\t313\tTitanic (1997)\tAction, Drama, Romance\t219.0000\t219\n8\t302\tL.A. Confidential (1997)\tCrime, Film-Noir, Mystery, Thriller\t202.0000\t202\n9\t357\tOne Flew Over the Cuckoo's Nest (1975)\tDrama\t202.0000\t202\n10\t483\tCasablanca (1942)\tDrama, Romance, War\t197.0000\t197"
+    },
+    {
+      "label": "primary",
+      "userId": 1,
+      "method": "pagerank",
+      "alpha": 0.5,
+      "rows": [
+        {
+          "rank": 1,
+          "movieId": 258,
+          "title": "Contact (1997)",
+          "genres": [
+            "Drama",
+            "Sci-Fi"
+          ],
+          "score": 0.0023751864209771156,
+          "popularity": 307,
+          "hit": true
+        },
+        {
+          "rank": 2,
+          "movieId": 286,
+          "title": "English Patient, The (1996)",
+          "genres": [
+            "Drama",
+            "Romance",
+            "War"
+          ],
+          "score": 0.002291253302246332,
+          "popularity": 279,
+          "hit": false
+        },
+        {
+          "rank": 3,
+          "movieId": 100,
+          "title": "Fargo (1996)",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "score": 0.002271695528179407,
+          "popularity": 377,
+          "hit": true
+        },
+        {
+          "rank": 4,
+          "movieId": 313,
+          "title": "Titanic (1997)",
+          "genres": [
+            "Action",
+            "Drama",
+            "Romance"
+          ],
+          "score": 0.0020634259562939405,
+          "popularity": 219,
+          "hit": false
+        },
+        {
+          "rank": 5,
+          "movieId": 300,
+          "title": "Air Force One (1997)",
+          "genres": [
+            "Action",
+            "Thriller"
+          ],
+          "score": 0.0020034192129969597,
+          "popularity": 235,
+          "hit": false
+        },
+        {
+          "rank": 6,
+          "movieId": 288,
+          "title": "Scream (1996)",
+          "genres": [
+            "Horror",
+            "Thriller"
+          ],
+          "score": 0.0018683733651414514,
+          "popularity": 226,
+          "hit": false
+        },
+        {
+          "rank": 7,
+          "movieId": 302,
+          "title": "L.A. Confidential (1997)",
+          "genres": [
+            "Crime",
+            "Film-Noir",
+            "Mystery",
+            "Thriller"
+          ],
+          "score": 0.001798133598640561,
+          "popularity": 202,
+          "hit": false
+        },
+        {
+          "rank": 8,
+          "movieId": 294,
+          "title": "Liar Liar (1997)",
+          "genres": [
+            "Comedy"
+          ],
+          "score": 0.0014883464900776744,
+          "popularity": 182,
+          "hit": false
+        },
+        {
+          "rank": 9,
+          "movieId": 275,
+          "title": "Sense and Sensibility (1995)",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "score": 0.0012158651370555162,
+          "popularity": 178,
+          "hit": false
+        },
+        {
+          "rank": 10,
+          "movieId": 222,
+          "title": "Star Trek: First Contact (1996)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "score": 0.0011928167659789324,
+          "popularity": 189,
+          "hit": true
+        }
+      ],
+      "meanPopularity": 239.4,
+      "hits": 3,
+      "relevant": 19,
+      "short": false,
+      "zeroScoreCount": 0,
+      "renderedRows": [
+        [
+          "1",
+          "258",
+          "Contact (1997)",
+          "Drama, Sci-Fi",
+          "0.0024",
+          "307"
+        ],
+        [
+          "2",
+          "286",
+          "English Patient, The (1996)",
+          "Drama, Romance, War",
+          "0.0023",
+          "279"
+        ],
+        [
+          "3",
+          "100",
+          "Fargo (1996)",
+          "Crime, Drama, Thriller",
+          "0.0023",
+          "377"
+        ],
+        [
+          "4",
+          "313",
+          "Titanic (1997)",
+          "Action, Drama, Romance",
+          "0.0021",
+          "219"
+        ],
+        [
+          "5",
+          "300",
+          "Air Force One (1997)",
+          "Action, Thriller",
+          "0.0020",
+          "235"
+        ],
+        [
+          "6",
+          "288",
+          "Scream (1996)",
+          "Horror, Thriller",
+          "0.0019",
+          "226"
+        ],
+        [
+          "7",
+          "302",
+          "L.A. Confidential (1997)",
+          "Crime, Film-Noir, Mystery, Thriller",
+          "0.0018",
+          "202"
+        ],
+        [
+          "8",
+          "294",
+          "Liar Liar (1997)",
+          "Comedy",
+          "0.0015",
+          "182"
+        ],
+        [
+          "9",
+          "275",
+          "Sense and Sensibility (1995)",
+          "Drama, Romance",
+          "0.0012",
+          "178"
+        ],
+        [
+          "10",
+          "222",
+          "Star Trek: First Contact (1996)",
+          "Action, Adventure, Sci-Fi",
+          "0.0012",
+          "189"
+        ]
+      ],
+      "panelText": "Method pagerank, alpha 0.50, test-split exclusions (training + validation rated movies).\n\nRank\tMovie id\tTitle\tGenres\tScore\tTraining popularity\n1\t258\tContact (1997)\tDrama, Sci-Fi\t0.0024\t307\n2\t286\tEnglish Patient, The (1996)\tDrama, Romance, War\t0.0023\t279\n3\t100\tFargo (1996)\tCrime, Drama, Thriller\t0.0023\t377\n4\t313\tTitanic (1997)\tAction, Drama, Romance\t0.0021\t219\n5\t300\tAir Force One (1997)\tAction, Thriller\t0.0020\t235\n6\t288\tScream (1996)\tHorror, Thriller\t0.0019\t226\n7\t302\tL.A. Confidential (1997)\tCrime, Film-Noir, Mystery, Thriller\t0.0018\t202\n8\t294\tLiar Liar (1997)\tComedy\t0.0015\t182\n9\t275\tSense and Sensibility (1995)\tDrama, Romance\t0.0012\t178\n10\t222\tStar Trek: First Contact (1996)\tAction, Adventure, Sci-Fi\t0.0012\t189\n\nThese are graph-walk probabilities, not predicted ratings."
+    },
+    {
+      "label": "primary",
+      "userId": 1,
+      "method": "ppr",
+      "alpha": 0.5,
+      "rows": [
+        {
+          "rank": 1,
+          "movieId": 100,
+          "title": "Fargo (1996)",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "score": 0.0006855191895738244,
+          "popularity": 377,
+          "hit": true
+        },
+        {
+          "rank": 2,
+          "movieId": 258,
+          "title": "Contact (1997)",
+          "genres": [
+            "Drama",
+            "Sci-Fi"
+          ],
+          "score": 0.0004398658056743443,
+          "popularity": 307,
+          "hit": true
+        },
+        {
+          "rank": 3,
+          "movieId": 286,
+          "title": "English Patient, The (1996)",
+          "genres": [
+            "Drama",
+            "Romance",
+            "War"
+          ],
+          "score": 0.00043101841583848,
+          "popularity": 279,
+          "hit": false
+        },
+        {
+          "rank": 4,
+          "movieId": 318,
+          "title": "Schindler's List (1993)",
+          "genres": [
+            "Drama",
+            "War"
+          ],
+          "score": 0.0004038166953250766,
+          "popularity": 224,
+          "hit": false
+        },
+        {
+          "rank": 5,
+          "movieId": 357,
+          "title": "One Flew Over the Cuckoo's Nest (1975)",
+          "genres": [
+            "Drama"
+          ],
+          "score": 0.00037716623046435416,
+          "popularity": 202,
+          "hit": false
+        },
+        {
+          "rank": 6,
+          "movieId": 483,
+          "title": "Casablanca (1942)",
+          "genres": [
+            "Drama",
+            "Romance",
+            "War"
+          ],
+          "score": 0.00035968932206742465,
+          "popularity": 197,
+          "hit": false
+        },
+        {
+          "rank": 7,
+          "movieId": 222,
+          "title": "Star Trek: First Contact (1996)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "score": 0.00033278539194725454,
+          "popularity": 189,
+          "hit": true
+        },
+        {
+          "rank": 8,
+          "movieId": 475,
+          "title": "Trainspotting (1996)",
+          "genres": [
+            "Drama"
+          ],
+          "score": 0.00032809015829116106,
+          "popularity": 164,
+          "hit": false
+        },
+        {
+          "rank": 9,
+          "movieId": 275,
+          "title": "Sense and Sensibility (1995)",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "score": 0.00032018491765484214,
+          "popularity": 178,
+          "hit": false
+        },
+        {
+          "rank": 10,
+          "movieId": 423,
+          "title": "E.T. the Extra-Terrestrial (1982)",
+          "genres": [
+            "Children's",
+            "Drama",
+            "Fantasy",
+            "Sci-Fi"
+          ],
+          "score": 0.00030566827626898885,
+          "popularity": 167,
+          "hit": false
+        }
+      ],
+      "meanPopularity": 228.4,
+      "hits": 3,
+      "relevant": 19,
+      "short": false,
+      "zeroScoreCount": 0,
+      "renderedRows": [
+        [
+          "1",
+          "100",
+          "Fargo (1996)",
+          "Crime, Drama, Thriller",
+          "0.0007",
+          "377"
+        ],
+        [
+          "2",
+          "258",
+          "Contact (1997)",
+          "Drama, Sci-Fi",
+          "0.0004",
+          "307"
+        ],
+        [
+          "3",
+          "286",
+          "English Patient, The (1996)",
+          "Drama, Romance, War",
+          "0.0004",
+          "279"
+        ],
+        [
+          "4",
+          "318",
+          "Schindler's List (1993)",
+          "Drama, War",
+          "0.0004",
+          "224"
+        ],
+        [
+          "5",
+          "357",
+          "One Flew Over the Cuckoo's Nest (1975)",
+          "Drama",
+          "0.0004",
+          "202"
+        ],
+        [
+          "6",
+          "483",
+          "Casablanca (1942)",
+          "Drama, Romance, War",
+          "0.0004",
+          "197"
+        ],
+        [
+          "7",
+          "222",
+          "Star Trek: First Contact (1996)",
+          "Action, Adventure, Sci-Fi",
+          "0.0003",
+          "189"
+        ],
+        [
+          "8",
+          "475",
+          "Trainspotting (1996)",
+          "Drama",
+          "0.0003",
+          "164"
+        ],
+        [
+          "9",
+          "275",
+          "Sense and Sensibility (1995)",
+          "Drama, Romance",
+          "0.0003",
+          "178"
+        ],
+        [
+          "10",
+          "423",
+          "E.T. the Extra-Terrestrial (1982)",
+          "Children's, Drama, Fantasy, Sci-Fi",
+          "0.0003",
+          "167"
+        ]
+      ],
+      "panelText": "Method ppr, alpha 0.50, test-split exclusions (training + validation rated movies).\n\nRank\tMovie id\tTitle\tGenres\tScore\tTraining popularity\n1\t100\tFargo (1996)\tCrime, Drama, Thriller\t0.0007\t377\n2\t258\tContact (1997)\tDrama, Sci-Fi\t0.0004\t307\n3\t286\tEnglish Patient, The (1996)\tDrama, Romance, War\t0.0004\t279\n4\t318\tSchindler's List (1993)\tDrama, War\t0.0004\t224\n5\t357\tOne Flew Over the Cuckoo's Nest (1975)\tDrama\t0.0004\t202\n6\t483\tCasablanca (1942)\tDrama, Romance, War\t0.0004\t197\n7\t222\tStar Trek: First Contact (1996)\tAction, Adventure, Sci-Fi\t0.0003\t189\n8\t475\tTrainspotting (1996)\tDrama\t0.0003\t164\n9\t275\tSense and Sensibility (1995)\tDrama, Romance\t0.0003\t178\n10\t423\tE.T. the Extra-Terrestrial (1982)\tChildren's, Drama, Fantasy, Sci-Fi\t0.0003\t167\n\nThese are graph-walk probabilities, not predicted ratings."
+    },
+    {
+      "label": "primary",
+      "userId": 1,
+      "method": "mf",
+      "alpha": 0.5,
+      "rows": [
+        {
+          "rank": 1,
+          "movieId": 5,
+          "title": "Copycat (1995)",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 28,
+          "hit": false
+        },
+        {
+          "rank": 2,
+          "movieId": 6,
+          "title": "Shanghai Triad (Yao a yao yao dao waipo qiao) (1995)",
+          "genres": [
+            "Drama"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 12,
+          "hit": true
+        },
+        {
+          "rank": 3,
+          "movieId": 18,
+          "title": "White Balloon, The (1995)",
+          "genres": [
+            "Drama"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 1,
+          "hit": true
+        },
+        {
+          "rank": 4,
+          "movieId": 20,
+          "title": "Angels and Insects (1995)",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 31,
+          "hit": true
+        },
+        {
+          "rank": 5,
+          "movieId": 32,
+          "title": "Crumb (1994)",
+          "genres": [
+            "Documentary"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 46,
+          "hit": true
+        },
+        {
+          "rank": 6,
+          "movieId": 74,
+          "title": "Faster Pussycat! Kill! Kill! (1965)",
+          "genres": [
+            "Action",
+            "Comedy",
+            "Drama"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 2,
+          "hit": false
+        },
+        {
+          "rank": 7,
+          "movieId": 100,
+          "title": "Fargo (1996)",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 377,
+          "hit": true
+        },
+        {
+          "rank": 8,
+          "movieId": 102,
+          "title": "Aristocats, The (1970)",
+          "genres": [
+            "Animation",
+            "Children's"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 18,
+          "hit": false
+        },
+        {
+          "rank": 9,
+          "movieId": 111,
+          "title": "Truth About Cats & Dogs, The (1996)",
+          "genres": [
+            "Comedy",
+            "Romance"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 131,
+          "hit": true
+        },
+        {
+          "rank": 10,
+          "movieId": 129,
+          "title": "Bound (1996)",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Romance",
+            "Thriller"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 76,
+          "hit": true
+        }
+      ],
+      "meanPopularity": 72.2,
+      "hits": 7,
+      "relevant": 19,
+      "short": false,
+      "zeroScoreCount": 0,
+      "renderedRows": [
+        [
+          "1",
+          "5",
+          "Copycat (1995)",
+          "Crime, Drama, Thriller",
+          "3.5806",
+          "28"
+        ],
+        [
+          "2",
+          "6",
+          "Shanghai Triad (Yao a yao yao dao waipo qiao) (1995)",
+          "Drama",
+          "3.5806",
+          "12"
+        ],
+        [
+          "3",
+          "18",
+          "White Balloon, The (1995)",
+          "Drama",
+          "3.5806",
+          "1"
+        ],
+        [
+          "4",
+          "20",
+          "Angels and Insects (1995)",
+          "Drama, Romance",
+          "3.5806",
+          "31"
+        ],
+        [
+          "5",
+          "32",
+          "Crumb (1994)",
+          "Documentary",
+          "3.5806",
+          "46"
+        ],
+        [
+          "6",
+          "74",
+          "Faster Pussycat! Kill! Kill! (1965)",
+          "Action, Comedy, Drama",
+          "3.5806",
+          "2"
+        ],
+        [
+          "7",
+          "100",
+          "Fargo (1996)",
+          "Crime, Drama, Thriller",
+          "3.5806",
+          "377"
+        ],
+        [
+          "8",
+          "102",
+          "Aristocats, The (1970)",
+          "Animation, Children's",
+          "3.5806",
+          "18"
+        ],
+        [
+          "9",
+          "111",
+          "Truth About Cats & Dogs, The (1996)",
+          "Comedy, Romance",
+          "3.5806",
+          "131"
+        ],
+        [
+          "10",
+          "129",
+          "Bound (1996)",
+          "Crime, Drama, Romance, Thriller",
+          "3.5806",
+          "76"
+        ]
+      ],
+      "panelText": "Method mf, alpha 0.50, test-split exclusions (training + validation rated movies).\n\nRank\tMovie id\tTitle\tGenres\tScore\tTraining popularity\n1\t5\tCopycat (1995)\tCrime, Drama, Thriller\t3.5806\t28\n2\t6\tShanghai Triad (Yao a yao yao dao waipo qiao) (1995)\tDrama\t3.5806\t12\n3\t18\tWhite Balloon, The (1995)\tDrama\t3.5806\t1\n4\t20\tAngels and Insects (1995)\tDrama, Romance\t3.5806\t31\n5\t32\tCrumb (1994)\tDocumentary\t3.5806\t46\n6\t74\tFaster Pussycat! Kill! Kill! (1965)\tAction, Comedy, Drama\t3.5806\t2\n7\t100\tFargo (1996)\tCrime, Drama, Thriller\t3.5806\t377\n8\t102\tAristocats, The (1970)\tAnimation, Children's\t3.5806\t18\n9\t111\tTruth About Cats & Dogs, The (1996)\tComedy, Romance\t3.5806\t131\n10\t129\tBound (1996)\tCrime, Drama, Romance, Thriller\t3.5806\t76"
+    },
+    {
+      "label": "primary",
+      "userId": 2,
+      "method": "popularity",
+      "alpha": 0.5,
+      "rows": [
+        {
+          "rank": 1,
+          "movieId": 181,
+          "title": "Return of the Jedi (1983)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Romance",
+            "Sci-Fi",
+            "War"
+          ],
+          "score": 339,
+          "popularity": 339,
+          "hit": false
+        },
+        {
+          "rank": 2,
+          "movieId": 174,
+          "title": "Raiders of the Lost Ark (1981)",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "score": 312,
+          "popularity": 312,
+          "hit": false
+        },
+        {
+          "rank": 3,
+          "movieId": 98,
+          "title": "Silence of the Lambs, The (1991)",
+          "genres": [
+            "Drama",
+            "Thriller"
+          ],
+          "score": 308,
+          "popularity": 308,
+          "hit": false
+        },
+        {
+          "rank": 4,
+          "movieId": 56,
+          "title": "Pulp Fiction (1994)",
+          "genres": [
+            "Crime",
+            "Drama"
+          ],
+          "score": 263,
+          "popularity": 263,
+          "hit": false
+        },
+        {
+          "rank": 5,
+          "movieId": 172,
+          "title": "Empire Strikes Back, The (1980)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Romance",
+            "Sci-Fi",
+            "War"
+          ],
+          "score": 261,
+          "popularity": 261,
+          "hit": false
+        },
+        {
+          "rank": 6,
+          "movieId": 7,
+          "title": "Twelve Monkeys (1995)",
+          "genres": [
+            "Drama",
+            "Sci-Fi"
+          ],
+          "score": 234,
+          "popularity": 234,
+          "hit": false
+        },
+        {
+          "rank": 7,
+          "movieId": 79,
+          "title": "Fugitive, The (1993)",
+          "genres": [
+            "Action",
+            "Thriller"
+          ],
+          "score": 230,
+          "popularity": 230,
+          "hit": false
+        },
+        {
+          "rank": 8,
+          "movieId": 64,
+          "title": "Shawshank Redemption, The (1994)",
+          "genres": [
+            "Drama"
+          ],
+          "score": 228,
+          "popularity": 228,
+          "hit": false
+        },
+        {
+          "rank": 9,
+          "movieId": 318,
+          "title": "Schindler's List (1993)",
+          "genres": [
+            "Drama",
+            "War"
+          ],
+          "score": 224,
+          "popularity": 224,
+          "hit": false
+        },
+        {
+          "rank": 10,
+          "movieId": 173,
+          "title": "Princess Bride, The (1987)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Romance"
+          ],
+          "score": 222,
+          "popularity": 222,
+          "hit": false
+        }
+      ],
+      "meanPopularity": 262.1,
+      "hits": 0,
+      "relevant": 2,
+      "short": false,
+      "zeroScoreCount": 0,
+      "renderedRows": [
+        [
+          "1",
+          "181",
+          "Return of the Jedi (1983)",
+          "Action, Adventure, Romance, Sci-Fi, War",
+          "339.0000",
+          "339"
+        ],
+        [
+          "2",
+          "174",
+          "Raiders of the Lost Ark (1981)",
+          "Action, Adventure",
+          "312.0000",
+          "312"
+        ],
+        [
+          "3",
+          "98",
+          "Silence of the Lambs, The (1991)",
+          "Drama, Thriller",
+          "308.0000",
+          "308"
+        ],
+        [
+          "4",
+          "56",
+          "Pulp Fiction (1994)",
+          "Crime, Drama",
+          "263.0000",
+          "263"
+        ],
+        [
+          "5",
+          "172",
+          "Empire Strikes Back, The (1980)",
+          "Action, Adventure, Drama, Romance, Sci-Fi, War",
+          "261.0000",
+          "261"
+        ],
+        [
+          "6",
+          "7",
+          "Twelve Monkeys (1995)",
+          "Drama, Sci-Fi",
+          "234.0000",
+          "234"
+        ],
+        [
+          "7",
+          "79",
+          "Fugitive, The (1993)",
+          "Action, Thriller",
+          "230.0000",
+          "230"
+        ],
+        [
+          "8",
+          "64",
+          "Shawshank Redemption, The (1994)",
+          "Drama",
+          "228.0000",
+          "228"
+        ],
+        [
+          "9",
+          "318",
+          "Schindler's List (1993)",
+          "Drama, War",
+          "224.0000",
+          "224"
+        ],
+        [
+          "10",
+          "173",
+          "Princess Bride, The (1987)",
+          "Action, Adventure, Comedy, Romance",
+          "222.0000",
+          "222"
+        ]
+      ],
+      "panelText": "Method popularity, alpha 0.50, test-split exclusions (training + validation rated movies).\n\nRank\tMovie id\tTitle\tGenres\tScore\tTraining popularity\n1\t181\tReturn of the Jedi (1983)\tAction, Adventure, Romance, Sci-Fi, War\t339.0000\t339\n2\t174\tRaiders of the Lost Ark (1981)\tAction, Adventure\t312.0000\t312\n3\t98\tSilence of the Lambs, The (1991)\tDrama, Thriller\t308.0000\t308\n4\t56\tPulp Fiction (1994)\tCrime, Drama\t263.0000\t263\n5\t172\tEmpire Strikes Back, The (1980)\tAction, Adventure, Drama, Romance, Sci-Fi, War\t261.0000\t261\n6\t7\tTwelve Monkeys (1995)\tDrama, Sci-Fi\t234.0000\t234\n7\t79\tFugitive, The (1993)\tAction, Thriller\t230.0000\t230\n8\t64\tShawshank Redemption, The (1994)\tDrama\t228.0000\t228\n9\t318\tSchindler's List (1993)\tDrama, War\t224.0000\t224\n10\t173\tPrincess Bride, The (1987)\tAction, Adventure, Comedy, Romance\t222.0000\t222"
+    },
+    {
+      "label": "primary",
+      "userId": 2,
+      "method": "pagerank",
+      "alpha": 0.5,
+      "rows": [
+        {
+          "rank": 1,
+          "movieId": 181,
+          "title": "Return of the Jedi (1983)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Romance",
+            "Sci-Fi",
+            "War"
+          ],
+          "score": 0.0019889404065907,
+          "popularity": 339,
+          "hit": false
+        },
+        {
+          "rank": 2,
+          "movieId": 174,
+          "title": "Raiders of the Lost Ark (1981)",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "score": 0.0015527261421084404,
+          "popularity": 312,
+          "hit": false
+        },
+        {
+          "rank": 3,
+          "movieId": 98,
+          "title": "Silence of the Lambs, The (1991)",
+          "genres": [
+            "Drama",
+            "Thriller"
+          ],
+          "score": 0.0015255436301231384,
+          "popularity": 308,
+          "hit": false
+        },
+        {
+          "rank": 4,
+          "movieId": 7,
+          "title": "Twelve Monkeys (1995)",
+          "genres": [
+            "Drama",
+            "Sci-Fi"
+          ],
+          "score": 0.001373774721287191,
+          "popularity": 234,
+          "hit": false
+        },
+        {
+          "rank": 5,
+          "movieId": 56,
+          "title": "Pulp Fiction (1994)",
+          "genres": [
+            "Crime",
+            "Drama"
+          ],
+          "score": 0.0013726184843108058,
+          "popularity": 263,
+          "hit": false
+        },
+        {
+          "rank": 6,
+          "movieId": 172,
+          "title": "Empire Strikes Back, The (1980)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Romance",
+            "Sci-Fi",
+            "War"
+          ],
+          "score": 0.0013182985130697489,
+          "popularity": 261,
+          "hit": false
+        },
+        {
+          "rank": 7,
+          "movieId": 117,
+          "title": "Rock, The (1996)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Thriller"
+          ],
+          "score": 0.0013080037897452712,
+          "popularity": 215,
+          "hit": false
+        },
+        {
+          "rank": 8,
+          "movieId": 121,
+          "title": "Independence Day (ID4) (1996)",
+          "genres": [
+            "Action",
+            "Sci-Fi",
+            "War"
+          ],
+          "score": 0.0012972892727702856,
+          "popularity": 207,
+          "hit": false
+        },
+        {
+          "rank": 9,
+          "movieId": 268,
+          "title": "Chasing Amy (1997)",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "score": 0.0012656085891649127,
+          "popularity": 146,
+          "hit": false
+        },
+        {
+          "rank": 10,
+          "movieId": 222,
+          "title": "Star Trek: First Contact (1996)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "score": 0.0011928167659789324,
+          "popularity": 189,
+          "hit": false
+        }
+      ],
+      "meanPopularity": 247.4,
+      "hits": 0,
+      "relevant": 2,
+      "short": false,
+      "zeroScoreCount": 0,
+      "renderedRows": [
+        [
+          "1",
+          "181",
+          "Return of the Jedi (1983)",
+          "Action, Adventure, Romance, Sci-Fi, War",
+          "0.0020",
+          "339"
+        ],
+        [
+          "2",
+          "174",
+          "Raiders of the Lost Ark (1981)",
+          "Action, Adventure",
+          "0.0016",
+          "312"
+        ],
+        [
+          "3",
+          "98",
+          "Silence of the Lambs, The (1991)",
+          "Drama, Thriller",
+          "0.0015",
+          "308"
+        ],
+        [
+          "4",
+          "7",
+          "Twelve Monkeys (1995)",
+          "Drama, Sci-Fi",
+          "0.0014",
+          "234"
+        ],
+        [
+          "5",
+          "56",
+          "Pulp Fiction (1994)",
+          "Crime, Drama",
+          "0.0014",
+          "263"
+        ],
+        [
+          "6",
+          "172",
+          "Empire Strikes Back, The (1980)",
+          "Action, Adventure, Drama, Romance, Sci-Fi, War",
+          "0.0013",
+          "261"
+        ],
+        [
+          "7",
+          "117",
+          "Rock, The (1996)",
+          "Action, Adventure, Thriller",
+          "0.0013",
+          "215"
+        ],
+        [
+          "8",
+          "121",
+          "Independence Day (ID4) (1996)",
+          "Action, Sci-Fi, War",
+          "0.0013",
+          "207"
+        ],
+        [
+          "9",
+          "268",
+          "Chasing Amy (1997)",
+          "Drama, Romance",
+          "0.0013",
+          "146"
+        ],
+        [
+          "10",
+          "222",
+          "Star Trek: First Contact (1996)",
+          "Action, Adventure, Sci-Fi",
+          "0.0012",
+          "189"
+        ]
+      ],
+      "panelText": "Method pagerank, alpha 0.50, test-split exclusions (training + validation rated movies).\n\nRank\tMovie id\tTitle\tGenres\tScore\tTraining popularity\n1\t181\tReturn of the Jedi (1983)\tAction, Adventure, Romance, Sci-Fi, War\t0.0020\t339\n2\t174\tRaiders of the Lost Ark (1981)\tAction, Adventure\t0.0016\t312\n3\t98\tSilence of the Lambs, The (1991)\tDrama, Thriller\t0.0015\t308\n4\t7\tTwelve Monkeys (1995)\tDrama, Sci-Fi\t0.0014\t234\n5\t56\tPulp Fiction (1994)\tCrime, Drama\t0.0014\t263\n6\t172\tEmpire Strikes Back, The (1980)\tAction, Adventure, Drama, Romance, Sci-Fi, War\t0.0013\t261\n7\t117\tRock, The (1996)\tAction, Adventure, Thriller\t0.0013\t215\n8\t121\tIndependence Day (ID4) (1996)\tAction, Sci-Fi, War\t0.0013\t207\n9\t268\tChasing Amy (1997)\tDrama, Romance\t0.0013\t146\n10\t222\tStar Trek: First Contact (1996)\tAction, Adventure, Sci-Fi\t0.0012\t189\n\nThese are graph-walk probabilities, not predicted ratings."
+    },
+    {
+      "label": "primary",
+      "userId": 2,
+      "method": "ppr",
+      "alpha": 0.5,
+      "rows": [
+        {
+          "rank": 1,
+          "movieId": 181,
+          "title": "Return of the Jedi (1983)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Romance",
+            "Sci-Fi",
+            "War"
+          ],
+          "score": 0.0006973391282372177,
+          "popularity": 339,
+          "hit": false
+        },
+        {
+          "rank": 2,
+          "movieId": 9,
+          "title": "Dead Man Walking (1995)",
+          "genres": [
+            "Drama"
+          ],
+          "score": 0.0004976635682396591,
+          "popularity": 182,
+          "hit": false
+        },
+        {
+          "rank": 3,
+          "movieId": 7,
+          "title": "Twelve Monkeys (1995)",
+          "genres": [
+            "Drama",
+            "Sci-Fi"
+          ],
+          "score": 0.00047437407192774117,
+          "popularity": 234,
+          "hit": false
+        },
+        {
+          "rank": 4,
+          "movieId": 117,
+          "title": "Rock, The (1996)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Thriller"
+          ],
+          "score": 0.0004563616821542382,
+          "popularity": 215,
+          "hit": false
+        },
+        {
+          "rank": 5,
+          "movieId": 98,
+          "title": "Silence of the Lambs, The (1991)",
+          "genres": [
+            "Drama",
+            "Thriller"
+          ],
+          "score": 0.00044651018106378615,
+          "popularity": 308,
+          "hit": false
+        },
+        {
+          "rank": 6,
+          "movieId": 121,
+          "title": "Independence Day (ID4) (1996)",
+          "genres": [
+            "Action",
+            "Sci-Fi",
+            "War"
+          ],
+          "score": 0.00043071250547654927,
+          "popularity": 207,
+          "hit": false
+        },
+        {
+          "rank": 7,
+          "movieId": 174,
+          "title": "Raiders of the Lost Ark (1981)",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "score": 0.00040285097202286124,
+          "popularity": 312,
+          "hit": false
+        },
+        {
+          "rank": 8,
+          "movieId": 268,
+          "title": "Chasing Amy (1997)",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "score": 0.00040181103395298123,
+          "popularity": 146,
+          "hit": false
+        },
+        {
+          "rank": 9,
+          "movieId": 475,
+          "title": "Trainspotting (1996)",
+          "genres": [
+            "Drama"
+          ],
+          "score": 0.00040160532807931304,
+          "popularity": 164,
+          "hit": false
+        },
+        {
+          "rank": 10,
+          "movieId": 15,
+          "title": "Mr. Holland's Opus (1995)",
+          "genres": [
+            "Drama"
+          ],
+          "score": 0.0004009184194728732,
+          "popularity": 160,
+          "hit": false
+        }
+      ],
+      "meanPopularity": 226.7,
+      "hits": 0,
+      "relevant": 2,
+      "short": false,
+      "zeroScoreCount": 0,
+      "renderedRows": [
+        [
+          "1",
+          "181",
+          "Return of the Jedi (1983)",
+          "Action, Adventure, Romance, Sci-Fi, War",
+          "0.0007",
+          "339"
+        ],
+        [
+          "2",
+          "9",
+          "Dead Man Walking (1995)",
+          "Drama",
+          "0.0005",
+          "182"
+        ],
+        [
+          "3",
+          "7",
+          "Twelve Monkeys (1995)",
+          "Drama, Sci-Fi",
+          "0.0005",
+          "234"
+        ],
+        [
+          "4",
+          "117",
+          "Rock, The (1996)",
+          "Action, Adventure, Thriller",
+          "0.0005",
+          "215"
+        ],
+        [
+          "5",
+          "98",
+          "Silence of the Lambs, The (1991)",
+          "Drama, Thriller",
+          "0.0004",
+          "308"
+        ],
+        [
+          "6",
+          "121",
+          "Independence Day (ID4) (1996)",
+          "Action, Sci-Fi, War",
+          "0.0004",
+          "207"
+        ],
+        [
+          "7",
+          "174",
+          "Raiders of the Lost Ark (1981)",
+          "Action, Adventure",
+          "0.0004",
+          "312"
+        ],
+        [
+          "8",
+          "268",
+          "Chasing Amy (1997)",
+          "Drama, Romance",
+          "0.0004",
+          "146"
+        ],
+        [
+          "9",
+          "475",
+          "Trainspotting (1996)",
+          "Drama",
+          "0.0004",
+          "164"
+        ],
+        [
+          "10",
+          "15",
+          "Mr. Holland's Opus (1995)",
+          "Drama",
+          "0.0004",
+          "160"
+        ]
+      ],
+      "panelText": "Method ppr, alpha 0.50, test-split exclusions (training + validation rated movies).\n\nRank\tMovie id\tTitle\tGenres\tScore\tTraining popularity\n1\t181\tReturn of the Jedi (1983)\tAction, Adventure, Romance, Sci-Fi, War\t0.0007\t339\n2\t9\tDead Man Walking (1995)\tDrama\t0.0005\t182\n3\t7\tTwelve Monkeys (1995)\tDrama, Sci-Fi\t0.0005\t234\n4\t117\tRock, The (1996)\tAction, Adventure, Thriller\t0.0005\t215\n5\t98\tSilence of the Lambs, The (1991)\tDrama, Thriller\t0.0004\t308\n6\t121\tIndependence Day (ID4) (1996)\tAction, Sci-Fi, War\t0.0004\t207\n7\t174\tRaiders of the Lost Ark (1981)\tAction, Adventure\t0.0004\t312\n8\t268\tChasing Amy (1997)\tDrama, Romance\t0.0004\t146\n9\t475\tTrainspotting (1996)\tDrama\t0.0004\t164\n10\t15\tMr. Holland's Opus (1995)\tDrama\t0.0004\t160\n\nThese are graph-walk probabilities, not predicted ratings."
+    },
+    {
+      "label": "primary",
+      "userId": 2,
+      "method": "mf",
+      "alpha": 0.5,
+      "rows": [
+        {
+          "rank": 1,
+          "movieId": 2,
+          "title": "GoldenEye (1995)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Thriller"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 41,
+          "hit": false
+        },
+        {
+          "rank": 2,
+          "movieId": 3,
+          "title": "Four Rooms (1995)",
+          "genres": [
+            "Thriller"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 27,
+          "hit": false
+        },
+        {
+          "rank": 3,
+          "movieId": 4,
+          "title": "Get Shorty (1995)",
+          "genres": [
+            "Action",
+            "Comedy",
+            "Drama"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 96,
+          "hit": false
+        },
+        {
+          "rank": 4,
+          "movieId": 5,
+          "title": "Copycat (1995)",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 28,
+          "hit": false
+        },
+        {
+          "rank": 5,
+          "movieId": 6,
+          "title": "Shanghai Triad (Yao a yao yao dao waipo qiao) (1995)",
+          "genres": [
+            "Drama"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 12,
+          "hit": false
+        },
+        {
+          "rank": 6,
+          "movieId": 7,
+          "title": "Twelve Monkeys (1995)",
+          "genres": [
+            "Drama",
+            "Sci-Fi"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 234,
+          "hit": false
+        },
+        {
+          "rank": 7,
+          "movieId": 8,
+          "title": "Babe (1995)",
+          "genres": [
+            "Children's",
+            "Comedy",
+            "Drama"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 137,
+          "hit": false
+        },
+        {
+          "rank": 8,
+          "movieId": 9,
+          "title": "Dead Man Walking (1995)",
+          "genres": [
+            "Drama"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 182,
+          "hit": false
+        },
+        {
+          "rank": 9,
+          "movieId": 11,
+          "title": "Seven (Se7en) (1995)",
+          "genres": [
+            "Crime",
+            "Thriller"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 152,
+          "hit": false
+        },
+        {
+          "rank": 10,
+          "movieId": 12,
+          "title": "Usual Suspects, The (1995)",
+          "genres": [
+            "Crime",
+            "Thriller"
+          ],
+          "score": 3.5806026458740234,
+          "popularity": 205,
+          "hit": false
+        }
+      ],
+      "meanPopularity": 111.4,
+      "hits": 0,
+      "relevant": 2,
+      "short": false,
+      "zeroScoreCount": 0,
+      "renderedRows": [
+        [
+          "1",
+          "2",
+          "GoldenEye (1995)",
+          "Action, Adventure, Thriller",
+          "3.5806",
+          "41"
+        ],
+        [
+          "2",
+          "3",
+          "Four Rooms (1995)",
+          "Thriller",
+          "3.5806",
+          "27"
+        ],
+        [
+          "3",
+          "4",
+          "Get Shorty (1995)",
+          "Action, Comedy, Drama",
+          "3.5806",
+          "96"
+        ],
+        [
+          "4",
+          "5",
+          "Copycat (1995)",
+          "Crime, Drama, Thriller",
+          "3.5806",
+          "28"
+        ],
+        [
+          "5",
+          "6",
+          "Shanghai Triad (Yao a yao yao dao waipo qiao) (1995)",
+          "Drama",
+          "3.5806",
+          "12"
+        ],
+        [
+          "6",
+          "7",
+          "Twelve Monkeys (1995)",
+          "Drama, Sci-Fi",
+          "3.5806",
+          "234"
+        ],
+        [
+          "7",
+          "8",
+          "Babe (1995)",
+          "Children's, Comedy, Drama",
+          "3.5806",
+          "137"
+        ],
+        [
+          "8",
+          "9",
+          "Dead Man Walking (1995)",
+          "Drama",
+          "3.5806",
+          "182"
+        ],
+        [
+          "9",
+          "11",
+          "Seven (Se7en) (1995)",
+          "Crime, Thriller",
+          "3.5806",
+          "152"
+        ],
+        [
+          "10",
+          "12",
+          "Usual Suspects, The (1995)",
+          "Crime, Thriller",
+          "3.5806",
+          "205"
+        ]
+      ],
+      "panelText": "Method mf, alpha 0.50, test-split exclusions (training + validation rated movies).\n\nRank\tMovie id\tTitle\tGenres\tScore\tTraining popularity\n1\t2\tGoldenEye (1995)\tAction, Adventure, Thriller\t3.5806\t41\n2\t3\tFour Rooms (1995)\tThriller\t3.5806\t27\n3\t4\tGet Shorty (1995)\tAction, Comedy, Drama\t3.5806\t96\n4\t5\tCopycat (1995)\tCrime, Drama, Thriller\t3.5806\t28\n5\t6\tShanghai Triad (Yao a yao yao dao waipo qiao) (1995)\tDrama\t3.5806\t12\n6\t7\tTwelve Monkeys (1995)\tDrama, Sci-Fi\t3.5806\t234\n7\t8\tBabe (1995)\tChildren's, Comedy, Drama\t3.5806\t137\n8\t9\tDead Man Walking (1995)\tDrama\t3.5806\t182\n9\t11\tSeven (Se7en) (1995)\tCrime, Thriller\t3.5806\t152\n10\t12\tUsual Suspects, The (1995)\tCrime, Thriller\t3.5806\t205"
+    },
+    {
+      "label": "baseline",
+      "userId": 1,
+      "method": "ppr",
+      "alpha": 0.85,
+      "rows": [
+        {
+          "rank": 1,
+          "movieId": 100,
+          "title": "Fargo (1996)",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "score": 0.002741683041676879,
+          "popularity": 377,
+          "hit": true
+        },
+        {
+          "rank": 2,
+          "movieId": 258,
+          "title": "Contact (1997)",
+          "genres": [
+            "Drama",
+            "Sci-Fi"
+          ],
+          "score": 0.00200196192599833,
+          "popularity": 307,
+          "hit": true
+        },
+        {
+          "rank": 3,
+          "movieId": 286,
+          "title": "English Patient, The (1996)",
+          "genres": [
+            "Drama",
+            "Romance",
+            "War"
+          ],
+          "score": 0.0018735380144789815,
+          "popularity": 279,
+          "hit": false
+        },
+        {
+          "rank": 4,
+          "movieId": 318,
+          "title": "Schindler's List (1993)",
+          "genres": [
+            "Drama",
+            "War"
+          ],
+          "score": 0.0016319365240633488,
+          "popularity": 224,
+          "hit": false
+        },
+        {
+          "rank": 5,
+          "movieId": 357,
+          "title": "One Flew Over the Cuckoo's Nest (1975)",
+          "genres": [
+            "Drama"
+          ],
+          "score": 0.001493106479756534,
+          "popularity": 202,
+          "hit": false
+        },
+        {
+          "rank": 6,
+          "movieId": 483,
+          "title": "Casablanca (1942)",
+          "genres": [
+            "Drama",
+            "Romance",
+            "War"
+          ],
+          "score": 0.0014446371933445334,
+          "popularity": 197,
+          "hit": false
+        },
+        {
+          "rank": 7,
+          "movieId": 288,
+          "title": "Scream (1996)",
+          "genres": [
+            "Horror",
+            "Thriller"
+          ],
+          "score": 0.0014287270605564117,
+          "popularity": 226,
+          "hit": false
+        },
+        {
+          "rank": 8,
+          "movieId": 300,
+          "title": "Air Force One (1997)",
+          "genres": [
+            "Action",
+            "Thriller"
+          ],
+          "score": 0.0014131064526736736,
+          "popularity": 235,
+          "hit": false
+        },
+        {
+          "rank": 9,
+          "movieId": 222,
+          "title": "Star Trek: First Contact (1996)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "score": 0.001352948253042996,
+          "popularity": 189,
+          "hit": true
+        },
+        {
+          "rank": 10,
+          "movieId": 313,
+          "title": "Titanic (1997)",
+          "genres": [
+            "Action",
+            "Drama",
+            "Romance"
+          ],
+          "score": 0.0013183335540816188,
+          "popularity": 219,
+          "hit": false
+        }
+      ],
+      "meanPopularity": 245.5,
+      "hits": 3,
+      "relevant": 19,
+      "short": false,
+      "zeroScoreCount": 0,
+      "renderedRows": [
+        [
+          "1",
+          "100",
+          "Fargo (1996)",
+          "Crime, Drama, Thriller",
+          "0.0027",
+          "377"
+        ],
+        [
+          "2",
+          "258",
+          "Contact (1997)",
+          "Drama, Sci-Fi",
+          "0.0020",
+          "307"
+        ],
+        [
+          "3",
+          "286",
+          "English Patient, The (1996)",
+          "Drama, Romance, War",
+          "0.0019",
+          "279"
+        ],
+        [
+          "4",
+          "318",
+          "Schindler's List (1993)",
+          "Drama, War",
+          "0.0016",
+          "224"
+        ],
+        [
+          "5",
+          "357",
+          "One Flew Over the Cuckoo's Nest (1975)",
+          "Drama",
+          "0.0015",
+          "202"
+        ],
+        [
+          "6",
+          "483",
+          "Casablanca (1942)",
+          "Drama, Romance, War",
+          "0.0014",
+          "197"
+        ],
+        [
+          "7",
+          "288",
+          "Scream (1996)",
+          "Horror, Thriller",
+          "0.0014",
+          "226"
+        ],
+        [
+          "8",
+          "300",
+          "Air Force One (1997)",
+          "Action, Thriller",
+          "0.0014",
+          "235"
+        ],
+        [
+          "9",
+          "222",
+          "Star Trek: First Contact (1996)",
+          "Action, Adventure, Sci-Fi",
+          "0.0014",
+          "189"
+        ],
+        [
+          "10",
+          "313",
+          "Titanic (1997)",
+          "Action, Drama, Romance",
+          "0.0013",
+          "219"
+        ]
+      ],
+      "panelText": "Method ppr, alpha 0.85, test-split exclusions (training + validation rated movies).\n\nRank\tMovie id\tTitle\tGenres\tScore\tTraining popularity\n1\t100\tFargo (1996)\tCrime, Drama, Thriller\t0.0027\t377\n2\t258\tContact (1997)\tDrama, Sci-Fi\t0.0020\t307\n3\t286\tEnglish Patient, The (1996)\tDrama, Romance, War\t0.0019\t279\n4\t318\tSchindler's List (1993)\tDrama, War\t0.0016\t224\n5\t357\tOne Flew Over the Cuckoo's Nest (1975)\tDrama\t0.0015\t202\n6\t483\tCasablanca (1942)\tDrama, Romance, War\t0.0014\t197\n7\t288\tScream (1996)\tHorror, Thriller\t0.0014\t226\n8\t300\tAir Force One (1997)\tAction, Thriller\t0.0014\t235\n9\t222\tStar Trek: First Contact (1996)\tAction, Adventure, Sci-Fi\t0.0014\t189\n10\t313\tTitanic (1997)\tAction, Drama, Romance\t0.0013\t219\n\nThese are graph-walk probabilities, not predicted ratings."
+    },
+    {
+      "label": "seed-only",
+      "userId": 2,
+      "method": "ppr",
+      "alpha": 0.85,
+      "rows": [
+        {
+          "rank": 1,
+          "movieId": 181,
+          "title": "Return of the Jedi (1983)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Romance",
+            "Sci-Fi",
+            "War"
+          ],
+          "score": 0.002600750420242548,
+          "popularity": 339,
+          "hit": false
+        },
+        {
+          "rank": 2,
+          "movieId": 98,
+          "title": "Silence of the Lambs, The (1991)",
+          "genres": [
+            "Drama",
+            "Thriller"
+          ],
+          "score": 0.0020272978581488132,
+          "popularity": 308,
+          "hit": false
+        },
+        {
+          "rank": 3,
+          "movieId": 174,
+          "title": "Raiders of the Lost Ark (1981)",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "score": 0.0019665774889290333,
+          "popularity": 312,
+          "hit": false
+        },
+        {
+          "rank": 4,
+          "movieId": 7,
+          "title": "Twelve Monkeys (1995)",
+          "genres": [
+            "Drama",
+            "Sci-Fi"
+          ],
+          "score": 0.0017902939580380917,
+          "popularity": 234,
+          "hit": false
+        },
+        {
+          "rank": 5,
+          "movieId": 56,
+          "title": "Pulp Fiction (1994)",
+          "genres": [
+            "Crime",
+            "Drama"
+          ],
+          "score": 0.0017448201542720199,
+          "popularity": 263,
+          "hit": false
+        },
+        {
+          "rank": 6,
+          "movieId": 117,
+          "title": "Rock, The (1996)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Thriller"
+          ],
+          "score": 0.001684593502432108,
+          "popularity": 215,
+          "hit": false
+        },
+        {
+          "rank": 7,
+          "movieId": 172,
+          "title": "Empire Strikes Back, The (1980)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Romance",
+            "Sci-Fi",
+            "War"
+          ],
+          "score": 0.0016606281278654933,
+          "popularity": 261,
+          "hit": false
+        },
+        {
+          "rank": 8,
+          "movieId": 9,
+          "title": "Dead Man Walking (1995)",
+          "genres": [
+            "Drama"
+          ],
+          "score": 0.001607951708137989,
+          "popularity": 182,
+          "hit": false
+        },
+        {
+          "rank": 9,
+          "movieId": 121,
+          "title": "Independence Day (ID4) (1996)",
+          "genres": [
+            "Action",
+            "Sci-Fi",
+            "War"
+          ],
+          "score": 0.001602756790816784,
+          "popularity": 207,
+          "hit": false
+        },
+        {
+          "rank": 10,
+          "movieId": 64,
+          "title": "Shawshank Redemption, The (1994)",
+          "genres": [
+            "Drama"
+          ],
+          "score": 0.0015171804698184133,
+          "popularity": 228,
+          "hit": false
+        }
+      ],
+      "meanPopularity": 254.9,
+      "hits": 0,
+      "relevant": 2,
+      "short": false,
+      "zeroScoreCount": 0,
+      "renderedRows": [
+        [
+          "1",
+          "181",
+          "Return of the Jedi (1983)",
+          "Action, Adventure, Romance, Sci-Fi, War",
+          "0.0026",
+          "339"
+        ],
+        [
+          "2",
+          "98",
+          "Silence of the Lambs, The (1991)",
+          "Drama, Thriller",
+          "0.0020",
+          "308"
+        ],
+        [
+          "3",
+          "174",
+          "Raiders of the Lost Ark (1981)",
+          "Action, Adventure",
+          "0.0020",
+          "312"
+        ],
+        [
+          "4",
+          "7",
+          "Twelve Monkeys (1995)",
+          "Drama, Sci-Fi",
+          "0.0018",
+          "234"
+        ],
+        [
+          "5",
+          "56",
+          "Pulp Fiction (1994)",
+          "Crime, Drama",
+          "0.0017",
+          "263"
+        ],
+        [
+          "6",
+          "117",
+          "Rock, The (1996)",
+          "Action, Adventure, Thriller",
+          "0.0017",
+          "215"
+        ],
+        [
+          "7",
+          "172",
+          "Empire Strikes Back, The (1980)",
+          "Action, Adventure, Drama, Romance, Sci-Fi, War",
+          "0.0017",
+          "261"
+        ],
+        [
+          "8",
+          "9",
+          "Dead Man Walking (1995)",
+          "Drama",
+          "0.0016",
+          "182"
+        ],
+        [
+          "9",
+          "121",
+          "Independence Day (ID4) (1996)",
+          "Action, Sci-Fi, War",
+          "0.0016",
+          "207"
+        ],
+        [
+          "10",
+          "64",
+          "Shawshank Redemption, The (1994)",
+          "Drama",
+          "0.0015",
+          "228"
+        ]
+      ],
+      "panelText": "Method ppr, alpha 0.85, test-split exclusions (training + validation rated movies).\n\nRank\tMovie id\tTitle\tGenres\tScore\tTraining popularity\n1\t181\tReturn of the Jedi (1983)\tAction, Adventure, Romance, Sci-Fi, War\t0.0026\t339\n2\t98\tSilence of the Lambs, The (1991)\tDrama, Thriller\t0.0020\t308\n3\t174\tRaiders of the Lost Ark (1981)\tAction, Adventure\t0.0020\t312\n4\t7\tTwelve Monkeys (1995)\tDrama, Sci-Fi\t0.0018\t234\n5\t56\tPulp Fiction (1994)\tCrime, Drama\t0.0017\t263\n6\t117\tRock, The (1996)\tAction, Adventure, Thriller\t0.0017\t215\n7\t172\tEmpire Strikes Back, The (1980)\tAction, Adventure, Drama, Romance, Sci-Fi, War\t0.0017\t261\n8\t9\tDead Man Walking (1995)\tDrama\t0.0016\t182\n9\t121\tIndependence Day (ID4) (1996)\tAction, Sci-Fi, War\t0.0016\t207\n10\t64\tShawshank Redemption, The (1994)\tDrama\t0.0015\t228\n\nThese are graph-walk probabilities, not predicted ratings."
+    },
+    {
+      "label": "alpha-only",
+      "userId": 1,
+      "method": "ppr",
+      "alpha": 0.5,
+      "rows": [
+        {
+          "rank": 1,
+          "movieId": 100,
+          "title": "Fargo (1996)",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "score": 0.0006855191895738244,
+          "popularity": 377,
+          "hit": true
+        },
+        {
+          "rank": 2,
+          "movieId": 258,
+          "title": "Contact (1997)",
+          "genres": [
+            "Drama",
+            "Sci-Fi"
+          ],
+          "score": 0.0004398658056743443,
+          "popularity": 307,
+          "hit": true
+        },
+        {
+          "rank": 3,
+          "movieId": 286,
+          "title": "English Patient, The (1996)",
+          "genres": [
+            "Drama",
+            "Romance",
+            "War"
+          ],
+          "score": 0.00043101841583848,
+          "popularity": 279,
+          "hit": false
+        },
+        {
+          "rank": 4,
+          "movieId": 318,
+          "title": "Schindler's List (1993)",
+          "genres": [
+            "Drama",
+            "War"
+          ],
+          "score": 0.0004038166953250766,
+          "popularity": 224,
+          "hit": false
+        },
+        {
+          "rank": 5,
+          "movieId": 357,
+          "title": "One Flew Over the Cuckoo's Nest (1975)",
+          "genres": [
+            "Drama"
+          ],
+          "score": 0.00037716623046435416,
+          "popularity": 202,
+          "hit": false
+        },
+        {
+          "rank": 6,
+          "movieId": 483,
+          "title": "Casablanca (1942)",
+          "genres": [
+            "Drama",
+            "Romance",
+            "War"
+          ],
+          "score": 0.00035968932206742465,
+          "popularity": 197,
+          "hit": false
+        },
+        {
+          "rank": 7,
+          "movieId": 222,
+          "title": "Star Trek: First Contact (1996)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "score": 0.00033278539194725454,
+          "popularity": 189,
+          "hit": true
+        },
+        {
+          "rank": 8,
+          "movieId": 475,
+          "title": "Trainspotting (1996)",
+          "genres": [
+            "Drama"
+          ],
+          "score": 0.00032809015829116106,
+          "popularity": 164,
+          "hit": false
+        },
+        {
+          "rank": 9,
+          "movieId": 275,
+          "title": "Sense and Sensibility (1995)",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "score": 0.00032018491765484214,
+          "popularity": 178,
+          "hit": false
+        },
+        {
+          "rank": 10,
+          "movieId": 423,
+          "title": "E.T. the Extra-Terrestrial (1982)",
+          "genres": [
+            "Children's",
+            "Drama",
+            "Fantasy",
+            "Sci-Fi"
+          ],
+          "score": 0.00030566827626898885,
+          "popularity": 167,
+          "hit": false
+        }
+      ],
+      "meanPopularity": 228.4,
+      "hits": 3,
+      "relevant": 19,
+      "short": false,
+      "zeroScoreCount": 0,
+      "renderedRows": [
+        [
+          "1",
+          "100",
+          "Fargo (1996)",
+          "Crime, Drama, Thriller",
+          "0.0007",
+          "377"
+        ],
+        [
+          "2",
+          "258",
+          "Contact (1997)",
+          "Drama, Sci-Fi",
+          "0.0004",
+          "307"
+        ],
+        [
+          "3",
+          "286",
+          "English Patient, The (1996)",
+          "Drama, Romance, War",
+          "0.0004",
+          "279"
+        ],
+        [
+          "4",
+          "318",
+          "Schindler's List (1993)",
+          "Drama, War",
+          "0.0004",
+          "224"
+        ],
+        [
+          "5",
+          "357",
+          "One Flew Over the Cuckoo's Nest (1975)",
+          "Drama",
+          "0.0004",
+          "202"
+        ],
+        [
+          "6",
+          "483",
+          "Casablanca (1942)",
+          "Drama, Romance, War",
+          "0.0004",
+          "197"
+        ],
+        [
+          "7",
+          "222",
+          "Star Trek: First Contact (1996)",
+          "Action, Adventure, Sci-Fi",
+          "0.0003",
+          "189"
+        ],
+        [
+          "8",
+          "475",
+          "Trainspotting (1996)",
+          "Drama",
+          "0.0003",
+          "164"
+        ],
+        [
+          "9",
+          "275",
+          "Sense and Sensibility (1995)",
+          "Drama, Romance",
+          "0.0003",
+          "178"
+        ],
+        [
+          "10",
+          "423",
+          "E.T. the Extra-Terrestrial (1982)",
+          "Children's, Drama, Fantasy, Sci-Fi",
+          "0.0003",
+          "167"
+        ]
+      ],
+      "panelText": "Method ppr, alpha 0.50, test-split exclusions (training + validation rated movies).\n\nRank\tMovie id\tTitle\tGenres\tScore\tTraining popularity\n1\t100\tFargo (1996)\tCrime, Drama, Thriller\t0.0007\t377\n2\t258\tContact (1997)\tDrama, Sci-Fi\t0.0004\t307\n3\t286\tEnglish Patient, The (1996)\tDrama, Romance, War\t0.0004\t279\n4\t318\tSchindler's List (1993)\tDrama, War\t0.0004\t224\n5\t357\tOne Flew Over the Cuckoo's Nest (1975)\tDrama\t0.0004\t202\n6\t483\tCasablanca (1942)\tDrama, Romance, War\t0.0004\t197\n7\t222\tStar Trek: First Contact (1996)\tAction, Adventure, Sci-Fi\t0.0003\t189\n8\t475\tTrainspotting (1996)\tDrama\t0.0003\t164\n9\t275\tSense and Sensibility (1995)\tDrama, Romance\t0.0003\t178\n10\t423\tE.T. the Extra-Terrestrial (1982)\tChildren's, Drama, Fantasy, Sci-Fi\t0.0003\t167\n\nThese are graph-walk probabilities, not predicted ratings."
+    }
+  ],
+  "primaryUserOverlap": [
+    {
+      "method": "popularity",
+      "commonMovieIds": [
+        318
+      ],
+      "count": 1,
+      "user1MeanPopularity": 246.8,
+      "user2MeanPopularity": 262.1
+    },
+    {
+      "method": "pagerank",
+      "commonMovieIds": [
+        222
+      ],
+      "count": 1,
+      "user1MeanPopularity": 239.4,
+      "user2MeanPopularity": 247.4
+    },
+    {
+      "method": "ppr",
+      "commonMovieIds": [
+        475
+      ],
+      "count": 1,
+      "user1MeanPopularity": 228.4,
+      "user2MeanPopularity": 226.7
+    },
+    {
+      "method": "mf",
+      "commonMovieIds": [
+        5,
+        6
+      ],
+      "count": 2,
+      "user1MeanPopularity": 72.2,
+      "user2MeanPopularity": 111.4
+    }
+  ],
+  "diagnostics": [
+    {
+      "label": "baseline",
+      "userId": 1,
+      "alpha": 0.85,
+      "sharedWithBaseline": [
+        100,
+        222,
+        258,
+        286,
+        288,
+        300,
+        313,
+        318,
+        357,
+        483
+      ],
+      "sharedCount": 10,
+      "meanPopularity": 245.5,
+      "meanPopularityChange": 0.0,
+      "genreComposition": {
+        "denominator": 10,
+        "unit": "recommended movies; multi-label shares may sum above1",
+        "counts": {
+          "Crime": 1,
+          "Drama": 7,
+          "Thriller": 3,
+          "Sci-Fi": 2,
+          "Romance": 3,
+          "War": 3,
+          "Horror": 1,
+          "Action": 3,
+          "Adventure": 1
+        },
+        "shares": {
+          "Crime": 0.1,
+          "Drama": 0.7,
+          "Thriller": 0.3,
+          "Sci-Fi": 0.2,
+          "Romance": 0.3,
+          "War": 0.3,
+          "Horror": 0.1,
+          "Action": 0.3,
+          "Adventure": 0.1
+        }
+      },
+      "hits": 3,
+      "relevant": 19
+    },
+    {
+      "label": "seed-only",
+      "userId": 2,
+      "alpha": 0.85,
+      "sharedWithBaseline": [],
+      "sharedCount": 0,
+      "meanPopularity": 254.9,
+      "meanPopularityChange": 9.400000000000006,
+      "genreComposition": {
+        "denominator": 10,
+        "unit": "recommended movies; multi-label shares may sum above1",
+        "counts": {
+          "Action": 5,
+          "Adventure": 4,
+          "Romance": 2,
+          "Sci-Fi": 4,
+          "War": 3,
+          "Drama": 6,
+          "Thriller": 2,
+          "Crime": 1
+        },
+        "shares": {
+          "Action": 0.5,
+          "Adventure": 0.4,
+          "Romance": 0.2,
+          "Sci-Fi": 0.4,
+          "War": 0.3,
+          "Drama": 0.6,
+          "Thriller": 0.2,
+          "Crime": 0.1
+        }
+      },
+      "hits": 0,
+      "relevant": 2
+    },
+    {
+      "label": "alpha-only",
+      "userId": 1,
+      "alpha": 0.5,
+      "sharedWithBaseline": [
+        100,
+        222,
+        258,
+        286,
+        318,
+        357,
+        483
+      ],
+      "sharedCount": 7,
+      "meanPopularity": 228.4,
+      "meanPopularityChange": -17.099999999999994,
+      "genreComposition": {
+        "denominator": 10,
+        "unit": "recommended movies; multi-label shares may sum above1",
+        "counts": {
+          "Crime": 1,
+          "Drama": 9,
+          "Thriller": 1,
+          "Sci-Fi": 3,
+          "Romance": 3,
+          "War": 3,
+          "Action": 1,
+          "Adventure": 1,
+          "Children's": 1,
+          "Fantasy": 1
+        },
+        "shares": {
+          "Crime": 0.1,
+          "Drama": 0.9,
+          "Thriller": 0.1,
+          "Sci-Fi": 0.3,
+          "Romance": 0.3,
+          "War": 0.3,
+          "Action": 0.1,
+          "Adventure": 0.1,
+          "Children's": 0.1,
+          "Fantasy": 0.1
+        }
+      },
+      "hits": 3,
+      "relevant": 19
+    }
+  ]
+}

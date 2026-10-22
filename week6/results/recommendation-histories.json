@@ -1,0 +1,527 @@
+[
+  {
+    "userId": 1,
+    "totalTrainRatings": 217,
+    "positiveTrainRatings": 131,
+    "positiveThreshold": 4,
+    "genreComposition": {
+      "allTrain": {
+        "denominator": 217,
+        "unit": "training rated movies; multi-label genre shares may sum above 1",
+        "shares": {
+          "Action": {
+            "count": 64,
+            "share": 0.29493087557603687
+          },
+          "Adventure": {
+            "count": 34,
+            "share": 0.15668202764976957
+          },
+          "Animation": {
+            "count": 9,
+            "share": 0.041474654377880185
+          },
+          "Children's": {
+            "count": 18,
+            "share": 0.08294930875576037
+          },
+          "Comedy": {
+            "count": 72,
+            "share": 0.3317972350230415
+          },
+          "Crime": {
+            "count": 20,
+            "share": 0.09216589861751152
+          },
+          "Documentary": {
+            "count": 3,
+            "share": 0.013824884792626729
+          },
+          "Drama": {
+            "count": 82,
+            "share": 0.3778801843317972
+          },
+          "Fantasy": {
+            "count": 2,
+            "share": 0.009216589861751152
+          },
+          "Film-Noir": {
+            "count": 1,
+            "share": 0.004608294930875576
+          },
+          "Horror": {
+            "count": 11,
+            "share": 0.05069124423963134
+          },
+          "Musical": {
+            "count": 11,
+            "share": 0.05069124423963134
+          },
+          "Mystery": {
+            "count": 5,
+            "share": 0.02304147465437788
+          },
+          "Romance": {
+            "count": 34,
+            "share": 0.15668202764976957
+          },
+          "Sci-Fi": {
+            "count": 36,
+            "share": 0.16589861751152074
+          },
+          "Thriller": {
+            "count": 42,
+            "share": 0.1935483870967742
+          },
+          "War": {
+            "count": 22,
+            "share": 0.10138248847926268
+          },
+          "Western": {
+            "count": 4,
+            "share": 0.018433179723502304
+          }
+        }
+      },
+      "positiveTrain": {
+        "denominator": 131,
+        "unit": "training rated movies; multi-label genre shares may sum above 1",
+        "shares": {
+          "Action": {
+            "count": 36,
+            "share": 0.2748091603053435
+          },
+          "Adventure": {
+            "count": 15,
+            "share": 0.11450381679389313
+          },
+          "Animation": {
+            "count": 4,
+            "share": 0.030534351145038167
+          },
+          "Children's": {
+            "count": 5,
+            "share": 0.03816793893129771
+          },
+          "Comedy": {
+            "count": 39,
+            "share": 0.29770992366412213
+          },
+          "Crime": {
+            "count": 11,
+            "share": 0.08396946564885496
+          },
+          "Documentary": {
+            "count": 3,
+            "share": 0.022900763358778626
+          },
+          "Drama": {
+            "count": 61,
+            "share": 0.46564885496183206
+          },
+          "Fantasy": {
+            "count": 1,
+            "share": 0.007633587786259542
+          },
+          "Film-Noir": {
+            "count": 1,
+            "share": 0.007633587786259542
+          },
+          "Horror": {
+            "count": 6,
+            "share": 0.04580152671755725
+          },
+          "Musical": {
+            "count": 5,
+            "share": 0.03816793893129771
+          },
+          "Mystery": {
+            "count": 3,
+            "share": 0.022900763358778626
+          },
+          "Romance": {
+            "count": 22,
+            "share": 0.16793893129770993
+          },
+          "Sci-Fi": {
+            "count": 27,
+            "share": 0.20610687022900764
+          },
+          "Thriller": {
+            "count": 25,
+            "share": 0.19083969465648856
+          },
+          "War": {
+            "count": 13,
+            "share": 0.09923664122137404
+          },
+          "Western": {
+            "count": 2,
+            "share": 0.015267175572519083
+          }
+        }
+      }
+    },
+    "meanPositiveMoviePopularity": 106.97709923664122,
+    "mostPopularPositive": [
+      {
+        "movieId": 50,
+        "title": "Star Wars (1977)",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Romance",
+          "Sci-Fi",
+          "War"
+        ],
+        "popularity": 449
+      },
+      {
+        "movieId": 181,
+        "title": "Return of the Jedi (1983)",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Romance",
+          "Sci-Fi",
+          "War"
+        ],
+        "popularity": 339
+      },
+      {
+        "movieId": 174,
+        "title": "Raiders of the Lost Ark (1981)",
+        "genres": [
+          "Action",
+          "Adventure"
+        ],
+        "popularity": 312
+      },
+      {
+        "movieId": 98,
+        "title": "Silence of the Lambs, The (1991)",
+        "genres": [
+          "Drama",
+          "Thriller"
+        ],
+        "popularity": 308
+      },
+      {
+        "movieId": 127,
+        "title": "Godfather, The (1972)",
+        "genres": [
+          "Action",
+          "Crime",
+          "Drama"
+        ],
+        "popularity": 308
+      }
+    ],
+    "leastPopularPositive": [
+      {
+        "movieId": 146,
+        "title": "Unhook the Stars (1996)",
+        "genres": [
+          "Drama"
+        ],
+        "popularity": 2
+      },
+      {
+        "movieId": 119,
+        "title": "Maya Lin: A Strong Clear Vision (1994)",
+        "genres": [
+          "Documentary"
+        ],
+        "popularity": 3
+      },
+      {
+        "movieId": 84,
+        "title": "Robert A. Heinlein's The Puppet Masters (1994)",
+        "genres": [
+          "Horror",
+          "Sci-Fi"
+        ],
+        "popularity": 4
+      },
+      {
+        "movieId": 267,
+        "title": "unknown",
+        "genres": [],
+        "popularity": 5
+      },
+      {
+        "movieId": 43,
+        "title": "Disclosure (1994)",
+        "genres": [
+          "Drama",
+          "Thriller"
+        ],
+        "popularity": 7
+      }
+    ]
+  },
+  {
+    "userId": 2,
+    "totalTrainRatings": 49,
+    "positiveTrainRatings": 32,
+    "positiveThreshold": 4,
+    "genreComposition": {
+      "allTrain": {
+        "denominator": 49,
+        "unit": "training rated movies; multi-label genre shares may sum above 1",
+        "shares": {
+          "Action": {
+            "count": 6,
+            "share": 0.12244897959183673
+          },
+          "Adventure": {
+            "count": 2,
+            "share": 0.04081632653061224
+          },
+          "Animation": {
+            "count": 1,
+            "share": 0.02040816326530612
+          },
+          "Children's": {
+            "count": 1,
+            "share": 0.02040816326530612
+          },
+          "Comedy": {
+            "count": 15,
+            "share": 0.30612244897959184
+          },
+          "Crime": {
+            "count": 7,
+            "share": 0.14285714285714285
+          },
+          "Documentary": {
+            "count": 0,
+            "share": 0.0
+          },
+          "Drama": {
+            "count": 28,
+            "share": 0.5714285714285714
+          },
+          "Fantasy": {
+            "count": 0,
+            "share": 0.0
+          },
+          "Film-Noir": {
+            "count": 1,
+            "share": 0.02040816326530612
+          },
+          "Horror": {
+            "count": 2,
+            "share": 0.04081632653061224
+          },
+          "Musical": {
+            "count": 0,
+            "share": 0.0
+          },
+          "Mystery": {
+            "count": 3,
+            "share": 0.061224489795918366
+          },
+          "Romance": {
+            "count": 14,
+            "share": 0.2857142857142857
+          },
+          "Sci-Fi": {
+            "count": 4,
+            "share": 0.08163265306122448
+          },
+          "Thriller": {
+            "count": 8,
+            "share": 0.16326530612244897
+          },
+          "War": {
+            "count": 3,
+            "share": 0.061224489795918366
+          },
+          "Western": {
+            "count": 0,
+            "share": 0.0
+          }
+        }
+      },
+      "positiveTrain": {
+        "denominator": 32,
+        "unit": "training rated movies; multi-label genre shares may sum above 1",
+        "shares": {
+          "Action": {
+            "count": 5,
+            "share": 0.15625
+          },
+          "Adventure": {
+            "count": 2,
+            "share": 0.0625
+          },
+          "Animation": {
+            "count": 1,
+            "share": 0.03125
+          },
+          "Children's": {
+            "count": 1,
+            "share": 0.03125
+          },
+          "Comedy": {
+            "count": 11,
+            "share": 0.34375
+          },
+          "Crime": {
+            "count": 5,
+            "share": 0.15625
+          },
+          "Documentary": {
+            "count": 0,
+            "share": 0.0
+          },
+          "Drama": {
+            "count": 18,
+            "share": 0.5625
+          },
+          "Fantasy": {
+            "count": 0,
+            "share": 0.0
+          },
+          "Film-Noir": {
+            "count": 1,
+            "share": 0.03125
+          },
+          "Horror": {
+            "count": 0,
+            "share": 0.0
+          },
+          "Musical": {
+            "count": 0,
+            "share": 0.0
+          },
+          "Mystery": {
+            "count": 0,
+            "share": 0.0
+          },
+          "Romance": {
+            "count": 11,
+            "share": 0.34375
+          },
+          "Sci-Fi": {
+            "count": 2,
+            "share": 0.0625
+          },
+          "Thriller": {
+            "count": 3,
+            "share": 0.09375
+          },
+          "War": {
+            "count": 2,
+            "share": 0.0625
+          },
+          "Western": {
+            "count": 0,
+            "share": 0.0
+          }
+        }
+      }
+    },
+    "meanPositiveMoviePopularity": 132.78125,
+    "mostPopularPositive": [
+      {
+        "movieId": 50,
+        "title": "Star Wars (1977)",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Romance",
+          "Sci-Fi",
+          "War"
+        ],
+        "popularity": 449
+      },
+      {
+        "movieId": 100,
+        "title": "Fargo (1996)",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Thriller"
+        ],
+        "popularity": 377
+      },
+      {
+        "movieId": 127,
+        "title": "Godfather, The (1972)",
+        "genres": [
+          "Action",
+          "Crime",
+          "Drama"
+        ],
+        "popularity": 308
+      },
+      {
+        "movieId": 1,
+        "title": "Toy Story (1995)",
+        "genres": [
+          "Animation",
+          "Children's",
+          "Comedy"
+        ],
+        "popularity": 288
+      },
+      {
+        "movieId": 286,
+        "title": "English Patient, The (1996)",
+        "genres": [
+          "Drama",
+          "Romance",
+          "War"
+        ],
+        "popularity": 279
+      }
+    ],
+    "leastPopularPositive": [
+      {
+        "movieId": 279,
+        "title": "Once Upon a Time... When We Were Colored (1995)",
+        "genres": [
+          "Drama"
+        ],
+        "popularity": 13
+      },
+      {
+        "movieId": 299,
+        "title": "Hoodlum (1997)",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Film-Noir"
+        ],
+        "popularity": 20
+      },
+      {
+        "movieId": 295,
+        "title": "Breakdown (1997)",
+        "genres": [
+          "Action",
+          "Thriller"
+        ],
+        "popularity": 27
+      },
+      {
+        "movieId": 251,
+        "title": "Shall We Dance? (1996)",
+        "genres": [
+          "Comedy"
+        ],
+        "popularity": 30
+      },
+      {
+        "movieId": 297,
+        "title": "Ulee's Gold (1997)",
+        "genres": [
+          "Drama"
+        ],
+        "popularity": 30
+      }
+    ]
+  }
+]

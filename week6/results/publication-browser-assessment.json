@@ -1,0 +1,15 @@
+{
+  "numericalVerificationPassed": true,
+  "suppliedChecksPassed": 12,
+  "validationBeforeTest": true,
+  "selectedAlpha": 0.5,
+  "testMetricsExactlyMatch": true,
+  "tensorCounts": [
+    2,
+    2
+  ],
+  "trainingPerformed": false,
+  "observedExitCode": 1,
+  "resourceWarning": "Only favicon.ico HTTP404; no pageerror or metric/check failure. App unchanged.",
+  "elapsedSeconds": 23.005
+}

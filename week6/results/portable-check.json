@@ -1,0 +1,100 @@
+{
+  "checks": [
+    {
+      "split": "val",
+      "method": "popularity",
+      "users": 846,
+      "recall": 0.06977315415726612,
+      "distinct": 75
+    },
+    {
+      "split": "val",
+      "method": "pagerank",
+      "users": 846,
+      "recall": 0.06410361078377277,
+      "distinct": 63
+    },
+    {
+      "split": "val",
+      "method": "ppr",
+      "users": 846,
+      "recall": 0.11448315913208877,
+      "distinct": 130
+    },
+    {
+      "split": "val",
+      "method": "mf",
+      "users": 846,
+      "recall": 0.027214842854203808,
+      "distinct": 33
+    },
+    {
+      "split": "test",
+      "method": "popularity",
+      "users": 861,
+      "recall": 0.07602291343770748,
+      "distinct": 82
+    },
+    {
+      "split": "test",
+      "method": "pagerank",
+      "users": 861,
+      "recall": 0.07969324149418132,
+      "distinct": 74
+    },
+    {
+      "split": "test",
+      "method": "ppr",
+      "users": 861,
+      "recall": 0.1121885321948605,
+      "distinct": 138
+    },
+    {
+      "split": "test",
+      "method": "mf",
+      "users": 861,
+      "recall": 0.021137488852036163,
+      "distinct": 39
+    }
+  ],
+  "models": [
+    {
+      "model": "hw6-supplied",
+      "all943ConstantFloat32Rows": true,
+      "validationAndTestTop10Exact": true
+    },
+    {
+      "model": "hw5-default",
+      "all943ConstantFloat32Rows": true,
+      "validationAndTestTop10Exact": true
+    },
+    {
+      "model": "hw5-reg0005",
+      "all943ConstantFloat32Rows": true,
+      "validationAndTestTop10Exact": true
+    }
+  ],
+  "users": 943,
+  "movies": 1611,
+  "nodes": 2554,
+  "edges": 45602,
+  "splitSizes": {
+    "train": 79619,
+    "val": 9596,
+    "test": 10785
+  },
+  "cohorts": {
+    "val": 846,
+    "test": 861
+  },
+  "pprUsers1and2PrimaryListsAndHits": true,
+  "referenceFirstUpdate": [
+    0.25,
+    0.14375,
+    0.56875,
+    0.0375
+  ],
+  "numpy": "2.3.5",
+  "elapsedSeconds": 5.024388207995798,
+  "trainingPerformed": false
+}

@@ -1,0 +1,1813 @@
+{
+  "method": "Independent raw chronological split, binary graph, eligible cohorts and score-desc/ID-asc ranking. Float64 PageRank recomputed; float64 PPR arrays independently generated earlier and hash verified.",
+  "alpha": 0.5,
+  "rawSHA256": "06416e597f82b7342361e41163890c81036900f418ad91315590814211dca490",
+  "graphSourceSHA256": "5df87007991d3db33d50cd56e441576b7d32a646eea30595e8922567b4a6f3cb",
+  "globalIterations": 19,
+  "globalResidual": 5.651403356061785e-07,
+  "comparisons": {
+    "val": {
+      "popularity": {
+        "denominator": 846,
+        "cohortIdentical": true,
+        "numpyRecall": 0.06977315415726612,
+        "browserRecall": 0.06977315415726622,
+        "recallDifference": -9.71445146547012e-17,
+        "recommendationDifferences": [],
+        "perUserHitDifferences": []
+      },
+      "pagerank": {
+        "denominator": 846,
+        "cohortIdentical": true,
+        "numpyRecall": 0.06410361078377277,
+        "browserRecall": 0.06410361078377284,
+        "recallDifference": -6.938893903907228e-17,
+        "recommendationDifferences": [],
+        "perUserHitDifferences": []
+      },
+      "ppr": {
+        "denominator": 846,
+        "cohortIdentical": true,
+        "numpyRecall": 0.11448315913208877,
+        "browserRecall": 0.11448315913208877,
+        "recallDifference": 0.0,
+        "recommendationDifferences": [],
+        "perUserHitDifferences": []
+      }
+    },
+    "test": {
+      "popularity": {
+        "denominator": 861,
+        "cohortIdentical": true,
+        "numpyRecall": 0.07602291343770748,
+        "browserRecall": 0.07602291343770759,
+        "recallDifference": -1.1102230246251565e-16,
+        "recommendationDifferences": [],
+        "perUserHitDifferences": []
+      },
+      "pagerank": {
+        "denominator": 861,
+        "cohortIdentical": true,
+        "numpyRecall": 0.07969324149418132,
+        "browserRecall": 0.07969324149418144,
+        "recallDifference": -1.249000902703301e-16,
+        "recommendationDifferences": [],
+        "perUserHitDifferences": []
+      },
+      "ppr": {
+        "denominator": 861,
+        "cohortIdentical": true,
+        "numpyRecall": 0.1121885321948605,
+        "browserRecall": 0.11218853219486066,
+        "recallDifference": -1.6653345369377348e-16,
+        "recommendationDifferences": [],
+        "perUserHitDifferences": []
+      }
+    }
+  },
+  "validationSweep": [
+    {
+      "alpha": 0.5,
+      "numpyRecall": 0.11448315913208877,
+      "browserRecall": 0.11448315913208877,
+      "cohort": 846,
+      "listDifferences": []
+    },
+    {
+      "alpha": 0.7,
+      "numpyRecall": 0.10479695076410428,
+      "browserRecall": 0.1047969507641043,
+      "cohort": 846,
+      "listDifferences": []
+    },
+    {
+      "alpha": 0.85,
+      "numpyRecall": 0.09002077155336485,
+      "browserRecall": 0.09002077155336492,
+      "cohort": 846,
+      "listDifferences": []
+    },
+    {
+      "alpha": 0.95,
+      "numpyRecall": 0.0737503038790967,
+      "browserRecall": 0.07375030387909676,
+      "cohort": 846,
+      "listDifferences": []
+    }
+  ],
+  "nonconverged95": [
+    {
+      "userId": 39,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          50,
+          100,
+          286,
+          181,
+          127,
+          288,
+          174,
+          98,
+          1,
+          56
+        ],
+        "browser": [
+          50,
+          100,
+          286,
+          181,
+          127,
+          288,
+          174,
+          98,
+          1,
+          56
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          50,
+          100,
+          286,
+          181,
+          127,
+          174,
+          98,
+          1,
+          56,
+          172
+        ],
+        "browser": [
+          50,
+          100,
+          286,
+          181,
+          127,
+          174,
+          98,
+          1,
+          56,
+          172
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 54,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          174,
+          98,
+          286,
+          300,
+          56,
+          172,
+          313,
+          79,
+          64,
+          318
+        ],
+        "browser": [
+          174,
+          98,
+          286,
+          300,
+          56,
+          172,
+          313,
+          79,
+          64,
+          318
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          174,
+          98,
+          286,
+          300,
+          56,
+          172,
+          313,
+          79,
+          64,
+          318
+        ],
+        "browser": [
+          174,
+          98,
+          286,
+          300,
+          56,
+          172,
+          313,
+          79,
+          64,
+          318
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 161,
+      "val": {
+        "cohortEligible": false,
+        "numpy": [
+          181,
+          258,
+          1,
+          313,
+          172,
+          300,
+          288,
+          7,
+          302,
+          64
+        ],
+        "browser": [
+          181,
+          258,
+          1,
+          313,
+          172,
+          300,
+          288,
+          7,
+          302,
+          64
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": false,
+        "numpy": [
+          258,
+          1,
+          313,
+          172,
+          300,
+          288,
+          7,
+          302,
+          64,
+          79
+        ],
+        "browser": [
+          258,
+          1,
+          313,
+          172,
+          300,
+          288,
+          7,
+          302,
+          64,
+          79
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 178,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          313,
+          210,
+          357,
+          191,
+          302,
+          475,
+          185,
+          132,
+          496,
+          151
+        ],
+        "browser": [
+          313,
+          210,
+          357,
+          191,
+          302,
+          475,
+          185,
+          132,
+          496,
+          151
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          357,
+          191,
+          302,
+          475,
+          185,
+          132,
+          496,
+          151,
+          515,
+          603
+        ],
+        "browser": [
+          357,
+          191,
+          302,
+          475,
+          185,
+          132,
+          496,
+          151,
+          515,
+          603
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 202,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          50,
+          100,
+          181,
+          174,
+          98,
+          127,
+          56,
+          300,
+          79,
+          7
+        ],
+        "browser": [
+          50,
+          100,
+          181,
+          174,
+          98,
+          127,
+          56,
+          300,
+          79,
+          7
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": false,
+        "numpy": [
+          50,
+          100,
+          181,
+          174,
+          98,
+          127,
+          56,
+          300,
+          79,
+          7
+        ],
+        "browser": [
+          50,
+          100,
+          181,
+          174,
+          98,
+          127,
+          56,
+          300,
+          79,
+          7
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 295,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          127,
+          258,
+          286,
+          64,
+          300,
+          117,
+          288,
+          12,
+          313,
+          89
+        ],
+        "browser": [
+          127,
+          258,
+          286,
+          64,
+          300,
+          117,
+          288,
+          12,
+          313,
+          89
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          127,
+          258,
+          286,
+          64,
+          300,
+          117,
+          288,
+          12,
+          313,
+          89
+        ],
+        "browser": [
+          127,
+          258,
+          286,
+          64,
+          300,
+          117,
+          288,
+          12,
+          313,
+          89
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 310,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          100,
+          127,
+          286,
+          1,
+          174,
+          98,
+          56,
+          172,
+          300,
+          7
+        ],
+        "browser": [
+          100,
+          127,
+          286,
+          1,
+          174,
+          98,
+          56,
+          172,
+          300,
+          7
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          100,
+          127,
+          286,
+          1,
+          174,
+          98,
+          56,
+          172,
+          300,
+          7
+        ],
+        "browser": [
+          100,
+          127,
+          286,
+          1,
+          174,
+          98,
+          56,
+          172,
+          300,
+          7
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 318,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          181,
+          98,
+          258,
+          1,
+          172,
+          300,
+          7,
+          79,
+          173,
+          288
+        ],
+        "browser": [
+          181,
+          98,
+          258,
+          1,
+          172,
+          300,
+          7,
+          79,
+          173,
+          288
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          181,
+          98,
+          258,
+          1,
+          172,
+          300,
+          7,
+          79,
+          173,
+          288
+        ],
+        "browser": [
+          181,
+          98,
+          258,
+          1,
+          172,
+          300,
+          7,
+          79,
+          173,
+          288
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 351,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          50,
+          100,
+          181,
+          127,
+          302,
+          174,
+          1,
+          98,
+          269,
+          56
+        ],
+        "browser": [
+          50,
+          100,
+          181,
+          127,
+          302,
+          174,
+          1,
+          98,
+          269,
+          56
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          50,
+          100,
+          181,
+          127,
+          302,
+          174,
+          1,
+          98,
+          269,
+          56
+        ],
+        "browser": [
+          50,
+          100,
+          181,
+          127,
+          302,
+          174,
+          1,
+          98,
+          269,
+          56
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 367,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          181,
+          174,
+          127,
+          1,
+          286,
+          172,
+          300,
+          313,
+          79,
+          64
+        ],
+        "browser": [
+          181,
+          174,
+          127,
+          1,
+          286,
+          172,
+          300,
+          313,
+          79,
+          64
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          181,
+          174,
+          127,
+          1,
+          286,
+          172,
+          300,
+          313,
+          79,
+          64
+        ],
+        "browser": [
+          181,
+          174,
+          127,
+          1,
+          286,
+          172,
+          300,
+          313,
+          79,
+          64
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 386,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          100,
+          258,
+          174,
+          1,
+          98,
+          286,
+          56,
+          172,
+          300,
+          288
+        ],
+        "browser": [
+          100,
+          258,
+          174,
+          1,
+          98,
+          286,
+          56,
+          172,
+          300,
+          288
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": false,
+        "numpy": [
+          100,
+          258,
+          174,
+          1,
+          98,
+          286,
+          56,
+          172,
+          300,
+          288
+        ],
+        "browser": [
+          100,
+          258,
+          174,
+          1,
+          98,
+          286,
+          56,
+          172,
+          300,
+          288
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 401,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          50,
+          98,
+          258,
+          56,
+          79,
+          7,
+          300,
+          288,
+          22,
+          313
+        ],
+        "browser": [
+          50,
+          98,
+          258,
+          56,
+          79,
+          7,
+          300,
+          288,
+          22,
+          313
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          50,
+          98,
+          258,
+          56,
+          79,
+          7,
+          300,
+          288,
+          22,
+          313
+        ],
+        "browser": [
+          50,
+          98,
+          258,
+          56,
+          79,
+          7,
+          300,
+          288,
+          22,
+          313
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 410,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          50,
+          100,
+          181,
+          127,
+          302,
+          98,
+          174,
+          288,
+          1,
+          56
+        ],
+        "browser": [
+          50,
+          100,
+          181,
+          127,
+          302,
+          98,
+          174,
+          288,
+          1,
+          56
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          50,
+          100,
+          181,
+          127,
+          302,
+          98,
+          174,
+          288,
+          1,
+          56
+        ],
+        "browser": [
+          50,
+          100,
+          181,
+          127,
+          302,
+          98,
+          174,
+          288,
+          1,
+          56
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 426,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          181,
+          127,
+          258,
+          1,
+          286,
+          56,
+          172,
+          64,
+          79,
+          7
+        ],
+        "browser": [
+          181,
+          127,
+          258,
+          1,
+          286,
+          56,
+          172,
+          64,
+          79,
+          7
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          181,
+          127,
+          258,
+          1,
+          286,
+          56,
+          172,
+          64,
+          79,
+          7
+        ],
+        "browser": [
+          181,
+          127,
+          258,
+          1,
+          286,
+          56,
+          172,
+          64,
+          79,
+          7
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 475,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          50,
+          181,
+          127,
+          174,
+          98,
+          1,
+          300,
+          288,
+          56,
+          172
+        ],
+        "browser": [
+          50,
+          181,
+          127,
+          174,
+          98,
+          1,
+          300,
+          288,
+          56,
+          172
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          181,
+          174,
+          98,
+          1,
+          300,
+          288,
+          56,
+          172,
+          7,
+          79
+        ],
+        "browser": [
+          181,
+          174,
+          98,
+          1,
+          300,
+          288,
+          56,
+          172,
+          7,
+          79
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 519,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          50,
+          258,
+          100,
+          286,
+          181,
+          300,
+          127,
+          302,
+          98,
+          174
+        ],
+        "browser": [
+          50,
+          258,
+          100,
+          286,
+          181,
+          300,
+          127,
+          302,
+          98,
+          174
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          50,
+          258,
+          100,
+          286,
+          181,
+          300,
+          127,
+          302,
+          98,
+          174
+        ],
+        "browser": [
+          50,
+          258,
+          100,
+          286,
+          181,
+          300,
+          127,
+          302,
+          98,
+          174
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 566,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          174,
+          258,
+          1,
+          286,
+          79,
+          300,
+          237,
+          357,
+          313,
+          183
+        ],
+        "browser": [
+          174,
+          258,
+          1,
+          286,
+          79,
+          300,
+          237,
+          357,
+          313,
+          183
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          174,
+          258,
+          1,
+          286,
+          79,
+          300,
+          237,
+          357,
+          313,
+          183
+        ],
+        "browser": [
+          174,
+          258,
+          1,
+          286,
+          79,
+          300,
+          237,
+          357,
+          313,
+          183
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 572,
+      "val": {
+        "cohortEligible": false,
+        "numpy": [
+          50,
+          258,
+          181,
+          127,
+          1,
+          98,
+          174,
+          56,
+          288,
+          172
+        ],
+        "browser": [
+          50,
+          258,
+          181,
+          127,
+          1,
+          98,
+          174,
+          56,
+          288,
+          172
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": false,
+        "numpy": [
+          50,
+          258,
+          181,
+          127,
+          1,
+          98,
+          174,
+          56,
+          288,
+          172
+        ],
+        "browser": [
+          50,
+          258,
+          181,
+          127,
+          1,
+          98,
+          174,
+          56,
+          288,
+          172
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 595,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          174,
+          1,
+          98,
+          286,
+          56,
+          172,
+          300,
+          7,
+          117,
+          313
+        ],
+        "browser": [
+          174,
+          1,
+          98,
+          286,
+          56,
+          172,
+          300,
+          7,
+          117,
+          313
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          174,
+          1,
+          98,
+          286,
+          56,
+          172,
+          300,
+          7,
+          117,
+          313
+        ],
+        "browser": [
+          174,
+          1,
+          98,
+          286,
+          56,
+          172,
+          300,
+          7,
+          117,
+          313
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 648,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          100,
+          258,
+          64,
+          300,
+          237,
+          313,
+          12,
+          302,
+          269,
+          427
+        ],
+        "browser": [
+          100,
+          258,
+          64,
+          300,
+          237,
+          313,
+          12,
+          302,
+          269,
+          427
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          100,
+          258,
+          64,
+          300,
+          237,
+          313,
+          12,
+          302,
+          269,
+          427
+        ],
+        "browser": [
+          100,
+          258,
+          64,
+          300,
+          237,
+          313,
+          12,
+          302,
+          269,
+          427
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 708,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          100,
+          286,
+          174,
+          98,
+          288,
+          172,
+          56,
+          7,
+          79,
+          64
+        ],
+        "browser": [
+          100,
+          286,
+          174,
+          98,
+          288,
+          172,
+          56,
+          7,
+          79,
+          64
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          100,
+          286,
+          174,
+          98,
+          288,
+          172,
+          56,
+          7,
+          79,
+          64
+        ],
+        "browser": [
+          100,
+          286,
+          174,
+          98,
+          288,
+          172,
+          56,
+          7,
+          79,
+          64
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 710,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          98,
+          1,
+          7,
+          288,
+          168,
+          313,
+          237,
+          69,
+          117,
+          121
+        ],
+        "browser": [
+          98,
+          1,
+          7,
+          288,
+          168,
+          313,
+          237,
+          69,
+          117,
+          121
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          98,
+          7,
+          288,
+          168,
+          313,
+          237,
+          69,
+          117,
+          121,
+          183
+        ],
+        "browser": [
+          98,
+          7,
+          288,
+          168,
+          313,
+          237,
+          69,
+          117,
+          121,
+          183
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 760,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          100,
+          174,
+          127,
+          1,
+          286,
+          56,
+          7,
+          313,
+          117,
+          79
+        ],
+        "browser": [
+          100,
+          174,
+          127,
+          1,
+          286,
+          56,
+          7,
+          313,
+          117,
+          79
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          100,
+          174,
+          127,
+          1,
+          286,
+          56,
+          7,
+          313,
+          117,
+          79
+        ],
+        "browser": [
+          100,
+          174,
+          127,
+          1,
+          286,
+          56,
+          7,
+          313,
+          117,
+          79
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 812,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          50,
+          258,
+          100,
+          181,
+          313,
+          127,
+          1,
+          98,
+          174,
+          56
+        ],
+        "browser": [
+          50,
+          258,
+          100,
+          181,
+          313,
+          127,
+          1,
+          98,
+          174,
+          56
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          50,
+          258,
+          100,
+          181,
+          313,
+          127,
+          1,
+          98,
+          174,
+          56
+        ],
+        "browser": [
+          50,
+          258,
+          100,
+          181,
+          313,
+          127,
+          1,
+          98,
+          174,
+          56
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 840,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          258,
+          1,
+          286,
+          318,
+          237,
+          288,
+          12,
+          117,
+          313,
+          302
+        ],
+        "browser": [
+          258,
+          1,
+          286,
+          318,
+          237,
+          288,
+          12,
+          117,
+          313,
+          302
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          258,
+          1,
+          286,
+          318,
+          237,
+          288,
+          12,
+          117,
+          313,
+          302
+        ],
+        "browser": [
+          258,
+          1,
+          286,
+          318,
+          237,
+          288,
+          12,
+          117,
+          313,
+          302
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 846,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          100,
+          1,
+          286,
+          7,
+          300,
+          237,
+          117,
+          313,
+          121,
+          222
+        ],
+        "browser": [
+          100,
+          1,
+          286,
+          7,
+          300,
+          237,
+          117,
+          313,
+          121,
+          222
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          100,
+          1,
+          286,
+          7,
+          300,
+          237,
+          117,
+          313,
+          121,
+          222
+        ],
+        "browser": [
+          100,
+          1,
+          286,
+          7,
+          300,
+          237,
+          117,
+          313,
+          121,
+          222
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 847,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          100,
+          174,
+          127,
+          286,
+          300,
+          79,
+          64,
+          318,
+          237,
+          313
+        ],
+        "browser": [
+          100,
+          174,
+          127,
+          286,
+          300,
+          79,
+          64,
+          318,
+          237,
+          313
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          100,
+          174,
+          127,
+          286,
+          300,
+          79,
+          64,
+          318,
+          237,
+          313
+        ],
+        "browser": [
+          100,
+          174,
+          127,
+          286,
+          300,
+          79,
+          64,
+          318,
+          237,
+          313
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 903,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          174,
+          98,
+          258,
+          286,
+          56,
+          172,
+          173,
+          300,
+          237,
+          117
+        ],
+        "browser": [
+          174,
+          98,
+          258,
+          286,
+          56,
+          172,
+          173,
+          300,
+          237,
+          117
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          174,
+          98,
+          258,
+          286,
+          172,
+          173,
+          300,
+          237,
+          117,
+          168
+        ],
+        "browser": [
+          174,
+          98,
+          258,
+          286,
+          172,
+          173,
+          300,
+          237,
+          117,
+          168
+        ],
+        "identical": true
+      }
+    },
+    {
+      "userId": 931,
+      "val": {
+        "cohortEligible": true,
+        "numpy": [
+          286,
+          127,
+          174,
+          1,
+          98,
+          300,
+          288,
+          56,
+          172,
+          7
+        ],
+        "browser": [
+          286,
+          127,
+          174,
+          1,
+          98,
+          300,
+          288,
+          56,
+          172,
+          7
+        ],
+        "identical": true
+      },
+      "test": {
+        "cohortEligible": true,
+        "numpy": [
+          286,
+          174,
+          1,
+          98,
+          300,
+          288,
+          56,
+          172,
+          7,
+          117
+        ],
+        "browser": [
+          286,
+          174,
+          1,
+          98,
+          300,
+          288,
+          56,
+          172,
+          7,
+          117
+        ],
+        "identical": true
+      }
+    }
+  ],
+  "runtimeSeconds": 9.452593374997377,
+  "titlePolicy": "History titles decoded independently as Latin-1 from raw u.item; native app/export titles preserve supplied UTF-8 decoding, including existing replacement characters."
+}

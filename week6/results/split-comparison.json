@@ -1,0 +1,42 @@
+{
+  "week5": {
+    "excluded": [],
+    "splits": {
+      "train": {
+        "rows": 79619,
+        "sha256": "e9bca9ec563d46f999d89be38d8417edd27eab58bcc539081d9b583813e4bdf6",
+        "matchesIndependent": true
+      },
+      "val": {
+        "rows": 9596,
+        "sha256": "c78079f0355cf9550d50b2a5a0a824af0e6706a04acc6115479cac9c7d2ce1db",
+        "matchesIndependent": true
+      },
+      "test": {
+        "rows": 10785,
+        "sha256": "505013c64127f2e84099f7337826cc05ec3b62090a016aa7ffca835b3d074aed",
+        "matchesIndependent": true
+      }
+    }
+  },
+  "week6": {
+    "excluded": [],
+    "splits": {
+      "train": {
+        "rows": 79619,
+        "sha256": "e9bca9ec563d46f999d89be38d8417edd27eab58bcc539081d9b583813e4bdf6",
+        "matchesIndependent": true
+      },
+      "val": {
+        "rows": 9596,
+        "sha256": "c78079f0355cf9550d50b2a5a0a824af0e6706a04acc6115479cac9c7d2ce1db",
+        "matchesIndependent": true
+      },
+      "test": {
+        "rows": 10785,
+        "sha256": "505013c64127f2e84099f7337826cc05ec3b62090a016aa7ffca835b3d074aed",
+        "matchesIndependent": true
+      }
+    }
+  }
+}

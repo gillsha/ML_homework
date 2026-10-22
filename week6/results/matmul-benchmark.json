@@ -1,0 +1,215 @@
+{
+  "kind": "MEASUREMENT: two independent matmuls; not PageRank/PPR runtime",
+  "tfjs": "4.22.0",
+  "backend": "webgl",
+  "shape": [
+    943,
+    1611
+  ],
+  "wallMs": 4431.4000000059605,
+  "rows": [
+    {
+      "batch": 1,
+      "products": [
+        [
+          943,
+          1611,
+          1
+        ],
+        [
+          1611,
+          943,
+          1
+        ]
+      ],
+      "flopsPerPair": 6076692,
+      "coldPairMs": 619.2000000029802,
+      "warmFullRead": {
+        "count": 5,
+        "minMs": 9.900000005960464,
+        "medianMs": 10.599999994039536,
+        "maxMs": 10.700000002980232
+      },
+      "warmScalarBarrier": {
+        "count": 5,
+        "minMs": 4.4000000059604645,
+        "medianMs": 5.299999997019768,
+        "maxMs": 5.5
+      },
+      "fullReadSamplesMs": [
+        10.700000002980232,
+        10.599999994039536,
+        9.900000005960464,
+        10.599999994039536,
+        10.400000005960464
+      ],
+      "scalarSamplesMs": [
+        5.5,
+        5.399999991059303,
+        4.4000000059604645,
+        4.4000000059604645,
+        5.299999997019768
+      ],
+      "checksum": 0.38672447204589844,
+      "residentInputAndOutputBytes": 6097124
+    },
+    {
+      "batch": 32,
+      "products": [
+        [
+          943,
+          1611,
+          32
+        ],
+        [
+          1611,
+          943,
+          32
+        ]
+      ],
+      "flopsPerPair": 194454144,
+      "coldPairMs": 359.70000000298023,
+      "warmFullRead": {
+        "count": 5,
+        "minMs": 9.799999997019768,
+        "medianMs": 10.5,
+        "maxMs": 10.600000008940697
+      },
+      "warmScalarBarrier": {
+        "count": 5,
+        "minMs": 5.300000011920929,
+        "medianMs": 5.399999991059303,
+        "maxMs": 9.200000002980232
+      },
+      "fullReadSamplesMs": [
+        10.600000008940697,
+        10.599999994039536,
+        10.5,
+        10.400000005960464,
+        9.799999997019768
+      ],
+      "scalarSamplesMs": [
+        9.200000002980232,
+        5.399999991059303,
+        5.5,
+        5.300000011920929,
+        5.399999991059303
+      ],
+      "checksum": 0.38672444969415665,
+      "residentInputAndOutputBytes": 6730516
+    },
+    {
+      "batch": 128,
+      "products": [
+        [
+          943,
+          1611,
+          128
+        ],
+        [
+          1611,
+          943,
+          128
+        ]
+      ],
+      "flopsPerPair": 777816576,
+      "coldPairMs": 363.59999999403954,
+      "warmFullRead": {
+        "count": 5,
+        "minMs": 10,
+        "medianMs": 15.800000011920929,
+        "maxMs": 16.099999994039536
+      },
+      "warmScalarBarrier": {
+        "count": 5,
+        "minMs": 5.0999999940395355,
+        "medianMs": 10,
+        "maxMs": 10.400000005960464
+      },
+      "fullReadSamplesMs": [
+        16.099999994039536,
+        16,
+        15.800000011920929,
+        10,
+        10.899999991059303
+      ],
+      "scalarSamplesMs": [
+        9.5,
+        10.400000005960464,
+        10.299999997019768,
+        10,
+        5.0999999940395355
+      ],
+      "checksum": 0.38672444969415665,
+      "residentInputAndOutputBytes": 8691988
+    },
+    {
+      "batch": 943,
+      "products": [
+        [
+          943,
+          1611,
+          943
+        ],
+        [
+          1611,
+          943,
+          943
+        ]
+      ],
+      "flopsPerPair": 5730320556,
+      "coldPairMs": 385.29999999701977,
+      "warmFullRead": {
+        "count": 5,
+        "minMs": 24.200000002980232,
+        "medianMs": 28.599999994039536,
+        "maxMs": 30.299999997019768
+      },
+      "warmScalarBarrier": {
+        "count": 5,
+        "minMs": 14.399999991059303,
+        "medianMs": 14.700000002980232,
+        "maxMs": 20.400000005960464
+      },
+      "fullReadSamplesMs": [
+        28.599999994039536,
+        24.200000002980232,
+        24.200000002980232,
+        29.599999994039536,
+        30.299999997019768
+      ],
+      "scalarSamplesMs": [
+        14.700000002980232,
+        14.399999991059303,
+        15.400000005960464,
+        14.5,
+        20.400000005960464
+      ],
+      "checksum": 0.38672444969415665,
+      "residentInputAndOutputBytes": 25344068
+    }
+  ],
+  "peakLogicalBytes": 25344068,
+  "peakGpuAllocatedBytes": 82063556,
+  "before": {
+    "unreliable": false,
+    "numBytesInGPU": 0,
+    "numBytesInGPUAllocated": 0,
+    "numBytesInGPUFree": 0,
+    "numTensors": 0,
+    "numDataBuffers": 0,
+    "numBytes": 0
+  },
+  "after": {
+    "unreliable": false,
+    "numBytesInGPU": 0,
+    "numBytesInGPUAllocated": 110989848,
+    "numBytesInGPUFree": 110989848,
+    "numTensors": 0,
+    "numDataBuffers": 0,
+    "numBytes": 0
+  },
+  "limitations": "Warm kernel estimates exclude degree scaling, dangling/restart arithmetic, per-column L1 residual, ranking, JS candidate handling and cold compilation. Full-read includes complete result download. Scalar barrier includes sum reductions, not actual residual. TF GPU allocator cache is not live tensor memory.",
+  "mfStillUntrained": true,
+  "browser": "153.0.8010.12"
+}

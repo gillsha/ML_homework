@@ -1,0 +1,3310 @@
+{
+  "stage": "Recommendation implementation and experiments; not final report",
+  "alpha": 0.5,
+  "runtime": {
+    "tfjs": "4.22.0",
+    "backend": "webgl",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+    "browser": "153.0.8010.12"
+  },
+  "validationSweep": [
+    {
+      "alpha": 0.5,
+      "recall": 0.11448315913208877,
+      "cohortSize": 846,
+      "error": null
+    },
+    {
+      "alpha": 0.7,
+      "recall": 0.1047969507641043,
+      "cohortSize": 846,
+      "error": null
+    },
+    {
+      "alpha": 0.85,
+      "recall": 0.09002077155336492,
+      "cohortSize": 846,
+      "error": null
+    },
+    {
+      "alpha": 0.95,
+      "recall": 0.07375030387909676,
+      "cohortSize": 846,
+      "error": null
+    }
+  ],
+  "testComparison": [
+    {
+      "method": "popularity",
+      "split": "test",
+      "alpha": null,
+      "recall": 0.07602291343770759,
+      "cohortSize": 861,
+      "excludedUnseen": 13,
+      "excludedNoEligible": 82,
+      "meanPopularity": 271.99686411149816,
+      "iterations": null,
+      "residual": null,
+      "converged": null,
+      "error": null,
+      "note": null
+    },
+    {
+      "method": "pagerank",
+      "split": "test",
+      "alpha": 0.5,
+      "recall": 0.07969324149418144,
+      "cohortSize": 861,
+      "excludedUnseen": 13,
+      "excludedNoEligible": 82,
+      "meanPopularity": 257.820325203252,
+      "iterations": 19,
+      "residual": 5.435867933556437e-07,
+      "converged": true,
+      "error": null,
+      "note": null
+    },
+    {
+      "method": "ppr",
+      "split": "test",
+      "alpha": 0.5,
+      "recall": 0.11218853219486066,
+      "cohortSize": 861,
+      "excludedUnseen": 13,
+      "excludedNoEligible": 82,
+      "meanPopularity": 244.20673635307733,
+      "iterations": 22,
+      "residual": 5.181344704396906e-07,
+      "converged": true,
+      "error": null,
+      "note": null
+    },
+    {
+      "method": "mf",
+      "split": "test",
+      "alpha": null,
+      "recall": 0.021137488852036153,
+      "cohortSize": 861,
+      "excludedUnseen": 13,
+      "excludedNoEligible": 82,
+      "meanPopularity": 96.76085946573689,
+      "iterations": null,
+      "residual": null,
+      "converged": null,
+      "error": null,
+      "note": null
+    }
+  ],
+  "comparisonWallMs": 4630,
+  "checks": {
+    "supplied": {
+      "passed": 12,
+      "failed": 0,
+      "pending": 0,
+      "checks": [
+        {
+          "name": "reference graph: uniform alpha=0.85 matches readme 4.1 values",
+          "status": "PASS",
+          "detail": "C>A>B>D; produced by student pageRank(alpha, {transition: REFERENCE_GRAPH.transition}), iterations 28"
+        },
+        {
+          "name": "reference graph: restart at A alpha=0.85 matches readme 4.1 values",
+          "status": "PASS",
+          "detail": "A>C>B>D (D stays 0); produced by student personalizedPageRank(seedNode, alpha, {transition: REFERENCE_GRAPH.transition})"
+        },
+        {
+          "name": "row normalization: every nonzero-degree row sums to 1",
+          "status": "PASS",
+          "detail": "6 positive-degree row(s) sum to 1; 2 dangling row(s) are zero"
+        },
+        {
+          "name": "restart distributions: nonnegative and summing to 1",
+          "status": "PASS",
+          "detail": "uniform + one-hot over 4 nodes"
+        },
+        {
+          "name": "iterations preserve total probability (sum approx 1)",
+          "status": "PASS",
+          "detail": "sum = 1.0000002682 over 3 synthetic nodes (graph.js)"
+        },
+        {
+          "name": "stationary scores are nonnegative",
+          "status": "PASS",
+          "detail": "3 scores nonnegative (graph.js)"
+        },
+        {
+          "name": "one extra update produces approximately the same distribution",
+          "status": "PASS",
+          "detail": "L1 = 7.972e-7"
+        },
+        {
+          "name": "zero-degree node fixture preserves probability mass",
+          "status": "PASS",
+          "detail": "danglingMask [false,true,false,false,true]; mass 1.00000028 / 1.00000000"
+        },
+        {
+          "name": "matrix orientation: probability collects at the pointed-to node, not the source",
+          "status": "PASS",
+          "detail": "p = [0.486486, 0.256757, 0.256757]"
+        },
+        {
+          "name": "recommendTopK: excludes previously rated movies and breaks ties by ascending id",
+          "status": "PASS",
+          "detail": "10 eligible items for user 1"
+        },
+        {
+          "name": "graph mapping: node count equals observed users plus observed movies",
+          "status": "PASS",
+          "detail": "2554 nodes = 943 users + 1611 movies"
+        },
+        {
+          "name": "public surface: every required name is defined",
+          "status": "PASS",
+          "detail": "10 functions + ALPHA_GRID + MF_INFO"
+        }
+      ]
+    },
+    "focused": [
+      {
+        "name": "movie block ordering and Float64Array",
+        "status": "PASS"
+      },
+      {
+        "name": "explicit movieNodes ordering",
+        "status": "PASS"
+      },
+      {
+        "name": "malformed vector rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "pool includes nonpositive-only movies and popularity deduplicates",
+        "status": "PASS"
+      },
+      {
+        "name": "validation excludes low-rated training and ascending-ID ties",
+        "status": "PASS"
+      },
+      {
+        "name": "test excludes all train+val; short zero-score list preserved",
+        "status": "PASS"
+      },
+      {
+        "name": "exact recommendation record shape",
+        "status": "PASS"
+      },
+      {
+        "name": "empty-result contracts",
+        "status": "PASS"
+      },
+      {
+        "name": "macro recall, shared ascending cohort and fresh split filtering",
+        "status": "PASS"
+      },
+      {
+        "name": "unseen relevance and no-eligible counts",
+        "status": "PASS"
+      },
+      {
+        "name": "empty cohort returns zero",
+        "status": "PASS"
+      },
+      {
+        "name": "empty pool returns empty list",
+        "status": "PASS"
+      }
+    ],
+    "memory": {
+      "unreliable": false,
+      "numBytesInGPU": 0,
+      "numBytesInGPUAllocated": 2272,
+      "numBytesInGPUFree": 2272,
+      "numTensors": 0,
+      "numDataBuffers": 0,
+      "numBytes": 0
+    }
+  },
+  "audit": {
+    "val": {
+      "exclusions": {
+        "candidateUsers": 943,
+        "cohortSize": 846,
+        "excludedUnseen": 4,
+        "excludedNoEligible": 97,
+        "excludedNoPositiveEdge": 1,
+        "unseenIds": [
+          814,
+          1106,
+          1526,
+          1653
+        ]
+      },
+      "methods": {
+        "popularity": {
+          "counts": {
+            "outOfPool": 0,
+            "exclusionViolations": 0,
+            "shortLists": 0,
+            "zeroScoreInclusions": 0,
+            "zeroScoreLists": 0,
+            "duplicateItems": 0,
+            "orderingViolations": 0
+          },
+          "recall": 0.06977315415726622,
+          "cohort": 846,
+          "wallMs": 389.5
+        },
+        "pagerank": {
+          "counts": {
+            "outOfPool": 0,
+            "exclusionViolations": 0,
+            "shortLists": 0,
+            "zeroScoreInclusions": 0,
+            "zeroScoreLists": 0,
+            "duplicateItems": 0,
+            "orderingViolations": 0
+          },
+          "recall": 0.06410361078377284,
+          "cohort": 846,
+          "wallMs": 615.7000000029802
+        },
+        "ppr": {
+          "counts": {
+            "outOfPool": 0,
+            "exclusionViolations": 0,
+            "shortLists": 0,
+            "zeroScoreInclusions": 0,
+            "zeroScoreLists": 0,
+            "duplicateItems": 0,
+            "orderingViolations": 0
+          },
+          "recall": 0.11448315913208877,
+          "cohort": 846,
+          "wallMs": 1005.7000000029802
+        },
+        "mf": {
+          "counts": {
+            "outOfPool": 0,
+            "exclusionViolations": 0,
+            "shortLists": 0,
+            "zeroScoreInclusions": 0,
+            "zeroScoreLists": 0,
+            "duplicateItems": 0,
+            "orderingViolations": 0
+          },
+          "recall": 0.0272148428542038,
+          "cohort": 846,
+          "wallMs": 5265.0999999940395
+        }
+      }
+    },
+    "test": {
+      "exclusions": {
+        "candidateUsers": 943,
+        "cohortSize": 861,
+        "excludedUnseen": 13,
+        "excludedNoEligible": 82,
+        "excludedNoPositiveEdge": 1,
+        "unseenIds": [
+          913,
+          1106,
+          1130,
+          1458,
+          1498,
+          1525,
+          1613,
+          1625,
+          1645,
+          1646,
+          1650,
+          1651,
+          1674
+        ]
+      },
+      "methods": {
+        "popularity": {
+          "counts": {
+            "outOfPool": 0,
+            "exclusionViolations": 0,
+            "shortLists": 0,
+            "zeroScoreInclusions": 0,
+            "zeroScoreLists": 0,
+            "duplicateItems": 0,
+            "orderingViolations": 0
+          },
+          "recall": 0.07602291343770759,
+          "cohort": 861,
+          "wallMs": 374.1000000089407
+        },
+        "pagerank": {
+          "counts": {
+            "outOfPool": 0,
+            "exclusionViolations": 0,
+            "shortLists": 0,
+            "zeroScoreInclusions": 0,
+            "zeroScoreLists": 0,
+            "duplicateItems": 0,
+            "orderingViolations": 0
+          },
+          "recall": 0.07969324149418144,
+          "cohort": 861,
+          "wallMs": 631.6999999880791
+        },
+        "ppr": {
+          "counts": {
+            "outOfPool": 0,
+            "exclusionViolations": 0,
+            "shortLists": 0,
+            "zeroScoreInclusions": 0,
+            "zeroScoreLists": 0,
+            "duplicateItems": 0,
+            "orderingViolations": 0
+          },
+          "recall": 0.11218853219486066,
+          "cohort": 861,
+          "wallMs": 1019.8000000119209
+        },
+        "mf": {
+          "counts": {
+            "outOfPool": 0,
+            "exclusionViolations": 0,
+            "shortLists": 0,
+            "zeroScoreInclusions": 0,
+            "zeroScoreLists": 0,
+            "duplicateItems": 0,
+            "orderingViolations": 0
+          },
+          "recall": 0.021137488852036153,
+          "cohort": 861,
+          "wallMs": 5308.899999991059
+        }
+      }
+    }
+  },
+  "mfDispersion": {
+    "val": {
+      "denominator": 846,
+      "constantScores": 846,
+      "ascendingFullRankings": 846
+    },
+    "test": {
+      "denominator": 861,
+      "constantScores": 861,
+      "ascendingFullRankings": 861
+    }
+  },
+  "primaryUserOverlap": [
+    {
+      "method": "popularity",
+      "commonMovieIds": [
+        318
+      ],
+      "count": 1,
+      "user1MeanPopularity": 246.8,
+      "user2MeanPopularity": 262.1
+    },
+    {
+      "method": "pagerank",
+      "commonMovieIds": [
+        222
+      ],
+      "count": 1,
+      "user1MeanPopularity": 239.4,
+      "user2MeanPopularity": 247.4
+    },
+    {
+      "method": "ppr",
+      "commonMovieIds": [
+        475
+      ],
+      "count": 1,
+      "user1MeanPopularity": 228.4,
+      "user2MeanPopularity": 226.7
+    },
+    {
+      "method": "mf",
+      "commonMovieIds": [
+        5,
+        6
+      ],
+      "count": 2,
+      "user1MeanPopularity": 72.2,
+      "user2MeanPopularity": 111.4
+    }
+  ],
+  "diagnostics": [
+    {
+      "label": "baseline",
+      "userId": 1,
+      "alpha": 0.85,
+      "sharedWithBaseline": [
+        100,
+        222,
+        258,
+        286,
+        288,
+        300,
+        313,
+        318,
+        357,
+        483
+      ],
+      "sharedCount": 10,
+      "meanPopularity": 245.5,
+      "meanPopularityChange": 0.0,
+      "genreComposition": {
+        "denominator": 10,
+        "unit": "recommended movies; multi-label shares may sum above1",
+        "counts": {
+          "Crime": 1,
+          "Drama": 7,
+          "Thriller": 3,
+          "Sci-Fi": 2,
+          "Romance": 3,
+          "War": 3,
+          "Horror": 1,
+          "Action": 3,
+          "Adventure": 1
+        },
+        "shares": {
+          "Crime": 0.1,
+          "Drama": 0.7,
+          "Thriller": 0.3,
+          "Sci-Fi": 0.2,
+          "Romance": 0.3,
+          "War": 0.3,
+          "Horror": 0.1,
+          "Action": 0.3,
+          "Adventure": 0.1
+        }
+      },
+      "hits": 3,
+      "relevant": 19
+    },
+    {
+      "label": "seed-only",
+      "userId": 2,
+      "alpha": 0.85,
+      "sharedWithBaseline": [],
+      "sharedCount": 0,
+      "meanPopularity": 254.9,
+      "meanPopularityChange": 9.400000000000006,
+      "genreComposition": {
+        "denominator": 10,
+        "unit": "recommended movies; multi-label shares may sum above1",
+        "counts": {
+          "Action": 5,
+          "Adventure": 4,
+          "Romance": 2,
+          "Sci-Fi": 4,
+          "War": 3,
+          "Drama": 6,
+          "Thriller": 2,
+          "Crime": 1
+        },
+        "shares": {
+          "Action": 0.5,
+          "Adventure": 0.4,
+          "Romance": 0.2,
+          "Sci-Fi": 0.4,
+          "War": 0.3,
+          "Drama": 0.6,
+          "Thriller": 0.2,
+          "Crime": 0.1
+        }
+      },
+      "hits": 0,
+      "relevant": 2
+    },
+    {
+      "label": "alpha-only",
+      "userId": 1,
+      "alpha": 0.5,
+      "sharedWithBaseline": [
+        100,
+        222,
+        258,
+        286,
+        318,
+        357,
+        483
+      ],
+      "sharedCount": 7,
+      "meanPopularity": 228.4,
+      "meanPopularityChange": -17.099999999999994,
+      "genreComposition": {
+        "denominator": 10,
+        "unit": "recommended movies; multi-label shares may sum above1",
+        "counts": {
+          "Crime": 1,
+          "Drama": 9,
+          "Thriller": 1,
+          "Sci-Fi": 3,
+          "Romance": 3,
+          "War": 3,
+          "Action": 1,
+          "Adventure": 1,
+          "Children's": 1,
+          "Fantasy": 1
+        },
+        "shares": {
+          "Crime": 0.1,
+          "Drama": 0.9,
+          "Thriller": 0.1,
+          "Sci-Fi": 0.3,
+          "Romance": 0.3,
+          "War": 0.3,
+          "Action": 0.1,
+          "Adventure": 0.1,
+          "Children's": 0.1,
+          "Fantasy": 0.1
+        }
+      },
+      "hits": 3,
+      "relevant": 19
+    }
+  ],
+  "hw5Additional": [
+    {
+      "label": "default-20261016-01",
+      "checkpoint": 1,
+      "validationTieEarliestEpochVerified": true,
+      "wallMs": 117004.5,
+      "splitRecall": {
+        "val": 0.0272148428542038,
+        "test": 0.021137488852036153
+      },
+      "cohorts": {
+        "val": 846,
+        "test": 861
+      }
+    },
+    {
+      "label": "reg-0005-20261016-01",
+      "checkpoint": 1,
+      "validationTieEarliestEpochVerified": true,
+      "wallMs": 2366,
+      "splitRecall": {
+        "val": 0.0272148428542038,
+        "test": 0.021137488852036153
+      },
+      "cohorts": {
+        "val": 846,
+        "test": 861
+      }
+    }
+  ],
+  "hw5Equality": {
+    "val": {
+      "denominator": 846,
+      "completeRankingsEqual": true,
+      "perUserHitsEqual": true,
+      "allScoresConstant": true
+    },
+    "test": {
+      "denominator": 861,
+      "completeRankingsEqual": true,
+      "perUserHitsEqual": true,
+      "allScoresConstant": true
+    }
+  },
+  "independent": {
+    "method": "Independent raw chronological split, binary graph, eligible cohorts and score-desc/ID-asc ranking. Float64 PageRank recomputed; float64 PPR arrays independently generated earlier and hash verified.",
+    "alpha": 0.5,
+    "rawSHA256": "06416e597f82b7342361e41163890c81036900f418ad91315590814211dca490",
+    "graphSourceSHA256": "5df87007991d3db33d50cd56e441576b7d32a646eea30595e8922567b4a6f3cb",
+    "globalIterations": 19,
+    "globalResidual": 5.651403356061785e-07,
+    "comparisons": {
+      "val": {
+        "popularity": {
+          "denominator": 846,
+          "cohortIdentical": true,
+          "numpyRecall": 0.06977315415726612,
+          "browserRecall": 0.06977315415726622,
+          "recallDifference": -9.71445146547012e-17,
+          "recommendationDifferences": [],
+          "perUserHitDifferences": []
+        },
+        "pagerank": {
+          "denominator": 846,
+          "cohortIdentical": true,
+          "numpyRecall": 0.06410361078377277,
+          "browserRecall": 0.06410361078377284,
+          "recallDifference": -6.938893903907228e-17,
+          "recommendationDifferences": [],
+          "perUserHitDifferences": []
+        },
+        "ppr": {
+          "denominator": 846,
+          "cohortIdentical": true,
+          "numpyRecall": 0.11448315913208877,
+          "browserRecall": 0.11448315913208877,
+          "recallDifference": 0.0,
+          "recommendationDifferences": [],
+          "perUserHitDifferences": []
+        }
+      },
+      "test": {
+        "popularity": {
+          "denominator": 861,
+          "cohortIdentical": true,
+          "numpyRecall": 0.07602291343770748,
+          "browserRecall": 0.07602291343770759,
+          "recallDifference": -1.1102230246251565e-16,
+          "recommendationDifferences": [],
+          "perUserHitDifferences": []
+        },
+        "pagerank": {
+          "denominator": 861,
+          "cohortIdentical": true,
+          "numpyRecall": 0.07969324149418132,
+          "browserRecall": 0.07969324149418144,
+          "recallDifference": -1.249000902703301e-16,
+          "recommendationDifferences": [],
+          "perUserHitDifferences": []
+        },
+        "ppr": {
+          "denominator": 861,
+          "cohortIdentical": true,
+          "numpyRecall": 0.1121885321948605,
+          "browserRecall": 0.11218853219486066,
+          "recallDifference": -1.6653345369377348e-16,
+          "recommendationDifferences": [],
+          "perUserHitDifferences": []
+        }
+      }
+    },
+    "validationSweep": [
+      {
+        "alpha": 0.5,
+        "numpyRecall": 0.11448315913208877,
+        "browserRecall": 0.11448315913208877,
+        "cohort": 846,
+        "listDifferences": []
+      },
+      {
+        "alpha": 0.7,
+        "numpyRecall": 0.10479695076410428,
+        "browserRecall": 0.1047969507641043,
+        "cohort": 846,
+        "listDifferences": []
+      },
+      {
+        "alpha": 0.85,
+        "numpyRecall": 0.09002077155336485,
+        "browserRecall": 0.09002077155336492,
+        "cohort": 846,
+        "listDifferences": []
+      },
+      {
+        "alpha": 0.95,
+        "numpyRecall": 0.0737503038790967,
+        "browserRecall": 0.07375030387909676,
+        "cohort": 846,
+        "listDifferences": []
+      }
+    ],
+    "nonconverged95": [
+      {
+        "userId": 39,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            50,
+            100,
+            286,
+            181,
+            127,
+            288,
+            174,
+            98,
+            1,
+            56
+          ],
+          "browser": [
+            50,
+            100,
+            286,
+            181,
+            127,
+            288,
+            174,
+            98,
+            1,
+            56
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            50,
+            100,
+            286,
+            181,
+            127,
+            174,
+            98,
+            1,
+            56,
+            172
+          ],
+          "browser": [
+            50,
+            100,
+            286,
+            181,
+            127,
+            174,
+            98,
+            1,
+            56,
+            172
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 54,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            174,
+            98,
+            286,
+            300,
+            56,
+            172,
+            313,
+            79,
+            64,
+            318
+          ],
+          "browser": [
+            174,
+            98,
+            286,
+            300,
+            56,
+            172,
+            313,
+            79,
+            64,
+            318
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            174,
+            98,
+            286,
+            300,
+            56,
+            172,
+            313,
+            79,
+            64,
+            318
+          ],
+          "browser": [
+            174,
+            98,
+            286,
+            300,
+            56,
+            172,
+            313,
+            79,
+            64,
+            318
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 161,
+        "val": {
+          "cohortEligible": false,
+          "numpy": [
+            181,
+            258,
+            1,
+            313,
+            172,
+            300,
+            288,
+            7,
+            302,
+            64
+          ],
+          "browser": [
+            181,
+            258,
+            1,
+            313,
+            172,
+            300,
+            288,
+            7,
+            302,
+            64
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": false,
+          "numpy": [
+            258,
+            1,
+            313,
+            172,
+            300,
+            288,
+            7,
+            302,
+            64,
+            79
+          ],
+          "browser": [
+            258,
+            1,
+            313,
+            172,
+            300,
+            288,
+            7,
+            302,
+            64,
+            79
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 178,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            313,
+            210,
+            357,
+            191,
+            302,
+            475,
+            185,
+            132,
+            496,
+            151
+          ],
+          "browser": [
+            313,
+            210,
+            357,
+            191,
+            302,
+            475,
+            185,
+            132,
+            496,
+            151
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            357,
+            191,
+            302,
+            475,
+            185,
+            132,
+            496,
+            151,
+            515,
+            603
+          ],
+          "browser": [
+            357,
+            191,
+            302,
+            475,
+            185,
+            132,
+            496,
+            151,
+            515,
+            603
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 202,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            50,
+            100,
+            181,
+            174,
+            98,
+            127,
+            56,
+            300,
+            79,
+            7
+          ],
+          "browser": [
+            50,
+            100,
+            181,
+            174,
+            98,
+            127,
+            56,
+            300,
+            79,
+            7
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": false,
+          "numpy": [
+            50,
+            100,
+            181,
+            174,
+            98,
+            127,
+            56,
+            300,
+            79,
+            7
+          ],
+          "browser": [
+            50,
+            100,
+            181,
+            174,
+            98,
+            127,
+            56,
+            300,
+            79,
+            7
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 295,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            127,
+            258,
+            286,
+            64,
+            300,
+            117,
+            288,
+            12,
+            313,
+            89
+          ],
+          "browser": [
+            127,
+            258,
+            286,
+            64,
+            300,
+            117,
+            288,
+            12,
+            313,
+            89
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            127,
+            258,
+            286,
+            64,
+            300,
+            117,
+            288,
+            12,
+            313,
+            89
+          ],
+          "browser": [
+            127,
+            258,
+            286,
+            64,
+            300,
+            117,
+            288,
+            12,
+            313,
+            89
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 310,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            100,
+            127,
+            286,
+            1,
+            174,
+            98,
+            56,
+            172,
+            300,
+            7
+          ],
+          "browser": [
+            100,
+            127,
+            286,
+            1,
+            174,
+            98,
+            56,
+            172,
+            300,
+            7
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            100,
+            127,
+            286,
+            1,
+            174,
+            98,
+            56,
+            172,
+            300,
+            7
+          ],
+          "browser": [
+            100,
+            127,
+            286,
+            1,
+            174,
+            98,
+            56,
+            172,
+            300,
+            7
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 318,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            181,
+            98,
+            258,
+            1,
+            172,
+            300,
+            7,
+            79,
+            173,
+            288
+          ],
+          "browser": [
+            181,
+            98,
+            258,
+            1,
+            172,
+            300,
+            7,
+            79,
+            173,
+            288
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            181,
+            98,
+            258,
+            1,
+            172,
+            300,
+            7,
+            79,
+            173,
+            288
+          ],
+          "browser": [
+            181,
+            98,
+            258,
+            1,
+            172,
+            300,
+            7,
+            79,
+            173,
+            288
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 351,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            50,
+            100,
+            181,
+            127,
+            302,
+            174,
+            1,
+            98,
+            269,
+            56
+          ],
+          "browser": [
+            50,
+            100,
+            181,
+            127,
+            302,
+            174,
+            1,
+            98,
+            269,
+            56
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            50,
+            100,
+            181,
+            127,
+            302,
+            174,
+            1,
+            98,
+            269,
+            56
+          ],
+          "browser": [
+            50,
+            100,
+            181,
+            127,
+            302,
+            174,
+            1,
+            98,
+            269,
+            56
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 367,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            181,
+            174,
+            127,
+            1,
+            286,
+            172,
+            300,
+            313,
+            79,
+            64
+          ],
+          "browser": [
+            181,
+            174,
+            127,
+            1,
+            286,
+            172,
+            300,
+            313,
+            79,
+            64
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            181,
+            174,
+            127,
+            1,
+            286,
+            172,
+            300,
+            313,
+            79,
+            64
+          ],
+          "browser": [
+            181,
+            174,
+            127,
+            1,
+            286,
+            172,
+            300,
+            313,
+            79,
+            64
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 386,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            100,
+            258,
+            174,
+            1,
+            98,
+            286,
+            56,
+            172,
+            300,
+            288
+          ],
+          "browser": [
+            100,
+            258,
+            174,
+            1,
+            98,
+            286,
+            56,
+            172,
+            300,
+            288
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": false,
+          "numpy": [
+            100,
+            258,
+            174,
+            1,
+            98,
+            286,
+            56,
+            172,
+            300,
+            288
+          ],
+          "browser": [
+            100,
+            258,
+            174,
+            1,
+            98,
+            286,
+            56,
+            172,
+            300,
+            288
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 401,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            50,
+            98,
+            258,
+            56,
+            79,
+            7,
+            300,
+            288,
+            22,
+            313
+          ],
+          "browser": [
+            50,
+            98,
+            258,
+            56,
+            79,
+            7,
+            300,
+            288,
+            22,
+            313
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            50,
+            98,
+            258,
+            56,
+            79,
+            7,
+            300,
+            288,
+            22,
+            313
+          ],
+          "browser": [
+            50,
+            98,
+            258,
+            56,
+            79,
+            7,
+            300,
+            288,
+            22,
+            313
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 410,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            50,
+            100,
+            181,
+            127,
+            302,
+            98,
+            174,
+            288,
+            1,
+            56
+          ],
+          "browser": [
+            50,
+            100,
+            181,
+            127,
+            302,
+            98,
+            174,
+            288,
+            1,
+            56
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            50,
+            100,
+            181,
+            127,
+            302,
+            98,
+            174,
+            288,
+            1,
+            56
+          ],
+          "browser": [
+            50,
+            100,
+            181,
+            127,
+            302,
+            98,
+            174,
+            288,
+            1,
+            56
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 426,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            181,
+            127,
+            258,
+            1,
+            286,
+            56,
+            172,
+            64,
+            79,
+            7
+          ],
+          "browser": [
+            181,
+            127,
+            258,
+            1,
+            286,
+            56,
+            172,
+            64,
+            79,
+            7
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            181,
+            127,
+            258,
+            1,
+            286,
+            56,
+            172,
+            64,
+            79,
+            7
+          ],
+          "browser": [
+            181,
+            127,
+            258,
+            1,
+            286,
+            56,
+            172,
+            64,
+            79,
+            7
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 475,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            50,
+            181,
+            127,
+            174,
+            98,
+            1,
+            300,
+            288,
+            56,
+            172
+          ],
+          "browser": [
+            50,
+            181,
+            127,
+            174,
+            98,
+            1,
+            300,
+            288,
+            56,
+            172
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            181,
+            174,
+            98,
+            1,
+            300,
+            288,
+            56,
+            172,
+            7,
+            79
+          ],
+          "browser": [
+            181,
+            174,
+            98,
+            1,
+            300,
+            288,
+            56,
+            172,
+            7,
+            79
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 519,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            50,
+            258,
+            100,
+            286,
+            181,
+            300,
+            127,
+            302,
+            98,
+            174
+          ],
+          "browser": [
+            50,
+            258,
+            100,
+            286,
+            181,
+            300,
+            127,
+            302,
+            98,
+            174
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            50,
+            258,
+            100,
+            286,
+            181,
+            300,
+            127,
+            302,
+            98,
+            174
+          ],
+          "browser": [
+            50,
+            258,
+            100,
+            286,
+            181,
+            300,
+            127,
+            302,
+            98,
+            174
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 566,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            174,
+            258,
+            1,
+            286,
+            79,
+            300,
+            237,
+            357,
+            313,
+            183
+          ],
+          "browser": [
+            174,
+            258,
+            1,
+            286,
+            79,
+            300,
+            237,
+            357,
+            313,
+            183
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            174,
+            258,
+            1,
+            286,
+            79,
+            300,
+            237,
+            357,
+            313,
+            183
+          ],
+          "browser": [
+            174,
+            258,
+            1,
+            286,
+            79,
+            300,
+            237,
+            357,
+            313,
+            183
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 572,
+        "val": {
+          "cohortEligible": false,
+          "numpy": [
+            50,
+            258,
+            181,
+            127,
+            1,
+            98,
+            174,
+            56,
+            288,
+            172
+          ],
+          "browser": [
+            50,
+            258,
+            181,
+            127,
+            1,
+            98,
+            174,
+            56,
+            288,
+            172
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": false,
+          "numpy": [
+            50,
+            258,
+            181,
+            127,
+            1,
+            98,
+            174,
+            56,
+            288,
+            172
+          ],
+          "browser": [
+            50,
+            258,
+            181,
+            127,
+            1,
+            98,
+            174,
+            56,
+            288,
+            172
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 595,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            174,
+            1,
+            98,
+            286,
+            56,
+            172,
+            300,
+            7,
+            117,
+            313
+          ],
+          "browser": [
+            174,
+            1,
+            98,
+            286,
+            56,
+            172,
+            300,
+            7,
+            117,
+            313
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            174,
+            1,
+            98,
+            286,
+            56,
+            172,
+            300,
+            7,
+            117,
+            313
+          ],
+          "browser": [
+            174,
+            1,
+            98,
+            286,
+            56,
+            172,
+            300,
+            7,
+            117,
+            313
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 648,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            100,
+            258,
+            64,
+            300,
+            237,
+            313,
+            12,
+            302,
+            269,
+            427
+          ],
+          "browser": [
+            100,
+            258,
+            64,
+            300,
+            237,
+            313,
+            12,
+            302,
+            269,
+            427
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            100,
+            258,
+            64,
+            300,
+            237,
+            313,
+            12,
+            302,
+            269,
+            427
+          ],
+          "browser": [
+            100,
+            258,
+            64,
+            300,
+            237,
+            313,
+            12,
+            302,
+            269,
+            427
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 708,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            100,
+            286,
+            174,
+            98,
+            288,
+            172,
+            56,
+            7,
+            79,
+            64
+          ],
+          "browser": [
+            100,
+            286,
+            174,
+            98,
+            288,
+            172,
+            56,
+            7,
+            79,
+            64
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            100,
+            286,
+            174,
+            98,
+            288,
+            172,
+            56,
+            7,
+            79,
+            64
+          ],
+          "browser": [
+            100,
+            286,
+            174,
+            98,
+            288,
+            172,
+            56,
+            7,
+            79,
+            64
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 710,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            98,
+            1,
+            7,
+            288,
+            168,
+            313,
+            237,
+            69,
+            117,
+            121
+          ],
+          "browser": [
+            98,
+            1,
+            7,
+            288,
+            168,
+            313,
+            237,
+            69,
+            117,
+            121
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            98,
+            7,
+            288,
+            168,
+            313,
+            237,
+            69,
+            117,
+            121,
+            183
+          ],
+          "browser": [
+            98,
+            7,
+            288,
+            168,
+            313,
+            237,
+            69,
+            117,
+            121,
+            183
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 760,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            100,
+            174,
+            127,
+            1,
+            286,
+            56,
+            7,
+            313,
+            117,
+            79
+          ],
+          "browser": [
+            100,
+            174,
+            127,
+            1,
+            286,
+            56,
+            7,
+            313,
+            117,
+            79
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            100,
+            174,
+            127,
+            1,
+            286,
+            56,
+            7,
+            313,
+            117,
+            79
+          ],
+          "browser": [
+            100,
+            174,
+            127,
+            1,
+            286,
+            56,
+            7,
+            313,
+            117,
+            79
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 812,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            50,
+            258,
+            100,
+            181,
+            313,
+            127,
+            1,
+            98,
+            174,
+            56
+          ],
+          "browser": [
+            50,
+            258,
+            100,
+            181,
+            313,
+            127,
+            1,
+            98,
+            174,
+            56
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            50,
+            258,
+            100,
+            181,
+            313,
+            127,
+            1,
+            98,
+            174,
+            56
+          ],
+          "browser": [
+            50,
+            258,
+            100,
+            181,
+            313,
+            127,
+            1,
+            98,
+            174,
+            56
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 840,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            258,
+            1,
+            286,
+            318,
+            237,
+            288,
+            12,
+            117,
+            313,
+            302
+          ],
+          "browser": [
+            258,
+            1,
+            286,
+            318,
+            237,
+            288,
+            12,
+            117,
+            313,
+            302
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            258,
+            1,
+            286,
+            318,
+            237,
+            288,
+            12,
+            117,
+            313,
+            302
+          ],
+          "browser": [
+            258,
+            1,
+            286,
+            318,
+            237,
+            288,
+            12,
+            117,
+            313,
+            302
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 846,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            100,
+            1,
+            286,
+            7,
+            300,
+            237,
+            117,
+            313,
+            121,
+            222
+          ],
+          "browser": [
+            100,
+            1,
+            286,
+            7,
+            300,
+            237,
+            117,
+            313,
+            121,
+            222
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            100,
+            1,
+            286,
+            7,
+            300,
+            237,
+            117,
+            313,
+            121,
+            222
+          ],
+          "browser": [
+            100,
+            1,
+            286,
+            7,
+            300,
+            237,
+            117,
+            313,
+            121,
+            222
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 847,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            100,
+            174,
+            127,
+            286,
+            300,
+            79,
+            64,
+            318,
+            237,
+            313
+          ],
+          "browser": [
+            100,
+            174,
+            127,
+            286,
+            300,
+            79,
+            64,
+            318,
+            237,
+            313
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            100,
+            174,
+            127,
+            286,
+            300,
+            79,
+            64,
+            318,
+            237,
+            313
+          ],
+          "browser": [
+            100,
+            174,
+            127,
+            286,
+            300,
+            79,
+            64,
+            318,
+            237,
+            313
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 903,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            174,
+            98,
+            258,
+            286,
+            56,
+            172,
+            173,
+            300,
+            237,
+            117
+          ],
+          "browser": [
+            174,
+            98,
+            258,
+            286,
+            56,
+            172,
+            173,
+            300,
+            237,
+            117
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            174,
+            98,
+            258,
+            286,
+            172,
+            173,
+            300,
+            237,
+            117,
+            168
+          ],
+          "browser": [
+            174,
+            98,
+            258,
+            286,
+            172,
+            173,
+            300,
+            237,
+            117,
+            168
+          ],
+          "identical": true
+        }
+      },
+      {
+        "userId": 931,
+        "val": {
+          "cohortEligible": true,
+          "numpy": [
+            286,
+            127,
+            174,
+            1,
+            98,
+            300,
+            288,
+            56,
+            172,
+            7
+          ],
+          "browser": [
+            286,
+            127,
+            174,
+            1,
+            98,
+            300,
+            288,
+            56,
+            172,
+            7
+          ],
+          "identical": true
+        },
+        "test": {
+          "cohortEligible": true,
+          "numpy": [
+            286,
+            174,
+            1,
+            98,
+            300,
+            288,
+            56,
+            172,
+            7,
+            117
+          ],
+          "browser": [
+            286,
+            174,
+            1,
+            98,
+            300,
+            288,
+            56,
+            172,
+            7,
+            117
+          ],
+          "identical": true
+        }
+      }
+    ],
+    "runtimeSeconds": 9.452593374997377,
+    "titlePolicy": "History titles decoded independently as Latin-1 from raw u.item; native app/export titles preserve supplied UTF-8 decoding, including existing replacement characters."
+  },
+  "analysisRelevantRanks": [
+    {
+      "userId": 1,
+      "alpha": 0.5,
+      "relevantMovies": [
+        {
+          "movieId": 6,
+          "title": "Shanghai Triad (Yao a yao yao dao waipo qiao) (1995)",
+          "genres": [
+            "Drama"
+          ],
+          "popularity": 12,
+          "pprEligibleRank": 428,
+          "recommendedHit": false
+        },
+        {
+          "movieId": 18,
+          "title": "White Balloon, The (1995)",
+          "genres": [
+            "Drama"
+          ],
+          "popularity": 1,
+          "pprEligibleRank": 972,
+          "recommendedHit": false
+        },
+        {
+          "movieId": 20,
+          "title": "Angels and Insects (1995)",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "popularity": 31,
+          "pprEligibleRank": 208,
+          "recommendedHit": false
+        },
+        {
+          "movieId": 32,
+          "title": "Crumb (1994)",
+          "genres": [
+            "Documentary"
+          ],
+          "popularity": 46,
+          "pprEligibleRank": 144,
+          "recommendedHit": false
+        },
+        {
+          "movieId": 100,
+          "title": "Fargo (1996)",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "popularity": 377,
+          "pprEligibleRank": 1,
+          "recommendedHit": true
+        },
+        {
+          "movieId": 111,
+          "title": "Truth About Cats & Dogs, The (1996)",
+          "genres": [
+            "Comedy",
+            "Romance"
+          ],
+          "popularity": 131,
+          "pprEligibleRank": 35,
+          "recommendedHit": false
+        },
+        {
+          "movieId": 129,
+          "title": "Bound (1996)",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Romance",
+            "Thriller"
+          ],
+          "popularity": 76,
+          "pprEligibleRank": 68,
+          "recommendedHit": false
+        },
+        {
+          "movieId": 154,
+          "title": "Monty Python's Life of Brian (1979)",
+          "genres": [
+            "Comedy"
+          ],
+          "popularity": 95,
+          "pprEligibleRank": 42,
+          "recommendedHit": false
+        },
+        {
+          "movieId": 169,
+          "title": "Wrong Trousers, The (1993)",
+          "genres": [
+            "Animation",
+            "Comedy"
+          ],
+          "popularity": 90,
+          "pprEligibleRank": 43,
+          "recommendedHit": false
+        },
+        {
+          "movieId": 171,
+          "title": "Delicatessen (1991)",
+          "genres": [
+            "Comedy",
+            "Sci-Fi"
+          ],
+          "popularity": 39,
+          "pprEligibleRank": 157,
+          "recommendedHit": false
+        },
+        {
+          "movieId": 178,
+          "title": "12 Angry Men (1957)",
+          "genres": [
+            "Drama"
+          ],
+          "popularity": 93,
+          "pprEligibleRank": 57,
+          "recommendedHit": false
+        },
+        {
+          "movieId": 209,
+          "title": "This Is Spinal Tap (1984)",
+          "genres": [
+            "Comedy",
+            "Drama",
+            "Musical"
+          ],
+          "popularity": 116,
+          "pprEligibleRank": 27,
+          "recommendedHit": false
+        },
+        {
+          "movieId": 221,
+          "title": "Breaking the Waves (1996)",
+          "genres": [
+            "Drama"
+          ],
+          "popularity": 39,
+          "pprEligibleRank": 154,
+          "recommendedHit": false
+        },
+        {
+          "movieId": 222,
+          "title": "Star Trek: First Contact (1996)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "popularity": 189,
+          "pprEligibleRank": 7,
+          "recommendedHit": true
+        },
+        {
+          "movieId": 228,
+          "title": "Star Trek: The Wrath of Khan (1982)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "popularity": 125,
+          "pprEligibleRank": 22,
+          "recommendedHit": false
+        },
+        {
+          "movieId": 242,
+          "title": "Kolya (1996)",
+          "genres": [
+            "Comedy"
+          ],
+          "popularity": 78,
+          "pprEligibleRank": 89,
+          "recommendedHit": false
+        },
+        {
+          "movieId": 256,
+          "title": "When the Cats Away (Chacun cherche son chat) (1996)",
+          "genres": [
+            "Comedy",
+            "Romance"
+          ],
+          "popularity": 7,
+          "pprEligibleRank": 542,
+          "recommendedHit": false
+        },
+        {
+          "movieId": 258,
+          "title": "Contact (1997)",
+          "genres": [
+            "Drama",
+            "Sci-Fi"
+          ],
+          "popularity": 307,
+          "pprEligibleRank": 2,
+          "recommendedHit": true
+        },
+        {
+          "movieId": 270,
+          "title": "Gattaca (1997)",
+          "genres": [
+            "Drama",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "popularity": 67,
+          "pprEligibleRank": 165,
+          "recommendedHit": false
+        }
+      ],
+      "numerator": 3,
+      "denominator": 19,
+      "recall": 0.15789473684210525
+    },
+    {
+      "userId": 2,
+      "alpha": 0.5,
+      "relevantMovies": [
+        {
+          "movieId": 304,
+          "title": "Fly Away Home (1996)",
+          "genres": [
+            "Adventure",
+            "Children's"
+          ],
+          "popularity": 68,
+          "pprEligibleRank": 84,
+          "recommendedHit": false
+        },
+        {
+          "movieId": 316,
+          "title": "As Good As It Gets (1997)",
+          "genres": [
+            "Comedy",
+            "Drama"
+          ],
+          "popularity": 57,
+          "pprEligibleRank": 177,
+          "recommendedHit": false
+        }
+      ],
+      "numerator": 0,
+      "denominator": 2,
+      "recall": 0.0
+    }
+  ],
+  "histories": [
+    {
+      "userId": 1,
+      "totalTrainRatings": 217,
+      "positiveTrainRatings": 131,
+      "positiveThreshold": 4,
+      "genreComposition": {
+        "allTrain": {
+          "denominator": 217,
+          "unit": "training rated movies; multi-label genre shares may sum above 1",
+          "shares": {
+            "Action": {
+              "count": 64,
+              "share": 0.29493087557603687
+            },
+            "Adventure": {
+              "count": 34,
+              "share": 0.15668202764976957
+            },
+            "Animation": {
+              "count": 9,
+              "share": 0.041474654377880185
+            },
+            "Children's": {
+              "count": 18,
+              "share": 0.08294930875576037
+            },
+            "Comedy": {
+              "count": 72,
+              "share": 0.3317972350230415
+            },
+            "Crime": {
+              "count": 20,
+              "share": 0.09216589861751152
+            },
+            "Documentary": {
+              "count": 3,
+              "share": 0.013824884792626729
+            },
+            "Drama": {
+              "count": 82,
+              "share": 0.3778801843317972
+            },
+            "Fantasy": {
+              "count": 2,
+              "share": 0.009216589861751152
+            },
+            "Film-Noir": {
+              "count": 1,
+              "share": 0.004608294930875576
+            },
+            "Horror": {
+              "count": 11,
+              "share": 0.05069124423963134
+            },
+            "Musical": {
+              "count": 11,
+              "share": 0.05069124423963134
+            },
+            "Mystery": {
+              "count": 5,
+              "share": 0.02304147465437788
+            },
+            "Romance": {
+              "count": 34,
+              "share": 0.15668202764976957
+            },
+            "Sci-Fi": {
+              "count": 36,
+              "share": 0.16589861751152074
+            },
+            "Thriller": {
+              "count": 42,
+              "share": 0.1935483870967742
+            },
+            "War": {
+              "count": 22,
+              "share": 0.10138248847926268
+            },
+            "Western": {
+              "count": 4,
+              "share": 0.018433179723502304
+            }
+          }
+        },
+        "positiveTrain": {
+          "denominator": 131,
+          "unit": "training rated movies; multi-label genre shares may sum above 1",
+          "shares": {
+            "Action": {
+              "count": 36,
+              "share": 0.2748091603053435
+            },
+            "Adventure": {
+              "count": 15,
+              "share": 0.11450381679389313
+            },
+            "Animation": {
+              "count": 4,
+              "share": 0.030534351145038167
+            },
+            "Children's": {
+              "count": 5,
+              "share": 0.03816793893129771
+            },
+            "Comedy": {
+              "count": 39,
+              "share": 0.29770992366412213
+            },
+            "Crime": {
+              "count": 11,
+              "share": 0.08396946564885496
+            },
+            "Documentary": {
+              "count": 3,
+              "share": 0.022900763358778626
+            },
+            "Drama": {
+              "count": 61,
+              "share": 0.46564885496183206
+            },
+            "Fantasy": {
+              "count": 1,
+              "share": 0.007633587786259542
+            },
+            "Film-Noir": {
+              "count": 1,
+              "share": 0.007633587786259542
+            },
+            "Horror": {
+              "count": 6,
+              "share": 0.04580152671755725
+            },
+            "Musical": {
+              "count": 5,
+              "share": 0.03816793893129771
+            },
+            "Mystery": {
+              "count": 3,
+              "share": 0.022900763358778626
+            },
+            "Romance": {
+              "count": 22,
+              "share": 0.16793893129770993
+            },
+            "Sci-Fi": {
+              "count": 27,
+              "share": 0.20610687022900764
+            },
+            "Thriller": {
+              "count": 25,
+              "share": 0.19083969465648856
+            },
+            "War": {
+              "count": 13,
+              "share": 0.09923664122137404
+            },
+            "Western": {
+              "count": 2,
+              "share": 0.015267175572519083
+            }
+          }
+        }
+      },
+      "meanPositiveMoviePopularity": 106.97709923664122,
+      "mostPopularPositive": [
+        {
+          "movieId": 50,
+          "title": "Star Wars (1977)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Romance",
+            "Sci-Fi",
+            "War"
+          ],
+          "popularity": 449
+        },
+        {
+          "movieId": 181,
+          "title": "Return of the Jedi (1983)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Romance",
+            "Sci-Fi",
+            "War"
+          ],
+          "popularity": 339
+        },
+        {
+          "movieId": 174,
+          "title": "Raiders of the Lost Ark (1981)",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "popularity": 312
+        },
+        {
+          "movieId": 98,
+          "title": "Silence of the Lambs, The (1991)",
+          "genres": [
+            "Drama",
+            "Thriller"
+          ],
+          "popularity": 308
+        },
+        {
+          "movieId": 127,
+          "title": "Godfather, The (1972)",
+          "genres": [
+            "Action",
+            "Crime",
+            "Drama"
+          ],
+          "popularity": 308
+        }
+      ],
+      "leastPopularPositive": [
+        {
+          "movieId": 146,
+          "title": "Unhook the Stars (1996)",
+          "genres": [
+            "Drama"
+          ],
+          "popularity": 2
+        },
+        {
+          "movieId": 119,
+          "title": "Maya Lin: A Strong Clear Vision (1994)",
+          "genres": [
+            "Documentary"
+          ],
+          "popularity": 3
+        },
+        {
+          "movieId": 84,
+          "title": "Robert A. Heinlein's The Puppet Masters (1994)",
+          "genres": [
+            "Horror",
+            "Sci-Fi"
+          ],
+          "popularity": 4
+        },
+        {
+          "movieId": 267,
+          "title": "unknown",
+          "genres": [],
+          "popularity": 5
+        },
+        {
+          "movieId": 43,
+          "title": "Disclosure (1994)",
+          "genres": [
+            "Drama",
+            "Thriller"
+          ],
+          "popularity": 7
+        }
+      ]
+    },
+    {
+      "userId": 2,
+      "totalTrainRatings": 49,
+      "positiveTrainRatings": 32,
+      "positiveThreshold": 4,
+      "genreComposition": {
+        "allTrain": {
+          "denominator": 49,
+          "unit": "training rated movies; multi-label genre shares may sum above 1",
+          "shares": {
+            "Action": {
+              "count": 6,
+              "share": 0.12244897959183673
+            },
+            "Adventure": {
+              "count": 2,
+              "share": 0.04081632653061224
+            },
+            "Animation": {
+              "count": 1,
+              "share": 0.02040816326530612
+            },
+            "Children's": {
+              "count": 1,
+              "share": 0.02040816326530612
+            },
+            "Comedy": {
+              "count": 15,
+              "share": 0.30612244897959184
+            },
+            "Crime": {
+              "count": 7,
+              "share": 0.14285714285714285
+            },
+            "Documentary": {
+              "count": 0,
+              "share": 0.0
+            },
+            "Drama": {
+              "count": 28,
+              "share": 0.5714285714285714
+            },
+            "Fantasy": {
+              "count": 0,
+              "share": 0.0
+            },
+            "Film-Noir": {
+              "count": 1,
+              "share": 0.02040816326530612
+            },
+            "Horror": {
+              "count": 2,
+              "share": 0.04081632653061224
+            },
+            "Musical": {
+              "count": 0,
+              "share": 0.0
+            },
+            "Mystery": {
+              "count": 3,
+              "share": 0.061224489795918366
+            },
+            "Romance": {
+              "count": 14,
+              "share": 0.2857142857142857
+            },
+            "Sci-Fi": {
+              "count": 4,
+              "share": 0.08163265306122448
+            },
+            "Thriller": {
+              "count": 8,
+              "share": 0.16326530612244897
+            },
+            "War": {
+              "count": 3,
+              "share": 0.061224489795918366
+            },
+            "Western": {
+              "count": 0,
+              "share": 0.0
+            }
+          }
+        },
+        "positiveTrain": {
+          "denominator": 32,
+          "unit": "training rated movies; multi-label genre shares may sum above 1",
+          "shares": {
+            "Action": {
+              "count": 5,
+              "share": 0.15625
+            },
+            "Adventure": {
+              "count": 2,
+              "share": 0.0625
+            },
+            "Animation": {
+              "count": 1,
+              "share": 0.03125
+            },
+            "Children's": {
+              "count": 1,
+              "share": 0.03125
+            },
+            "Comedy": {
+              "count": 11,
+              "share": 0.34375
+            },
+            "Crime": {
+              "count": 5,
+              "share": 0.15625
+            },
+            "Documentary": {
+              "count": 0,
+              "share": 0.0
+            },
+            "Drama": {
+              "count": 18,
+              "share": 0.5625
+            },
+            "Fantasy": {
+              "count": 0,
+              "share": 0.0
+            },
+            "Film-Noir": {
+              "count": 1,
+              "share": 0.03125
+            },
+            "Horror": {
+              "count": 0,
+              "share": 0.0
+            },
+            "Musical": {
+              "count": 0,
+              "share": 0.0
+            },
+            "Mystery": {
+              "count": 0,
+              "share": 0.0
+            },
+            "Romance": {
+              "count": 11,
+              "share": 0.34375
+            },
+            "Sci-Fi": {
+              "count": 2,
+              "share": 0.0625
+            },
+            "Thriller": {
+              "count": 3,
+              "share": 0.09375
+            },
+            "War": {
+              "count": 2,
+              "share": 0.0625
+            },
+            "Western": {
+              "count": 0,
+              "share": 0.0
+            }
+          }
+        }
+      },
+      "meanPositiveMoviePopularity": 132.78125,
+      "mostPopularPositive": [
+        {
+          "movieId": 50,
+          "title": "Star Wars (1977)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Romance",
+            "Sci-Fi",
+            "War"
+          ],
+          "popularity": 449
+        },
+        {
+          "movieId": 100,
+          "title": "Fargo (1996)",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "popularity": 377
+        },
+        {
+          "movieId": 127,
+          "title": "Godfather, The (1972)",
+          "genres": [
+            "Action",
+            "Crime",
+            "Drama"
+          ],
+          "popularity": 308
+        },
+        {
+          "movieId": 1,
+          "title": "Toy Story (1995)",
+          "genres": [
+            "Animation",
+            "Children's",
+            "Comedy"
+          ],
+          "popularity": 288
+        },
+        {
+          "movieId": 286,
+          "title": "English Patient, The (1996)",
+          "genres": [
+            "Drama",
+            "Romance",
+            "War"
+          ],
+          "popularity": 279
+        }
+      ],
+      "leastPopularPositive": [
+        {
+          "movieId": 279,
+          "title": "Once Upon a Time... When We Were Colored (1995)",
+          "genres": [
+            "Drama"
+          ],
+          "popularity": 13
+        },
+        {
+          "movieId": 299,
+          "title": "Hoodlum (1997)",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir"
+          ],
+          "popularity": 20
+        },
+        {
+          "movieId": 295,
+          "title": "Breakdown (1997)",
+          "genres": [
+            "Action",
+            "Thriller"
+          ],
+          "popularity": 27
+        },
+        {
+          "movieId": 251,
+          "title": "Shall We Dance? (1996)",
+          "genres": [
+            "Comedy"
+          ],
+          "popularity": 30
+        },
+        {
+          "movieId": 297,
+          "title": "Ulee's Gold (1997)",
+          "genres": [
+            "Drama"
+          ],
+          "popularity": 30
+        }
+      ]
+    }
+  ],
+  "preservation": {
+    "onlyPreexistingFileChanged": [
+      "week6/script.js"
+    ],
+    "preexistingFilesVerified": 275,
+    "graphSHA256": "5df87007991d3db33d50cd56e441576b7d32a646eea30595e8922567b4a6f3cb",
+    "scriptSHA256": "96b53cde6db08509f8b2606c856837eefa377e2f71279a9b5b430d5f60f4f689",
+    "outsideThreeStubsAndJSDocIdentical": true,
+    "weeks1to5Unchanged": true,
+    "gitStatusUnchanged": true,
+    "headUnchanged": true
+  },
+  "locations": {
+    "movieScores": {
+      "file": "week6/script.js",
+      "line": 1097
+    },
+    "recommendTopK": {
+      "file": "week6/script.js",
+      "line": 1133
+    },
+    "recallAtK": {
+      "file": "week6/script.js",
+      "line": 1172
+    },
+    "hw6BuildSplitIndices": {
+      "file": "week6/script.js",
+      "line": 567
+    },
+    "hw6SharedCohort": {
+      "file": "week6/script.js",
+      "line": 694
+    },
+    "hw6RunComparison": {
+      "file": "week6/script.js",
+      "line": 1711
+    },
+    "hw6RunAlphaSweep": {
+      "file": "week6/script.js",
+      "line": 1800
+    }
+  },
+  "jobs": [
+    {
+      "mode": "checks",
+      "seconds": 3.568,
+      "startedAt": "2026-10-22T10:28:14.602Z",
+      "finishedAt": "2026-10-22T10:28:18.170Z",
+      "error": null
+    },
+    {
+      "mode": "sweep",
+      "seconds": 15.783,
+      "startedAt": "2026-10-22T10:28:51.810Z",
+      "finishedAt": "2026-10-22T10:29:07.593Z",
+      "error": null
+    },
+    {
+      "mode": "primary-attempt1",
+      "seconds": 1.558,
+      "startedAt": "2026-10-22T10:29:38.232Z",
+      "finishedAt": "2026-10-22T10:29:39.790Z",
+      "error": "ReferenceError: expRestoreMF is not defined\n    at hw6-tools/run_recommendation_job.cjs:35:44"
+    },
+    {
+      "mode": "primary",
+      "seconds": 10.82,
+      "startedAt": "2026-10-22T10:30:48.794Z",
+      "finishedAt": "2026-10-22T10:30:59.614Z",
+      "error": null
+    },
+    {
+      "mode": "audit-val",
+      "seconds": 9.05,
+      "startedAt": "2026-10-22T10:31:18.789Z",
+      "finishedAt": "2026-10-22T10:31:27.839Z",
+      "error": null
+    },
+    {
+      "mode": "audit-test",
+      "seconds": 9.047,
+      "startedAt": "2026-10-22T10:31:28.076Z",
+      "finishedAt": "2026-10-22T10:31:37.123Z",
+      "error": null
+    },
+    {
+      "mode": "hw5",
+      "seconds": 130.643,
+      "startedAt": "2026-10-22T10:32:01.105Z",
+      "finishedAt": "2026-10-22T10:34:11.748Z",
+      "error": null
+    }
+  ],
+  "allGPUJobsSequential": true,
+  "exportCoverage": {
+    "uniqueSettings": 10,
+    "recommendationRows": 100,
+    "resultRows": 10,
+    "allRequestedSettingsCovered": true,
+    "allPrimaryExportAlphasVerified": true
+  },
+  "limitations": [
+    "Alpha .95 retains29/943 nonconverged PPR columns at unchanged tol1e-6/max500; their eligible Top10 lists match independent float64 in both splits.",
+    "MF supplied and both saved HW5 models produce constant float32 scores over evaluated eligible pools; mean-only/tie-driven results do not establish useful personalization.",
+    "Native convergence export describes one PPR seed; all-user convergence and complete setting metadata supplied separately.",
+    "Initial primary automation attempt failed before evaluation due to browser/Node scope; fixed and retained in attempt1 evidence.",
+    "Existing supplied title decoding is unchanged; independent raw-data history titles use Latin-1."
+  ]
+}

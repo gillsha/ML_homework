@@ -1,0 +1,800 @@
+{
+  "lastRun": {
+    "schemaVersion": 1,
+    "upstreamRevision": "00c032fb58ca5f7bec05218b5bebee01e462e532",
+    "tfjs": "4.22.0",
+    "backend": "webgl",
+    "options": {
+      "epochs": 20,
+      "lr": 0.01,
+      "reg": 0.05,
+      "batchSize": 64
+    },
+    "factors": 16,
+    "seeds": {
+      "users": 5101,
+      "items": 5102,
+      "shuffle": 5103
+    },
+    "loss": "batch-mean raw-prediction MSE + reg * (sum(P^2) + sum(Q^2))",
+    "scoreType": "raw model score",
+    "ratingRMSE": "clipped [1,5], warm-start rows only",
+    "trainingMean": 3.5806026199776437,
+    "selectedEpoch": 1,
+    "bestCheckpoint": {
+      "epoch": 1,
+      "trainRMSE": 1.1052078640164102,
+      "valRMSE": 1.18002107464026
+    },
+    "history": [
+      {
+        "epoch": 1,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 2,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 3,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 4,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 5,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 6,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 7,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 8,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 9,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 10,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 11,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 12,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 13,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 14,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 15,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 16,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 17,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 18,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 19,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 20,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      }
+    ],
+    "splits": {
+      "train": {
+        "rawRows": 79619,
+        "eligibleRows": 79619,
+        "excludedRows": 0,
+        "missingUserRows": 0,
+        "missingItemRows": 0,
+        "missingUserIds": [],
+        "missingItemIds": [],
+        "baselineRMSE": 1.105208514257592,
+        "mfRMSE": 1.1052078640164102
+      },
+      "validation": {
+        "rawRows": 9596,
+        "eligibleRows": 9561,
+        "excludedRows": 35,
+        "missingUserRows": 0,
+        "missingItemRows": 35,
+        "missingUserIds": [],
+        "missingItemIds": [
+          677,
+          814,
+          897,
+          910,
+          957,
+          1106,
+          1408,
+          1453,
+          1460,
+          1494,
+          1508,
+          1526,
+          1543,
+          1546,
+          1565,
+          1569,
+          1571,
+          1575,
+          1576,
+          1579,
+          1584,
+          1586,
+          1588,
+          1603,
+          1614,
+          1633,
+          1637,
+          1653,
+          1659,
+          1667,
+          1668,
+          1679
+        ],
+        "baselineRMSE": 1.1800217293694784,
+        "mfRMSE": 1.18002107464026
+      },
+      "test": {
+        "rawRows": 10785,
+        "eligibleRows": 10732,
+        "excludedRows": 53,
+        "missingUserRows": 0,
+        "missingItemRows": 53,
+        "missingUserIds": [],
+        "missingItemIds": [
+          897,
+          910,
+          913,
+          957,
+          1106,
+          1130,
+          1236,
+          1408,
+          1432,
+          1447,
+          1458,
+          1476,
+          1498,
+          1508,
+          1520,
+          1525,
+          1562,
+          1563,
+          1570,
+          1572,
+          1577,
+          1580,
+          1583,
+          1588,
+          1613,
+          1618,
+          1621,
+          1624,
+          1625,
+          1645,
+          1646,
+          1647,
+          1648,
+          1649,
+          1650,
+          1651,
+          1661,
+          1665,
+          1666,
+          1669,
+          1671,
+          1674,
+          1677,
+          1678,
+          1680,
+          1682
+        ],
+        "baselineRMSE": 1.2257193843348209,
+        "mfRMSE": 1.225719429436268
+      }
+    }
+  },
+  "status": "Trained 20 epoch(s) on webgl — best val RMSE 1.1800 at epoch 1.",
+  "ratingDisplay": "Restored epoch 1. Warm-start validation RMSE 1.18002107; test RMSE 1.22571943 vs baseline 1.22571938 on the same 10732 test rows.",
+  "timing": {
+    "initializationMs": 8.100000023841858,
+    "initialDiagnosticsMs": 1219.1999999284744,
+    "trainingStartMs": 8887.700000047684,
+    "trainingWallMs": 229561.60000002384
+  },
+  "initializationDiagnostics": {
+    "label": "initialization, before any optimizer update",
+    "trainingMean": 3.5806026199776437,
+    "allFactorsFinite": true,
+    "norms": {
+      "userFrobenius": 6.1485553812555995,
+      "itemFrobenius": 8.203531425943666,
+      "userSquared": 37.80473327636719,
+      "itemSquared": 67.29792785644531,
+      "observedUserFrobenius": 6.146083109503156,
+      "observedItemFrobenius": 8.0217580566989
+    },
+    "predictionDistributions": {
+      "train": {
+        "dotCorrections": {
+          "count": 79619,
+          "finite": true,
+          "min": -0.044895268976688385,
+          "max": 0.046681568026542664,
+          "mean": -4.1634671210118696e-05,
+          "meanAbsolute": 0.007951112791726197,
+          "rms": 0.010091706539972727,
+          "standardDeviation": 0.010091620654933109,
+          "zeroCount": 0,
+          "quantiles": {
+            "p01": -0.024381201714277267,
+            "p05": -0.016605738550424576,
+            "p50": -1.9233557395637035e-05,
+            "p95": 0.016548320651054382,
+            "p99": 0.024168960750102997
+          }
+        },
+        "rawPredictions": {
+          "count": 79619,
+          "finite": true,
+          "min": 3.535707473754883,
+          "max": 3.627284288406372,
+          "mean": 3.5805610108704045,
+          "meanAbsolute": 3.5805610108704045,
+          "rms": 3.5805752321902955,
+          "standardDeviation": 0.010091620724008418,
+          "zeroCount": 0,
+          "quantiles": {
+            "p01": 3.5562214851379395,
+            "p05": 3.5639967918395996,
+            "p50": 3.580583333969116,
+            "p95": 3.597151041030884,
+            "p99": 3.604771614074707
+          }
+        },
+        "outsideRatingRange": 0,
+        "outsideRatingRangeFraction": 0
+      },
+      "validation": {
+        "dotCorrections": {
+          "count": 9561,
+          "finite": true,
+          "min": -0.04166565462946892,
+          "max": 0.04343847930431366,
+          "mean": 8.165712424540975e-06,
+          "meanAbsolute": 0.00790608914319971,
+          "rms": 0.010022016469265996,
+          "standardDeviation": 0.010022013142646469,
+          "zeroCount": 0,
+          "quantiles": {
+            "p01": -0.02383626438677311,
+            "p05": -0.01660197414457798,
+            "p50": 6.704841507598758e-05,
+            "p95": 0.016440482810139656,
+            "p99": 0.024227915331721306
+          }
+        },
+        "rawPredictions": {
+          "count": 9561,
+          "finite": true,
+          "min": 3.5389370918273926,
+          "max": 3.6240410804748535,
+          "mean": 3.5806108115295676,
+          "meanAbsolute": 3.5806108115295676,
+          "rms": 3.5806248371468397,
+          "standardDeviation": 0.0100220132814183,
+          "zeroCount": 0,
+          "quantiles": {
+            "p01": 3.5567662715911865,
+            "p05": 3.5640006065368652,
+            "p50": 3.580669641494751,
+            "p95": 3.597043037414551,
+            "p99": 3.604830503463745
+          }
+        },
+        "outsideRatingRange": 0,
+        "outsideRatingRangeFraction": 0
+      },
+      "test": {
+        "dotCorrections": {
+          "count": 10732,
+          "finite": true,
+          "min": -0.04499455913901329,
+          "max": 0.04576047509908676,
+          "mean": -6.409320022357264e-05,
+          "meanAbsolute": 0.007944689096262223,
+          "rms": 0.010059081631780934,
+          "standardDeviation": 0.010058877439183595,
+          "zeroCount": 0,
+          "quantiles": {
+            "p01": -0.024373464286327362,
+            "p05": -0.016402071341872215,
+            "p50": -0.00015469861682504416,
+            "p95": 0.016550181433558464,
+            "p99": 0.02403353527188301
+          }
+        },
+        "rawPredictions": {
+          "count": 10732,
+          "finite": true,
+          "min": 3.5356080532073975,
+          "max": 3.6263630390167236,
+          "mean": 3.580538552797334,
+          "meanAbsolute": 3.580538552797334,
+          "rms": 3.58055268206867,
+          "standardDeviation": 0.010058876722337465,
+          "zeroCount": 0,
+          "quantiles": {
+            "p01": 3.5562291145324707,
+            "p05": 3.5642006397247314,
+            "p50": 3.5804479122161865,
+            "p95": 3.5971527099609375,
+            "p99": 3.6046361923217773
+          }
+        },
+        "outsideRatingRange": 0,
+        "outsideRatingRangeFraction": 0
+      }
+    },
+    "fixedBatch": {
+      "definition": "First 64 rows of supplied trainSet, before training shuffle",
+      "rows": [
+        {
+          "userId": 196,
+          "movieId": 242,
+          "rating": 3,
+          "timestamp": 881250949
+        },
+        {
+          "userId": 196,
+          "movieId": 269,
+          "rating": 3,
+          "timestamp": 881250949
+        },
+        {
+          "userId": 196,
+          "movieId": 286,
+          "rating": 5,
+          "timestamp": 881250949
+        },
+        {
+          "userId": 196,
+          "movieId": 306,
+          "rating": 4,
+          "timestamp": 881251021
+        },
+        {
+          "userId": 196,
+          "movieId": 340,
+          "rating": 3,
+          "timestamp": 881251045
+        },
+        {
+          "userId": 196,
+          "movieId": 1022,
+          "rating": 4,
+          "timestamp": 881251143
+        },
+        {
+          "userId": 196,
+          "movieId": 251,
+          "rating": 3,
+          "timestamp": 881251274
+        },
+        {
+          "userId": 196,
+          "movieId": 257,
+          "rating": 2,
+          "timestamp": 881251577
+        },
+        {
+          "userId": 196,
+          "movieId": 1007,
+          "rating": 4,
+          "timestamp": 881251601
+        },
+        {
+          "userId": 196,
+          "movieId": 1241,
+          "rating": 3,
+          "timestamp": 881251642
+        },
+        {
+          "userId": 196,
+          "movieId": 428,
+          "rating": 4,
+          "timestamp": 881251702
+        },
+        {
+          "userId": 196,
+          "movieId": 202,
+          "rating": 3,
+          "timestamp": 881251728
+        },
+        {
+          "userId": 196,
+          "movieId": 381,
+          "rating": 4,
+          "timestamp": 881251728
+        },
+        {
+          "userId": 196,
+          "movieId": 8,
+          "rating": 5,
+          "timestamp": 881251753
+        },
+        {
+          "userId": 196,
+          "movieId": 116,
+          "rating": 3,
+          "timestamp": 881251753
+        },
+        {
+          "userId": 196,
+          "movieId": 285,
+          "rating": 5,
+          "timestamp": 881251753
+        },
+        {
+          "userId": 196,
+          "movieId": 111,
+          "rating": 4,
+          "timestamp": 881251793
+        },
+        {
+          "userId": 196,
+          "movieId": 655,
+          "rating": 5,
+          "timestamp": 881251793
+        },
+        {
+          "userId": 196,
+          "movieId": 153,
+          "rating": 5,
+          "timestamp": 881251820
+        },
+        {
+          "userId": 196,
+          "movieId": 173,
+          "rating": 2,
+          "timestamp": 881251820
+        },
+        {
+          "userId": 196,
+          "movieId": 238,
+          "rating": 4,
+          "timestamp": 881251820
+        },
+        {
+          "userId": 196,
+          "movieId": 70,
+          "rating": 3,
+          "timestamp": 881251842
+        },
+        {
+          "userId": 196,
+          "movieId": 382,
+          "rating": 4,
+          "timestamp": 881251843
+        },
+        {
+          "userId": 196,
+          "movieId": 393,
+          "rating": 4,
+          "timestamp": 881251863
+        },
+        {
+          "userId": 196,
+          "movieId": 287,
+          "rating": 3,
+          "timestamp": 881251884
+        },
+        {
+          "userId": 196,
+          "movieId": 66,
+          "rating": 3,
+          "timestamp": 881251911
+        },
+        {
+          "userId": 196,
+          "movieId": 663,
+          "rating": 5,
+          "timestamp": 881251911
+        },
+        {
+          "userId": 196,
+          "movieId": 845,
+          "rating": 4,
+          "timestamp": 881251954
+        },
+        {
+          "userId": 196,
+          "movieId": 13,
+          "rating": 2,
+          "timestamp": 881251955
+        },
+        {
+          "userId": 196,
+          "movieId": 25,
+          "rating": 4,
+          "timestamp": 881251955
+        },
+        {
+          "userId": 196,
+          "movieId": 762,
+          "rating": 3,
+          "timestamp": 881251955
+        },
+        {
+          "userId": 186,
+          "movieId": 288,
+          "rating": 1,
+          "timestamp": 879022858
+        },
+        {
+          "userId": 186,
+          "movieId": 300,
+          "rating": 5,
+          "timestamp": 879022858
+        },
+        {
+          "userId": 186,
+          "movieId": 322,
+          "rating": 5,
+          "timestamp": 879022927
+        },
+        {
+          "userId": 186,
+          "movieId": 291,
+          "rating": 4,
+          "timestamp": 879023073
+        },
+        {
+          "userId": 186,
+          "movieId": 298,
+          "rating": 3,
+          "timestamp": 879023073
+        },
+        {
+          "userId": 186,
+          "movieId": 591,
+          "rating": 4,
+          "timestamp": 879023073
+        },
+        {
+          "userId": 186,
+          "movieId": 742,
+          "rating": 3,
+          "timestamp": 879023073
+        },
+        {
+          "userId": 186,
+          "movieId": 121,
+          "rating": 2,
+          "timestamp": 879023074
+        },
+        {
+          "userId": 186,
+          "movieId": 100,
+          "rating": 4,
+          "timestamp": 879023115
+        },
+        {
+          "userId": 186,
+          "movieId": 925,
+          "rating": 5,
+          "timestamp": 879023152
+        },
+        {
+          "userId": 186,
+          "movieId": 983,
+          "rating": 3,
+          "timestamp": 879023152
+        },
+        {
+          "userId": 186,
+          "movieId": 106,
+          "rating": 2,
+          "timestamp": 879023242
+        },
+        {
+          "userId": 186,
+          "movieId": 118,
+          "rating": 2,
+          "timestamp": 879023242
+        },
+        {
+          "userId": 186,
+          "movieId": 717,
+          "rating": 3,
+          "timestamp": 879023242
+        },
+        {
+          "userId": 186,
+          "movieId": 406,
+          "rating": 1,
+          "timestamp": 879023272
+        },
+        {
+          "userId": 186,
+          "movieId": 977,
+          "rating": 3,
+          "timestamp": 879023273
+        },
+        {
+          "userId": 186,
+          "movieId": 281,
+          "rating": 4,
+          "timestamp": 879023390
+        },
+        {
+          "userId": 186,
+          "movieId": 295,
+          "rating": 2,
+          "timestamp": 879023390
+        },
+        {
+          "userId": 186,
+          "movieId": 595,
+          "rating": 3,
+          "timestamp": 879023390
+        },
+        {
+          "userId": 186,
+          "movieId": 12,
+          "rating": 1,
+          "timestamp": 879023460
+        },
+        {
+          "userId": 186,
+          "movieId": 56,
+          "rating": 3,
+          "timestamp": 879023460
+        },
+        {
+          "userId": 186,
+          "movieId": 79,
+          "rating": 5,
+          "timestamp": 879023460
+        },
+        {
+          "userId": 186,
+          "movieId": 31,
+          "rating": 4,
+          "timestamp": 879023529
+        },
+        {
+          "userId": 186,
+          "movieId": 44,
+          "rating": 5,
+          "timestamp": 879023529
+        },
+        {
+          "userId": 186,
+          "movieId": 203,
+          "rating": 5,
+          "timestamp": 879023529
+        },
+        {
+          "userId": 186,
+          "movieId": 939,
+          "rating": 5,
+          "timestamp": 879023529
+        },
+        {
+          "userId": 186,
+          "movieId": 55,
+          "rating": 4,
+          "timestamp": 879023556
+        },
+        {
+          "userId": 186,
+          "movieId": 263,
+          "rating": 3,
+          "timestamp": 879023571
+        },
+        {
+          "userId": 186,
+          "movieId": 684,
+          "rating": 4,
+          "timestamp": 879023599
+        },
+        {
+          "userId": 186,
+          "movieId": 1083,
+          "rating": 1,
+          "timestamp": 879023599
+        },
+        {
+          "userId": 186,
+          "movieId": 117,
+          "rating": 5,
+          "timestamp": 879023607
+        },
+        {
+          "userId": 186,
+          "movieId": 250,
+          "rating": 1,
+          "timestamp": 879023607
+        },
+        {
+          "userId": 186,
+          "movieId": 1042,
+          "rating": 5,
+          "timestamp": 879023632
+        }
+      ],
+      "dataMSE": 1.4167258739471436,
+      "regularization": 0.05,
+      "scaledWholeMatrixL2": 5.255133152008057,
+      "l2ToDataMseRatio": 3.7093507280746674,
+      "caution": "Loss-value ratio alone is not evidence of gradient dominance or causation"
+    },
+    "tensorsBefore": 2,
+    "tensorsAfter": 2
+  },
+  "memory": {
+    "unreliable": false,
+    "numBytesInGPU": 168192,
+    "numBytesInGPUAllocated": 58076848,
+    "numBytesInGPUFree": 57908656,
+    "numTensors": 2,
+    "numDataBuffers": 2,
+    "numBytes": 168128
+  },
+  "restoredValidationRMSE": 1.18002107464026,
+  "pipelineWallMs": 231146.45762499998,
+  "loadingMs": 932.228417,
+  "testsMs": 6694.411042,
+  "durationDefinition": "trainMF wall time includes batches, epoch metrics, checkpoint copying/restoration, logging; excludes loading, tests, initialization diagnostics and later evaluation"
+}

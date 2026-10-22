@@ -1,0 +1,581 @@
+{
+  "alpha": 0.95,
+  "numpy": "2.3.5",
+  "method": "float64 dense row-normalized Q; row-vector p@Q, independently parsed/split",
+  "graph": {
+    "users": 943,
+    "movies": 1611,
+    "nodes": 2554,
+    "edges": 45602,
+    "zeroUsers": 1,
+    "zeroMovies": 253,
+    "degreeMatchesBrowser": true,
+    "maxRowSumError": 2.220446049250313e-16,
+    "splitSizes": [
+      79619,
+      9596,
+      10785
+    ],
+    "smallUserExclusions": []
+  },
+  "denominator": 943,
+  "allConverged": true,
+  "iterationsRange": [
+    1,
+    283
+  ],
+  "maxResidual": 9.92682332829073e-07,
+  "maxMassError": 4.440892098500626e-16,
+  "minimum": 0.0,
+  "pprWallSeconds": 11.297440708003705,
+  "globalWallSeconds": 0.23226241600059438,
+  "global": {
+    "iterations": 246,
+    "residual": 9.81144839325039e-07,
+    "converged": true,
+    "maxAbsVsBrowser": 2.5488500485573717e-09
+  },
+  "vectorComparison": {
+    "maxAbs": 1.537551625602207e-08,
+    "maxL1": 1.4004029457607984e-06,
+    "absoluteTolerance": 2e-06,
+    "l1Tolerance": 2e-05,
+    "pass": true
+  },
+  "rankingComparison": {
+    "definition": "all training movie candidates minus train+val history; score desc/movieId asc",
+    "top10ExactMatches": 943,
+    "denominator": 943,
+    "top10Differences": [],
+    "fullRankingExactMatches": 915,
+    "fullRankingDifferences": [
+      {
+        "userId": 30,
+        "maxReferenceScoreInversion": 5.355850142454554e-13
+      },
+      {
+        "userId": 43,
+        "maxReferenceScoreInversion": 5.520412265876996e-12
+      },
+      {
+        "userId": 52,
+        "maxReferenceScoreInversion": 3.736892831171469e-12
+      },
+      {
+        "userId": 127,
+        "maxReferenceScoreInversion": 5.13110063945642e-12
+      },
+      {
+        "userId": 157,
+        "maxReferenceScoreInversion": 1.1277016495093994e-10
+      },
+      {
+        "userId": 190,
+        "maxReferenceScoreInversion": 4.5313406483006927e-13
+      },
+      {
+        "userId": 197,
+        "maxReferenceScoreInversion": 1.823926833134301e-12
+      },
+      {
+        "userId": 199,
+        "maxReferenceScoreInversion": 1.3961929854443278e-10
+      },
+      {
+        "userId": 218,
+        "maxReferenceScoreInversion": 1.3017857896247681e-11
+      },
+      {
+        "userId": 318,
+        "maxReferenceScoreInversion": 8.276316542093088e-13
+      },
+      {
+        "userId": 340,
+        "maxReferenceScoreInversion": 1.917191682103067e-11
+      },
+      {
+        "userId": 343,
+        "maxReferenceScoreInversion": 6.687807642749566e-12
+      },
+      {
+        "userId": 366,
+        "maxReferenceScoreInversion": 2.006798237785476e-11
+      },
+      {
+        "userId": 392,
+        "maxReferenceScoreInversion": 1.9905149712751494e-12
+      },
+      {
+        "userId": 399,
+        "maxReferenceScoreInversion": 3.404749220189615e-11
+      },
+      {
+        "userId": 562,
+        "maxReferenceScoreInversion": 4.8288836647304885e-12
+      },
+      {
+        "userId": 608,
+        "maxReferenceScoreInversion": 4.360141984467063e-12
+      },
+      {
+        "userId": 689,
+        "maxReferenceScoreInversion": 8.482733761835774e-14
+      },
+      {
+        "userId": 690,
+        "maxReferenceScoreInversion": 4.469914506756564e-12
+      },
+      {
+        "userId": 715,
+        "maxReferenceScoreInversion": 1.1939709258172032e-10
+      },
+      {
+        "userId": 809,
+        "maxReferenceScoreInversion": 4.148237068652078e-12
+      },
+      {
+        "userId": 810,
+        "maxReferenceScoreInversion": 1.235720220810546e-10
+      },
+      {
+        "userId": 825,
+        "maxReferenceScoreInversion": 2.3275257860378568e-12
+      },
+      {
+        "userId": 827,
+        "maxReferenceScoreInversion": 4.880322301880138e-12
+      },
+      {
+        "userId": 854,
+        "maxReferenceScoreInversion": 1.1838874531319016e-10
+      },
+      {
+        "userId": 888,
+        "maxReferenceScoreInversion": 8.652529170580237e-11
+      },
+      {
+        "userId": 914,
+        "maxReferenceScoreInversion": 2.6080896882267612e-12
+      },
+      {
+        "userId": 915,
+        "maxReferenceScoreInversion": 2.185787830030414e-11
+      }
+    ],
+    "note": "Rank differences among near-equal float32 scores must be disclosed, never disguised by renormalization or forced order."
+  },
+  "representatives": [
+    {
+      "userId": 1,
+      "maxAbs": 2.3050967896606767e-09,
+      "l1": 1.1842057351883604e-07,
+      "numpyIterations": 283,
+      "browserIterations": 299,
+      "numpyTop10": [
+        100,
+        258,
+        286,
+        318,
+        300,
+        288,
+        313,
+        357,
+        483,
+        302
+      ],
+      "browserTop10": [
+        100,
+        258,
+        286,
+        318,
+        300,
+        288,
+        313,
+        357,
+        483,
+        302
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 2,
+      "maxAbs": 2.9041209471947216e-09,
+      "l1": 1.5128347255657763e-07,
+      "numpyIterations": 283,
+      "browserIterations": 279,
+      "numpyTop10": [
+        181,
+        98,
+        174,
+        56,
+        172,
+        7,
+        117,
+        79,
+        64,
+        318
+      ],
+      "browserTop10": [
+        181,
+        98,
+        174,
+        56,
+        172,
+        7,
+        117,
+        79,
+        64,
+        318
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 196,
+      "maxAbs": 2.362485799871361e-09,
+      "l1": 1.606208792407088e-07,
+      "numpyIterations": 283,
+      "browserIterations": 281,
+      "numpyTop10": [
+        50,
+        100,
+        181,
+        127,
+        258,
+        174,
+        98,
+        1,
+        56,
+        172
+      ],
+      "browserTop10": [
+        50,
+        100,
+        181,
+        127,
+        258,
+        174,
+        98,
+        1,
+        56,
+        172
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 684,
+      "maxAbs": 2.775943756978816e-09,
+      "l1": 3.544233935361295e-07,
+      "numpyIterations": 283,
+      "browserIterations": 303,
+      "numpyTop10": [
+        174,
+        127,
+        258,
+        286,
+        56,
+        7,
+        79,
+        300,
+        318,
+        288
+      ],
+      "browserTop10": [
+        174,
+        127,
+        258,
+        286,
+        56,
+        7,
+        79,
+        300,
+        318,
+        288
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 685,
+      "maxAbs": 0.0,
+      "l1": 0.0,
+      "numpyIterations": 1,
+      "browserIterations": 1,
+      "numpyTop10": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "browserTop10": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 686,
+      "maxAbs": 1.7465557325055392e-09,
+      "l1": 2.583870677482754e-07,
+      "numpyIterations": 283,
+      "browserIterations": 279,
+      "numpyTop10": [
+        100,
+        181,
+        258,
+        1,
+        286,
+        64,
+        7,
+        300,
+        288,
+        69
+      ],
+      "browserTop10": [
+        100,
+        181,
+        258,
+        1,
+        286,
+        64,
+        7,
+        300,
+        288,
+        69
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 942,
+      "maxAbs": 5.128516739755229e-09,
+      "l1": 9.633158729687649e-07,
+      "numpyIterations": 283,
+      "browserIterations": 300,
+      "numpyTop10": [
+        100,
+        181,
+        98,
+        127,
+        286,
+        1,
+        56,
+        288,
+        64,
+        7
+      ],
+      "browserTop10": [
+        100,
+        181,
+        98,
+        127,
+        286,
+        1,
+        56,
+        288,
+        64,
+        7
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 943,
+      "maxAbs": 1.706399403722525e-09,
+      "l1": 1.3794822449942376e-07,
+      "numpyIterations": 283,
+      "browserIterations": 281,
+      "numpyTop10": [
+        258,
+        1,
+        286,
+        7,
+        300,
+        288,
+        237,
+        313,
+        357,
+        183
+      ],
+      "browserTop10": [
+        258,
+        1,
+        286,
+        7,
+        300,
+        288,
+        237,
+        313,
+        357,
+        183
+      ],
+      "fullRankingEqual": true
+    }
+  ],
+  "fixture": {
+    "Q": [
+      [
+        0.0,
+        0.5,
+        0.5,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "uniformIncoming": [
+      0.25,
+      0.125,
+      0.625,
+      0.0
+    ],
+    "uniformFirst": [
+      0.25,
+      0.14375,
+      0.56875,
+      0.0375
+    ],
+    "seedFirst": [
+      0.15,
+      0.425,
+      0.425,
+      0.0
+    ],
+    "arithmetic": "Uniform incoming=(1/4,1/8,5/8,0); multiply by0.85, add0.15*(1/4 each) => (0.25,0.14375,0.56875,0.0375). Seed A incoming=(0,1/2,1/2,0); multiply by0.85, add0.15*(1,0,0,0) => (0.15,0.425,0.425,0).",
+    "uniform": {
+      "p": [
+        0.37252693031282125,
+        0.19582373990738838,
+        0.3941493297797897,
+        0.0375
+      ],
+      "iterations": 28,
+      "residual": 9.669438148229847e-07
+    },
+    "seedA": {
+      "p": [
+        0.4522328618993243,
+        0.19219906527794117,
+        0.35556807282273445,
+        0.0
+      ],
+      "iterations": 30,
+      "residual": 4.657446040501334e-07
+    }
+  },
+  "analysisUsers": [
+    {
+      "userId": 1,
+      "reportSource": "week5/submission/a05_report.html",
+      "reportLines": [
+        45,
+        58
+      ],
+      "positiveTrainDegree": 131,
+      "splits": {
+        "val": {
+          "eligibleRelevantCount": 13,
+          "eligibleRelevantMovieIds": [
+            9,
+            12,
+            16,
+            44,
+            51,
+            58,
+            66,
+            75,
+            76,
+            86,
+            87,
+            208,
+            241
+          ],
+          "eligible": true
+        },
+        "test": {
+          "eligibleRelevantCount": 19,
+          "eligibleRelevantMovieIds": [
+            6,
+            18,
+            20,
+            32,
+            100,
+            111,
+            129,
+            154,
+            169,
+            171,
+            178,
+            209,
+            221,
+            222,
+            228,
+            242,
+            256,
+            258,
+            270
+          ],
+          "eligible": true
+        }
+      }
+    },
+    {
+      "userId": 2,
+      "reportSource": "week5/submission/a05_report.html",
+      "reportLines": [
+        45,
+        58
+      ],
+      "positiveTrainDegree": 32,
+      "splits": {
+        "val": {
+          "eligibleRelevantCount": 6,
+          "eligibleRelevantMovieIds": [
+            272,
+            300,
+            302,
+            310,
+            311,
+            313
+          ],
+          "eligible": true
+        },
+        "test": {
+          "eligibleRelevantCount": 2,
+          "eligibleRelevantMovieIds": [
+            304,
+            316
+          ],
+          "eligible": true
+        }
+      }
+    }
+  ],
+  "totalWallSeconds": 12.000772750005126
+}

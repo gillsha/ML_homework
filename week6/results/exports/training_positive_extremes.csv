@@ -1,0 +1,21 @@
+userId,kind,rank,movieId,title,genres,popularity
+1,mostPopularPositive,1,50,Star Wars (1977),Action;Adventure;Romance;Sci-Fi;War,449
+1,mostPopularPositive,2,181,Return of the Jedi (1983),Action;Adventure;Romance;Sci-Fi;War,339
+1,mostPopularPositive,3,174,Raiders of the Lost Ark (1981),Action;Adventure,312
+1,mostPopularPositive,4,98,"Silence of the Lambs, The (1991)",Drama;Thriller,308
+1,mostPopularPositive,5,127,"Godfather, The (1972)",Action;Crime;Drama,308
+1,leastPopularPositive,1,146,Unhook the Stars (1996),Drama,2
+1,leastPopularPositive,2,119,Maya Lin: A Strong Clear Vision (1994),Documentary,3
+1,leastPopularPositive,3,84,Robert A. Heinlein's The Puppet Masters (1994),Horror;Sci-Fi,4
+1,leastPopularPositive,4,267,unknown,,5
+1,leastPopularPositive,5,43,Disclosure (1994),Drama;Thriller,7
+2,mostPopularPositive,1,50,Star Wars (1977),Action;Adventure;Romance;Sci-Fi;War,449
+2,mostPopularPositive,2,100,Fargo (1996),Crime;Drama;Thriller,377
+2,mostPopularPositive,3,127,"Godfather, The (1972)",Action;Crime;Drama,308
+2,mostPopularPositive,4,1,Toy Story (1995),Animation;Children's;Comedy,288
+2,mostPopularPositive,5,286,"English Patient, The (1996)",Drama;Romance;War,279
+2,leastPopularPositive,1,279,Once Upon a Time... When We Were Colored (1995),Drama,13
+2,leastPopularPositive,2,299,Hoodlum (1997),Crime;Drama;Film-Noir,20
+2,leastPopularPositive,3,295,Breakdown (1997),Action;Thriller,27
+2,leastPopularPositive,4,251,Shall We Dance? (1996),Comedy,30
+2,leastPopularPositive,5,297,Ulee's Gold (1997),Drama,30

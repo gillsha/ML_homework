@@ -1,0 +1,41 @@
+{
+  "method": "independent raw parsing, chronological split, float64 evaluation of saved float32 factors; no training",
+  "globalMean": 3.5806026199776437,
+  "metrics": {
+    "train": {
+      "rows": 79619,
+      "float64RMSE": 1.1052085142560844,
+      "meanOnlyRMSE": 1.1052085142573125,
+      "mfMinusMeanOnly": -1.2281287098403482e-12,
+      "maximumAbsDotProduct": 2.176212998107343e-09,
+      "browserRMSE": 1.1052078640164102,
+      "browserMinusFloat64": -6.502396741048244e-07
+    },
+    "val": {
+      "rows": 9596,
+      "float64RMSE": 1.1829947710659372,
+      "meanOnlyRMSE": 1.1829947710600115,
+      "mfMinusMeanOnly": 5.9257043716343105e-12,
+      "maximumAbsDotProduct": 1.6495155860184372e-09,
+      "browserRMSE": 1.1829944264078285,
+      "browserMinusFloat64": -3.446581087196421e-07
+    },
+    "test": {
+      "rows": 10785,
+      "float64RMSE": 1.2289001371845054,
+      "meanOnlyRMSE": 1.2289001371836488,
+      "mfMinusMeanOnly": 8.566480858007708e-13,
+      "maximumAbsDotProduct": 1.7621286652731195e-09,
+      "browserRMSE": 1.2288999214179168,
+      "browserMinusFloat64": -2.157665885960114e-07
+    }
+  },
+  "selectedEpoch": 1,
+  "checkpointMatchesEarliestValidationMinimum": true,
+  "all30EpochsRecorded": true,
+  "uniqueValidationRMSE": 1,
+  "factorSHA256": {
+    "user": "bcb78a2a13a5baf5837a3ddbf3d7d08ba614a551800aec7929e07ae9bd64caf9",
+    "item": "550e56f0ac7f3067f4a7aa7c3dfffa91d9674c4af1065d812d8d19f6de79a253"
+  }
+}

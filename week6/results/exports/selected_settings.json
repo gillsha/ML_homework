@@ -1,0 +1,493 @@
+{
+  "selectedAlpha": 0.5,
+  "criterion": "highest validation macro Recall@10; exact ties smaller alpha",
+  "validationCohort": 846,
+  "selectionCompletedAt": "2026-10-22T10:29:07.593Z",
+  "sliderExplicitlySetBeforeTest": "0.5",
+  "testStartedAt": "2026-10-22T10:30:48.794Z",
+  "primaryMF": {
+    "mode": "restored saved supplied-HW6 probe checkpoint; no retraining",
+    "checkpoint": 1,
+    "rmse": {
+      "train": 1.1052078640164102,
+      "val": 1.1829944264078285,
+      "test": 1.2288999214179168
+    },
+    "memory": {
+      "unreliable": false,
+      "numBytesInGPU": 168128,
+      "numBytesInGPUAllocated": 48487156,
+      "numBytesInGPUFree": 48319028,
+      "numTensors": 2,
+      "numDataBuffers": 2,
+      "numBytes": 168128
+    },
+    "originalProbeTensorLeftovers": {
+      "unreliable": false,
+      "numBytesInGPU": 504512,
+      "numBytesInGPUAllocated": 53750620,
+      "numBytesInGPUFree": 53246108,
+      "numTensors": 8,
+      "numDataBuffers": 8,
+      "numBytes": 504392
+    },
+    "factorSHA256": {
+      "user": "bcb78a2a13a5baf5837a3ddbf3d7d08ba614a551800aec7929e07ae9bd64caf9",
+      "item": "550e56f0ac7f3067f4a7aa7c3dfffa91d9674c4af1065d812d8d19f6de79a253"
+    }
+  },
+  "nativeExporterCoverage": {
+    "uniqueSettings": 10,
+    "recommendationRows": 100,
+    "resultRows": 10,
+    "allRequestedSettingsCovered": true,
+    "allPrimaryExportAlphasVerified": true
+  },
+  "settings": [
+    {
+      "label": "primary",
+      "userId": 1,
+      "method": "popularity",
+      "sliderAlpha": 0.5,
+      "exportAlpha": "",
+      "split": "test",
+      "meanPopularity": 246.8,
+      "hits": 2,
+      "relevant": 19
+    },
+    {
+      "label": "primary",
+      "userId": 1,
+      "method": "pagerank",
+      "sliderAlpha": 0.5,
+      "exportAlpha": "0.50",
+      "split": "test",
+      "meanPopularity": 239.4,
+      "hits": 3,
+      "relevant": 19
+    },
+    {
+      "label": "primary",
+      "userId": 1,
+      "method": "ppr",
+      "sliderAlpha": 0.5,
+      "exportAlpha": "0.50",
+      "split": "test",
+      "meanPopularity": 228.4,
+      "hits": 3,
+      "relevant": 19
+    },
+    {
+      "label": "primary",
+      "userId": 1,
+      "method": "mf",
+      "sliderAlpha": 0.5,
+      "exportAlpha": "",
+      "split": "test",
+      "meanPopularity": 72.2,
+      "hits": 7,
+      "relevant": 19
+    },
+    {
+      "label": "primary",
+      "userId": 2,
+      "method": "popularity",
+      "sliderAlpha": 0.5,
+      "exportAlpha": "",
+      "split": "test",
+      "meanPopularity": 262.1,
+      "hits": 0,
+      "relevant": 2
+    },
+    {
+      "label": "primary",
+      "userId": 2,
+      "method": "pagerank",
+      "sliderAlpha": 0.5,
+      "exportAlpha": "0.50",
+      "split": "test",
+      "meanPopularity": 247.4,
+      "hits": 0,
+      "relevant": 2
+    },
+    {
+      "label": "primary",
+      "userId": 2,
+      "method": "ppr",
+      "sliderAlpha": 0.5,
+      "exportAlpha": "0.50",
+      "split": "test",
+      "meanPopularity": 226.7,
+      "hits": 0,
+      "relevant": 2
+    },
+    {
+      "label": "primary",
+      "userId": 2,
+      "method": "mf",
+      "sliderAlpha": 0.5,
+      "exportAlpha": "",
+      "split": "test",
+      "meanPopularity": 111.4,
+      "hits": 0,
+      "relevant": 2
+    },
+    {
+      "label": "baseline",
+      "userId": 1,
+      "method": "ppr",
+      "sliderAlpha": 0.85,
+      "exportAlpha": "0.85",
+      "split": "test",
+      "meanPopularity": 245.5,
+      "hits": 3,
+      "relevant": 19
+    },
+    {
+      "label": "seed-only",
+      "userId": 2,
+      "method": "ppr",
+      "sliderAlpha": 0.85,
+      "exportAlpha": "0.85",
+      "split": "test",
+      "meanPopularity": 254.9,
+      "hits": 0,
+      "relevant": 2
+    },
+    {
+      "label": "alpha-only",
+      "userId": 1,
+      "method": "ppr",
+      "sliderAlpha": 0.5,
+      "exportAlpha": "0.50",
+      "split": "test",
+      "meanPopularity": 228.4,
+      "hits": 3,
+      "relevant": 19
+    }
+  ],
+  "convergenceExportScope": "Native PPR iterations/residual are representative user1, not an aggregate. Full943-user convergence is in recommendation-primary.json and recommendation-sweep.json.",
+  "runtimeScope": "Primary supplied comparison wall time includes Recall and mean-list-popularity scoring; model restoration and prior graph propagation are excluded from comparisonWallMs; overall job time includes them. Audit method timings include full-cohort checks and extra MF dispersion checks, not inference-only timing.",
+  "supplementalExports": "recommendations_with_hits.csv and hw5_additional_*.csv are evidence supplements; verification.json/results.csv/recommendations.csv are unchanged native downloads.",
+  "primaryUserOverlap": [
+    {
+      "method": "popularity",
+      "commonMovieIds": [
+        318
+      ],
+      "count": 1,
+      "user1MeanPopularity": 246.8,
+      "user2MeanPopularity": 262.1
+    },
+    {
+      "method": "pagerank",
+      "commonMovieIds": [
+        222
+      ],
+      "count": 1,
+      "user1MeanPopularity": 239.4,
+      "user2MeanPopularity": 247.4
+    },
+    {
+      "method": "ppr",
+      "commonMovieIds": [
+        475
+      ],
+      "count": 1,
+      "user1MeanPopularity": 228.4,
+      "user2MeanPopularity": 226.7
+    },
+    {
+      "method": "mf",
+      "commonMovieIds": [
+        5,
+        6
+      ],
+      "count": 2,
+      "user1MeanPopularity": 72.2,
+      "user2MeanPopularity": 111.4
+    }
+  ],
+  "diagnostics": [
+    {
+      "label": "baseline",
+      "userId": 1,
+      "alpha": 0.85,
+      "sharedWithBaseline": [
+        100,
+        222,
+        258,
+        286,
+        288,
+        300,
+        313,
+        318,
+        357,
+        483
+      ],
+      "sharedCount": 10,
+      "meanPopularity": 245.5,
+      "meanPopularityChange": 0.0,
+      "genreComposition": {
+        "denominator": 10,
+        "unit": "recommended movies; multi-label shares may sum above1",
+        "counts": {
+          "Crime": 1,
+          "Drama": 7,
+          "Thriller": 3,
+          "Sci-Fi": 2,
+          "Romance": 3,
+          "War": 3,
+          "Horror": 1,
+          "Action": 3,
+          "Adventure": 1
+        },
+        "shares": {
+          "Crime": 0.1,
+          "Drama": 0.7,
+          "Thriller": 0.3,
+          "Sci-Fi": 0.2,
+          "Romance": 0.3,
+          "War": 0.3,
+          "Horror": 0.1,
+          "Action": 0.3,
+          "Adventure": 0.1
+        }
+      },
+      "hits": 3,
+      "relevant": 19
+    },
+    {
+      "label": "seed-only",
+      "userId": 2,
+      "alpha": 0.85,
+      "sharedWithBaseline": [],
+      "sharedCount": 0,
+      "meanPopularity": 254.9,
+      "meanPopularityChange": 9.400000000000006,
+      "genreComposition": {
+        "denominator": 10,
+        "unit": "recommended movies; multi-label shares may sum above1",
+        "counts": {
+          "Action": 5,
+          "Adventure": 4,
+          "Romance": 2,
+          "Sci-Fi": 4,
+          "War": 3,
+          "Drama": 6,
+          "Thriller": 2,
+          "Crime": 1
+        },
+        "shares": {
+          "Action": 0.5,
+          "Adventure": 0.4,
+          "Romance": 0.2,
+          "Sci-Fi": 0.4,
+          "War": 0.3,
+          "Drama": 0.6,
+          "Thriller": 0.2,
+          "Crime": 0.1
+        }
+      },
+      "hits": 0,
+      "relevant": 2
+    },
+    {
+      "label": "alpha-only",
+      "userId": 1,
+      "alpha": 0.5,
+      "sharedWithBaseline": [
+        100,
+        222,
+        258,
+        286,
+        318,
+        357,
+        483
+      ],
+      "sharedCount": 7,
+      "meanPopularity": 228.4,
+      "meanPopularityChange": -17.099999999999994,
+      "genreComposition": {
+        "denominator": 10,
+        "unit": "recommended movies; multi-label shares may sum above1",
+        "counts": {
+          "Crime": 1,
+          "Drama": 9,
+          "Thriller": 1,
+          "Sci-Fi": 3,
+          "Romance": 3,
+          "War": 3,
+          "Action": 1,
+          "Adventure": 1,
+          "Children's": 1,
+          "Fantasy": 1
+        },
+        "shares": {
+          "Crime": 0.1,
+          "Drama": 0.9,
+          "Thriller": 0.1,
+          "Sci-Fi": 0.3,
+          "Romance": 0.3,
+          "War": 0.3,
+          "Action": 0.1,
+          "Adventure": 0.1,
+          "Children's": 0.1,
+          "Fantasy": 0.1
+        }
+      },
+      "hits": 3,
+      "relevant": 19
+    }
+  ],
+  "hw5Additional": [
+    {
+      "label": "default-20261016-01",
+      "checkpoint": 1,
+      "validationTieEarliestEpochVerified": true,
+      "wallMs": 117004.5,
+      "splitRecall": {
+        "val": 0.0272148428542038,
+        "test": 0.021137488852036153
+      },
+      "cohorts": {
+        "val": 846,
+        "test": 861
+      }
+    },
+    {
+      "label": "reg-0005-20261016-01",
+      "checkpoint": 1,
+      "validationTieEarliestEpochVerified": true,
+      "wallMs": 2366,
+      "splitRecall": {
+        "val": 0.0272148428542038,
+        "test": 0.021137488852036153
+      },
+      "cohorts": {
+        "val": 846,
+        "test": 861
+      }
+    }
+  ],
+  "hw5NoSelection": "Both labels retained; no test-based winner selected.",
+  "resourceAccounting": {
+    "sweep": {
+      "before": {
+        "unreliable": false,
+        "numBytesInGPU": 0,
+        "numBytesInGPUAllocated": 245648904,
+        "numBytesInGPUFree": 245648904,
+        "numTensors": 0,
+        "numDataBuffers": 0,
+        "numBytes": 0
+      },
+      "cache": {
+        "entries": 8,
+        "vectors": 3776,
+        "vectorBytes": 77151232,
+        "retainedGpuTensors": 0
+      },
+      "afterGraph": {
+        "unreliable": false,
+        "numBytesInGPU": 0,
+        "numBytesInGPUAllocated": 245648904,
+        "numBytesInGPUFree": 245648904,
+        "numTensors": 0,
+        "numDataBuffers": 0,
+        "numBytes": 0
+      },
+      "afterMF": {
+        "unreliable": false,
+        "numBytesInGPU": 0,
+        "numBytesInGPUAllocated": 245648904,
+        "numBytesInGPUFree": 245648904,
+        "numTensors": 0,
+        "numDataBuffers": 0,
+        "numBytes": 0
+      },
+      "note": "Restored MF creates only the two factor variables; the prior training probe disposal leftovers are separately retained in restoration evidence. GPU allocated/free pool is separate from live tensors."
+    },
+    "primary": {
+      "before": {
+        "unreliable": false,
+        "numBytesInGPU": 168128,
+        "numBytesInGPUAllocated": 294396444,
+        "numBytesInGPUFree": 294228316,
+        "numTensors": 2,
+        "numDataBuffers": 2,
+        "numBytes": 168128
+      },
+      "cache": {
+        "entries": 3,
+        "vectors": 1887,
+        "vectorBytes": 38555184,
+        "retainedGpuTensors": 0
+      },
+      "afterGraph": {
+        "unreliable": false,
+        "numBytesInGPU": 168128,
+        "numBytesInGPUAllocated": 294396444,
+        "numBytesInGPUFree": 294228316,
+        "numTensors": 2,
+        "numDataBuffers": 2,
+        "numBytes": 168128
+      },
+      "afterMF": {
+        "unreliable": false,
+        "numBytesInGPU": 0,
+        "numBytesInGPUAllocated": 294396444,
+        "numBytesInGPUFree": 294396444,
+        "numTensors": 0,
+        "numDataBuffers": 0,
+        "numBytes": 0
+      },
+      "note": "Restored MF creates only the two factor variables; the prior training probe disposal leftovers are separately retained in restoration evidence. GPU allocated/free pool is separate from live tensors."
+    },
+    "hw5": {
+      "before": {
+        "unreliable": false,
+        "numBytesInGPU": 168128,
+        "numBytesInGPUAllocated": 107938000,
+        "numBytesInGPUFree": 107769872,
+        "numTensors": 2,
+        "numDataBuffers": 2,
+        "numBytes": 168128
+      },
+      "cache": {
+        "entries": 0,
+        "vectors": 0,
+        "vectorBytes": 0,
+        "retainedGpuTensors": 0
+      },
+      "afterGraph": {
+        "unreliable": false,
+        "numBytesInGPU": 168128,
+        "numBytesInGPUAllocated": 107938000,
+        "numBytesInGPUFree": 107769872,
+        "numTensors": 2,
+        "numDataBuffers": 2,
+        "numBytes": 168128
+      },
+      "afterMF": {
+        "unreliable": false,
+        "numBytesInGPU": 0,
+        "numBytesInGPUAllocated": 107938000,
+        "numBytesInGPUFree": 107938000,
+        "numTensors": 0,
+        "numDataBuffers": 0,
+        "numBytes": 0
+      },
+      "note": "Restored MF creates only the two factor variables; the prior training probe disposal leftovers are separately retained in restoration evidence. GPU allocated/free pool is separate from live tensors."
+    },
+    "priorTrainingLeftovers": {
+      "unreliable": false,
+      "numBytesInGPU": 504512,
+      "numBytesInGPUAllocated": 53750620,
+      "numBytesInGPUFree": 53246108,
+      "numTensors": 8,
+      "numDataBuffers": 8,
+      "numBytes": 504392
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "construction": "Own raw parsing and timestamp/movieId split; binary undirected rating>=4 adjacency sets; DFS components.",
+  "nontrivialComponentSizes": [
+    2300
+  ],
+  "isolates": 254,
+  "positiveUsers": 942,
+  "positiveMovies": 1358,
+  "edges": 45602,
+  "combinedHeldoutOutsidePool": {
+    "ratingInstances": 17,
+    "distinctUserMoviePairs": 17,
+    "distinctMovies": 16
+  },
+  "runtimeSeconds": 0.21746149999671616
+}

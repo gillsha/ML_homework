@@ -1,0 +1,179 @@
+{
+  "mode": "checks",
+  "startedAt": "2026-10-22T10:28:14.602Z",
+  "sourceSHA256": {
+    "graph": "5df87007991d3db33d50cd56e441576b7d32a646eea30595e8922567b4a6f3cb",
+    "script": "96b53cde6db08509f8b2606c856837eefa377e2f71279a9b5b430d5f60f4f689"
+  },
+  "runtime": {
+    "tfjs": "4.22.0",
+    "backend": "webgl",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+    "browser": "153.0.8010.12"
+  },
+  "result": {
+    "supplied": {
+      "passed": 12,
+      "failed": 0,
+      "pending": 0,
+      "checks": [
+        {
+          "name": "reference graph: uniform alpha=0.85 matches readme 4.1 values",
+          "status": "PASS",
+          "detail": "C>A>B>D; produced by student pageRank(alpha, {transition: REFERENCE_GRAPH.transition}), iterations 28"
+        },
+        {
+          "name": "reference graph: restart at A alpha=0.85 matches readme 4.1 values",
+          "status": "PASS",
+          "detail": "A>C>B>D (D stays 0); produced by student personalizedPageRank(seedNode, alpha, {transition: REFERENCE_GRAPH.transition})"
+        },
+        {
+          "name": "row normalization: every nonzero-degree row sums to 1",
+          "status": "PASS",
+          "detail": "6 positive-degree row(s) sum to 1; 2 dangling row(s) are zero"
+        },
+        {
+          "name": "restart distributions: nonnegative and summing to 1",
+          "status": "PASS",
+          "detail": "uniform + one-hot over 4 nodes"
+        },
+        {
+          "name": "iterations preserve total probability (sum approx 1)",
+          "status": "PASS",
+          "detail": "sum = 1.0000002682 over 3 synthetic nodes (graph.js)"
+        },
+        {
+          "name": "stationary scores are nonnegative",
+          "status": "PASS",
+          "detail": "3 scores nonnegative (graph.js)"
+        },
+        {
+          "name": "one extra update produces approximately the same distribution",
+          "status": "PASS",
+          "detail": "L1 = 7.972e-7"
+        },
+        {
+          "name": "zero-degree node fixture preserves probability mass",
+          "status": "PASS",
+          "detail": "danglingMask [false,true,false,false,true]; mass 1.00000028 / 1.00000000"
+        },
+        {
+          "name": "matrix orientation: probability collects at the pointed-to node, not the source",
+          "status": "PASS",
+          "detail": "p = [0.486486, 0.256757, 0.256757]"
+        },
+        {
+          "name": "recommendTopK: excludes previously rated movies and breaks ties by ascending id",
+          "status": "PASS",
+          "detail": "10 eligible items for user 1"
+        },
+        {
+          "name": "graph mapping: node count equals observed users plus observed movies",
+          "status": "PASS",
+          "detail": "2554 nodes = 943 users + 1611 movies"
+        },
+        {
+          "name": "public surface: every required name is defined",
+          "status": "PASS",
+          "detail": "10 functions + ALPHA_GRID + MF_INFO"
+        }
+      ]
+    },
+    "focused": [
+      {
+        "name": "movie block ordering and Float64Array",
+        "status": "PASS"
+      },
+      {
+        "name": "explicit movieNodes ordering",
+        "status": "PASS"
+      },
+      {
+        "name": "malformed vector rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "pool includes nonpositive-only movies and popularity deduplicates",
+        "status": "PASS"
+      },
+      {
+        "name": "validation excludes low-rated training and ascending-ID ties",
+        "status": "PASS"
+      },
+      {
+        "name": "test excludes all train+val; short zero-score list preserved",
+        "status": "PASS"
+      },
+      {
+        "name": "exact recommendation record shape",
+        "status": "PASS"
+      },
+      {
+        "name": "empty-result contracts",
+        "status": "PASS"
+      },
+      {
+        "name": "macro recall, shared ascending cohort and fresh split filtering",
+        "status": "PASS"
+      },
+      {
+        "name": "unseen relevance and no-eligible counts",
+        "status": "PASS"
+      },
+      {
+        "name": "empty cohort returns zero",
+        "status": "PASS"
+      },
+      {
+        "name": "empty pool returns empty list",
+        "status": "PASS"
+      }
+    ],
+    "memory": {
+      "unreliable": false,
+      "numBytesInGPU": 0,
+      "numBytesInGPUAllocated": 2272,
+      "numBytesInGPUFree": 2272,
+      "numTensors": 0,
+      "numDataBuffers": 0,
+      "numBytes": 0
+    }
+  },
+  "cleanup": {
+    "before": {
+      "unreliable": false,
+      "numBytesInGPU": 0,
+      "numBytesInGPUAllocated": 2272,
+      "numBytesInGPUFree": 2272,
+      "numTensors": 0,
+      "numDataBuffers": 0,
+      "numBytes": 0
+    },
+    "cache": {
+      "entries": 0,
+      "vectors": 0,
+      "vectorBytes": 0,
+      "retainedGpuTensors": 0
+    },
+    "afterGraph": {
+      "unreliable": false,
+      "numBytesInGPU": 0,
+      "numBytesInGPUAllocated": 2272,
+      "numBytesInGPUFree": 2272,
+      "numTensors": 0,
+      "numDataBuffers": 0,
+      "numBytes": 0
+    },
+    "afterMF": {
+      "unreliable": false,
+      "numBytesInGPU": 0,
+      "numBytesInGPUAllocated": 2272,
+      "numBytesInGPUFree": 2272,
+      "numTensors": 0,
+      "numDataBuffers": 0,
+      "numBytes": 0
+    },
+    "note": "Restored MF creates only the two factor variables; the prior training probe disposal leftovers are separately retained in restoration evidence. GPU allocated/free pool is separate from live tensors."
+  },
+  "finishedAt": "2026-10-22T10:28:18.170Z"
+}

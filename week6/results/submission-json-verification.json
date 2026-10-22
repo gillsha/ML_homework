@@ -1,0 +1,21 @@
+{
+  "records": 1804,
+  "jsonBytes": 16443699,
+  "sourceJSONSHA256": "2334f7161879aeec9981937710288f844d6bd018fbf05dcfdd17636502635450",
+  "destinationJSONSHA256": "2334f7161879aeec9981937710288f844d6bd018fbf05dcfdd17636502635450",
+  "gzipBytes": 9044260,
+  "sourceGzipSHA256": "c1330b1ccecf71bba51b34955a029732e243366ce3ba7be05e032317071ba83d",
+  "destinationGzipSHA256": "c1330b1ccecf71bba51b34955a029732e243366ce3ba7be05e032317071ba83d",
+  "sourceDestinationByteIdentical": true,
+  "gzipDecompressesIdentically": true,
+  "serializedRecordsByteIdenticalToNativeLines": true,
+  "firstTimestamp": "2026-10-22T09:39:25.371Z",
+  "lastTimestamp": "2026-10-22T11:44:39.505Z",
+  "nativeParts": 4,
+  "replacements": 0,
+  "redactions": 0,
+  "omittedRecords": 0,
+  "formatChanged": true,
+  "nativeFileByteIdentical": false,
+  "description": "Four original JSONL parts combined in original order by array brackets and separators; no record-content changes. Prepared export copied unchanged; later packaging excluded."
+}

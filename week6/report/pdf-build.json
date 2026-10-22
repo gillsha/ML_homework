@@ -1,0 +1,45 @@
+{
+  "browser": "153.0.8010.12",
+  "playwright": "1.62.1",
+  "node": "v24.19.0",
+  "layout": [
+    {
+      "section": 1,
+      "height": 939.09375,
+      "width": 672.75,
+      "textChars": 4180
+    },
+    {
+      "section": 2,
+      "height": 1001.53125,
+      "width": 672.75,
+      "textChars": 4210
+    },
+    {
+      "section": 3,
+      "height": 991.890625,
+      "width": 672.75,
+      "textChars": 2967
+    },
+    {
+      "section": 4,
+      "height": 998.109375,
+      "width": 672.75,
+      "textChars": 2919
+    },
+    {
+      "section": 5,
+      "height": 975.3125,
+      "width": 672.75,
+      "textChars": 4958
+    },
+    {
+      "section": 6,
+      "height": 609.390625,
+      "width": 672.75,
+      "textChars": 2691
+    }
+  ],
+  "pdf": "A06_submit/gill_elizaveta_a06_report.pdf",
+  "gpuDisabled": true
+}

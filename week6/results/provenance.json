@@ -1,0 +1,59 @@
+{
+  "fetched_at_utc": "2026-10-22T09:40:46.961477+00:00",
+  "url": "https://github.com/dryjins/RecSys-LLMs.git",
+  "default_branch": "refs/remotes/origin/main",
+  "commit": "4b9598b4e670417387aabe3facb7868b6b6143eb",
+  "temporary_checkout": "[temporary path omitted]",
+  "is_shallow": "true",
+  "week6_recent_commits": [
+    "00c032fb58ca5f7bec05218b5bebee01e462e532 2026-10-13T17:05:49+03:00 HW6: add graph-based Personalized PageRank starter (week6)"
+  ],
+  "files": [
+    {
+      "path": "week6/data.js",
+      "sha256": "eb33f8441f652938cce07e7fc7fe1e36f38acd0b296234074ac90d367e2678cd",
+      "bytes": 6793
+    },
+    {
+      "path": "week6/graph.js",
+      "sha256": "33621c63919d34d76e0ba3d604d0b327e46b44aad6cffcd06fdccff40f81fe7e",
+      "bytes": 54118
+    },
+    {
+      "path": "week6/index.html",
+      "sha256": "3a9317bf06f9ef3fee8da60000b1f96182eaf87d947b54c436bb1ceb73f92db1",
+      "bytes": 10628
+    },
+    {
+      "path": "week6/readme.md",
+      "sha256": "56f2b68e111cad2fed437cf9d375b54722d165bf4446b41138cfc0f59866c486",
+      "bytes": 13998
+    },
+    {
+      "path": "week6/script.js",
+      "sha256": "712f54dff06ae1b71ab048d43b2605af1e8d2e9a7332868ce6ffae592b4fba26",
+      "bytes": 147913
+    },
+    {
+      "path": "week6/style.css",
+      "sha256": "ea006b0f213cdd988916c9fea5f4789d89c7348c5627eaad2ef64b899729986b",
+      "bytes": 8799
+    },
+    {
+      "path": "week6/u.data",
+      "sha256": "06416e597f82b7342361e41163890c81036900f418ad91315590814211dca490",
+      "bytes": 1979173
+    },
+    {
+      "path": "week6/u.item",
+      "sha256": "553841ebc7de3a0fd0d6b62a204ea30c1e651aacfb2814c7a6584ac52f2c5701",
+      "bytes": 236344
+    },
+    {
+      "path": "week6/vendor/d3.min.js",
+      "sha256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539",
+      "bytes": 279706
+    }
+  ],
+  "destination_initially_absent": true
+}

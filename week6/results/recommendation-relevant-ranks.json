@@ -1,0 +1,251 @@
+[
+  {
+    "userId": 1,
+    "alpha": 0.5,
+    "relevantMovies": [
+      {
+        "movieId": 6,
+        "title": "Shanghai Triad (Yao a yao yao dao waipo qiao) (1995)",
+        "genres": [
+          "Drama"
+        ],
+        "popularity": 12,
+        "pprEligibleRank": 428,
+        "recommendedHit": false
+      },
+      {
+        "movieId": 18,
+        "title": "White Balloon, The (1995)",
+        "genres": [
+          "Drama"
+        ],
+        "popularity": 1,
+        "pprEligibleRank": 972,
+        "recommendedHit": false
+      },
+      {
+        "movieId": 20,
+        "title": "Angels and Insects (1995)",
+        "genres": [
+          "Drama",
+          "Romance"
+        ],
+        "popularity": 31,
+        "pprEligibleRank": 208,
+        "recommendedHit": false
+      },
+      {
+        "movieId": 32,
+        "title": "Crumb (1994)",
+        "genres": [
+          "Documentary"
+        ],
+        "popularity": 46,
+        "pprEligibleRank": 144,
+        "recommendedHit": false
+      },
+      {
+        "movieId": 100,
+        "title": "Fargo (1996)",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Thriller"
+        ],
+        "popularity": 377,
+        "pprEligibleRank": 1,
+        "recommendedHit": true
+      },
+      {
+        "movieId": 111,
+        "title": "Truth About Cats & Dogs, The (1996)",
+        "genres": [
+          "Comedy",
+          "Romance"
+        ],
+        "popularity": 131,
+        "pprEligibleRank": 35,
+        "recommendedHit": false
+      },
+      {
+        "movieId": 129,
+        "title": "Bound (1996)",
+        "genres": [
+          "Crime",
+          "Drama",
+          "Romance",
+          "Thriller"
+        ],
+        "popularity": 76,
+        "pprEligibleRank": 68,
+        "recommendedHit": false
+      },
+      {
+        "movieId": 154,
+        "title": "Monty Python's Life of Brian (1979)",
+        "genres": [
+          "Comedy"
+        ],
+        "popularity": 95,
+        "pprEligibleRank": 42,
+        "recommendedHit": false
+      },
+      {
+        "movieId": 169,
+        "title": "Wrong Trousers, The (1993)",
+        "genres": [
+          "Animation",
+          "Comedy"
+        ],
+        "popularity": 90,
+        "pprEligibleRank": 43,
+        "recommendedHit": false
+      },
+      {
+        "movieId": 171,
+        "title": "Delicatessen (1991)",
+        "genres": [
+          "Comedy",
+          "Sci-Fi"
+        ],
+        "popularity": 39,
+        "pprEligibleRank": 157,
+        "recommendedHit": false
+      },
+      {
+        "movieId": 178,
+        "title": "12 Angry Men (1957)",
+        "genres": [
+          "Drama"
+        ],
+        "popularity": 93,
+        "pprEligibleRank": 57,
+        "recommendedHit": false
+      },
+      {
+        "movieId": 209,
+        "title": "This Is Spinal Tap (1984)",
+        "genres": [
+          "Comedy",
+          "Drama",
+          "Musical"
+        ],
+        "popularity": 116,
+        "pprEligibleRank": 27,
+        "recommendedHit": false
+      },
+      {
+        "movieId": 221,
+        "title": "Breaking the Waves (1996)",
+        "genres": [
+          "Drama"
+        ],
+        "popularity": 39,
+        "pprEligibleRank": 154,
+        "recommendedHit": false
+      },
+      {
+        "movieId": 222,
+        "title": "Star Trek: First Contact (1996)",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Sci-Fi"
+        ],
+        "popularity": 189,
+        "pprEligibleRank": 7,
+        "recommendedHit": true
+      },
+      {
+        "movieId": 228,
+        "title": "Star Trek: The Wrath of Khan (1982)",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Sci-Fi"
+        ],
+        "popularity": 125,
+        "pprEligibleRank": 22,
+        "recommendedHit": false
+      },
+      {
+        "movieId": 242,
+        "title": "Kolya (1996)",
+        "genres": [
+          "Comedy"
+        ],
+        "popularity": 78,
+        "pprEligibleRank": 89,
+        "recommendedHit": false
+      },
+      {
+        "movieId": 256,
+        "title": "When the Cats Away (Chacun cherche son chat) (1996)",
+        "genres": [
+          "Comedy",
+          "Romance"
+        ],
+        "popularity": 7,
+        "pprEligibleRank": 542,
+        "recommendedHit": false
+      },
+      {
+        "movieId": 258,
+        "title": "Contact (1997)",
+        "genres": [
+          "Drama",
+          "Sci-Fi"
+        ],
+        "popularity": 307,
+        "pprEligibleRank": 2,
+        "recommendedHit": true
+      },
+      {
+        "movieId": 270,
+        "title": "Gattaca (1997)",
+        "genres": [
+          "Drama",
+          "Sci-Fi",
+          "Thriller"
+        ],
+        "popularity": 67,
+        "pprEligibleRank": 165,
+        "recommendedHit": false
+      }
+    ],
+    "numerator": 3,
+    "denominator": 19,
+    "recall": 0.15789473684210525
+  },
+  {
+    "userId": 2,
+    "alpha": 0.5,
+    "relevantMovies": [
+      {
+        "movieId": 304,
+        "title": "Fly Away Home (1996)",
+        "genres": [
+          "Adventure",
+          "Children's"
+        ],
+        "popularity": 68,
+        "pprEligibleRank": 84,
+        "recommendedHit": false
+      },
+      {
+        "movieId": 316,
+        "title": "As Good As It Gets (1997)",
+        "genres": [
+          "Comedy",
+          "Drama"
+        ],
+        "popularity": 57,
+        "pprEligibleRank": 177,
+        "recommendedHit": false
+      }
+    ],
+    "numerator": 0,
+    "denominator": 2,
+    "recall": 0.0
+  }
+]

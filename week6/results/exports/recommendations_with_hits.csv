@@ -1,0 +1,111 @@
+setting,user_id,method,alpha,split,rank,movieId,title,genres,score,popularity,hit
+primary,1,popularity,,test,1,100,Fargo (1996),Crime;Drama;Thriller,377,377,True
+primary,1,popularity,,test,2,258,Contact (1997),Drama;Sci-Fi,307,307,True
+primary,1,popularity,,test,3,286,"English Patient, The (1996)",Drama;Romance;War,279,279,False
+primary,1,popularity,,test,4,300,Air Force One (1997),Action;Thriller,235,235,False
+primary,1,popularity,,test,5,288,Scream (1996),Horror;Thriller,226,226,False
+primary,1,popularity,,test,6,318,Schindler's List (1993),Drama;War,224,224,False
+primary,1,popularity,,test,7,313,Titanic (1997),Action;Drama;Romance,219,219,False
+primary,1,popularity,,test,8,302,L.A. Confidential (1997),Crime;Film-Noir;Mystery;Thriller,202,202,False
+primary,1,popularity,,test,9,357,One Flew Over the Cuckoo's Nest (1975),Drama,202,202,False
+primary,1,popularity,,test,10,483,Casablanca (1942),Drama;Romance;War,197,197,False
+primary,1,pagerank,0.50,test,1,258,Contact (1997),Drama;Sci-Fi,0.0023751864209771156,307,True
+primary,1,pagerank,0.50,test,2,286,"English Patient, The (1996)",Drama;Romance;War,0.002291253302246332,279,False
+primary,1,pagerank,0.50,test,3,100,Fargo (1996),Crime;Drama;Thriller,0.002271695528179407,377,True
+primary,1,pagerank,0.50,test,4,313,Titanic (1997),Action;Drama;Romance,0.0020634259562939405,219,False
+primary,1,pagerank,0.50,test,5,300,Air Force One (1997),Action;Thriller,0.0020034192129969597,235,False
+primary,1,pagerank,0.50,test,6,288,Scream (1996),Horror;Thriller,0.0018683733651414514,226,False
+primary,1,pagerank,0.50,test,7,302,L.A. Confidential (1997),Crime;Film-Noir;Mystery;Thriller,0.001798133598640561,202,False
+primary,1,pagerank,0.50,test,8,294,Liar Liar (1997),Comedy,0.0014883464900776744,182,False
+primary,1,pagerank,0.50,test,9,275,Sense and Sensibility (1995),Drama;Romance,0.0012158651370555162,178,False
+primary,1,pagerank,0.50,test,10,222,Star Trek: First Contact (1996),Action;Adventure;Sci-Fi,0.0011928167659789324,189,True
+primary,1,ppr,0.50,test,1,100,Fargo (1996),Crime;Drama;Thriller,0.0006855191895738244,377,True
+primary,1,ppr,0.50,test,2,258,Contact (1997),Drama;Sci-Fi,0.0004398658056743443,307,True
+primary,1,ppr,0.50,test,3,286,"English Patient, The (1996)",Drama;Romance;War,0.00043101841583848,279,False
+primary,1,ppr,0.50,test,4,318,Schindler's List (1993),Drama;War,0.0004038166953250766,224,False
+primary,1,ppr,0.50,test,5,357,One Flew Over the Cuckoo's Nest (1975),Drama,0.00037716623046435416,202,False
+primary,1,ppr,0.50,test,6,483,Casablanca (1942),Drama;Romance;War,0.00035968932206742465,197,False
+primary,1,ppr,0.50,test,7,222,Star Trek: First Contact (1996),Action;Adventure;Sci-Fi,0.00033278539194725454,189,True
+primary,1,ppr,0.50,test,8,475,Trainspotting (1996),Drama,0.00032809015829116106,164,False
+primary,1,ppr,0.50,test,9,275,Sense and Sensibility (1995),Drama;Romance,0.00032018491765484214,178,False
+primary,1,ppr,0.50,test,10,423,E.T. the Extra-Terrestrial (1982),Children's;Drama;Fantasy;Sci-Fi,0.00030566827626898885,167,False
+primary,1,mf,,test,1,5,Copycat (1995),Crime;Drama;Thriller,3.5806026458740234,28,False
+primary,1,mf,,test,2,6,Shanghai Triad (Yao a yao yao dao waipo qiao) (1995),Drama,3.5806026458740234,12,True
+primary,1,mf,,test,3,18,"White Balloon, The (1995)",Drama,3.5806026458740234,1,True
+primary,1,mf,,test,4,20,Angels and Insects (1995),Drama;Romance,3.5806026458740234,31,True
+primary,1,mf,,test,5,32,Crumb (1994),Documentary,3.5806026458740234,46,True
+primary,1,mf,,test,6,74,Faster Pussycat! Kill! Kill! (1965),Action;Comedy;Drama,3.5806026458740234,2,False
+primary,1,mf,,test,7,100,Fargo (1996),Crime;Drama;Thriller,3.5806026458740234,377,True
+primary,1,mf,,test,8,102,"Aristocats, The (1970)",Animation;Children's,3.5806026458740234,18,False
+primary,1,mf,,test,9,111,"Truth About Cats & Dogs, The (1996)",Comedy;Romance,3.5806026458740234,131,True
+primary,1,mf,,test,10,129,Bound (1996),Crime;Drama;Romance;Thriller,3.5806026458740234,76,True
+primary,2,popularity,,test,1,181,Return of the Jedi (1983),Action;Adventure;Romance;Sci-Fi;War,339,339,False
+primary,2,popularity,,test,2,174,Raiders of the Lost Ark (1981),Action;Adventure,312,312,False
+primary,2,popularity,,test,3,98,"Silence of the Lambs, The (1991)",Drama;Thriller,308,308,False
+primary,2,popularity,,test,4,56,Pulp Fiction (1994),Crime;Drama,263,263,False
+primary,2,popularity,,test,5,172,"Empire Strikes Back, The (1980)",Action;Adventure;Drama;Romance;Sci-Fi;War,261,261,False
+primary,2,popularity,,test,6,7,Twelve Monkeys (1995),Drama;Sci-Fi,234,234,False
+primary,2,popularity,,test,7,79,"Fugitive, The (1993)",Action;Thriller,230,230,False
+primary,2,popularity,,test,8,64,"Shawshank Redemption, The (1994)",Drama,228,228,False
+primary,2,popularity,,test,9,318,Schindler's List (1993),Drama;War,224,224,False
+primary,2,popularity,,test,10,173,"Princess Bride, The (1987)",Action;Adventure;Comedy;Romance,222,222,False
+primary,2,pagerank,0.50,test,1,181,Return of the Jedi (1983),Action;Adventure;Romance;Sci-Fi;War,0.0019889404065907,339,False
+primary,2,pagerank,0.50,test,2,174,Raiders of the Lost Ark (1981),Action;Adventure,0.0015527261421084404,312,False
+primary,2,pagerank,0.50,test,3,98,"Silence of the Lambs, The (1991)",Drama;Thriller,0.0015255436301231384,308,False
+primary,2,pagerank,0.50,test,4,7,Twelve Monkeys (1995),Drama;Sci-Fi,0.001373774721287191,234,False
+primary,2,pagerank,0.50,test,5,56,Pulp Fiction (1994),Crime;Drama,0.0013726184843108058,263,False
+primary,2,pagerank,0.50,test,6,172,"Empire Strikes Back, The (1980)",Action;Adventure;Drama;Romance;Sci-Fi;War,0.0013182985130697489,261,False
+primary,2,pagerank,0.50,test,7,117,"Rock, The (1996)",Action;Adventure;Thriller,0.0013080037897452712,215,False
+primary,2,pagerank,0.50,test,8,121,Independence Day (ID4) (1996),Action;Sci-Fi;War,0.0012972892727702856,207,False
+primary,2,pagerank,0.50,test,9,268,Chasing Amy (1997),Drama;Romance,0.0012656085891649127,146,False
+primary,2,pagerank,0.50,test,10,222,Star Trek: First Contact (1996),Action;Adventure;Sci-Fi,0.0011928167659789324,189,False
+primary,2,ppr,0.50,test,1,181,Return of the Jedi (1983),Action;Adventure;Romance;Sci-Fi;War,0.0006973391282372177,339,False
+primary,2,ppr,0.50,test,2,9,Dead Man Walking (1995),Drama,0.0004976635682396591,182,False
+primary,2,ppr,0.50,test,3,7,Twelve Monkeys (1995),Drama;Sci-Fi,0.00047437407192774117,234,False
+primary,2,ppr,0.50,test,4,117,"Rock, The (1996)",Action;Adventure;Thriller,0.0004563616821542382,215,False
+primary,2,ppr,0.50,test,5,98,"Silence of the Lambs, The (1991)",Drama;Thriller,0.00044651018106378615,308,False
+primary,2,ppr,0.50,test,6,121,Independence Day (ID4) (1996),Action;Sci-Fi;War,0.00043071250547654927,207,False
+primary,2,ppr,0.50,test,7,174,Raiders of the Lost Ark (1981),Action;Adventure,0.00040285097202286124,312,False
+primary,2,ppr,0.50,test,8,268,Chasing Amy (1997),Drama;Romance,0.00040181103395298123,146,False
+primary,2,ppr,0.50,test,9,475,Trainspotting (1996),Drama,0.00040160532807931304,164,False
+primary,2,ppr,0.50,test,10,15,Mr. Holland's Opus (1995),Drama,0.0004009184194728732,160,False
+primary,2,mf,,test,1,2,GoldenEye (1995),Action;Adventure;Thriller,3.5806026458740234,41,False
+primary,2,mf,,test,2,3,Four Rooms (1995),Thriller,3.5806026458740234,27,False
+primary,2,mf,,test,3,4,Get Shorty (1995),Action;Comedy;Drama,3.5806026458740234,96,False
+primary,2,mf,,test,4,5,Copycat (1995),Crime;Drama;Thriller,3.5806026458740234,28,False
+primary,2,mf,,test,5,6,Shanghai Triad (Yao a yao yao dao waipo qiao) (1995),Drama,3.5806026458740234,12,False
+primary,2,mf,,test,6,7,Twelve Monkeys (1995),Drama;Sci-Fi,3.5806026458740234,234,False
+primary,2,mf,,test,7,8,Babe (1995),Children's;Comedy;Drama,3.5806026458740234,137,False
+primary,2,mf,,test,8,9,Dead Man Walking (1995),Drama,3.5806026458740234,182,False
+primary,2,mf,,test,9,11,Seven (Se7en) (1995),Crime;Thriller,3.5806026458740234,152,False
+primary,2,mf,,test,10,12,"Usual Suspects, The (1995)",Crime;Thriller,3.5806026458740234,205,False
+baseline,1,ppr,0.85,test,1,100,Fargo (1996),Crime;Drama;Thriller,0.002741683041676879,377,True
+baseline,1,ppr,0.85,test,2,258,Contact (1997),Drama;Sci-Fi,0.00200196192599833,307,True
+baseline,1,ppr,0.85,test,3,286,"English Patient, The (1996)",Drama;Romance;War,0.0018735380144789815,279,False
+baseline,1,ppr,0.85,test,4,318,Schindler's List (1993),Drama;War,0.0016319365240633488,224,False
+baseline,1,ppr,0.85,test,5,357,One Flew Over the Cuckoo's Nest (1975),Drama,0.001493106479756534,202,False
+baseline,1,ppr,0.85,test,6,483,Casablanca (1942),Drama;Romance;War,0.0014446371933445334,197,False
+baseline,1,ppr,0.85,test,7,288,Scream (1996),Horror;Thriller,0.0014287270605564117,226,False
+baseline,1,ppr,0.85,test,8,300,Air Force One (1997),Action;Thriller,0.0014131064526736736,235,False
+baseline,1,ppr,0.85,test,9,222,Star Trek: First Contact (1996),Action;Adventure;Sci-Fi,0.001352948253042996,189,True
+baseline,1,ppr,0.85,test,10,313,Titanic (1997),Action;Drama;Romance,0.0013183335540816188,219,False
+seed-only,2,ppr,0.85,test,1,181,Return of the Jedi (1983),Action;Adventure;Romance;Sci-Fi;War,0.002600750420242548,339,False
+seed-only,2,ppr,0.85,test,2,98,"Silence of the Lambs, The (1991)",Drama;Thriller,0.0020272978581488132,308,False
+seed-only,2,ppr,0.85,test,3,174,Raiders of the Lost Ark (1981),Action;Adventure,0.0019665774889290333,312,False
+seed-only,2,ppr,0.85,test,4,7,Twelve Monkeys (1995),Drama;Sci-Fi,0.0017902939580380917,234,False
+seed-only,2,ppr,0.85,test,5,56,Pulp Fiction (1994),Crime;Drama,0.0017448201542720199,263,False
+seed-only,2,ppr,0.85,test,6,117,"Rock, The (1996)",Action;Adventure;Thriller,0.001684593502432108,215,False
+seed-only,2,ppr,0.85,test,7,172,"Empire Strikes Back, The (1980)",Action;Adventure;Drama;Romance;Sci-Fi;War,0.0016606281278654933,261,False
+seed-only,2,ppr,0.85,test,8,9,Dead Man Walking (1995),Drama,0.001607951708137989,182,False
+seed-only,2,ppr,0.85,test,9,121,Independence Day (ID4) (1996),Action;Sci-Fi;War,0.001602756790816784,207,False
+seed-only,2,ppr,0.85,test,10,64,"Shawshank Redemption, The (1994)",Drama,0.0015171804698184133,228,False
+alpha-only,1,ppr,0.50,test,1,100,Fargo (1996),Crime;Drama;Thriller,0.0006855191895738244,377,True
+alpha-only,1,ppr,0.50,test,2,258,Contact (1997),Drama;Sci-Fi,0.0004398658056743443,307,True
+alpha-only,1,ppr,0.50,test,3,286,"English Patient, The (1996)",Drama;Romance;War,0.00043101841583848,279,False
+alpha-only,1,ppr,0.50,test,4,318,Schindler's List (1993),Drama;War,0.0004038166953250766,224,False
+alpha-only,1,ppr,0.50,test,5,357,One Flew Over the Cuckoo's Nest (1975),Drama,0.00037716623046435416,202,False
+alpha-only,1,ppr,0.50,test,6,483,Casablanca (1942),Drama;Romance;War,0.00035968932206742465,197,False
+alpha-only,1,ppr,0.50,test,7,222,Star Trek: First Contact (1996),Action;Adventure;Sci-Fi,0.00033278539194725454,189,True
+alpha-only,1,ppr,0.50,test,8,475,Trainspotting (1996),Drama,0.00032809015829116106,164,False
+alpha-only,1,ppr,0.50,test,9,275,Sense and Sensibility (1995),Drama;Romance,0.00032018491765484214,178,False
+alpha-only,1,ppr,0.50,test,10,423,E.T. the Extra-Terrestrial (1982),Children's;Drama;Fantasy;Sci-Fi,0.00030566827626898885,167,False

@@ -1,0 +1,488 @@
+{
+  "stage": "Pre-implementation review evidence, not final course report",
+  "assignment": "Complete current week6/readme.md (191 lines); no separate HW6 assignment file exists in week6.",
+  "readComplete": [
+    "week6/readme.md",
+    "week6/data.js",
+    "week6/graph.js",
+    "week6/script.js",
+    "week6/index.html"
+  ],
+  "stubs": [
+    {
+      "signature": "buildGraph(train)",
+      "source": {
+        "file": "week6/graph.js",
+        "line": 356,
+        "lastLine": 356,
+        "quote": "function buildGraph(train) {"
+      },
+      "types": "Rating[] -> Graph",
+      "shape": "R:number[][] [U,M]; degree:Float64Array[N]; ascending userIds/movieIds; raw-ID Maps; nodeCount=N; nodeOfUser/movieOfNode/isUserNode; zero-degree raw-ID lists; positiveEdges.",
+      "optionsAndFailures": "Non-array train returns empty graph. Universe includes all training-observed IDs, even without positives. Binary unique positive pair (rating>=4).",
+      "contract": "Synchronous; plain object/array, never Promise.",
+      "selfCheckNumbers": [
+        11
+      ],
+      "coverageGaps": "No direct construction fixture: #11 inspects an already-active graph; smaller graphs become PENDING.",
+      "bodyStillThrowOnly": true
+    },
+    {
+      "signature": "rowNormalize(graph)",
+      "source": {
+        "file": "week6/graph.js",
+        "line": 390,
+        "lastLine": 390,
+        "quote": "function rowNormalize(graph) {"
+      },
+      "types": "Graph -> {Q:number[][], danglingMask:boolean[]}",
+      "shape": "Q [N,N]; positive-degree rows sum to 1, zero-degree rows all zero; mask [N].",
+      "optionsAndFailures": "Null/missing graph -> {Q:[],danglingMask:[]}. Fixture interface demands plain arrays, not tensors/typed mask.",
+      "contract": "Synchronous; plain object/array, never Promise.",
+      "selfCheckNumbers": [
+        3,
+        7,
+        8,
+        9
+      ],
+      "coverageGaps": "Tests tiny synthetic graphs; no full-scale memory test.",
+      "bodyStillThrowOnly": true
+    },
+    {
+      "signature": "pageRank(alpha, opts)",
+      "source": {
+        "file": "week6/graph.js",
+        "line": 440,
+        "lastLine": 440,
+        "quote": "function pageRank(alpha, opts) {"
+      },
+      "types": "number, options? -> PageRankResult",
+      "shape": "p:Float64Array[N], iterations:number, residual:number (L1), converged:boolean.",
+      "optionsAndFailures": "alpha link probability [0,1]; opts={tol:1e-6,maxIter:500,transition?:{Q:number[][],danglingMask:Uint8Array,nodeLabels?:string[]}}. Override replaces GRAPH, already normalized. Otherwise GRAPH required. Uniform restart; p0=v. Missing graph/transition throws.",
+      "contract": "Synchronous; plain object/array, never Promise.",
+      "selfCheckNumbers": [
+        1,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "coverageGaps": "No options-boundary, cap-edge, repeated-memory or scale checks.",
+      "bodyStillThrowOnly": true
+    },
+    {
+      "signature": "personalizedPageRank(userId, alpha, opts)",
+      "source": {
+        "file": "week6/graph.js",
+        "line": 477,
+        "lastLine": 477,
+        "quote": "function personalizedPageRank(userId, alpha, opts) {"
+      },
+      "types": "number seed NODE INDEX, number, options? -> PageRankResult",
+      "shape": "Same p:Float64Array[N] result; one-hot restart, p0=v.",
+      "optionsAndFailures": "Same options as pageRank; unknown/out-of-range seed throws. graph.js and fixture caller specify node index; product adapter passes raw ID (unresolved conflict).",
+      "contract": "Synchronous; plain object/array, never Promise.",
+      "selfCheckNumbers": [
+        2,
+        8
+      ],
+      "coverageGaps": "#8 uses wrong seed convention through adapter and checks only total mass; may miss incorrect seed location. No raw-ID vs node-index assertion.",
+      "bodyStillThrowOnly": true
+    },
+    {
+      "signature": "movieScores(p, graph)",
+      "source": {
+        "file": "week6/script.js",
+        "line": 1112,
+        "lastLine": 1112,
+        "quote": "function movieScores(p, graph) {"
+      },
+      "types": "ArrayLike<number>[N], Graph -> Float64Array[M]",
+      "shape": "Output matches graph.movieIds order; prefer graph.movieNodes when available, otherwise offset by graph.userIds.length.",
+      "optionsAndFailures": "No padding; no user scores; no additional documented default options.",
+      "contract": "Synchronous; plain object/array, never Promise.",
+      "selfCheckNumbers": [
+        12
+      ],
+      "coverageGaps": "Only name existence is checked; no numeric movie-extraction test.",
+      "bodyStillThrowOnly": true
+    },
+    {
+      "signature": "recommendTopK(method, userId, K, split)",
+      "source": {
+        "file": "week6/script.js",
+        "line": 1150,
+        "lastLine": 1150,
+        "quote": "function recommendTopK(method, userId, K, split) {"
+      },
+      "types": "method string, raw numeric userId, K=10, split=\"test\" -> RecommendedMovie[]",
+      "shape": "Length <=K; each {movieId:number,title:string,genres:string[],score:number,popularity:number}.",
+      "optionsAndFailures": "Methods popularity/pagerank/ppr/mf; active slider alpha; training-movie pool; val excludes train, test excludes train+val; sort score descending/raw movie ID ascending. Unknown method/K<=0/no eligible candidates -> []. Report shortfall and zero-score padding.",
+      "contract": "Synchronous; plain object/array, never Promise.",
+      "selfCheckNumbers": [
+        10,
+        12
+      ],
+      "coverageGaps": "#10 tests only popularity/test/first cohort user and does not require a full nonempty result; no validation filtering or other-method numeric coverage.",
+      "bodyStillThrowOnly": true
+    },
+    {
+      "signature": "recallAtK(method, K, split)",
+      "source": {
+        "file": "week6/script.js",
+        "line": 1183,
+        "lastLine": 1183,
+        "quote": "function recallAtK(method, K, split) {"
+      },
+      "types": "method string, K=10, split=\"test\" -> RecallReport",
+      "shape": "{recall:number,cohort:number[] ascending,excludedUnseen:number,excludedNoEligible:number,perUser:{userId,relevant,hit}[]}.",
+      "optionsAndFailures": "Same split-specific shared cohort for all methods; relevant rating>=4, candidate+history eligible; macro mean hit/relevant; empty cohort ->0; fresh validation lists; no PPR RMSE.",
+      "contract": "Synchronous; plain object/array, never Promise.",
+      "selfCheckNumbers": [
+        12
+      ],
+      "coverageGaps": "Only name existence is checked; no numerical macro-recall/exclusion or common-cohort test.",
+      "bodyStillThrowOnly": true
+    }
+  ],
+  "contradictionsAndTensions": [
+    {
+      "topic": "Raw user ID vs node index",
+      "evidence": [
+        {
+          "file": "week6/graph.js",
+          "line": 453,
+          "lastLine": 460,
+          "quote": " * RESTART INDEX (node index, not a raw user id): the first argument is a node\n * INDEX and is used directly as the restart node. This is today's caller\n * convention; keep it.\n *  - default MovieLens path: the index is a global node index from `buildGraph`\n *    (a user node is `GRAPH.nodeOfUser(userId)` or equivalently any\n *    `index < GRAPH.nUsers`).\n *  - `opts.transition` path: the index must be in `[0, Q.length)` and refers to\n *    the same node order as `Q` (`REFERENCE_GRAPH.transition.nodeLabels` names"
+        },
+        {
+          "file": "week6/script.js",
+          "line": 1431,
+          "lastLine": 1433,
+          "quote": " * graph-first `(graph, seed, alpha)` shape is also tolerated. The seed passed to\n * the user-first form is the raw user id (not a node index) when the graph\n * exposes one."
+        },
+        {
+          "file": "week6/script.js",
+          "line": 1455,
+          "lastLine": 1459,
+          "quote": "  const attempts = [\n    function () { return hw6WithActiveGraph(graph, function () { return personalizedPageRank(rawUserId, alpha); }); },\n  ];\n  if (personalizedPageRank.length >= 3) {\n    attempts.push(function () { return personalizedPageRank(graph, seedNode, alpha); });"
+        },
+        {
+          "file": "week6/script.js",
+          "line": 2849,
+          "lastLine": 2852,
+          "quote": "  const result = hw6NormalizePropagation(out, 4);\n  if (!result) {\n    throw hw6InterfaceError(\"graph.js `personalizedPageRank` did not return a length-4 vector for REFERENCE_GRAPH.transition\");\n  }"
+        }
+      ],
+      "impact": "Raw user 1 is node 0. Existing adapter passes 1 (next user); raw user 943 would point into the movie block if only global range is checked. Fixture path passes 0 correctly. Cannot satisfy both as one untagged numeric convention.",
+      "proposedResolutionNotApplied": "Keep documented node-index propagation API; convert raw IDs once at product boundary. Adapter change needs explicit implementation scope."
+    },
+    {
+      "topic": "Previous selected MF vs supplied retraining reference",
+      "evidence": [
+        {
+          "file": "week6/readme.md",
+          "line": 109,
+          "lastLine": 109,
+          "quote": "Compare four methods: (1) Popularity — count distinct users with a positive training rating per movie; (2) Global PageRank with uniform restart; (3) PPR with restart at the target user; (4) MF — reuse your previous implementation and selected model. Do not alter the MF scoring definition to resemble PPR; state the model and checkpoint used."
+        },
+        {
+          "file": "week6/script.js",
+          "line": 30,
+          "lastLine": 35,
+          "quote": " * PROVIDED (instructor scaffolding — not an exercise to rewrite):\n *   - `hw6InitTf`, the formatting/CSV/exporter helpers, the training-split indices,\n *     `popularityScores`, `mfScores` and the deterministic MF reference model,\n *     every panel renderer, the four-method / alpha-sweep / convergence /\n *     two-user-demo runners, the self-check harness and the UI wiring.\n *   - The MF reference is instructor-provided: students must not have to"
+        },
+        {
+          "file": "week6/script.js",
+          "line": 131,
+          "lastLine": 134,
+          "quote": "const MF_SEED = 20261013;\n\n/** Training settings, keeping the previous assignment's convention. */\nconst MF_CONFIG = { epochs: 30, lr: 0.01, reg: 0.05, batchSize: 512 };"
+        },
+        {
+          "file": "week6/script.js",
+          "line": 814,
+          "lastLine": 836,
+          "quote": "function hw6MfRmse(split) {\n  if (!HW6_MF_MODEL || !split || split.length === 0) return Number.NaN;\n  const model = HW6_MF_MODEL;\n  return tf.tidy(function () {\n    const n = split.length;\n    const uRows = model.userFactors.shape[0];\n    const iRows = model.itemFactors.shape[0];\n    const userIds = new Int32Array(n);\n    const movieIds = new Int32Array(n);\n    const actual = new Float32Array(n);\n    for (let k = 0; k < n; k++) {\n      const row = split[k];\n      userIds[k] = Math.min(Math.max(0, row.userId), uRows - 1);\n      movieIds[k] = Math.min(Math.max(0, row.movieId), iRows - 1);\n      actual[k] = row.rating;\n    }\n    const u = tf.gather(model.userFactors, tf.tensor1d(userIds, \"int32\"));\n    const i = tf.gather(model.itemFactors, tf.tensor1d(movieIds, \"int32\"));\n    const pred = tf.sum(tf.mul(u, i), 1).add(model.globalMean);\n    const diff = pred.sub(tf.tensor1d(actual, \"float32\"));\n    return Math.sqrt(tf.mean(diff.square()).dataSync()[0]);\n  });\n}"
+        }
+      ],
+      "impact": "Previous HW5 model uses 20 epochs/batch64/seeds5101-5103, validation-clipped warm-start RMSE; supplied HW6 uses30/batch512/seed20261013, raw RMSE including cold validation movies. Same mu+dot score family and whole-matrix L2 do not make checkpoints interchangeable.",
+      "proposedResolutionNotApplied": "Choose and identify the existing HW5 selected artifact; resolve whether instructor expects it or the supplied reference before model integration. No substitute chosen or trained."
+    },
+    {
+      "topic": "Validation selection vs evaluation orchestration",
+      "evidence": [
+        {
+          "file": "week6/readme.md",
+          "line": 113,
+          "lastLine": 113,
+          "quote": "For PPR compare `alpha` in `{0.50, 0.70, 0.85, 0.95}` on validation Recall@10 and select one shared alpha for the full evaluation population; do not use test outcomes. Break exact ties by the smaller alpha. Use the same alpha for the primary global PageRank comparison and disclose this control; this is not a claim that global PageRank was independently optimized. MF keeps the previous validation-RMSE checkpoint rule; disclose that MF and PPR use different validation objectives."
+        },
+        {
+          "file": "week6/script.js",
+          "line": 3595,
+          "lastLine": 3600,
+          "quote": "  const comparison = await hw6RunComparison(\"test\");\n  hw6RenderConvergence();\n  hw6RenderComparison(comparison);\n\n  const sweep = hw6RunAlphaSweep();\n  hw6RenderAlphaSweep(sweep);"
+        },
+        {
+          "file": "week6/script.js",
+          "line": 1831,
+          "lastLine": 1840,
+          "quote": "function hw6WithAlpha(value, fn) {\n  const slider = document.getElementById(\"alpha\");\n  const previous = slider ? Number(slider.value) : 0.85;\n  hw6SetAlpha(value);\n  try {\n    return fn();\n  } finally {\n    hw6SetAlpha(previous);\n  }\n}"
+        },
+        {
+          "file": "week6/script.js",
+          "line": 3624,
+          "lastLine": 3637,
+          "quote": "function hw6HandleAlphaSweep() {\n  const target = document.getElementById(\"alpha-sweep-results\");\n  let sweep = null;\n  try {\n    sweep = hw6RunAlphaSweep();\n  } catch (error) {\n    if (target) target.innerHTML = hw6UnavailableHtml(\"Alpha sweep\", error);\n    hw6SetStatus(\"Alpha sweep unavailable: \" + String(error && error.message ? error.message : error));\n    return;\n  }\n  hw6RenderAlphaSweep(sweep);\n  const selected = sweep.best === null ? \"not selected (validation sweep unavailable)\" : \"alpha \" + hw6Fmt(sweep.best, 2);\n  hw6SetStatus(\"Alpha sweep (validation Recall@10) complete \\u2014 selected \" + selected + \".\");\n}"
+        }
+      ],
+      "impact": "Evaluate runs test comparison at current slider alpha before sweeping validation. Sweep restores the previous slider and only reports best; neither handler applies best. A fresh user must explicitly run sweep/apply alpha before final test or authorize runner correction.",
+      "proposedResolutionNotApplied": "Freeze validation-selected shared alpha before test and use it for global PR; no settings selected now."
+    },
+    {
+      "topic": "Async preference vs synchronous public contracts",
+      "evidence": [
+        {
+          "file": "week6/readme.md",
+          "line": 75,
+          "lastLine": 75,
+          "quote": "Use TensorFlow.js for the core batched propagation. JavaScript loops are acceptable for parsing, ID mapping, formatting, and small fixtures; they must not replace the main propagation with per-edge loops. You may avoid the full square adjacency matrix by implementing its two off-diagonal blocks with `R` and `R^T`, vector degree normalization, and `tf.matMul`. Await `tf.ready()`, report `tf.getBackend()`, manage tensors with `tf.tidy()` and dispose long-lived tensors, read results asynchronously where practical, never put an async callback inside `tf.tidy()`, and make sure repeated runs do not accumulate tensors. Record runtime and backend without comparing timings across devices. PPR is an iterative calculation, not neural-network training; no optimizer is required. Write code, comments and JSDoc in English and document inputs, outputs, indexing, assumptions and failure cases."
+        },
+        {
+          "file": "week6/script.js",
+          "line": 1414,
+          "lastLine": 1414,
+          "quote": "      const normalized = hw6NormalizePropagation(attempts[i](), n);"
+        },
+        {
+          "file": "week6/script.js",
+          "line": 1466,
+          "lastLine": 1466,
+          "quote": "      const normalized = hw6NormalizePropagation(attempts[i](), n);"
+        },
+        {
+          "file": "week6/script.js",
+          "line": 1368,
+          "lastLine": 1382,
+          "quote": "function hw6WithActiveGraph(graph, fn) {\n  const canSwap = typeof setGraph === \"function\" && typeof getGraph === \"function\";\n  const previous = canSwap ? getGraph() : null;\n  if (canSwap && previous !== graph) setGraph(graph);\n  try {\n    return fn();\n  } finally {\n    if (canSwap && previous !== graph) {\n      try {\n        setGraph(previous);\n      } catch (error) {\n        // Restoring the previous graph is best-effort.\n      }\n    }\n  }"
+        }
+      ],
+      "impact": "Readme says asynchronous readback where practical, not a mandatory Promise API. Adapters consume return values immediately and restore GRAPH in finally. All seven stubs must remain synchronous unless the call chain is explicitly refactored.",
+      "proposedResolutionNotApplied": "Preserve synchronous returns in a minimal implementation; discuss explicit batched async precomputation/cache integration for cohort-scale jobs."
+    },
+    {
+      "topic": "Inspectable dense Q vs block propagation",
+      "evidence": [
+        {
+          "file": "week6/graph.js",
+          "line": 373,
+          "lastLine": 381,
+          "quote": " *\n * INTENDED TENSORFLOW.JS USE (readme.md section 3.5): this helper returns plain\n * JavaScript arrays so it can be inspected and tested, but the student\n * implementation should lift them into tensors for the batched propagation:\n * build the full transition from the two off-diagonal blocks (R row-normalized\n * by user degree and R-transpose row-normalized by movie degree) so the square\n * adjacency matrix is never materialized, and use `tf.tensor2d(Q)`,\n * `tf.transpose`, `tf.matMul`, and a `danglingMask`-derived correction for the\n * dangling term. Q and danglingMask are deliberately plain so tests can verify"
+        },
+        {
+          "file": "week6/script.js",
+          "line": 2951,
+          "lastLine": 2956,
+          "quote": "      if (!result || !Array.isArray(result.Q) || result.Q.length !== n || !Array.isArray(result.danglingMask)) {\n        throw hw6InterfaceError(\"rowNormalize did not return { Q, danglingMask } for a synthetic graph\");\n      }\n      for (let i = 0; i < n; i++) {\n        let sum = 0;\n        for (let j = 0; j < n; j++) sum += Number((result.Q[i] && result.Q[i][j]) || 0);"
+        },
+        {
+          "file": "week6/readme.md",
+          "line": 75,
+          "lastLine": 75,
+          "quote": "Use TensorFlow.js for the core batched propagation. JavaScript loops are acceptable for parsing, ID mapping, formatting, and small fixtures; they must not replace the main propagation with per-edge loops. You may avoid the full square adjacency matrix by implementing its two off-diagonal blocks with `R` and `R^T`, vector degree normalization, and `tf.matMul`. Await `tf.ready()`, report `tf.getBackend()`, manage tensors with `tf.tidy()` and dispose long-lived tensors, read results asynchronously where practical, never put an async callback inside `tf.tidy()`, and make sure repeated runs do not accumulate tensors. Record runtime and backend without comparing timings across devices. PPR is an iterative calculation, not neural-network training; no optimizer is required. Write code, comments and JSDoc in English and document inputs, outputs, indexing, assumptions and failure cases."
+        }
+      ],
+      "impact": "rowNormalize contract/harness expect square plain-array Q. Production can use R and degree blocks directly; do not replace fixture Q with a tensor or block object without updating contract.",
+      "proposedResolutionNotApplied": "Dense normalization can serve fixtures; production propagation should avoid allocating dense Q unnecessarily."
+    },
+    {
+      "topic": "Unpadded sparsity and title decoding",
+      "evidence": [
+        {
+          "file": "week6/script.js",
+          "line": 1960,
+          "lastLine": 1961,
+          "quote": "  const cells = (numUsers + 1) * (HW6_MAX_MOVIE_ID + 1);\n  const sparsity = cells > 0 ? 1 - total / cells : 0;"
+        },
+        {
+          "file": "week6/data.js",
+          "line": 47,
+          "lastLine": 47,
+          "quote": "        const moviesText = await moviesResponse.text();"
+        },
+        {
+          "file": "week5/data.js",
+          "line": 47,
+          "lastLine": 49,
+          "quote": "        // MovieLens u.item is Latin-1, not UTF-8. Browser TextDecoder maps\n        // this label to Windows-1252; the file has no bytes in 0x80..0x9f.\n        const moviesText = new TextDecoder('iso-8859-1').decode(await moviesResponse.arrayBuffer());"
+        },
+        {
+          "file": "week5/submission/a05_report.html",
+          "line": 20,
+          "lastLine": 20,
+          "quote": "<p>The supplied <code>u.data</code> contains 100,000 ratings from 943 users on 1,682 movies; all 1,682 movies have metadata. There are no duplicate user–movie pairs or missing-metadata ratings. Sparsity over real IDs is <b>1 − 100000 / (943 × 1682) = 93.69533064%</b>; unused ID-zero padding is excluded. The pipe-separated <code>u.item</code> has 19 genre flags: “unknown” plus 18 named genres. Latin-1-compatible decoding preserves all nine accented titles.</p>"
+        }
+      ],
+      "impact": "UI uses ID-zero padded denominator (93.71% displayed); requested unpadded sparsity is 93.6953306358%. HW6 text() decodes Latin-1 as UTF-8, damaging nine titles; HW5 explicitly uses Latin-1-compatible decoding.",
+      "proposedResolutionNotApplied": "Disclose now; agree narrowly scoped scaffold fixes before implementation."
+    }
+  ],
+  "resolvedContracts": {
+    "graph": "All training-observed raw user/movie IDs; sorted contiguous users then movies; no ID-zero padding; binary >=4 train edges only; two directed arcs per positive pair.",
+    "dangling": "Q zero rows and d=current dangling mass; alpha*(Q^T*p+d*v)+(1-alpha)*v for both global and PPR.",
+    "candidates": "All training movies, including zero-degree movies. Validation masks train; test masks train+validation regardless of rating. Sort score desc / raw movie ID asc.",
+    "cohorts": "Separate validation and test cohorts; shared intersection across four methods within each split, not intersection of validation and test users. Require training user, positive edge, selected MF score availability, >=1 eligible relevant item. MF assumption in current helper is provisional.",
+    "alpha": "0.50/0.70/0.85/0.95; shared validation macro Recall@10; exact ties smaller alpha; same alpha for primary global PR. MF uses previous validation RMSE checkpoint.",
+    "synchronous": "All seven stubs are synchronous. hw6InitTf and MF orchestration are asynchronous; bootstrap awaits tf readiness."
+  },
+  "providedMustRemainUnchanged": [
+    "week6/data.js and raw data, graph.js reference fixture/accessors/d3 rendering/teaching demo",
+    "script.js TF bootstrap, split indexes, popularityScores, MF block (MF_INFO/hw6TrainMf/hw6EnsureMf/mfScores)",
+    "script.js adapters, convergence/four-method/alpha/two-user runners, panel renderers, harness, UI wiring and serializers",
+    "index.html, style.css, vendor/d3.min.js. All are byte-identical now; potential corrections above are review findings, not edits."
+  ],
+  "exports": {
+    "verification.json": {
+      "keys": [
+        "backend",
+        "generated_at",
+        "checks",
+        "passed",
+        "failed",
+        "pending"
+      ],
+      "checkKeys": [
+        "name",
+        "status",
+        "detail"
+      ],
+      "source": {
+        "file": "week6/script.js",
+        "line": 3205,
+        "lastLine": 3205,
+        "quote": "function serializeVerification() {"
+      }
+    },
+    "results.csv": {
+      "columns": [
+        "method",
+        "alpha",
+        "recall_at_10",
+        "cohort_size",
+        "excluded_unseen_ids",
+        "excluded_no_eligible_user",
+        "mean_popularity",
+        "iterations",
+        "residual",
+        "converged",
+        "split",
+        "excluded_unseen_id_list"
+      ],
+      "source": {
+        "file": "week6/script.js",
+        "line": 3243,
+        "lastLine": 3243,
+        "quote": "function serializeResults() {"
+      }
+    },
+    "recommendations.csv": {
+      "columns": [
+        "user_id",
+        "method",
+        "alpha",
+        "rank",
+        "movie_id",
+        "title",
+        "genres",
+        "score",
+        "training_popularity"
+      ],
+      "source": {
+        "file": "week6/script.js",
+        "line": 3321,
+        "lastLine": 3321,
+        "quote": "function serializeRecommendations() {"
+      }
+    }
+  },
+  "selfChecks": {
+    "passed": 2,
+    "failed": 0,
+    "pending": 10,
+    "checks": [
+      {
+        "name": "reference graph: uniform alpha=0.85 matches readme 4.1 values",
+        "status": "PENDING",
+        "detail": "TODO(hw6): not implemented yet."
+      },
+      {
+        "name": "reference graph: restart at A alpha=0.85 matches readme 4.1 values",
+        "status": "PENDING",
+        "detail": "TODO(hw6): not implemented yet."
+      },
+      {
+        "name": "row normalization: every nonzero-degree row sums to 1",
+        "status": "PENDING",
+        "detail": "graph.js `rowNormalize` is still a TODO(hw6) stub"
+      },
+      {
+        "name": "restart distributions: nonnegative and summing to 1",
+        "status": "PASS",
+        "detail": "uniform + one-hot over 4 nodes"
+      },
+      {
+        "name": "iterations preserve total probability (sum approx 1)",
+        "status": "PENDING",
+        "detail": "TODO(hw6): not implemented yet."
+      },
+      {
+        "name": "stationary scores are nonnegative",
+        "status": "PENDING",
+        "detail": "TODO(hw6): not implemented yet."
+      },
+      {
+        "name": "one extra update produces approximately the same distribution",
+        "status": "PENDING",
+        "detail": "graph.js `rowNormalize` is still a TODO(hw6) stub"
+      },
+      {
+        "name": "zero-degree node fixture preserves probability mass",
+        "status": "PENDING",
+        "detail": "graph.js `rowNormalize` is still a TODO(hw6) stub"
+      },
+      {
+        "name": "matrix orientation: probability collects at the pointed-to node, not the source",
+        "status": "PENDING",
+        "detail": "graph.js `rowNormalize` is still a TODO(hw6) stub"
+      },
+      {
+        "name": "recommendTopK: excludes previously rated movies and breaks ties by ascending id",
+        "status": "PENDING",
+        "detail": "TODO(hw6): not implemented yet."
+      },
+      {
+        "name": "graph mapping: node count equals observed users plus observed movies",
+        "status": "PENDING",
+        "detail": "interface unavailable — HW6_INTERFACE: no graph is active; press \"Build graph\" first"
+      },
+      {
+        "name": "public surface: every required name is defined",
+        "status": "PASS",
+        "detail": "10 functions + ALPHA_GRID + MF_INFO"
+      }
+    ]
+  },
+  "additionalCoverageLimits": [
+    "PASS restart tests verify provided helper vectors, not stub restart construction.",
+    "Probability preservation checks final mass, not every iteration. No repeated-run memory or batched per-user residual check.",
+    "An HW6_INTERFACE error becomes PENDING, so zero FAIL is not proof of working integration."
+  ],
+  "unresolvedDecisions": [
+    "MF artifact/model provenance choice versus instructor-provided reference",
+    "Explicit scope for correcting raw-ID adapter and alpha/test ordering in protected scaffolding",
+    "Sync API plus batching/cache design versus explicit async call-chain changes",
+    "Title decoding and unpadded UI sparsity fixes",
+    "Before eventual publishing, instructor confirmation of grading guide, directory/deadline and AI export requirement; no publication requested now"
+  ]
+}

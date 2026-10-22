@@ -1,0 +1,431 @@
+PAGE 1
+LLM4Rec — Homework Guidelines
+Audience: Students of LLM4Rec, HSE University
+Instructor: Seungmin Jin (sedzhin@hse.ru)
+Status: Oﬃcial student-facing guidelines (binding rules)
+1. Course Context
+This is LLM4Rec, an AI-Assisted Recommender Systems course at HSE University. You will learn 
+both classical RecSys algorithms (matrix factorizaƟon, content-based ﬁltering, collaboraƟve 
+ﬁltering, PageRank, two-tower retrieval) and modern LLM-based approaches (LLM4Rec, 
+conversaƟonal RecSys, agenƟc RecSys).
+AI use is free to use. The rubric measures exactly two things about you:
+① Understanding — c1
+   Did you understand the problem? Did you find valid references?
+② AI Management — c2
+   Did you direct AI to produce a working solution?
+   Did you verify AI's work yourself?
+   Is your reasoning accurate (not just plausible)?
+The Top-Down 5-Loop is the operaƟonal form of these two criteria:
+① BUILD    → run a working baseline (AI may scaffold this)
+② ASK WHY  → question assumptions, list alternatives (PERSONAL — your 
+reasoning must be accurate)
+③ TEST     → verify AI outputs against theory/data/code (PERSONAL — hand-
+compute at least one result)
+④ EXPLAIN  → state the result in YOUR OWN WORDS (PERSONAL — not AI's summary)
+⑤ IMPROVE  → iterate on one variable, repeat
+A student who lets AI produce working code without verifying the reasoning path will oŌen 
+trigger Gate 0 — because AI output frequently contains subtly wrong root causes, fabricated 
+mechanisms, or self-contradictory reasoning that look plausible but fail on veriﬁcaƟon.
+See §8 for the exact rubric criteria.
+
+PAGE 2
+2. Grading Structure
+2.1 Per-Assignment (2 points max)
+Each of the 10 assignments is graded on a 2-point binary framework:
+Criterion Ques Ɵon Range
+c1 — Problem & ReferencesDid you idenƟfy the problem 
+and cite valid references?
+0 or 1
+c2 — SoluƟon & Evidence Did you solve it correctly and 
+provide veriﬁable evidence?
+0 or 1
+Total c1 + c2 0, 1, or 2
+2.2 Gate 0 (fail-fast)
+A score of 0 is automaƟcally assigned if any of the following triggers:
+ c1 = 0 (major): Reference invalid (hallucinated citaƟon, broken URL, fabricated 
+author/year/journal, misaƩribuƟon).
+ c2 = 0 (major): Claim–evidence mismatch, fabricated benchmark, hallucinated API/funcƟon 
+usage, soluƟon doesn't actually run, evidence missing.
+2.3 Scoring Decision Table
+c1 c2 c=0 subtype Final score
+1 1 (both clean) 2
+1 0 c2 = minor 1
+0 1 c1 = minor 1
+0 0 both minor 0 (fail-fast)
+1 0 c2 = major 0 (Gate 0)
+0 1 c1 = major 0 (Gate 0)
+0 0 any major 0 (Gate 0)
+Plain English: Two clean criteria → 2 points. One minor issue → 1 point. Anything major (invalid 
+reference or fabricated evidence) → 0 points, full stop.
+2.4 Overall (10 assignments × 2 = 20 points max)
+∈Total = Σ (score per assignment)  [0, 20]
+Suggested mapping (instructor reserves the right to adjust):
+Total Suggested grade band
+18–20 A — Excellent
+14–17 B — Good
+10–13 C — SaƟsfactory
+6–9 D — Needs improvement
+0–5 F — Fail
+
+PAGE 3
+3. The 10 Assignments (One per Week)
+# Week Topic Length limit
+A01 W1 Random Lunch 
+Generator — web app 
+scaﬀold
+≤5 pages (excl. 
+references)
+A02 W2 Content-Based Filtering
+implementaƟon
+≤5 pages (excl. 
+references)
+A03 W3 Collabora Ɵve Filtering 
+implementaƟon
+≤5 pages (excl. 
+references)
+A04 W4 Associa Ɵon Rule mining
+(Apriori / FP-Growth)
+≤5 pages (excl. 
+references)
+A05 W5 PageRank-based RecSys ≤5 pages (excl. 
+references)
+A06 W6 Two-Tower Retrieval 
+(item/user embedding)
+≤5 pages (excl. 
+references)
+A07 W7 Context Encoder (DL-
+based RecSys)
+≤5 pages (excl. 
+references)
+A08 W8 Personalized Ranker ≤5 pages (excl. 
+references)
+A09 W9 LLM4Rec baseline ≤5 pages (excl. 
+references)
+A10 W10 Capstone prepara Ɵon 
+(extended scope)
+≤5 pages (excl. 
+references)
+Page limit: ≤5 pages (excl. references) — hard cap. Earlier assignments may be shorter; later 
+assignments should approach the 5-page limit — these are the rehearsal for the ﬁnal capstone 
+short paper in W12.
+The instructor may revise topics and ordering. You will receive a per-assignment speciﬁcaƟon 
+sheet at the start of each week.
+4. Submission Requirements
+4.1 Required ﬁles (2 ﬁles per assignment)
+File Format Required
+report.pdf PDF Yes
+session.json JSON (tool-naƟve) Yes
+Note: Earlier draŌs of these guidelines menƟoned DOCX format. As of v1.0, the oﬃcial 
+submission format is PDF. Convert your DOCX (or markdown) to PDF before submission.
+report.pdf: Your homework report, structured as described in §5.
+session.json: The full session log from your AI coding tool (OpenCode, Claude Code, Cursor, or 
+equivalent). Tool-naƟve format is accepted. The session must show the AI tool calls, ﬁle 
+modiﬁcaƟons, and key milestones. This is the audit trail for your AI-assisted work.
+
+PAGE 4
+4.2 File naming convenƟon
+<student-id-or-name>_<assignment-id>_report.pdf
+<student-id-or-name>_<assignment-id>_session.json
+Examples:
+ jin_seungmin_a01_report.pdf
+ jin_seungmin_a01_session.json
+ team_alpha_a03_report.pdf
+ team_alpha_a03_session.json
+4.3 Deadline
+Each assignment has a strict deadline announced at the start of the week. Submissions are 
+accepted up to and including the deadline Ɵmestamp.
+4.4 Late submissions
+Late submissions are NOT accepted. No excepƟons.
+If you anƟcipate missing a deadline, discuss it with the instructor before the deadline, not aŌer. 
+Late submissions will not be graded regardless of the reason (technical issues, illness, etc. — 
+claim excepƟons in advance).
+4.5 Where to submit
+Submission channel: announced in class and via LMS oﬃcial channel.
+5. Report Structure (IEEE-aligned)
+Your report.pdf must follow this structure. Templates are provided separately; this secƟon 
+speciﬁes the required content.
+Title block (top)
+[Concise paper-style title, e.g., "Matrix Factorization with Side Information
+on MovieLens-1M: A Lightweight Reproducibility Study"]
+Student: [Name]    Team: [Team or "Individual"]
+Email: [email]      Date: YYYY-MM-DD
+Assignment: [Topic] (Week [N])
+Page limit
+Maximum 6 pages, excluding references. This is a hard cap.
+ Earlier assignments (W1–W2) typically need only 1–2 pages — that's ﬁne, but no more than 
+5.
+
+PAGE 5
+ Later assignments (W7–W10) should approach the 6-page limit; this is good pracƟce for the 
+capstone short paper.
+ References are NOT counted toward the 6-page limit.
+Abstract
+ Length: 50–150 words.
+ Structure: 4 sentences — (1) Problem, (2) Method, (3) Key Result with one speciﬁc number, 
+(4) One takeaway.
+Index Terms (opƟonal)
+3–5 keywords in IEEE format: Index Terms — keyword1, keyword2, keyword3, keyword4, 
+keyword5.
+§1. IntroducƟon
+ Problem statement (2–4 sentences)
+ MoƟvaƟon (2–3 sentences)
+ Concrete example (1 prompt / scenario / input-output pair)
+ ContribuƟons (1–2 bullets, no over-claim)
+§2. Related Work
+Prior work consulted: 3–7 entries in IEEE numbered format.
+[N] A. Surname, "Title of paper," Journal/Conf., vol. x, no. x, pp. xx–xx, 
+Year. [Online]. Available: URL. [Accessed: YYYY-MM-DD].
+AlternaƟves considered: 1–3 brief menƟons + 1-line raƟonale each.
+§3. Method
+ Approach (2–4 sentences)
+ Pipeline (diagram or step-by-step)
+ Tools & libraries (bullet list with versions, reference oﬃcial docs)
+ Key design decisions (2–3 non-obvious choices + raƟonale)
+ ConﬁguraƟon (hyperparameters, seeds, environment)
+§4. Experiments
+ Setup (dataset, eval protocol, hardware)
+ Results (table or ﬁgure, each row/column labeled)
+ Comparison vs baseline (2–3 sentences)
+ VeriﬁcaƟon (sanity checks, unit tests, manual inspecƟon — cite speciﬁc check)
+§5. Discussion
+This is the most heavily weighted secƟon for criƟcal-thinking credit. Include:
+
+PAGE 6
+ Failure case (1 realisƟc failure — error message, log excerpt)
+ Root cause (speciﬁc explanaƟon)
+ Fix + veriﬁcaƟon (detecƟon → change → conﬁrmaƟon)
+ What worked (2–3 bullets)
+ What surprised you or didn't work (2–3 bullets)
+ Next improvement (1 concrete improvement with more Ɵme)
+§6. AI Usage Disclosure
+ AI tools used (names + versions)
+ How AI was used (categorize: search, code generaƟon, debugging, docs, viz)
+ What I personally veriﬁed (for each AI output: how you conﬁrmed correctness)
+ What I trusted without veriﬁcaƟon (honest disclosure — be honest, this won't hurt you if 
+you're transparent)
+ Session log reference (the aƩached session.json is the audit trail)
+References
+IEEE numbered format, conƟnuing from §2 if needed.
+6. Class AcƟvity (in-class presentaƟons)
+6.1 Format
+Each class session, 10 students will be selected to present their work from the previous 
+assignment. The selecƟon is made by the instructor and is not negoƟable.
+AŌer each presentaƟon, the class engages in structured discussion. Other students ask 
+quesƟons, challenge assumpƟons, suggest alternaƟves.
+6.2 What we grade
+ PresentaƟon quality when you are selected (clarity, evidence, response to quesƟons)
+ AcƟve parƟcipaƟon in discussion (asking substanƟve quesƟons, oﬀering construcƟve 
+criƟque, building on others' work)
+ ConstrucƟve feedback to peers
+6.3 What this is and is not
+ This IS: An opportunity to pracƟce the Top-Down ⑤ IMPROVE step in front of others; a 
+forcing funcƟon for deep engagement with your own work.
+ This is NOT: A popularity contest. Quality of engagement maƩers more than quanƟty of 
+comments.
+
+PAGE 7
+6.4 ConnecƟon to grading
+Class acƟvity is 10% of the ﬁnal course grade. It is graded per-session and aggregated. Missing 
+class without prior arrangement reduces your class acƟvity grade. Being unprepared when 
+selected to present (e.g., "I didn't do the homework this week") is a serious negaƟve signal.
+7. The Top-Down 5-Loop — Pedagogical Core
+This course is built around a speciﬁc learning philosophy. Read this secƟon carefully; it explains 
+why the homework is structured the way it is.
+7.1 The 5 steps
+① BUILD    → run a working baseline (you can use AI to scaffold this)
+② ASK WHY  → question assumptions, list alternatives (PERSONAL)
+③ TEST     → verify AI outputs against theory/data/code (PERSONAL)
+④ EXPLAIN  → state the result in YOUR OWN WORDS (PERSONAL)
+⑤ IMPROVE  → iterate on one variable, repeat
+7.2 The trap we are avoiding
+It is tempƟng to:
+ Prompt AI: "Build me a RecSys with X"
+ AI returns working code + explanaƟon
+ Submit the AI's output
+This is the AI-delegaƟon trap. Students who do this:
+ Score 0 on §5 Discussion (it reads like AI output)
+ Score 0 on §6 AI Usage Disclosure (claim veriﬁed what wasn't)
+ OŌen trigger Gate 0 (claims unveriﬁed)
+ Do not actually learn the material
+7.3 What we expect instead
+ Prompt AI to scaﬀold (step ①)
+ Stop and ask: "Is this the right approach? What are the alternaƟves? Why this and not 
+that?" (step ②)
+ Manually verify at least one number, one derivaƟon, one assumpƟon (step ③)
+ Write the discussion in your own voice — not AI's summary (step ④)
+ IdenƟfy what to do diﬀerently next based on what you learned (step ⑤)
+Students who engage with all 5 steps score 2/2. Students who only do step ① score 0–1/2.
+7.4 The pedagogical quote
+The course material includes this quote (from Page 5 of the introductory slides):
+
+PAGE 8
+"AI does not do the learning for you. It shortens the loop through which you learn."
+This is not a metaphor. It is the operaƟonal principle of this course.
+8. Rubric Criteria in Detail
+8.0 Two things we measure
+c1 — Understanding: problem + references
+c2 — AI Management: solution + reasoning + verification
+Both binary (0 or 1). Subtypes (clean / minor / major) capture how the criterion failed.
+8.1 c1 — Understanding
+Score Subtype What triggered it
+1 Clean Clear problem statement, all 
+references valid, aƩribuƟon 
+accurate
+0 Minor Reference format typo, 
+outdated reference, 1–2 missing
+references
+0 Major (Gate 0 trigger) Hallucinated citaƟon, broken 
+URL, fabricated author/year, 
+misaƩribuƟon, problem 
+misidenƟﬁed
+8.2 c2 — AI Management
+c2 = 1 requires three aspects to be yes:
+Aspect Pass condi Ɵon
+SoluƟon works Code runs; chart/table matches code output
+Reasoning accurate Each loop step is factually correct AND logically 
+valid
+VeriﬁcaƟon cited §6 lists at least one of: hand-computed metric, re-
+ran experiment, paper read beyond abstract, 
+cross-checked number against code, argued 
+derivaƟon mathemaƟcally
+Subtype breakdown:
+Subtype Trigger
+Clean (c2=1) All three aspects pass
+Minor One aspect weak: veriﬁcaƟon missing; OR parƟal 
+evidence; OR slight over-claim; OR failure case 
+shallow
+Major (Gate 0) SoluƟon broken (doesn't run, fabricated 
+benchmark, hallucinated API); OR reasoning 
+broken (wrong root cause, wrong alternaƟve 
+rejecƟon, hallucinated mechanism); OR criƟcal 
+
+PAGE 9
+fabricaƟon (claimed veriﬁcaƟon without doing it)
+What "accurate reasoning" means in pracƟce:
+Step Accurate reasoning Inaccurate reasoning
+② ASK WHY Adam adapts learning rate per 
+parameter, useful for sparse 
+RecSys embeddings
+Adam is always beƩer than SGD
+③ TEST Hand-computed P@10 for user 
+1 = 3/10 = 0.3, matches the 
+chart value
+The AI said it's right
+④ EXPLAIN Model learned to recommend 
+popular items because raƟngs 
+skew toward common products
+It works because AI
+⑤ IMPROVE I'd add L2 regularizaƟon next — 
+current model overﬁts per the 
+train/test gap in Fig. 2
+Make it beƩer
+What counts as "veriﬁed":
+To pass the veriﬁcaƟon aspect, do at least ONE of the following for a criƟcal output:
+ Hand-computed a metric on at least one data point (show your work)
+ Re-ran the experiment from scratch and conﬁrmed idenƟcal results
+ Read the cited paper beyond the abstract (or the cited source's key secƟon)
+ Cross-checked the claimed number against the actual code output (line:line)
+ Argued mathemaƟcally why the formula is correct, not just "the AI said so"
+If you cannot do any of the above for a criƟcal output, you did not verify it. Write that honestly 
+in §6.
+9. AI Usage Policy
+9.1 Allowed
+ Using any AI coding tool (OpenCode, Claude Code, Cursor, Codex, etc.)
+ Using AI to scaﬀold code, suggest approaches, search references, debug
+ Using AI to draŌ text, then rewriƟng in your own voice
+ Using AI for visualizaƟon spec generaƟon (Plotly, D2)
+9.2 Required
+ Disclosure: §6 must list every AI tool and what it was used for
+ VeriﬁcaƟon: CriƟcal outputs (algorithms, math, benchmark numbers) MUST be veriﬁed
+ Honesty: "Trusted without veriﬁcaƟon" is acceptable IF you're transparent
+9.3 Not allowed
+ Submiƫ ng AI output verbaƟm without personal engagement with steps ②–⑤
+
+PAGE 10
+ FabricaƟng AI usage: claiming you used AI when you didn't, or vice versa
+ Hallucinated citaƟons: copying AI-suggested references without checking they exist
+ Claiming veriﬁcaƟon you didn't do: this is the most common Gate 0 trigger
+9.4 The session.json audit trail
+The session.json you submit is the primary veriﬁcaƟon tool the instructor uses. It records:
+ Every prompt you sent to the AI
+ Every tool the AI invoked
+ Every ﬁle the AI created or modiﬁed
+ Timestamps and session duraƟon
+If your §6 claims don't match your session.json (e.g., you claim "5 hours of AI-assisted work" but 
+session.json shows 12 minutes), this is a contradicƟon and may trigger Gate 0.
+10. Failure Modes (What Triggers Gate 0)
+Failure Sec Ɵon aﬀected Gate 0?
+Hallucinated citaƟon (paper 
+doesn't exist)
+§2 Related Work Yes
+Fabricated benchmark number 
+(chart shows 0.187 but code 
+outputs 0.083)
+§4 Experiments Yes
+SoluƟon claimed to work but 
+doesn't run
+§4 Experiments Yes
+Cherry-picked metric (only 
+posiƟve results shown)
+§4 Experiments Yes
+AI usage claimed but 
+session.json missing
+§6 AI Usage Yes (over-claim)
+Reference with broken URL 
+(404)
+§2 Related Work Yes
+Hallucinated API call (funcƟon 
+doesn't exist or not used)
+§3 Method Yes
+Discussion secƟon is 3 generic 
+bullets
+§5 Discussion Yes (thin 5-Loop)
+11. Worked Examples (How the Rubric Plays Out)
+11.1 Example 1: Score 2/2
+A student submits a report with:
+ All references valid (veriﬁed by instructor)
+ Results table with numbers matching code output
+ Failure case with root cause and ﬁx
+
+PAGE 11
+ Discussion secƟon with 5-Loop reﬂecƟon (5.1–5.5 all populated)
+ session.json shows 4 hours of substanƟve work
+Score: c1 = 1, c2 = 1 → 2 points.
+11.2 Example 2: Score 0/2 (Gate 0)
+A student submits a report where:
+ §2 cites paper [3] that doesn't exist (DOI 404)
+ Everything else looks great
+Score: c1 = 0 (major, hallucinated citaƟon) → Gate 0 → 0 points regardless of c2 quality.
+11.3 Example 3: Score 1/2
+A student submits a report with:
+ All references valid
+ SoluƟon works but evidence is just one screenshot (no execuƟon log)
+ Failure case menƟoned but root cause not analyzed
+Score: c1 = 1, c2 = 0 (minor) → 1 point.
+12. Frequently Asked QuesƟons
+Q: I used no AI at all. Do I sƟll need §6?
+A: Yes. §6 should state "No AI tools were used for this assignment." This is honest disclosure.
+Q: Can I submit a Word document?
+A: No. The submission format is PDF. Convert your DOCX/markdown to PDF before submiƫ ng.
+Q: My session.json is huge (>10 MB). What do I do?
+A: Contact the instructor before submission. We may accept gzipped or aggregated logs.
+Q: Can I edit my session.json?
+A: No. The session.json must be the unmodiﬁed export from your AI tool. ModiﬁcaƟons 
+compromise audit integrity.
+Q: I missed the deadline by 5 minutes. Is that "late"?
+A: Yes. Strict deadline. No excepƟons.
+Q: What's the page limit for the report?
+
+PAGE 12
+A: Maximum 5 pages excluding references. References are listed separately and not counted. 
+Earlier assignments may be shorter; later assignments should approach 5 pages.
+Q: What if my AI tool crashed mid-session?
+A: Document it in §6 (AI Usage Disclosure → "Session Notes"). Submit whatever session.json was
+produced. If criƟcal, contact instructor in advance.
+Q: Do I have to present in every class?
+A: No. 10 students per class are selected. Over the course, the selecƟon covers everyone 
+(roughly).
+Q: I'm presenƟng but my work has a bug. Should I hide it?
+A: Absolutely not. §5 Discussion exists exactly for this. "I had a bug, root cause was X, I ﬁxed it by
+Y" is exactly what we want to see.
+— end of guidelines —

@@ -1,0 +1,233 @@
+{
+  "status": "EXTRAPOLATION ONLY; no propagation implementation or full PPR runtime measured",
+  "officialGrid": [
+    0.5,
+    0.7,
+    0.85,
+    0.95
+  ],
+  "tolerance": 1e-06,
+  "iterationCap": 500,
+  "analyticalIterations": {
+    "0.5": 21,
+    "0.7": 41,
+    "0.85": 90,
+    "0.95": 283
+  },
+  "derivation": "The stochastic restart operator contracts L1 by alpha, so delta_k <= 2*alpha^k. For one-hot PPR at a positive-degree user in this undirected bipartite graph, successive pure-walk distributions occupy opposite partitions; exact-arithmetic residual is 2*alpha^k. Floating-point behavior must be measured later. Global PR uses the same conservative bound and can converge sooner.",
+  "singleVectorGlobalOrPPRKernelSecondsByAlpha": {
+    "0.5": [
+      0.11129999993741513,
+      0.22259999987483026
+    ],
+    "0.7": [
+      0.21729999987781048,
+      0.43459999975562097
+    ],
+    "0.85": [
+      0.4769999997317791,
+      0.9539999994635582
+    ],
+    "0.95": [
+      1.4998999991565942,
+      2.9997999983131884
+    ]
+  },
+  "singleVector500CapKernelSeconds": [
+    2.649999998509884,
+    5.299999997019768
+  ],
+  "batches": [
+    {
+      "batch": 1,
+      "iterationProxySeconds": [
+        0.005299999997019768,
+        0.010599999994039535
+      ],
+      "allAlphaValidationKernelSeconds": [
+        1950.4529989032446,
+        3900.9059978064893
+      ],
+      "allAlphaValidation500CapKernelSeconds": [
+        8967.599994957447,
+        17935.199989914894
+      ],
+      "testKernelSecondsByAlpha": {
+        "0.5": [
+          95.82929994611442,
+          191.65859989222884
+        ],
+        "0.7": [
+          187.0952998947948,
+          374.1905997895896
+        ],
+        "0.85": [
+          410.6969997690618,
+          821.3939995381236
+        ],
+        "0.95": [
+          1291.4138992738276,
+          2582.827798547655
+        ]
+      },
+      "plannedCoreLogicalBytes4To6StateArrays": [
+        6117556,
+        6137988
+      ]
+    },
+    {
+      "batch": 32,
+      "iterationProxySeconds": [
+        0.005399999991059303,
+        0.0105
+      ],
+      "allAlphaValidationKernelSeconds": [
+        63.42299989499151,
+        123.3225
+      ],
+      "allAlphaValidation500CapKernelSeconds": [
+        291.5999995172024,
+        567.0
+      ],
+      "testKernelSecondsByAlpha": {
+        "0.5": [
+          3.0617999949306247,
+          5.9535
+        ],
+        "0.7": [
+          5.977799990102649,
+          11.6235
+        ],
+        "0.85": [
+          13.121999978274106,
+          25.515
+        ],
+        "0.95": [
+          41.26139993168414,
+          80.2305
+        ]
+      },
+      "plannedCoreLogicalBytes4To6StateArrays": [
+        7384340,
+        8038164
+      ]
+    },
+    {
+      "batch": 128,
+      "iterationProxySeconds": [
+        0.01,
+        0.015800000011920928
+      ],
+      "allAlphaValidationKernelSeconds": [
+        30.45,
+        48.111000036299224
+      ],
+      "allAlphaValidation500CapKernelSeconds": [
+        140.0,
+        221.20000016689298
+      ],
+      "testKernelSecondsByAlpha": {
+        "0.5": [
+          1.47,
+          2.3226000017523765
+        ],
+        "0.7": [
+          2.87,
+          4.534600003421306
+        ],
+        "0.85": [
+          6.3,
+          9.954000007510185
+        ],
+        "0.95": [
+          19.81,
+          31.299800023615358
+        ]
+      },
+      "plannedCoreLogicalBytes4To6StateArrays": [
+        11307284,
+        13922580
+      ]
+    },
+    {
+      "batch": 943,
+      "iterationProxySeconds": [
+        0.014700000002980232,
+        0.028599999994039536
+      ],
+      "allAlphaValidationKernelSeconds": [
+        6.394500001296401,
+        12.440999997407198
+      ],
+      "allAlphaValidation500CapKernelSeconds": [
+        29.400000005960464,
+        57.19999998807907
+      ],
+      "testKernelSecondsByAlpha": {
+        "0.5": [
+          0.30870000006258486,
+          0.6005999998748303
+        ],
+        "0.7": [
+          0.6027000001221895,
+          1.172599999755621
+        ],
+        "0.85": [
+          1.323000000268221,
+          2.5739999994635583
+        ],
+        "0.95": [
+          4.160100000843405,
+          8.09379999831319
+        ]
+      },
+      "plannedCoreLogicalBytes4To6StateArrays": [
+        44611444,
+        63878820
+      ]
+    }
+  ],
+  "fullRuntimePlanningEstimates": {
+    "basis": "Explicit engineering headroom, NOT measured confidence intervals: kernel proxies plus normalization, restart, per-column residuals, cold setup and ranking. Initial instrumented trials needed.",
+    "singleGlobalPRSeconds": [
+      2,
+      15
+    ],
+    "singleUserPPRSeconds": [
+      2,
+      15
+    ],
+    "allAlphaValidationSingleUserMinutes": [
+      45,
+      120
+    ],
+    "allAlphaValidationBatch943Seconds": [
+      20,
+      90
+    ],
+    "testPPRBatch943OneAlphaSeconds": [
+      10,
+      60
+    ],
+    "authorization": "No full jobs run. Ask before any job estimated over 180 seconds. Batch128/943 are feasible candidates; do not assume the present synchronous one-user API provides batching."
+  },
+  "memory": {
+    "RFloat32Bytes": 6076692,
+    "twoFloat32BlocksBytes": 12153384,
+    "denseQFloat32Bytes": 26091664,
+    "denseQJSNumericPayloadBytes": 52183328,
+    "RJSNumericPayloadBytes": 12153384,
+    "allUserNodeScoresFloat64OneAlphaBytes": 19267376,
+    "allUserNodeScoresFloat64FourAlphaBytes": 77069504,
+    "benchmarkSampledPeakLogicalBytes": 25344068,
+    "benchmarkFinalGpuAllocatedCacheBytes": 110989848,
+    "benchmarkFinalLiveTensors": 0,
+    "caveat": "Logical payloads exclude array/object overhead, WebGL packing, temporaries and allocator cache; cache allocation is not a live tensor leak."
+  },
+  "integrationCostRisk": [
+    "HW6_STATE.ppr caches only the last (graph,userId,alpha).",
+    "hw6RunComparison computes recall then mean list popularity, requesting cohort recommendations twice; without per-seed caching PPR work is repeated.",
+    "All seven stub interfaces are synchronous today. Returning a Promise breaks their callers; asynchronously precomputing batched scores requires an explicit integration design.",
+    "Keep convergence residual/iteration counts per seed, not a pooled residual; global or one displayed PPR convergence cannot stand in for the full cohort."
+  ]
+}

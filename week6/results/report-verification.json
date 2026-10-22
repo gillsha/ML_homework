@@ -1,0 +1,70 @@
+{
+  "bodyPages": 5,
+  "referencePages": 1,
+  "totalPages": 6,
+  "renderedPagesVisuallyInspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "visualOutcome": "All final pages inspected; no clipping, unreadable tables or orphan headings. Local screenshot panel legible.",
+  "layout": [
+    {
+      "page": 1,
+      "bodyBottomPoints": 746.5713702385582,
+      "horizontalOverflowCharacters": 0
+    },
+    {
+      "page": 2,
+      "bodyBottomPoints": 793.0713683010581,
+      "horizontalOverflowCharacters": 0
+    },
+    {
+      "page": 3,
+      "bodyBottomPoints": 786.321368582308,
+      "horizontalOverflowCharacters": 0
+    },
+    {
+      "page": 4,
+      "bodyBottomPoints": 790.7371326071484,
+      "horizontalOverflowCharacters": 0
+    },
+    {
+      "page": 5,
+      "bodyBottomPoints": 773.5713691135579,
+      "horizontalOverflowCharacters": 0
+    },
+    {
+      "page": 6,
+      "bodyBottomPoints": 507.40720539803135,
+      "horizontalOverflowCharacters": 0
+    }
+  ],
+  "originalScreenshotPreserved": true,
+  "preexistingFilesChecked": 205,
+  "changedPreexistingFiles": [],
+  "protectedHomeworkFilesUnchanged": true,
+  "appExperimentSettingsAndWeeks1To5Unchanged": true,
+  "preparedJSONByteIdentical": true,
+  "reportExperimentTextUnchanged": true,
+  "pdfSHA256": "a5eb7d9e24c4f4155211f5932da66b8af6b6454e0d276e65e9b56dec28dc3266",
+  "pdfBytes": 1073215,
+  "numberTrace": {
+    "ledgerRows": 4448,
+    "rawNumericMetadataFieldsResolvedAndCompared": 3576,
+    "mismatches": 0,
+    "durationClaimsChecked": 10,
+    "disclosureCountsVerified": true,
+    "source": "submission-json-verification.json"
+  },
+  "portableReportRebuild": {
+    "passed": true,
+    "allSixPageTextsMatchFinalPDF": true,
+    "initialSandboxBrowserLaunchFailed": true,
+    "retryWithBrowserPermissionPassed": true,
+    "gpuDisabled": true
+  }
+}

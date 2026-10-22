@@ -1,0 +1,549 @@
+{
+  "alpha": 0.5,
+  "numpy": "2.3.5",
+  "method": "float64 dense row-normalized Q; row-vector p@Q, independently parsed/split",
+  "graph": {
+    "users": 943,
+    "movies": 1611,
+    "nodes": 2554,
+    "edges": 45602,
+    "zeroUsers": 1,
+    "zeroMovies": 253,
+    "degreeMatchesBrowser": true,
+    "maxRowSumError": 2.220446049250313e-16,
+    "splitSizes": [
+      79619,
+      9596,
+      10785
+    ],
+    "smallUserExclusions": []
+  },
+  "denominator": 943,
+  "allConverged": true,
+  "iterationsRange": [
+    1,
+    21
+  ],
+  "maxResidual": 9.536743168975018e-07,
+  "maxMassError": 4.440892098500626e-16,
+  "minimum": 0.0,
+  "pprWallSeconds": 0.8310430840065237,
+  "globalWallSeconds": 0.017803958005970344,
+  "global": {
+    "iterations": 19,
+    "residual": 5.651403356061785e-07,
+    "converged": true,
+    "maxAbsVsBrowser": 7.378216358190637e-10
+  },
+  "vectorComparison": {
+    "maxAbs": 3.787614744066303e-08,
+    "maxL1": 6.030493186880972e-07,
+    "absoluteTolerance": 2e-06,
+    "l1Tolerance": 2e-05,
+    "pass": true
+  },
+  "rankingComparison": {
+    "definition": "all training movie candidates minus train+val history; score desc/movieId asc",
+    "top10ExactMatches": 943,
+    "denominator": 943,
+    "top10Differences": [],
+    "fullRankingExactMatches": 923,
+    "fullRankingDifferences": [
+      {
+        "userId": 1,
+        "maxReferenceScoreInversion": 7.367673779282245e-12
+      },
+      {
+        "userId": 30,
+        "maxReferenceScoreInversion": 1.1449236827706932e-10
+      },
+      {
+        "userId": 42,
+        "maxReferenceScoreInversion": 2.7500339485952768e-11
+      },
+      {
+        "userId": 46,
+        "maxReferenceScoreInversion": 2.0031266413384624e-12
+      },
+      {
+        "userId": 58,
+        "maxReferenceScoreInversion": 1.9705849765275143e-11
+      },
+      {
+        "userId": 75,
+        "maxReferenceScoreInversion": 1.2097136070914494e-12
+      },
+      {
+        "userId": 78,
+        "maxReferenceScoreInversion": 2.8192675617818e-12
+      },
+      {
+        "userId": 81,
+        "maxReferenceScoreInversion": 1.8642014608426585e-12
+      },
+      {
+        "userId": 117,
+        "maxReferenceScoreInversion": 2.0406550527065498e-12
+      },
+      {
+        "userId": 220,
+        "maxReferenceScoreInversion": 2.0669566861038213e-11
+      },
+      {
+        "userId": 276,
+        "maxReferenceScoreInversion": 1.373901108170112e-12
+      },
+      {
+        "userId": 312,
+        "maxReferenceScoreInversion": 7.075812612428786e-13
+      },
+      {
+        "userId": 313,
+        "maxReferenceScoreInversion": 1.2925408491995874e-11
+      },
+      {
+        "userId": 326,
+        "maxReferenceScoreInversion": 3.1974410884825014e-11
+      },
+      {
+        "userId": 375,
+        "maxReferenceScoreInversion": 7.450810639037658e-12
+      },
+      {
+        "userId": 384,
+        "maxReferenceScoreInversion": 3.423023935359023e-11
+      },
+      {
+        "userId": 541,
+        "maxReferenceScoreInversion": 8.881890990915242e-13
+      },
+      {
+        "userId": 574,
+        "maxReferenceScoreInversion": 2.667222709988831e-12
+      },
+      {
+        "userId": 630,
+        "maxReferenceScoreInversion": 2.364593459763516e-13
+      },
+      {
+        "userId": 872,
+        "maxReferenceScoreInversion": 1.831112745630313e-10
+      }
+    ],
+    "note": "Rank differences among near-equal float32 scores must be disclosed, never disguised by renormalization or forced order."
+  },
+  "representatives": [
+    {
+      "userId": 1,
+      "maxAbs": 1.5153084897967517e-08,
+      "l1": 5.210319031222258e-07,
+      "numpyIterations": 21,
+      "browserIterations": 22,
+      "numpyTop10": [
+        100,
+        258,
+        286,
+        318,
+        357,
+        483,
+        222,
+        475,
+        275,
+        423
+      ],
+      "browserTop10": [
+        100,
+        258,
+        286,
+        318,
+        357,
+        483,
+        222,
+        475,
+        275,
+        423
+      ],
+      "fullRankingEqual": false
+    },
+    {
+      "userId": 2,
+      "maxAbs": 8.764200486871543e-09,
+      "l1": 1.3080557517196276e-07,
+      "numpyIterations": 21,
+      "browserIterations": 21,
+      "numpyTop10": [
+        181,
+        9,
+        7,
+        117,
+        98,
+        121,
+        174,
+        268,
+        475,
+        15
+      ],
+      "browserTop10": [
+        181,
+        9,
+        7,
+        117,
+        98,
+        121,
+        174,
+        268,
+        475,
+        15
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 196,
+      "maxAbs": 6.6814939535947415e-09,
+      "l1": 6.179190597289506e-08,
+      "numpyIterations": 21,
+      "browserIterations": 21,
+      "numpyTop10": [
+        50,
+        100,
+        181,
+        127,
+        258,
+        1,
+        98,
+        174,
+        275,
+        56
+      ],
+      "browserTop10": [
+        50,
+        100,
+        181,
+        127,
+        258,
+        1,
+        98,
+        174,
+        275,
+        56
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 684,
+      "maxAbs": 2.7385101630805764e-08,
+      "l1": 9.526388277255532e-08,
+      "numpyIterations": 21,
+      "browserIterations": 21,
+      "numpyTop10": [
+        174,
+        127,
+        258,
+        56,
+        79,
+        7,
+        69,
+        22,
+        222,
+        318
+      ],
+      "browserTop10": [
+        174,
+        127,
+        258,
+        56,
+        79,
+        7,
+        69,
+        22,
+        222,
+        318
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 685,
+      "maxAbs": 0.0,
+      "l1": 0.0,
+      "numpyIterations": 1,
+      "browserIterations": 1,
+      "numpyTop10": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "browserTop10": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 686,
+      "maxAbs": 2.3254419168061702e-08,
+      "l1": 8.138888921479332e-08,
+      "numpyIterations": 21,
+      "browserIterations": 21,
+      "numpyTop10": [
+        100,
+        181,
+        64,
+        1,
+        483,
+        69,
+        183,
+        258,
+        195,
+        286
+      ],
+      "browserTop10": [
+        100,
+        181,
+        64,
+        1,
+        483,
+        69,
+        183,
+        258,
+        195,
+        286
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 942,
+      "maxAbs": 3.302326634369024e-09,
+      "l1": 4.096547108019741e-08,
+      "numpyIterations": 21,
+      "browserIterations": 21,
+      "numpyTop10": [
+        100,
+        181,
+        286,
+        98,
+        127,
+        1,
+        302,
+        288,
+        56,
+        64
+      ],
+      "browserTop10": [
+        100,
+        181,
+        286,
+        98,
+        127,
+        1,
+        302,
+        288,
+        56,
+        64
+      ],
+      "fullRankingEqual": true
+    },
+    {
+      "userId": 943,
+      "maxAbs": 3.2857671028452273e-09,
+      "l1": 3.801053013969188e-08,
+      "numpyIterations": 21,
+      "browserIterations": 21,
+      "numpyTop10": [
+        1,
+        7,
+        258,
+        237,
+        183,
+        176,
+        89,
+        222,
+        357,
+        288
+      ],
+      "browserTop10": [
+        1,
+        7,
+        258,
+        237,
+        183,
+        176,
+        89,
+        222,
+        357,
+        288
+      ],
+      "fullRankingEqual": true
+    }
+  ],
+  "fixture": {
+    "Q": [
+      [
+        0.0,
+        0.5,
+        0.5,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "uniformIncoming": [
+      0.25,
+      0.125,
+      0.625,
+      0.0
+    ],
+    "uniformFirst": [
+      0.25,
+      0.14375,
+      0.56875,
+      0.0375
+    ],
+    "seedFirst": [
+      0.15,
+      0.425,
+      0.425,
+      0.0
+    ],
+    "arithmetic": "Uniform incoming=(1/4,1/8,5/8,0); multiply by0.85, add0.15*(1/4 each) => (0.25,0.14375,0.56875,0.0375). Seed A incoming=(0,1/2,1/2,0); multiply by0.85, add0.15*(1,0,0,0) => (0.15,0.425,0.425,0).",
+    "uniform": {
+      "p": [
+        0.37252693031282125,
+        0.19582373990738838,
+        0.3941493297797897,
+        0.0375
+      ],
+      "iterations": 28,
+      "residual": 9.669438148229847e-07
+    },
+    "seedA": {
+      "p": [
+        0.4522328618993243,
+        0.19219906527794117,
+        0.35556807282273445,
+        0.0
+      ],
+      "iterations": 30,
+      "residual": 4.657446040501334e-07
+    }
+  },
+  "analysisUsers": [
+    {
+      "userId": 1,
+      "reportSource": "week5/submission/a05_report.html",
+      "reportLines": [
+        45,
+        58
+      ],
+      "positiveTrainDegree": 131,
+      "splits": {
+        "val": {
+          "eligibleRelevantCount": 13,
+          "eligibleRelevantMovieIds": [
+            9,
+            12,
+            16,
+            44,
+            51,
+            58,
+            66,
+            75,
+            76,
+            86,
+            87,
+            208,
+            241
+          ],
+          "eligible": true
+        },
+        "test": {
+          "eligibleRelevantCount": 19,
+          "eligibleRelevantMovieIds": [
+            6,
+            18,
+            20,
+            32,
+            100,
+            111,
+            129,
+            154,
+            169,
+            171,
+            178,
+            209,
+            221,
+            222,
+            228,
+            242,
+            256,
+            258,
+            270
+          ],
+          "eligible": true
+        }
+      }
+    },
+    {
+      "userId": 2,
+      "reportSource": "week5/submission/a05_report.html",
+      "reportLines": [
+        45,
+        58
+      ],
+      "positiveTrainDegree": 32,
+      "splits": {
+        "val": {
+          "eligibleRelevantCount": 6,
+          "eligibleRelevantMovieIds": [
+            272,
+            300,
+            302,
+            310,
+            311,
+            313
+          ],
+          "eligible": true
+        },
+        "test": {
+          "eligibleRelevantCount": 2,
+          "eligibleRelevantMovieIds": [
+            304,
+            316
+          ],
+          "eligible": true
+        }
+      }
+    }
+  ],
+  "totalWallSeconds": 1.3167726250103442
+}

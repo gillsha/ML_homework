@@ -1,0 +1,42 @@
+VERIFIED IEEE REFERENCE WORKING ENTRIES
+Accessed: Oct.22,2026 (Europe/Istanbul) for every source. HTTP codes below are actual bounded curl GET results; web-index access is identified separately. NoHTTPstatus means transport failure, not HTTP404. Full redirects/timings are in references/http-*.json.
+
+[1] F. M. Harper and J. A. Konstan, “The MovieLens datasets: History and context,” ACM Trans. Interact. Intell. Syst., vol.5, no.4, Art.19, pp.1–19, Dec.2015. https://doi.org/10.1145/2827872
+Accessed: Oct.22,2026.
+Verification/status: Crossref https://api.crossref.org/works/10.1145/2827872 (200). Project citation https://www.grouplens.org/blog/movielens-datasets-context-and-history/ (web-readable; curl TLS error, no HTTP status). DOI redirects to ACM403. Author draft https://files.grouplens.org/papers/harper-tiis2015.pdf (200).
+Version decision: Use published version metadata: Crossref online2015-12-22, print2016-01-07; project recommends2015. The author PDF is a draft with XXXX article/DOI placeholders and20 pages, not the final19-page article. Do not copy its placeholder DOI or page count.
+
+[2] L. Page, S. Brin, R. Motwani, and T. Winograd, “The PageRank citation ranking: Bringing order to the Web,” Stanford University, technical report manuscript, Jan.29,1998. https://ethw-images.s3.us-east-va.perf.cloud.ovh.us/ethw/6/64/Ref13-PageEtAl1998-PageRankCitationRanking.pdf
+Accessed: Oct.22,2026.
+Verification/status: Archived manuscript PDF200; IEEE milestone metadata https://ethw.org/Milestones:PageRank_and_the_Birth_of_Google,_1996-1998 (200). Stanford https://ilpubs.stanford.edu/422/ and https://ilpubs.stanford.edu/422/1/1999-66.pdf timed out, no HTTP status. Legacy http://ilpubs.stanford.edu:8090/422/ returns200 DATABASE ERROR; legacy PDF returns500.
+Version decision: Chosen entry cites the visually verified Jan29,1998 17-page manuscript and authors credited by the IEEE milestone record. Separate catalog representation: Stanford InfoLab Tech.Rep.1999-66, Nov11,1999, previous number SIDL-WP-1999-0120. That metadata is visible in the archived Stanford catalog copy at https://www.cs.uml.edu/~haim/teaching/iws/tirsaa/sources/google/PageRank_Citation_cover.html (web-readable, curl timeout). Do not append1999-66 to the1998 manuscript citation as if one date/version were verified. The live1999 record/PDF are unavailable, so content identity/revision history between those representations is unresolved. No verified DOI. Neither is the Brin–Page WWW1998 “Anatomy” paper.
+
+[3] T. H. Haveliwala, “Topic-sensitive PageRank,” in Proc.11th Int.Conf.World Wide Web (WWW), 2002, pp.517–526. https://doi.org/10.1145/511446.511513
+Accessed: Oct.22,2026.
+Verification/status: Crossref https://api.crossref.org/works/10.1145/511446.511513 (200 after initial429); DOI→ACM403.
+Version decision: This is the2002 conference paper. The2003 extended TKDE article has a different title, “Topic-Sensitive PageRank: A Context-Sensitive Ranking Algorithm for Web Search”; its journal metadata is not used here.
+
+[4] G. Jeh and J. Widom, “Scaling personalized web search,” in Proc.12th Int.Conf.World Wide Web (WWW), 2003, pp.271–279. https://doi.org/10.1145/775152.775191
+Accessed: Oct.22,2026.
+Verification/status: Crossref https://api.crossref.org/works/10.1145/775152.775191 (200 after initial429); DOI→ACM403. Page range from ACM SIGMOD proceedings index https://sigmod.org/publications/discs/2003/out/a_jennifer_widom.htm (web-indexed; direct HTTP/HTTPS timed out).
+Version decision: Crossref supplies first page271 only; publisher index supplies271–279. Do not substitute a longer technical-report pagination. A guessed ETH PDF path redirected to an error404 page with HTTP200 and was rejected as source content.
+
+[5] F. Fouss, A. Pirotte, J.-M. Renders, and M. Saerens, “Random-walk computation of similarities between nodes of a graph with application to collaborative recommendation,” IEEE Trans.Knowl.Data Eng., vol.19, no.3, pp.355–369, Mar.2007. https://doi.org/10.1109/TKDE.2007.46
+Accessed: Oct.22,2026.
+Verification/status: Crossref https://api.crossref.org/works/10.1109/TKDE.2007.46 (200); DOI→https://ieeexplore.ieee.org/document/4072747/ (202).
+Version decision: Use2007 publication metadata, not earlier draft/acceptance dates. HTTP202 does not establish article-body retrieval.
+
+[6] Y. Koren, R. Bell, and C. Volinsky, “Matrix factorization techniques for recommender systems,” Computer, vol.42, no.8, pp.30–37, Aug.2009. https://doi.org/10.1109/MC.2009.263
+Accessed: Oct.22,2026.
+Verification/status: Crossref https://api.crossref.org/works/10.1109/MC.2009.263 (200); DOI→https://ieeexplore.ieee.org/document/5197422/ (202).
+Version decision: Publication metadata verified through Crossref; no claim of full publisher-body access.
+
+[7] D. Smilkov et al., “TensorFlow.js: Machine learning for the Web and beyond,” Proc.Mach.Learn.Syst., vol.1, pp.309–321, 2019. https://proceedings.mlsys.org/paper_files/paper/2019/hash/acd593d2db87a799a8d3da5a860c028e-Abstract.html
+Accessed: Oct.22,2026.
+Verification/status: Official proceedings landing200; metadata https://proceedings.mlsys.org/paper_files/paper/2019/file/acd593d2db87a799a8d3da5a860c028e-Metadata.json (200).
+Version decision: Use published proceedings vol1 pp309–321. PDF footer calls the venue2nd SysML Conference; the proceedings site uses MLSys2019. Do not attach the arXiv preprint DOI to this proceedings entry. No proceedings DOI verified. Landing author metadata misspells David Soergel as Soegel and changes author order; the paper full text preserves Soergel and the original order. Entry uses first author et al., unambiguous across both.
+
+[8] TensorFlow, “TensorFlow.js API, version4.22.0.” [Online]. Available: https://js.tensorflow.org/api/4.22.0/
+Accessed: Oct.22,2026.
+Verification/status: Versioned official API URL200. Runtime version4.22.0 is independently recorded in recommendation-experiment-summary.json#/runtime.
+Version decision: Pinned to the actual experimental runtime, not an unversioned latest API. No publication year or DOI invented.

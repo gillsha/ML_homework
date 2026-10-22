@@ -1,0 +1,660 @@
+[
+  {
+    "id": "pagerank-ieee-pdf",
+    "requested_url": "https://ethw-images.s3.us-east-va.perf.cloud.ovh.us/ethw/6/64/Ref13-PageEtAl1998-PageRankCitationRanking.pdf",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:46:10.957727+00:00",
+    "http_status": 200,
+    "final_url": "https://ethw-images.s3.us-east-va.perf.cloud.ovh.us/ethw/6/64/Ref13-PageEtAl1998-PageRankCitationRanking.pdf",
+    "redirects": [
+      {
+        "status_line": "HTTP/1.1 200 OK",
+        "location": null
+      }
+    ],
+    "content_type": "application/pdf",
+    "curl_exit_code": 0,
+    "bytes": 288177,
+    "local_file": "pagerank-ieee-pdf.pdf",
+    "sha256": "93e0cf50482c61d466fd85701408d0d5e5e2219104e58086487358fa53cf5400",
+    "seconds": 3.332172125,
+    "logFile": "http-archive.json",
+    "contentAssessment": "retrieved source; metadata/body inspected as documented"
+  },
+  {
+    "id": "jeh-acm-index",
+    "requested_url": "https://sigmod.org/publications/discs/2003/out/a_jennifer_widom.htm",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:46:10.957922+00:00",
+    "http_status": null,
+    "final_url": "https://sigmod.org/publications/discs/2003/out/a_jennifer_widom.htm",
+    "redirects": [],
+    "content_type": "",
+    "curl_exit_code": 28,
+    "error_type": "curl transport error",
+    "error": "curl: (28) Failed to connect to sigmod.org port 443 after 8005 ms: Timeout was reached",
+    "seconds": 8.018392834,
+    "logFile": "http-archive.json",
+    "contentAssessment": "not inspected/metadata status only"
+  },
+  {
+    "id": "pagerank-catalog-mirror",
+    "requested_url": "https://www.cs.uml.edu/~haim/teaching/iws/tirsaa/sources/google/PageRank_Citation_cover.html",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:46:55.776816+00:00",
+    "http_status": null,
+    "final_url": "https://www.cs.uml.edu/~haim/teaching/iws/tirsaa/sources/google/PageRank_Citation_cover.html",
+    "redirects": [],
+    "content_type": "",
+    "curl_exit_code": 28,
+    "error_type": "curl transport error",
+    "error": "curl: (28) Failed to connect to www.cs.uml.edu port 443 after 8004 ms: Timeout was reached",
+    "seconds": 8.020172624999999,
+    "logFile": "http-catalog.json",
+    "contentAssessment": "not inspected/metadata status only"
+  },
+  {
+    "id": "jeh-acm-index-http",
+    "requested_url": "http://sigmod.org/publications/discs/2003/out/a_jennifer_widom.htm",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:46:55.777060+00:00",
+    "http_status": null,
+    "final_url": "http://sigmod.org/publications/discs/2003/out/a_jennifer_widom.htm",
+    "redirects": [],
+    "content_type": "",
+    "curl_exit_code": 28,
+    "error_type": "curl transport error",
+    "error": "curl: (28) Failed to connect to sigmod.org port 80 after 8007 ms: Timeout was reached",
+    "seconds": 8.02024275,
+    "logFile": "http-catalog.json",
+    "contentAssessment": "not inspected/metadata status only"
+  },
+  {
+    "id": "pagerank-ieee-milestone",
+    "requested_url": "https://ethw.org/Milestones:PageRank_and_the_Birth_of_Google,_1996-1998",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:46:55.777140+00:00",
+    "http_status": 200,
+    "final_url": "https://ethw.org/Milestones:PageRank_and_the_Birth_of_Google,_1996-1998",
+    "redirects": [
+      {
+        "status_line": "HTTP/2 200 ",
+        "location": null
+      }
+    ],
+    "content_type": "text/html; charset=UTF-8",
+    "curl_exit_code": 0,
+    "bytes": 82777,
+    "local_file": "pagerank-ieee-milestone.html",
+    "sha256": "77970cbc07d7e64ded59f800b2d20bf6ed28cb75c81f0bd3e2a02dd6751b1154",
+    "seconds": 0.444530917,
+    "logFile": "http-catalog.json",
+    "contentAssessment": "retrieved source; metadata/body inspected as documented"
+  },
+  {
+    "id": "harper-crossref",
+    "requested_url": "https://api.crossref.org/works/10.1145/2827872",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:41:47.860672+00:00",
+    "http_status": 200,
+    "final_url": "https://api.crossref.org/works/10.1145/2827872",
+    "redirects": [
+      {
+        "status_line": "HTTP/2 200 ",
+        "location": null
+      }
+    ],
+    "content_type": "application/json",
+    "curl_exit_code": 0,
+    "bytes": 11274,
+    "local_file": "harper-crossref.json",
+    "sha256": "a73a5fd59f1d765f8044be0d2fbaa7d95eb7a334fd587afbf4b613267cefbaee",
+    "seconds": 0.7244564159918809,
+    "logFile": "http-crossref.json",
+    "contentAssessment": "retrieved source; metadata/body inspected as documented"
+  },
+  {
+    "id": "haveliwala-crossref",
+    "requested_url": "https://api.crossref.org/works/10.1145/511446.511513",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:41:47.860878+00:00",
+    "http_status": 429,
+    "final_url": "https://api.crossref.org/works/10.1145/511446.511513",
+    "redirects": [
+      {
+        "status_line": "HTTP/2 429 ",
+        "location": null
+      }
+    ],
+    "content_type": "",
+    "curl_exit_code": 0,
+    "seconds": 0.5777604169998085,
+    "logFile": "http-crossref.json",
+    "contentAssessment": "not inspected/metadata status only"
+  },
+  {
+    "id": "jeh-crossref",
+    "requested_url": "https://api.crossref.org/works/10.1145/775152.775191",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:41:47.860921+00:00",
+    "http_status": 429,
+    "final_url": "https://api.crossref.org/works/10.1145/775152.775191",
+    "redirects": [
+      {
+        "status_line": "HTTP/2 429 ",
+        "location": null
+      }
+    ],
+    "content_type": "",
+    "curl_exit_code": 0,
+    "seconds": 0.585528958006762,
+    "logFile": "http-crossref.json",
+    "contentAssessment": "not inspected/metadata status only"
+  },
+  {
+    "id": "fouss-crossref",
+    "requested_url": "https://api.crossref.org/works/10.1109/TKDE.2007.46",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:41:47.860953+00:00",
+    "http_status": 200,
+    "final_url": "https://api.crossref.org/works/10.1109/TKDE.2007.46",
+    "redirects": [
+      {
+        "status_line": "HTTP/2 200 ",
+        "location": null
+      }
+    ],
+    "content_type": "application/json",
+    "curl_exit_code": 0,
+    "bytes": 9519,
+    "local_file": "fouss-crossref.json",
+    "sha256": "4c76cb07472c8a769557dd170962ce0fa1fbe38ec852e2a18d0ac1bde631b6f4",
+    "seconds": 0.7242384999990463,
+    "logFile": "http-crossref.json",
+    "contentAssessment": "retrieved source; metadata/body inspected as documented"
+  },
+  {
+    "id": "koren-crossref",
+    "requested_url": "https://api.crossref.org/works/10.1109/MC.2009.263",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:41:47.861075+00:00",
+    "http_status": 200,
+    "final_url": "https://api.crossref.org/works/10.1109/MC.2009.263",
+    "redirects": [
+      {
+        "status_line": "HTTP/2 200 ",
+        "location": null
+      }
+    ],
+    "content_type": "application/json",
+    "curl_exit_code": 0,
+    "bytes": 3804,
+    "local_file": "koren-crossref.json",
+    "sha256": "a55250d2e55b59aca8688cbe03a86842466c3f984f9a9b04755961574a4f6f6b",
+    "seconds": 0.587465541990241,
+    "logFile": "http-crossref.json",
+    "contentAssessment": "retrieved source; metadata/body inspected as documented"
+  },
+  {
+    "id": "harper-doi",
+    "requested_url": "https://doi.org/10.1145/2827872",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:44:55.582254+00:00",
+    "http_status": 403,
+    "final_url": "https://dl.acm.org/doi/10.1145/2827872",
+    "redirects": [
+      {
+        "status_line": "HTTP/2 302 ",
+        "location": "https://dl.acm.org/doi/10.1145/2827872"
+      },
+      {
+        "status_line": "HTTP/2 403 ",
+        "location": null
+      }
+    ],
+    "content_type": "text/html; charset=UTF-8",
+    "curl_exit_code": 0,
+    "seconds": 0.462923875,
+    "logFile": "http-doi.json",
+    "contentAssessment": "not inspected/metadata status only"
+  },
+  {
+    "id": "haveliwala-doi",
+    "requested_url": "https://doi.org/10.1145/511446.511513",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:44:55.582440+00:00",
+    "http_status": 403,
+    "final_url": "https://dl.acm.org/doi/10.1145/511446.511513",
+    "redirects": [
+      {
+        "status_line": "HTTP/2 302 ",
+        "location": "https://dl.acm.org/doi/10.1145/511446.511513"
+      },
+      {
+        "status_line": "HTTP/2 403 ",
+        "location": null
+      }
+    ],
+    "content_type": "text/html; charset=UTF-8",
+    "curl_exit_code": 0,
+    "seconds": 0.481370083,
+    "logFile": "http-doi.json",
+    "contentAssessment": "not inspected/metadata status only"
+  },
+  {
+    "id": "jeh-doi",
+    "requested_url": "https://doi.org/10.1145/775152.775191",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:44:55.582515+00:00",
+    "http_status": 403,
+    "final_url": "https://portal.acm.org/citation.cfm?doid=775152.775191",
+    "redirects": [
+      {
+        "status_line": "HTTP/2 302 ",
+        "location": "http://portal.acm.org/citation.cfm?doid=775152.775191"
+      },
+      {
+        "status_line": "HTTP/1.1 301 Moved Permanently",
+        "location": "https://portal.acm.org/citation.cfm?doid=775152.775191"
+      },
+      {
+        "status_line": "HTTP/2 403 ",
+        "location": null
+      }
+    ],
+    "content_type": "text/html; charset=UTF-8",
+    "curl_exit_code": 0,
+    "seconds": 0.626486125,
+    "logFile": "http-doi.json",
+    "contentAssessment": "not inspected/metadata status only"
+  },
+  {
+    "id": "fouss-doi",
+    "requested_url": "https://doi.org/10.1109/TKDE.2007.46",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:44:55.582586+00:00",
+    "http_status": 202,
+    "final_url": "https://ieeexplore.ieee.org/document/4072747/",
+    "redirects": [
+      {
+        "status_line": "HTTP/2 302 ",
+        "location": "http://ieeexplore.ieee.org/document/4072747/"
+      },
+      {
+        "status_line": "HTTP/1.1 301 Moved Permanently",
+        "location": "https://ieeexplore.ieee.org/document/4072747/"
+      },
+      {
+        "status_line": "HTTP/2 202 ",
+        "location": null
+      }
+    ],
+    "content_type": "text/html; charset=UTF-8",
+    "curl_exit_code": 0,
+    "seconds": 1.4229774579999999,
+    "logFile": "http-doi.json",
+    "contentAssessment": "not inspected/metadata status only"
+  },
+  {
+    "id": "koren-doi",
+    "requested_url": "https://doi.org/10.1109/MC.2009.263",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:44:55.582680+00:00",
+    "http_status": 202,
+    "final_url": "https://ieeexplore.ieee.org/document/5197422/",
+    "redirects": [
+      {
+        "status_line": "HTTP/2 302 ",
+        "location": "http://ieeexplore.ieee.org/document/5197422/"
+      },
+      {
+        "status_line": "HTTP/1.1 301 Moved Permanently",
+        "location": "https://ieeexplore.ieee.org/document/5197422/"
+      },
+      {
+        "status_line": "HTTP/2 202 ",
+        "location": null
+      }
+    ],
+    "content_type": "text/html; charset=UTF-8",
+    "curl_exit_code": 0,
+    "seconds": 1.4211392919999999,
+    "logFile": "http-doi.json",
+    "contentAssessment": "not inspected/metadata status only"
+  },
+  {
+    "id": "haveliwala-crossref",
+    "requested_url": "https://api.crossref.org/works/10.1145/511446.511513",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:45:21.396364+00:00",
+    "http_status": 200,
+    "final_url": "https://api.crossref.org/works/10.1145/511446.511513",
+    "redirects": [
+      {
+        "status_line": "HTTP/2 200 ",
+        "location": null
+      }
+    ],
+    "content_type": "application/json",
+    "curl_exit_code": 0,
+    "bytes": 5969,
+    "local_file": "haveliwala-crossref.json",
+    "sha256": "db1fc974950bba5de8ff385954c7ecf4367aab699c8b8f85bc4d1cd4b3709c11",
+    "seconds": 0.47716820800000004,
+    "logFile": "http-followup.json",
+    "contentAssessment": "retrieved source; metadata/body inspected as documented"
+  },
+  {
+    "id": "jeh-crossref",
+    "requested_url": "https://api.crossref.org/works/10.1145/775152.775191",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:45:21.396586+00:00",
+    "http_status": 200,
+    "final_url": "https://api.crossref.org/works/10.1145/775152.775191",
+    "redirects": [
+      {
+        "status_line": "HTTP/2 200 ",
+        "location": null
+      }
+    ],
+    "content_type": "application/json",
+    "curl_exit_code": 0,
+    "bytes": 2396,
+    "local_file": "jeh-crossref.json",
+    "sha256": "9225e57ddefe8edf333051c224adc9ae6563acf6ec4807a0c78ad8b0bf0ff7cb",
+    "seconds": 0.47862033300000006,
+    "logFile": "http-followup.json",
+    "contentAssessment": "retrieved source; metadata/body inspected as documented"
+  },
+  {
+    "id": "smilkov-metadata",
+    "requested_url": "https://proceedings.mlsys.org/paper_files/paper/2019/file/acd593d2db87a799a8d3da5a860c028e-Metadata.json",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:45:21.396651+00:00",
+    "http_status": 200,
+    "final_url": "https://proceedings.mlsys.org/paper_files/paper/2019/file/acd593d2db87a799a8d3da5a860c028e-Metadata.json",
+    "redirects": [
+      {
+        "status_line": "HTTP/1.1 200 OK",
+        "location": null
+      }
+    ],
+    "content_type": "application/json",
+    "curl_exit_code": 0,
+    "bytes": 83132,
+    "local_file": "smilkov-metadata.json",
+    "sha256": "d14413852a36e704093e99cb34ef1343c833f4afcd3b262c3055157517f52fd5",
+    "seconds": 1.496915416,
+    "logFile": "http-followup.json",
+    "contentAssessment": "retrieved source; metadata/body inspected as documented"
+  },
+  {
+    "id": "pagerank-port-record",
+    "requested_url": "https://ilpubs.stanford.edu:8090/422/",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:45:21.396686+00:00",
+    "http_status": null,
+    "final_url": "https://ilpubs.stanford.edu:8090/422/",
+    "redirects": [],
+    "content_type": "",
+    "curl_exit_code": 35,
+    "error_type": "curl transport error",
+    "error": "curl: (35) LibreSSL/3.3.6: error:1404B42E:SSL routines:ST_CONNECT:tlsv1 alert protocol version",
+    "seconds": 0.449374084,
+    "logFile": "http-followup.json",
+    "contentAssessment": "not inspected/metadata status only"
+  },
+  {
+    "id": "pagerank-author-ps",
+    "requested_url": "https://infolab.stanford.edu/~backrub/pageranksub.ps",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:45:21.396726+00:00",
+    "http_status": null,
+    "final_url": "https://infolab.stanford.edu/~backrub/pageranksub.ps",
+    "redirects": [],
+    "content_type": "",
+    "curl_exit_code": 28,
+    "error_type": "curl transport error",
+    "error": "curl: (28) Failed to connect to infolab.stanford.edu port 443 after 8003 ms: Timeout was reached",
+    "seconds": 8.019390291,
+    "logFile": "http-followup.json",
+    "contentAssessment": "not inspected/metadata status only"
+  },
+  {
+    "id": "pagerank-http-record",
+    "requested_url": "http://ilpubs.stanford.edu:8090/422/",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:45:45.289506+00:00",
+    "http_status": 200,
+    "final_url": "http://ilpubs.stanford.edu:8090/422/",
+    "redirects": [
+      {
+        "status_line": "HTTP/1.1 200 OK",
+        "location": null
+      }
+    ],
+    "content_type": "text/html; charset=UTF-8",
+    "curl_exit_code": 0,
+    "bytes": 4692,
+    "local_file": "pagerank-http-record.html",
+    "sha256": "7490355aa270ecb3caa270b3c13ecaeda0b0a237de1bcf86f49d82bfe6e55a9c",
+    "seconds": 0.4129355,
+    "logFile": "http-papers.json",
+    "contentAssessment": "HTTP200 but Stanford database error; NOT valid record content"
+  },
+  {
+    "id": "pagerank-http-pdf",
+    "requested_url": "http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:45:45.289714+00:00",
+    "http_status": 500,
+    "final_url": "http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf",
+    "redirects": [
+      {
+        "status_line": "HTTP/1.1 500 Internal Server Error",
+        "location": null
+      }
+    ],
+    "content_type": "text/html; charset=iso-8859-1",
+    "curl_exit_code": 0,
+    "seconds": 0.423754375,
+    "logFile": "http-papers.json",
+    "contentAssessment": "not inspected/metadata status only"
+  },
+  {
+    "id": "harper-paper",
+    "requested_url": "https://files.grouplens.org/papers/harper-tiis2015.pdf",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:45:45.289790+00:00",
+    "http_status": 200,
+    "final_url": "https://files.grouplens.org/papers/harper-tiis2015.pdf",
+    "redirects": [
+      {
+        "status_line": "HTTP/1.1 200 OK",
+        "location": null
+      }
+    ],
+    "content_type": "application/pdf",
+    "curl_exit_code": 0,
+    "bytes": 1413134,
+    "local_file": "harper-paper.pdf",
+    "sha256": "b46f2b3cfc1cc76d0977faa430f5d809d577ddc2f2fe740611de643331a7de85",
+    "seconds": 5.180622208,
+    "logFile": "http-papers.json",
+    "contentAssessment": "retrieved source; metadata/body inspected as documented"
+  },
+  {
+    "id": "jeh-paper",
+    "requested_url": "https://areto.ethz.ch/CDstore/www2003/papers/refereed/p185/p185-jeh.pdf",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:45:45.289823+00:00",
+    "http_status": 200,
+    "final_url": "https://webarchiv.ethz.ch/error404.html",
+    "redirects": [
+      {
+        "status_line": "HTTP/2 302 ",
+        "location": "http://webarchiv.ethz.ch/error404.html"
+      },
+      {
+        "status_line": "HTTP/1.1 302 Redirect",
+        "location": "https://webarchiv.ethz.ch/error404.html"
+      },
+      {
+        "status_line": "HTTP/2 200 ",
+        "location": null
+      }
+    ],
+    "content_type": "text/html",
+    "curl_exit_code": 0,
+    "bytes": 3945,
+    "local_file": "jeh-paper.html",
+    "sha256": "49fee9ea6671221720e60e9c863e5492603b00cce6da633db56be401e96cfa7d",
+    "seconds": 0.886949958,
+    "logFile": "http-papers.json",
+    "contentAssessment": "HTTP200 redirected to error404.html; NOT a paper"
+  },
+  {
+    "id": "pagerank-ieee-record",
+    "requested_url": "https://ethw.org/File:Ref13-PageEtAl1998-PageRankCitationRanking.pdf",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:45:45.289858+00:00",
+    "http_status": 200,
+    "final_url": "https://ethw.org/File:Ref13-PageEtAl1998-PageRankCitationRanking.pdf",
+    "redirects": [
+      {
+        "status_line": "HTTP/2 200 ",
+        "location": null
+      }
+    ],
+    "content_type": "text/html; charset=UTF-8",
+    "curl_exit_code": 0,
+    "bytes": 28697,
+    "local_file": "pagerank-ieee-record.html",
+    "sha256": "55a3d975cbcd2117f52c32853b0dd80e5df3517ff5da1d8a18d9cce9a80772ce",
+    "seconds": 0.901752208,
+    "logFile": "http-papers.json",
+    "contentAssessment": "retrieved source; metadata/body inspected as documented"
+  },
+  {
+    "id": "pagerank-record",
+    "requested_url": "https://ilpubs.stanford.edu/422/",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:44:57.067958+00:00",
+    "http_status": null,
+    "final_url": "https://ilpubs.stanford.edu/422/",
+    "redirects": [],
+    "content_type": "",
+    "curl_exit_code": 28,
+    "error_type": "curl transport error",
+    "error": "curl: (28) Failed to connect to ilpubs.stanford.edu port 443 after 8005 ms: Timeout was reached",
+    "seconds": 8.019629208000001,
+    "logFile": "http-primary.json",
+    "contentAssessment": "not inspected/metadata status only"
+  },
+  {
+    "id": "pagerank-pdf",
+    "requested_url": "https://ilpubs.stanford.edu/422/1/1999-66.pdf",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:44:57.068152+00:00",
+    "http_status": null,
+    "final_url": "https://ilpubs.stanford.edu/422/1/1999-66.pdf",
+    "redirects": [],
+    "content_type": "",
+    "curl_exit_code": 28,
+    "error_type": "curl transport error",
+    "error": "curl: (28) Failed to connect to ilpubs.stanford.edu port 443 after 8005 ms: Timeout was reached",
+    "seconds": 8.019373875,
+    "logFile": "http-primary.json",
+    "contentAssessment": "not inspected/metadata status only"
+  },
+  {
+    "id": "smilkov-proceedings",
+    "requested_url": "https://proceedings.mlsys.org/paper_files/paper/2019/hash/acd593d2db87a799a8d3da5a860c028e-Abstract.html",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:44:57.068255+00:00",
+    "http_status": 200,
+    "final_url": "https://proceedings.mlsys.org/paper_files/paper/2019/hash/acd593d2db87a799a8d3da5a860c028e-Abstract.html",
+    "redirects": [
+      {
+        "status_line": "HTTP/1.1 200 OK",
+        "location": null
+      }
+    ],
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "bytes": 10275,
+    "local_file": "smilkov-proceedings.html",
+    "sha256": "a57d584c3148200ade1ac969326dc33c52bafbf97cdfbaaa49750dcf0f9d182c",
+    "seconds": 1.236602208,
+    "logFile": "http-primary.json",
+    "contentAssessment": "retrieved source; metadata/body inspected as documented"
+  },
+  {
+    "id": "tfjs-api",
+    "requested_url": "https://js.tensorflow.org/api/4.22.0/",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:44:57.068294+00:00",
+    "http_status": 200,
+    "final_url": "https://js.tensorflow.org/api/4.22.0/",
+    "redirects": [
+      {
+        "status_line": "HTTP/2 200 ",
+        "location": null
+      }
+    ],
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "bytes": 1771411,
+    "local_file": "tfjs-api.html",
+    "sha256": "48d8c7388d24529b1e43cc00a59c424cb624a93533e2a40f5f6f88500a4b5d79",
+    "seconds": 0.695098625,
+    "logFile": "http-primary.json",
+    "contentAssessment": "retrieved source; metadata/body inspected as documented"
+  },
+  {
+    "id": "harper-project",
+    "requested_url": "https://www.grouplens.org/blog/movielens-datasets-context-and-history/",
+    "access_date": "2026-10-22",
+    "access_timezone": "Europe/Istanbul",
+    "checked_at_utc": "2026-10-22T10:44:57.068328+00:00",
+    "http_status": null,
+    "final_url": "https://www.grouplens.org/blog/movielens-datasets-context-and-history/",
+    "redirects": [],
+    "content_type": "",
+    "curl_exit_code": 60,
+    "error_type": "curl transport error",
+    "error": "curl: (60) SSL: no alternative certificate subject name matches target host name 'www.grouplens.org'\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.",
+    "seconds": 0.696371875,
+    "logFile": "http-primary.json",
+    "contentAssessment": "not inspected/metadata status only"
+  }
+]

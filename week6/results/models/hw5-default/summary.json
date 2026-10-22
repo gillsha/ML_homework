@@ -1,0 +1,1460 @@
+{
+  "name": "default-20261016-01",
+  "config": {
+    "factors": 16,
+    "epochs": 20,
+    "lr": 0.01,
+    "reg": 0.05,
+    "batchSize": 64,
+    "seeds": {
+      "users": 5101,
+      "items": 5102,
+      "shuffle": 5103
+    }
+  },
+  "environment": {
+    "node": "v25.9.0",
+    "playwright": "1.64.1",
+    "python": "Python 3.9.6",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "osRelease": "25.6.0",
+    "cpu": "Apple M3",
+    "tfjs": "4.22.0",
+    "backend": "webgl",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+    "tfEnvironment": {
+      "IS_BROWSER": true,
+      "IS_NODE": false,
+      "DEBUG": false,
+      "CPU_HANDOFF_SIZE_THRESHOLD": 128,
+      "CANVAS2D_WILL_READ_FREQUENTLY_FOR_GPU": false,
+      "IS_SAFARI": false,
+      "IS_TEST": false,
+      "SOFTWARE_WEBGL_ENABLED": false,
+      "WEBGL_VERSION": 2,
+      "HAS_WEBGL": true
+    },
+    "config": {
+      "factors": 16,
+      "epochs": 20,
+      "lr": 0.01,
+      "reg": 0.05,
+      "batchSize": 64,
+      "seeds": {
+        "users": 5101,
+        "items": 5102,
+        "shuffle": 5103
+      }
+    },
+    "browser": "153.0.8010.12",
+    "loadingMs": 932.228417
+  },
+  "selectedEpoch": 1,
+  "allEpochMetricsIdentical": true,
+  "trainingWallSeconds": 229.56160000002384,
+  "loadingSeconds": 0.932228417,
+  "testsSeconds": 6.694411042,
+  "initializationSeconds": 0.008100000023841859,
+  "initialDiagnosticsSeconds": 1.2191999999284744,
+  "recallEvaluationSeconds": 60.64604145800002,
+  "metrics": {
+    "train": {
+      "rawRows": 79619,
+      "eligibleRows": 79619,
+      "baselineRMSE": 1.1052085142573125,
+      "independentDoublePrecisionMFRMSE": 1.1052085142573125,
+      "browserMFRMSE": 1.1052078640164102,
+      "absoluteDifferenceMFMinusBaseline": -6.502411817876919e-07,
+      "relativeDifferencePercent": -5.883425375387033e-05
+    },
+    "validation": {
+      "rawRows": 9596,
+      "eligibleRows": 9561,
+      "baselineRMSE": 1.1800217293694546,
+      "independentDoublePrecisionMFRMSE": 1.1800217293694546,
+      "browserMFRMSE": 1.18002107464026,
+      "absoluteDifferenceMFMinusBaseline": -6.547292183967102e-07,
+      "relativeDifferencePercent": -5.548450525114923e-05
+    },
+    "test": {
+      "rawRows": 10785,
+      "eligibleRows": 10732,
+      "baselineRMSE": 1.2257193843347933,
+      "independentDoublePrecisionMFRMSE": 1.2257193843347933,
+      "browserMFRMSE": 1.225719429436268,
+      "absoluteDifferenceMFMinusBaseline": 4.510144724356735e-08,
+      "relativeDifferencePercent": 3.679589946930897e-06
+    }
+  },
+  "deltaFormulas": {
+    "absolute": "MF_RMSE - baseline_RMSE; negative is improvement",
+    "relativePercent": "100 * (MF_RMSE - baseline_RMSE) / baseline_RMSE"
+  },
+  "macroRecall": 0.021137488852036153,
+  "evaluatedUsers": 861,
+  "excludedUserCount": 82,
+  "excludedRelevantItemCount": 13,
+  "excludedRelevantRows": 13,
+  "coldStartUsers": 0,
+  "missingMetadataRelevantIds": 0,
+  "alreadySeenRelevantRows": 0,
+  "totalHits": 108,
+  "totalEligibleRelevant": 5142,
+  "initialNorms": {
+    "userFrobenius": 6.1485553812555995,
+    "itemFrobenius": 8.203531425943666,
+    "userSquared": 37.80473327636719,
+    "itemSquared": 67.29792785644531,
+    "observedUserFrobenius": 6.146083109503156,
+    "observedItemFrobenius": 8.0217580566989
+  },
+  "restoredNormsBrowser": {
+    "userFrobenius": 0,
+    "itemFrobenius": 0,
+    "userSquared": 0,
+    "itemSquared": 0,
+    "observedUserFrobenius": 7.552701859580712e-28,
+    "observedItemFrobenius": 8.364615740378215e-28
+  },
+  "restoredNormsFromStoredFactorsDouble": {
+    "user": 7.552797306188378e-28,
+    "item": 8.381104406533923e-28,
+    "scaledWholeMatrixL2": 6.364382911079438e-56
+  },
+  "fixedBatch": {
+    "size": 64,
+    "definition": "First 64 rows of supplied trainSet, before training shuffle",
+    "userCounts": {
+      "196": 31,
+      "186": 33
+    },
+    "initialDataMSE": 1.4167258739471436,
+    "initialScaledL2": 5.255133152008057,
+    "initialL2ToDataMseRatio": 3.7093507280746674,
+    "restoredDataMSEBrowser": 1.4152655601501465,
+    "restoredScaledL2Browser": 0,
+    "restoredDataMSEDouble": 1.4152656142215618,
+    "restoredScaledL2Double": 6.364382911079438e-56
+  },
+  "initialPredictionDistributions": {
+    "train": {
+      "dotCorrections": {
+        "count": 79619,
+        "finite": true,
+        "min": -0.044895268976688385,
+        "max": 0.046681568026542664,
+        "mean": -4.1634671210118696e-05,
+        "meanAbsolute": 0.007951112791726197,
+        "rms": 0.010091706539972727,
+        "standardDeviation": 0.010091620654933109,
+        "zeroCount": 0,
+        "quantiles": {
+          "p01": -0.024381201714277267,
+          "p05": -0.016605738550424576,
+          "p50": -1.9233557395637035e-05,
+          "p95": 0.016548320651054382,
+          "p99": 0.024168960750102997
+        }
+      },
+      "rawPredictions": {
+        "count": 79619,
+        "finite": true,
+        "min": 3.535707473754883,
+        "max": 3.627284288406372,
+        "mean": 3.5805610108704045,
+        "meanAbsolute": 3.5805610108704045,
+        "rms": 3.5805752321902955,
+        "standardDeviation": 0.010091620724008418,
+        "zeroCount": 0,
+        "quantiles": {
+          "p01": 3.5562214851379395,
+          "p05": 3.5639967918395996,
+          "p50": 3.580583333969116,
+          "p95": 3.597151041030884,
+          "p99": 3.604771614074707
+        }
+      },
+      "outsideRatingRange": 0,
+      "outsideRatingRangeFraction": 0
+    },
+    "validation": {
+      "dotCorrections": {
+        "count": 9561,
+        "finite": true,
+        "min": -0.04166565462946892,
+        "max": 0.04343847930431366,
+        "mean": 8.165712424540975e-06,
+        "meanAbsolute": 0.00790608914319971,
+        "rms": 0.010022016469265996,
+        "standardDeviation": 0.010022013142646469,
+        "zeroCount": 0,
+        "quantiles": {
+          "p01": -0.02383626438677311,
+          "p05": -0.01660197414457798,
+          "p50": 6.704841507598758e-05,
+          "p95": 0.016440482810139656,
+          "p99": 0.024227915331721306
+        }
+      },
+      "rawPredictions": {
+        "count": 9561,
+        "finite": true,
+        "min": 3.5389370918273926,
+        "max": 3.6240410804748535,
+        "mean": 3.5806108115295676,
+        "meanAbsolute": 3.5806108115295676,
+        "rms": 3.5806248371468397,
+        "standardDeviation": 0.0100220132814183,
+        "zeroCount": 0,
+        "quantiles": {
+          "p01": 3.5567662715911865,
+          "p05": 3.5640006065368652,
+          "p50": 3.580669641494751,
+          "p95": 3.597043037414551,
+          "p99": 3.604830503463745
+        }
+      },
+      "outsideRatingRange": 0,
+      "outsideRatingRangeFraction": 0
+    },
+    "test": {
+      "dotCorrections": {
+        "count": 10732,
+        "finite": true,
+        "min": -0.04499455913901329,
+        "max": 0.04576047509908676,
+        "mean": -6.409320022357264e-05,
+        "meanAbsolute": 0.007944689096262223,
+        "rms": 0.010059081631780934,
+        "standardDeviation": 0.010058877439183595,
+        "zeroCount": 0,
+        "quantiles": {
+          "p01": -0.024373464286327362,
+          "p05": -0.016402071341872215,
+          "p50": -0.00015469861682504416,
+          "p95": 0.016550181433558464,
+          "p99": 0.02403353527188301
+        }
+      },
+      "rawPredictions": {
+        "count": 10732,
+        "finite": true,
+        "min": 3.5356080532073975,
+        "max": 3.6263630390167236,
+        "mean": 3.580538552797334,
+        "meanAbsolute": 3.580538552797334,
+        "rms": 3.58055268206867,
+        "standardDeviation": 0.010058876722337465,
+        "zeroCount": 0,
+        "quantiles": {
+          "p01": 3.5562291145324707,
+          "p05": 3.5642006397247314,
+          "p50": 3.5804479122161865,
+          "p95": 3.5971527099609375,
+          "p99": 3.6046361923217773
+        }
+      },
+      "outsideRatingRange": 0,
+      "outsideRatingRangeFraction": 0
+    }
+  },
+  "restoredPredictionDistributions": {
+    "train": {
+      "dotCorrections": {
+        "count": 79619,
+        "finite": true,
+        "min": 0,
+        "max": 0,
+        "mean": 0,
+        "meanAbsolute": 0,
+        "rms": 0,
+        "standardDeviation": 0,
+        "zeroCount": 79619,
+        "quantiles": {
+          "p01": 0,
+          "p05": 0,
+          "p50": 0,
+          "p95": 0,
+          "p99": 0
+        }
+      },
+      "rawPredictions": {
+        "count": 79619,
+        "finite": true,
+        "min": 3.5806026458740234,
+        "max": 3.5806026458740234,
+        "mean": 3.5806026458740234,
+        "meanAbsolute": 3.5806026458740234,
+        "rms": 3.580602645872599,
+        "standardDeviation": 0,
+        "zeroCount": 0,
+        "quantiles": {
+          "p01": 3.5806026458740234,
+          "p05": 3.5806026458740234,
+          "p50": 3.5806026458740234,
+          "p95": 3.5806026458740234,
+          "p99": 3.5806026458740234
+        }
+      },
+      "outsideRatingRange": 0,
+      "outsideRatingRangeFraction": 0
+    },
+    "validation": {
+      "dotCorrections": {
+        "count": 9561,
+        "finite": true,
+        "min": 0,
+        "max": 0,
+        "mean": 0,
+        "meanAbsolute": 0,
+        "rms": 0,
+        "standardDeviation": 0,
+        "zeroCount": 9561,
+        "quantiles": {
+          "p01": 0,
+          "p05": 0,
+          "p50": 0,
+          "p95": 0,
+          "p99": 0
+        }
+      },
+      "rawPredictions": {
+        "count": 9561,
+        "finite": true,
+        "min": 3.5806026458740234,
+        "max": 3.5806026458740234,
+        "mean": 3.5806026458740234,
+        "meanAbsolute": 3.5806026458740234,
+        "rms": 3.5806026458736513,
+        "standardDeviation": 0,
+        "zeroCount": 0,
+        "quantiles": {
+          "p01": 3.5806026458740234,
+          "p05": 3.5806026458740234,
+          "p50": 3.5806026458740234,
+          "p95": 3.5806026458740234,
+          "p99": 3.5806026458740234
+        }
+      },
+      "outsideRatingRange": 0,
+      "outsideRatingRangeFraction": 0
+    },
+    "test": {
+      "dotCorrections": {
+        "count": 10732,
+        "finite": true,
+        "min": 0,
+        "max": 0,
+        "mean": 0,
+        "meanAbsolute": 0,
+        "rms": 0,
+        "standardDeviation": 0,
+        "zeroCount": 10732,
+        "quantiles": {
+          "p01": 0,
+          "p05": 0,
+          "p50": 0,
+          "p95": 0,
+          "p99": 0
+        }
+      },
+      "rawPredictions": {
+        "count": 10732,
+        "finite": true,
+        "min": 3.5806026458740234,
+        "max": 3.5806026458740234,
+        "mean": 3.5806026458740234,
+        "meanAbsolute": 3.5806026458740234,
+        "rms": 3.5806026458736366,
+        "standardDeviation": 0,
+        "zeroCount": 0,
+        "quantiles": {
+          "p01": 3.5806026458740234,
+          "p05": 3.5806026458740234,
+          "p50": 3.5806026458740234,
+          "p95": 3.5806026458740234,
+          "p99": 3.5806026458740234
+        }
+      },
+      "outsideRatingRange": 0,
+      "outsideRatingRangeFraction": 0
+    }
+  },
+  "users": [
+    {
+      "userId": 1,
+      "historyCount": 244,
+      "historyLikedCount": 144,
+      "historyMeanRating": 3.5778688524590163,
+      "preferenceGenres": [
+        {
+          "genre": "Drama",
+          "ratedMovies": 93,
+          "likedMovies": 68,
+          "meanRating": 3.913978494623656
+        },
+        {
+          "genre": "Comedy",
+          "ratedMovies": 81,
+          "likedMovies": 42,
+          "meanRating": 3.419753086419753
+        },
+        {
+          "genre": "Action",
+          "ratedMovies": 69,
+          "likedMovies": 37,
+          "meanRating": 3.4057971014492754
+        },
+        {
+          "genre": "Thriller",
+          "ratedMovies": 47,
+          "likedMovies": 27,
+          "meanRating": 3.574468085106383
+        },
+        {
+          "genre": "Sci-Fi",
+          "ratedMovies": 37,
+          "likedMovies": 27,
+          "meanRating": 3.945945945945946
+        },
+        {
+          "genre": "Romance",
+          "ratedMovies": 39,
+          "likedMovies": 26,
+          "meanRating": 3.923076923076923
+        },
+        {
+          "genre": "Adventure",
+          "ratedMovies": 38,
+          "likedMovies": 15,
+          "meanRating": 2.9210526315789473
+        },
+        {
+          "genre": "War",
+          "ratedMovies": 24,
+          "likedMovies": 15,
+          "meanRating": 3.75
+        },
+        {
+          "genre": "Crime",
+          "ratedMovies": 22,
+          "likedMovies": 13,
+          "meanRating": 3.3181818181818183
+        },
+        {
+          "genre": "Horror",
+          "ratedMovies": 13,
+          "likedMovies": 7,
+          "meanRating": 3.4615384615384617
+        },
+        {
+          "genre": "Children's",
+          "ratedMovies": 24,
+          "likedMovies": 5,
+          "meanRating": 2.2083333333333335
+        },
+        {
+          "genre": "Musical",
+          "ratedMovies": 12,
+          "likedMovies": 5,
+          "meanRating": 2.8333333333333335
+        },
+        {
+          "genre": "Animation",
+          "ratedMovies": 9,
+          "likedMovies": 4,
+          "meanRating": 3.3333333333333335
+        },
+        {
+          "genre": "Documentary",
+          "ratedMovies": 4,
+          "likedMovies": 4,
+          "meanRating": 4.75
+        },
+        {
+          "genre": "Western",
+          "ratedMovies": 6,
+          "likedMovies": 3,
+          "meanRating": 3.6666666666666665
+        },
+        {
+          "genre": "Mystery",
+          "ratedMovies": 5,
+          "likedMovies": 3,
+          "meanRating": 3.6
+        },
+        {
+          "genre": "Fantasy",
+          "ratedMovies": 2,
+          "likedMovies": 1,
+          "meanRating": 3.5
+        },
+        {
+          "genre": "Film-Noir",
+          "ratedMovies": 1,
+          "likedMovies": 1,
+          "meanRating": 5.0
+        }
+      ],
+      "highRatedHistoryExamples": [
+        {
+          "movieId": 9,
+          "title": "Dead Man Walking (1995)",
+          "genres": [
+            "Drama"
+          ],
+          "rating": 5,
+          "timestamp": 878543541
+        },
+        {
+          "movieId": 16,
+          "title": "French Twist (Gazon maudit) (1995)",
+          "genres": [
+            "Comedy",
+            "Romance"
+          ],
+          "rating": 5,
+          "timestamp": 878543541
+        },
+        {
+          "movieId": 44,
+          "title": "Dolores Claiborne (1994)",
+          "genres": [
+            "Drama",
+            "Thriller"
+          ],
+          "rating": 5,
+          "timestamp": 878543541
+        },
+        {
+          "movieId": 86,
+          "title": "Remains of the Day, The (1993)",
+          "genres": [
+            "Drama"
+          ],
+          "rating": 5,
+          "timestamp": 878543541
+        },
+        {
+          "movieId": 87,
+          "title": "Searching for Bobby Fischer (1993)",
+          "genres": [
+            "Drama"
+          ],
+          "rating": 5,
+          "timestamp": 878543541
+        },
+        {
+          "movieId": 12,
+          "title": "Usual Suspects, The (1995)",
+          "genres": [
+            "Crime",
+            "Thriller"
+          ],
+          "rating": 5,
+          "timestamp": 878542960
+        },
+        {
+          "movieId": 208,
+          "title": "Young Frankenstein (1974)",
+          "genres": [
+            "Comedy",
+            "Horror"
+          ],
+          "rating": 5,
+          "timestamp": 878542960
+        },
+        {
+          "movieId": 113,
+          "title": "Horseman on the Roof, The (Hussard sur le toit, Le) (1995)",
+          "genres": [
+            "Drama"
+          ],
+          "rating": 5,
+          "timestamp": 878542738
+        },
+        {
+          "movieId": 198,
+          "title": "Nikita (La Femme Nikita) (1990)",
+          "genres": [
+            "Thriller"
+          ],
+          "rating": 5,
+          "timestamp": 878542717
+        },
+        {
+          "movieId": 82,
+          "title": "Jurassic Park (1993)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "rating": 5,
+          "timestamp": 878542589
+        },
+        {
+          "movieId": 152,
+          "title": "Sleeper (1973)",
+          "genres": [
+            "Comedy",
+            "Sci-Fi"
+          ],
+          "rating": 5,
+          "timestamp": 878542589
+        },
+        {
+          "movieId": 57,
+          "title": "Priest (1994)",
+          "genres": [
+            "Drama"
+          ],
+          "rating": 5,
+          "timestamp": 878542459
+        },
+        {
+          "movieId": 173,
+          "title": "Princess Bride, The (1987)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Romance"
+          ],
+          "rating": 5,
+          "timestamp": 878541803
+        },
+        {
+          "movieId": 115,
+          "title": "Haunted World of Edward D. Wood Jr., The (1995)",
+          "genres": [
+            "Documentary"
+          ],
+          "rating": 5,
+          "timestamp": 878541637
+        },
+        {
+          "movieId": 269,
+          "title": "Full Monty, The (1997)",
+          "genres": [
+            "Comedy"
+          ],
+          "rating": 5,
+          "timestamp": 877482427
+        }
+      ],
+      "recommendations": [
+        {
+          "movieId": 5,
+          "title": "Copycat (1995)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "eligibleRelevantTestHit": false
+        },
+        {
+          "movieId": 6,
+          "title": "Shanghai Triad (Yao a yao yao dao waipo qiao) (1995)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Drama"
+          ],
+          "eligibleRelevantTestHit": true
+        },
+        {
+          "movieId": 18,
+          "title": "White Balloon, The (1995)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Drama"
+          ],
+          "eligibleRelevantTestHit": true
+        },
+        {
+          "movieId": 20,
+          "title": "Angels and Insects (1995)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "eligibleRelevantTestHit": true
+        },
+        {
+          "movieId": 32,
+          "title": "Crumb (1994)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Documentary"
+          ],
+          "eligibleRelevantTestHit": true
+        },
+        {
+          "movieId": 74,
+          "title": "Faster Pussycat! Kill! Kill! (1965)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Action",
+            "Comedy",
+            "Drama"
+          ],
+          "eligibleRelevantTestHit": false
+        },
+        {
+          "movieId": 100,
+          "title": "Fargo (1996)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "eligibleRelevantTestHit": true
+        },
+        {
+          "movieId": 102,
+          "title": "Aristocats, The (1970)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Animation",
+            "Children's"
+          ],
+          "eligibleRelevantTestHit": false
+        },
+        {
+          "movieId": 111,
+          "title": "Truth About Cats & Dogs, The (1996)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Comedy",
+            "Romance"
+          ],
+          "eligibleRelevantTestHit": true
+        },
+        {
+          "movieId": 129,
+          "title": "Bound (1996)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Romance",
+            "Thriller"
+          ],
+          "eligibleRelevantTestHit": true
+        }
+      ],
+      "eligibleRelevantTest": [
+        {
+          "userId": 1,
+          "movieId": 100,
+          "rating": 5,
+          "timestamp": 878543541,
+          "title": "Fargo (1996)",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ]
+        },
+        {
+          "userId": 1,
+          "movieId": 154,
+          "rating": 5,
+          "timestamp": 878543541,
+          "title": "Monty Python's Life of Brian (1979)",
+          "genres": [
+            "Comedy"
+          ]
+        },
+        {
+          "userId": 1,
+          "movieId": 169,
+          "rating": 5,
+          "timestamp": 878543541,
+          "title": "Wrong Trousers, The (1993)",
+          "genres": [
+            "Animation",
+            "Comedy"
+          ]
+        },
+        {
+          "userId": 1,
+          "movieId": 178,
+          "rating": 5,
+          "timestamp": 878543541,
+          "title": "12 Angry Men (1957)",
+          "genres": [
+            "Drama"
+          ]
+        },
+        {
+          "userId": 1,
+          "movieId": 228,
+          "rating": 5,
+          "timestamp": 878543541,
+          "title": "Star Trek: The Wrath of Khan (1982)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ]
+        },
+        {
+          "userId": 1,
+          "movieId": 222,
+          "rating": 4,
+          "timestamp": 878873388,
+          "title": "Star Trek: First Contact (1996)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ]
+        },
+        {
+          "userId": 1,
+          "movieId": 258,
+          "rating": 5,
+          "timestamp": 878873389,
+          "title": "Contact (1997)",
+          "genres": [
+            "Drama",
+            "Sci-Fi"
+          ]
+        },
+        {
+          "userId": 1,
+          "movieId": 20,
+          "rating": 4,
+          "timestamp": 887431883,
+          "title": "Angels and Insects (1995)",
+          "genres": [
+            "Drama",
+            "Romance"
+          ]
+        },
+        {
+          "userId": 1,
+          "movieId": 129,
+          "rating": 5,
+          "timestamp": 887431908,
+          "title": "Bound (1996)",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Romance",
+            "Thriller"
+          ]
+        },
+        {
+          "userId": 1,
+          "movieId": 221,
+          "rating": 5,
+          "timestamp": 887431921,
+          "title": "Breaking the Waves (1996)",
+          "genres": [
+            "Drama"
+          ]
+        },
+        {
+          "userId": 1,
+          "movieId": 6,
+          "rating": 5,
+          "timestamp": 887431973,
+          "title": "Shanghai Triad (Yao a yao yao dao waipo qiao) (1995)",
+          "genres": [
+            "Drama"
+          ]
+        },
+        {
+          "userId": 1,
+          "movieId": 18,
+          "rating": 4,
+          "timestamp": 887432020,
+          "title": "White Balloon, The (1995)",
+          "genres": [
+            "Drama"
+          ]
+        },
+        {
+          "userId": 1,
+          "movieId": 270,
+          "rating": 5,
+          "timestamp": 888732827,
+          "title": "Gattaca (1997)",
+          "genres": [
+            "Drama",
+            "Sci-Fi",
+            "Thriller"
+          ]
+        },
+        {
+          "userId": 1,
+          "movieId": 209,
+          "rating": 4,
+          "timestamp": 888732908,
+          "title": "This Is Spinal Tap (1984)",
+          "genres": [
+            "Comedy",
+            "Drama",
+            "Musical"
+          ]
+        },
+        {
+          "userId": 1,
+          "movieId": 32,
+          "rating": 5,
+          "timestamp": 888732909,
+          "title": "Crumb (1994)",
+          "genres": [
+            "Documentary"
+          ]
+        },
+        {
+          "userId": 1,
+          "movieId": 242,
+          "rating": 5,
+          "timestamp": 889751633,
+          "title": "Kolya (1996)",
+          "genres": [
+            "Comedy"
+          ]
+        },
+        {
+          "userId": 1,
+          "movieId": 111,
+          "rating": 5,
+          "timestamp": 889751711,
+          "title": "Truth About Cats & Dogs, The (1996)",
+          "genres": [
+            "Comedy",
+            "Romance"
+          ]
+        },
+        {
+          "userId": 1,
+          "movieId": 171,
+          "rating": 5,
+          "timestamp": 889751711,
+          "title": "Delicatessen (1991)",
+          "genres": [
+            "Comedy",
+            "Sci-Fi"
+          ]
+        },
+        {
+          "userId": 1,
+          "movieId": 256,
+          "rating": 4,
+          "timestamp": 889751712,
+          "title": "When the Cats Away (Chacun cherche son chat) (1996)",
+          "genres": [
+            "Comedy",
+            "Romance"
+          ]
+        }
+      ],
+      "recommendationGenreCounts": {
+        "Crime": 3,
+        "Drama": 7,
+        "Thriller": 3,
+        "Romance": 3,
+        "Documentary": 1,
+        "Action": 1,
+        "Comedy": 2,
+        "Animation": 1,
+        "Children's": 1
+      },
+      "genresAbsentFromRatedHistory": [],
+      "hitMovieIds": [
+        6,
+        18,
+        20,
+        32,
+        100,
+        111,
+        129
+      ],
+      "recall": 0.3684210526315789,
+      "trainingRows": 217,
+      "validationRows": 27,
+      "candidateCount": 1367,
+      "noTrainingValidationOverlap": true,
+      "allCandidateBrowserScoresExactlyEqual": true,
+      "commonRawScore": 3.5806026458740234,
+      "selectedTop10AreLowestEligibleMovieIds": true,
+      "savedFactorDotCorrectionDoubleRange": [
+        -7.358255154257409e-58,
+        2.3758818789990845e-57
+      ],
+      "rankingVerification": {
+        "float32OrderMatches": true,
+        "doubleOrderMatches": true,
+        "maximumScoreError": 2.5896379707290862e-08,
+        "scoreTolerance": 2e-06,
+        "nearCutoffCandidateCount": 1367
+      }
+    },
+    {
+      "userId": 2,
+      "historyCount": 55,
+      "historyLikedCount": 38,
+      "historyMeanRating": 3.8181818181818183,
+      "preferenceGenres": [
+        {
+          "genre": "Drama",
+          "ratedMovies": 32,
+          "likedMovies": 22,
+          "meanRating": 3.84375
+        },
+        {
+          "genre": "Romance",
+          "ratedMovies": 16,
+          "likedMovies": 13,
+          "meanRating": 4.125
+        },
+        {
+          "genre": "Comedy",
+          "ratedMovies": 15,
+          "likedMovies": 11,
+          "meanRating": 3.7333333333333334
+        },
+        {
+          "genre": "Action",
+          "ratedMovies": 8,
+          "likedMovies": 7,
+          "meanRating": 4.25
+        },
+        {
+          "genre": "Thriller",
+          "ratedMovies": 11,
+          "likedMovies": 6,
+          "meanRating": 3.6363636363636362
+        },
+        {
+          "genre": "Crime",
+          "ratedMovies": 8,
+          "likedMovies": 6,
+          "meanRating": 4.125
+        },
+        {
+          "genre": "Sci-Fi",
+          "ratedMovies": 4,
+          "likedMovies": 2,
+          "meanRating": 3.75
+        },
+        {
+          "genre": "War",
+          "ratedMovies": 3,
+          "likedMovies": 2,
+          "meanRating": 3.6666666666666665
+        },
+        {
+          "genre": "Adventure",
+          "ratedMovies": 2,
+          "likedMovies": 2,
+          "meanRating": 4.5
+        },
+        {
+          "genre": "Film-Noir",
+          "ratedMovies": 2,
+          "likedMovies": 2,
+          "meanRating": 4.5
+        },
+        {
+          "genre": "Mystery",
+          "ratedMovies": 4,
+          "likedMovies": 1,
+          "meanRating": 3.5
+        },
+        {
+          "genre": "Animation",
+          "ratedMovies": 1,
+          "likedMovies": 1,
+          "meanRating": 4.0
+        },
+        {
+          "genre": "Children's",
+          "ratedMovies": 1,
+          "likedMovies": 1,
+          "meanRating": 4.0
+        },
+        {
+          "genre": "Horror",
+          "ratedMovies": 2,
+          "likedMovies": 0,
+          "meanRating": 3.0
+        }
+      ],
+      "highRatedHistoryExamples": [
+        {
+          "movieId": 272,
+          "title": "Good Will Hunting (1997)",
+          "genres": [
+            "Drama"
+          ],
+          "rating": 5,
+          "timestamp": 888979061
+        },
+        {
+          "movieId": 50,
+          "title": "Star Wars (1977)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Romance",
+            "Sci-Fi",
+            "War"
+          ],
+          "rating": 5,
+          "timestamp": 888552084
+        },
+        {
+          "movieId": 100,
+          "title": "Fargo (1996)",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "rating": 5,
+          "timestamp": 888552084
+        },
+        {
+          "movieId": 127,
+          "title": "Godfather, The (1972)",
+          "genres": [
+            "Action",
+            "Crime",
+            "Drama"
+          ],
+          "rating": 5,
+          "timestamp": 888552084
+        },
+        {
+          "movieId": 242,
+          "title": "Kolya (1996)",
+          "genres": [
+            "Comedy"
+          ],
+          "rating": 5,
+          "timestamp": 888552084
+        },
+        {
+          "movieId": 251,
+          "title": "Shall We Dance? (1996)",
+          "genres": [
+            "Comedy"
+          ],
+          "rating": 5,
+          "timestamp": 888552084
+        },
+        {
+          "movieId": 283,
+          "title": "Emma (1996)",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "rating": 5,
+          "timestamp": 888552084
+        },
+        {
+          "movieId": 285,
+          "title": "Secrets & Lies (1996)",
+          "genres": [
+            "Drama"
+          ],
+          "rating": 5,
+          "timestamp": 888552084
+        },
+        {
+          "movieId": 302,
+          "title": "L.A. Confidential (1997)",
+          "genres": [
+            "Crime",
+            "Film-Noir",
+            "Mystery",
+            "Thriller"
+          ],
+          "rating": 5,
+          "timestamp": 888552084
+        },
+        {
+          "movieId": 311,
+          "title": "Wings of the Dove, The (1997)",
+          "genres": [
+            "Drama",
+            "Romance",
+            "Thriller"
+          ],
+          "rating": 5,
+          "timestamp": 888552084
+        },
+        {
+          "movieId": 313,
+          "title": "Titanic (1997)",
+          "genres": [
+            "Action",
+            "Drama",
+            "Romance"
+          ],
+          "rating": 5,
+          "timestamp": 888552084
+        },
+        {
+          "movieId": 275,
+          "title": "Sense and Sensibility (1995)",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "rating": 5,
+          "timestamp": 888550939
+        },
+        {
+          "movieId": 300,
+          "title": "Air Force One (1997)",
+          "genres": [
+            "Action",
+            "Thriller"
+          ],
+          "rating": 4,
+          "timestamp": 888979197
+        },
+        {
+          "movieId": 310,
+          "title": "Rainmaker, The (1997)",
+          "genres": [
+            "Drama"
+          ],
+          "rating": 4,
+          "timestamp": 888979061
+        },
+        {
+          "movieId": 237,
+          "title": "Jerry Maguire (1996)",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "rating": 4,
+          "timestamp": 888552017
+        }
+      ],
+      "recommendations": [
+        {
+          "movieId": 2,
+          "title": "GoldenEye (1995)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Thriller"
+          ],
+          "eligibleRelevantTestHit": false
+        },
+        {
+          "movieId": 3,
+          "title": "Four Rooms (1995)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Thriller"
+          ],
+          "eligibleRelevantTestHit": false
+        },
+        {
+          "movieId": 4,
+          "title": "Get Shorty (1995)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Action",
+            "Comedy",
+            "Drama"
+          ],
+          "eligibleRelevantTestHit": false
+        },
+        {
+          "movieId": 5,
+          "title": "Copycat (1995)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "eligibleRelevantTestHit": false
+        },
+        {
+          "movieId": 6,
+          "title": "Shanghai Triad (Yao a yao yao dao waipo qiao) (1995)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Drama"
+          ],
+          "eligibleRelevantTestHit": false
+        },
+        {
+          "movieId": 7,
+          "title": "Twelve Monkeys (1995)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Drama",
+            "Sci-Fi"
+          ],
+          "eligibleRelevantTestHit": false
+        },
+        {
+          "movieId": 8,
+          "title": "Babe (1995)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Children's",
+            "Comedy",
+            "Drama"
+          ],
+          "eligibleRelevantTestHit": false
+        },
+        {
+          "movieId": 9,
+          "title": "Dead Man Walking (1995)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Drama"
+          ],
+          "eligibleRelevantTestHit": false
+        },
+        {
+          "movieId": 11,
+          "title": "Seven (Se7en) (1995)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Crime",
+            "Thriller"
+          ],
+          "eligibleRelevantTestHit": false
+        },
+        {
+          "movieId": 12,
+          "title": "Usual Suspects, The (1995)",
+          "score": 3.5806026458740234,
+          "scoreType": "raw model score",
+          "genres": [
+            "Crime",
+            "Thriller"
+          ],
+          "eligibleRelevantTestHit": false
+        }
+      ],
+      "eligibleRelevantTest": [
+        {
+          "userId": 2,
+          "movieId": 304,
+          "rating": 4,
+          "timestamp": 888979197,
+          "title": "Fly Away Home (1996)",
+          "genres": [
+            "Adventure",
+            "Children's"
+          ]
+        },
+        {
+          "userId": 2,
+          "movieId": 316,
+          "rating": 5,
+          "timestamp": 888979693,
+          "title": "As Good As It Gets (1997)",
+          "genres": [
+            "Comedy",
+            "Drama"
+          ]
+        }
+      ],
+      "recommendationGenreCounts": {
+        "Action": 2,
+        "Adventure": 1,
+        "Thriller": 5,
+        "Comedy": 2,
+        "Drama": 6,
+        "Crime": 3,
+        "Sci-Fi": 1,
+        "Children's": 1
+      },
+      "genresAbsentFromRatedHistory": [],
+      "hitMovieIds": [],
+      "recall": 0.0,
+      "trainingRows": 49,
+      "validationRows": 6,
+      "candidateCount": 1556,
+      "noTrainingValidationOverlap": true,
+      "allCandidateBrowserScoresExactlyEqual": true,
+      "commonRawScore": 3.5806026458740234,
+      "selectedTop10AreLowestEligibleMovieIds": true,
+      "savedFactorDotCorrectionDoubleRange": [
+        -5.518308948356319e-58,
+        4.264423709870965e-58
+      ],
+      "rankingVerification": {
+        "float32OrderMatches": true,
+        "doubleOrderMatches": true,
+        "maximumScoreError": 2.5896379707290862e-08,
+        "scoreTolerance": 2e-06,
+        "nearCutoffCandidateCount": 1556
+      }
+    }
+  ],
+  "independentChecksPassed": 1796,
+  "finiteAndMemory": {
+    "beforeDisposal": {
+      "unreliable": false,
+      "numBytesInGPU": 168192,
+      "numBytesInGPUAllocated": 107142180,
+      "numBytesInGPUFree": 106973988,
+      "numTensors": 2,
+      "numDataBuffers": 2,
+      "numBytes": 168128
+    },
+    "afterDisposal": {
+      "unreliable": false,
+      "numBytesInGPU": 0,
+      "numBytesInGPUAllocated": 107142180,
+      "numBytesInGPUFree": 107142180,
+      "numTensors": 0,
+      "numDataBuffers": 0,
+      "numBytes": 0
+    },
+    "allHistoryFinite": true
+  },
+  "interpretation": "Effectively mean-only predictions. Tiny browser-versus-baseline RMSE gaps are numerical; independent double-precision MF and baseline RMSE are identical. Measured factor shrinkage is consistent with strong regularization, but this one run does not isolate causation or gradient dominance.",
+  "proposedFollowUpNotExecuted": {
+    "onlyChangedVariable": "reg",
+    "from": 0.05,
+    "to": 0.005,
+    "allOtherSettingsUnchanged": true,
+    "selectionCriterion": "validation RMSE only"
+  }
+}
