@@ -1,0 +1,238 @@
+{
+  "env": {
+    "backend": "webgl",
+    "tfjs": "4.22.0",
+    "webglVersion": 2,
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)"
+  },
+  "graph": {
+    "users": 943,
+    "movies": 1611,
+    "nodes": 2554,
+    "positiveEdges": 45602,
+    "zeroDegreeUsers": [
+      685
+    ],
+    "zeroDegreeMovies": 253
+  },
+  "before": {
+    "unreliable": false,
+    "numBytesInGPU": 0,
+    "numBytesInGPUAllocated": 0,
+    "numBytesInGPUFree": 0,
+    "numTensors": 0,
+    "numDataBuffers": 0,
+    "numBytes": 0
+  },
+  "after": {
+    "unreliable": false,
+    "numBytesInGPU": 0,
+    "numBytesInGPUAllocated": 43182852,
+    "numBytesInGPUFree": 43182852,
+    "numTensors": 0,
+    "numDataBuffers": 0,
+    "numBytes": 0
+  },
+  "elapsedMs": 9960.90000000596,
+  "checks": [
+    {
+      "name": "graph construction: training universe, binary deduplication, sorted maps, no mutation",
+      "pass": true,
+      "detail": {
+        "users": [
+          10,
+          50
+        ],
+        "movies": [
+          70,
+          90
+        ],
+        "degree": [
+          1,
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "raw ID boundary and missing seed guards",
+      "pass": true,
+      "detail": {
+        "rawId": 943,
+        "node": 942,
+        "firstMovieNode": 943,
+        "errors": [
+          "PPR: unknown raw user ID 0",
+          "PPR: unknown raw user ID 944",
+          "PPR: unknown raw user ID -1",
+          "PPR: unknown raw user ID 1.5",
+          "PPR: unknown raw user ID 1",
+          "PPR: unknown raw user ID NaN"
+        ]
+      }
+    },
+    {
+      "name": "fixture seed, shape and parameter guards",
+      "pass": true,
+      "detail": [
+        "PPR: invalid transition node index -1",
+        "PPR: invalid transition node index 4",
+        "PPR: invalid transition node index 0.5",
+        "PageRank: alpha must be in [0,1]",
+        "PageRank: alpha must be in [0,1]",
+        "PageRank: alpha must be in [0,1]",
+        "PageRank: tol must be positive and finite",
+        "PageRank: tol must be positive and finite",
+        "PageRank: maxIter must be an integer in [1,500]",
+        "PageRank: maxIter must be an integer in [1,500]",
+        "PageRank: batchSize must be an integer in [1,128]",
+        "PageRank: transition is not row-normalized at node 0"
+      ]
+    },
+    {
+      "name": "per-iteration mass, nonnegativity and frozen columns",
+      "pass": true,
+      "detail": {
+        "frozenUpdates": 264,
+        "maxMassError": 2.682209014892578e-07,
+        "minValue": 0,
+        "iterations": [
+          89,
+          1
+        ]
+      }
+    },
+    {
+      "name": "iteration cap reports non-convergence honestly",
+      "pass": true,
+      "detail": {
+        "periodic": {
+          "p": [
+            0,
+            1
+          ],
+          "iterations": 5,
+          "residual": 2,
+          "converged": false
+        },
+        "convergedOnlyAtCap": {
+          "p": [
+            1,
+            0
+          ],
+          "iterations": 1,
+          "residual": 0,
+          "converged": false
+        }
+      }
+    },
+    {
+      "name": "cache identity, parameters and independent return copies",
+      "pass": true,
+      "detail": {
+        "alpha05": 0.6666665077209473,
+        "alpha085": 0.5405404567718506,
+        "differentTransition": 1
+      }
+    },
+    {
+      "name": "rectangular MovieLens path never calls rowNormalize",
+      "pass": true,
+      "detail": "MovieLens propagation succeeded with diagnostic rowNormalize disabled"
+    },
+    {
+      "name": "tensor memory stays flat after repeated success and callback failure",
+      "pass": true,
+      "detail": {
+        "before": {
+          "unreliable": false,
+          "numBytesInGPU": 0,
+          "numBytesInGPUAllocated": 43181644,
+          "numBytesInGPUFree": 43181644,
+          "numTensors": 0,
+          "numDataBuffers": 0,
+          "numBytes": 0
+        },
+        "after": {
+          "unreliable": false,
+          "numBytesInGPU": 0,
+          "numBytesInGPUAllocated": 43181644,
+          "numBytesInGPUFree": 43181644,
+          "numTensors": 0,
+          "numDataBuffers": 0,
+          "numBytes": 0
+        }
+      }
+    }
+  ],
+  "selfChecks": {
+    "passed": 11,
+    "failed": 0,
+    "pending": 1,
+    "checks": [
+      {
+        "name": "reference graph: uniform alpha=0.85 matches readme 4.1 values",
+        "status": "PASS",
+        "detail": "C>A>B>D; produced by student pageRank(alpha, {transition: REFERENCE_GRAPH.transition}), iterations 28"
+      },
+      {
+        "name": "reference graph: restart at A alpha=0.85 matches readme 4.1 values",
+        "status": "PASS",
+        "detail": "A>C>B>D (D stays 0); produced by student personalizedPageRank(seedNode, alpha, {transition: REFERENCE_GRAPH.transition})"
+      },
+      {
+        "name": "row normalization: every nonzero-degree row sums to 1",
+        "status": "PASS",
+        "detail": "6 positive-degree row(s) sum to 1; 2 dangling row(s) are zero"
+      },
+      {
+        "name": "restart distributions: nonnegative and summing to 1",
+        "status": "PASS",
+        "detail": "uniform + one-hot over 4 nodes"
+      },
+      {
+        "name": "iterations preserve total probability (sum approx 1)",
+        "status": "PASS",
+        "detail": "sum = 1.0000002682 over 3 synthetic nodes (graph.js)"
+      },
+      {
+        "name": "stationary scores are nonnegative",
+        "status": "PASS",
+        "detail": "3 scores nonnegative (graph.js)"
+      },
+      {
+        "name": "one extra update produces approximately the same distribution",
+        "status": "PASS",
+        "detail": "L1 = 7.972e-7"
+      },
+      {
+        "name": "zero-degree node fixture preserves probability mass",
+        "status": "PASS",
+        "detail": "danglingMask [false,true,false,false,true]; mass 1.00000028 / 1.00000000"
+      },
+      {
+        "name": "matrix orientation: probability collects at the pointed-to node, not the source",
+        "status": "PASS",
+        "detail": "p = [0.486486, 0.256757, 0.256757]"
+      },
+      {
+        "name": "recommendTopK: excludes previously rated movies and breaks ties by ascending id",
+        "status": "PENDING",
+        "detail": "TODO(hw6): not implemented yet."
+      },
+      {
+        "name": "graph mapping: node count equals observed users plus observed movies",
+        "status": "PASS",
+        "detail": "2554 nodes = 943 users + 1611 movies"
+      },
+      {
+        "name": "public surface: every required name is defined",
+        "status": "PASS",
+        "detail": "10 functions + ALPHA_GRID + MF_INFO"
+      }
+    ]
+  },
+  "passed": true,
+  "mfUntrained": true
+}

@@ -1,0 +1,183 @@
+{
+  "dtype": "float32",
+  "byteOrder": "little-endian",
+  "userShape": [
+    944,
+    16
+  ],
+  "itemShape": [
+    1683,
+    16
+  ],
+  "globalMean": 3.5806026199776437,
+  "selectedEpoch": 1,
+  "MF_INFO": {
+    "factors": 16,
+    "epochs": 30,
+    "learningRate": 0.01,
+    "regularization": 0.05,
+    "batchSize": 512,
+    "seed": 20261013,
+    "backend": "webgl",
+    "checkpoint": 1,
+    "validationRMSE": 1.1829944264078285,
+    "trainedAt": "2026-10-21T17:34:11.667Z",
+    "history": [
+      {
+        "epoch": 1,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 2,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 3,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 4,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 5,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 6,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 7,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 8,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 9,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 10,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 11,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 12,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 13,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 14,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 15,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 16,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 17,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 18,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 19,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 20,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 21,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 22,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 23,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 24,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 25,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 26,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 27,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 28,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 29,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 30,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      }
+    ]
+  },
+  "hashes": {
+    "user": "bcb78a2a13a5baf5837a3ddbf3d7d08ba614a551800aec7929e07ae9bd64caf9",
+    "item": "550e56f0ac7f3067f4a7aa7c3dfffa91d9674c4af1065d812d8d19f6de79a253"
+  },
+  "source": "Actual supplied MF run recorded in ../supplied-mf.json; no retraining or factor transformation."
+}

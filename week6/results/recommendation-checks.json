@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "name": "movie score mapping and return type",
+      "pass": true,
+      "result": [
+        0.4,
+        0.2
+      ]
+    },
+    {
+      "name": "malformed probabilities reject",
+      "pass": true,
+      "result": 3
+    },
+    {
+      "name": "validation/test filtering and ID tie-break",
+      "pass": true,
+      "result": true
+    },
+    {
+      "name": "empty contract; short and zero-score diagnostics",
+      "pass": true,
+      "result": {
+        "method": "popularity",
+        "userId": 1,
+        "split": "test",
+        "requestedK": 10,
+        "eligibleCandidates": 3,
+        "returned": 3,
+        "shortList": true,
+        "zeroScoreCount": 1,
+        "reason": null
+      }
+    },
+    {
+      "name": "macro rather than micro recall",
+      "pass": true,
+      "result": {
+        "recall": 0.75,
+        "cohort": [
+          1,
+          2
+        ],
+        "excludedUnseen": 0,
+        "excludedNoEligible": 0,
+        "perUser": [
+          {
+            "userId": 1,
+            "relevant": 2,
+            "hit": 1
+          },
+          {
+            "userId": 2,
+            "relevant": 1,
+            "hit": 1
+          }
+        ]
+      }
+    }
+  ],
+  "passed": true,
+  "memory": {
+    "unreliable": false,
+    "numBytesInGPU": 0,
+    "numBytesInGPUAllocated": 5368252,
+    "numBytesInGPUFree": 5368252,
+    "numTensors": 0,
+    "numDataBuffers": 0,
+    "numBytes": 0
+  }
+}

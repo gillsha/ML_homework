@@ -1,0 +1,22 @@
+user_id,movie_id,title,genres,ppr_rank,ppr_score,recommended_hit
+1,6,Shanghai Triad (Yao a yao yao dao waipo qiao) (1995),Drama,428,2.279428554174956e-05,False
+1,18,"White Balloon, The (1995)",Drama,972,2.0350512386357877e-06,False
+1,20,Angels and Insects (1995),Drama;Romance,208,6.658600614173338e-05,False
+1,32,Crumb (1994),Documentary,144,8.889253513189033e-05,False
+1,100,Fargo (1996),Crime;Drama;Thriller,1,0.0006855191895738244,True
+1,111,"Truth About Cats & Dogs, The (1996)",Comedy;Romance,35,0.00021105899941176176,False
+1,129,Bound (1996),Crime;Drama;Romance;Thriller,68,0.00014891654427628964,False
+1,154,Monty Python's Life of Brian (1979),Comedy,42,0.00019717014220077544,False
+1,169,"Wrong Trousers, The (1993)",Animation;Comedy,43,0.00018359074601903558,False
+1,171,Delicatessen (1991),Comedy;Sci-Fi,157,8.131033246172592e-05,False
+1,178,12 Angry Men (1957),Drama,57,0.00016362009046133608,False
+1,209,This Is Spinal Tap (1984),Comedy;Drama;Musical,27,0.00023843831149861217,False
+1,221,Breaking the Waves (1996),Drama,154,8.482829434797168e-05,False
+1,222,Star Trek: First Contact (1996),Action;Adventure;Sci-Fi,7,0.00033278539194725454,True
+1,228,Star Trek: The Wrath of Khan (1982),Action;Adventure;Sci-Fi,22,0.0002506844175513834,False
+1,242,Kolya (1996),Comedy,89,0.0001248995104106143,False
+1,256,When the Cats Away (Chacun cherche son chat) (1996),Comedy;Romance,542,1.3456370652420446e-05,False
+1,258,Contact (1997),Drama;Sci-Fi,2,0.0004398658056743443,True
+1,270,Gattaca (1997),Drama;Sci-Fi;Thriller,165,7.814534910721704e-05,False
+2,304,Fly Away Home (1996),Adventure;Children's,84,0.00019255024380981922,False
+2,316,As Good As It Gets (1997),Comedy;Drama,177,0.00011436683416832238,False

@@ -1,0 +1,5056 @@
+{
+  "alpha": 0.5,
+  "start": 896,
+  "end": 943,
+  "source": "Independent float64 NumPy from raw data; no app arrays used to construct graph. Per-column L1<1e-6; cap500.",
+  "comparisons": [
+    {
+      "userId": 897,
+      "gpuIterations": 21,
+      "gpuResidual": 9.664180424806545e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743163875401e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 2.0433066461045257e-08,
+      "l1Difference": 5.976931495710463e-08,
+      "gpuFloat64StationarityResidual": 5.206383662080739e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            100,
+            1,
+            79,
+            64,
+            318,
+            258,
+            7,
+            357,
+            191
+          ],
+          "gpuIds": [
+            50,
+            100,
+            1,
+            79,
+            64,
+            318,
+            258,
+            7,
+            357,
+            191
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            100,
+            1,
+            79,
+            64,
+            318,
+            258,
+            7,
+            357,
+            191
+          ],
+          "gpuIds": [
+            50,
+            100,
+            1,
+            79,
+            64,
+            318,
+            258,
+            7,
+            357,
+            191
+          ],
+          "numpyHit": 3,
+          "gpuHit": 3
+        }
+      }
+    },
+    {
+      "userId": 898,
+      "gpuIterations": 21,
+      "gpuResidual": 9.704356216388987e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743163644829e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.5597696800817573e-08,
+      "l1Difference": 5.392461329345986e-08,
+      "gpuFloat64StationarityResidual": 5.21976772875323e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            269,
+            333,
+            50,
+            268,
+            100,
+            294,
+            340,
+            307,
+            181,
+            127
+          ],
+          "gpuIds": [
+            269,
+            333,
+            50,
+            268,
+            100,
+            294,
+            340,
+            307,
+            181,
+            127
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            269,
+            333,
+            50,
+            268,
+            100,
+            294,
+            340,
+            307,
+            181,
+            127
+          ],
+          "gpuIds": [
+            269,
+            333,
+            50,
+            268,
+            100,
+            294,
+            340,
+            307,
+            181,
+            127
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 899,
+      "gpuIterations": 21,
+      "gpuResidual": 9.486361705057789e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743165021013e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.3014661770158198e-09,
+      "l1Difference": 4.395717657625155e-08,
+      "gpuFloat64StationarityResidual": 4.822233137630526e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            100,
+            127,
+            56,
+            22,
+            7,
+            286,
+            210,
+            12,
+            191,
+            183
+          ],
+          "gpuIds": [
+            100,
+            127,
+            56,
+            22,
+            7,
+            286,
+            210,
+            12,
+            191,
+            183
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            100,
+            127,
+            56,
+            22,
+            7,
+            286,
+            210,
+            12,
+            191,
+            183
+          ],
+          "gpuIds": [
+            100,
+            127,
+            56,
+            22,
+            7,
+            286,
+            210,
+            12,
+            191,
+            183
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 900,
+      "gpuIterations": 21,
+      "gpuResidual": 9.504063882559421e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743163682961e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.512004632608921e-08,
+      "l1Difference": 5.511495464010507e-08,
+      "gpuFloat64StationarityResidual": 5.024301432417445e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            127,
+            181,
+            1,
+            98,
+            286,
+            174,
+            258,
+            7,
+            56
+          ],
+          "gpuIds": [
+            50,
+            127,
+            181,
+            1,
+            98,
+            286,
+            174,
+            258,
+            7,
+            56
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            127,
+            181,
+            1,
+            98,
+            286,
+            174,
+            258,
+            7,
+            56
+          ],
+          "gpuIds": [
+            50,
+            127,
+            181,
+            1,
+            98,
+            286,
+            174,
+            258,
+            7,
+            56
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 901,
+      "gpuIterations": 21,
+      "gpuResidual": 9.342936664324952e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743164562343e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.7618659753360078e-08,
+      "l1Difference": 7.872664241377272e-08,
+      "gpuFloat64StationarityResidual": 4.970884473333431e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            100,
+            98,
+            127,
+            79,
+            258,
+            173,
+            69,
+            64,
+            7,
+            300
+          ],
+          "gpuIds": [
+            100,
+            98,
+            127,
+            79,
+            258,
+            173,
+            69,
+            64,
+            7,
+            300
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            100,
+            98,
+            127,
+            79,
+            258,
+            173,
+            64,
+            7,
+            300,
+            318
+          ],
+          "gpuIds": [
+            100,
+            98,
+            127,
+            79,
+            258,
+            173,
+            64,
+            7,
+            300,
+            318
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 902,
+      "gpuIterations": 21,
+      "gpuResidual": 9.50026674217952e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743164622433e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.6529875801474248e-08,
+      "l1Difference": 7.543666883661177e-08,
+      "gpuFloat64StationarityResidual": 5.263035944625777e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            100,
+            286,
+            174,
+            98,
+            56,
+            313,
+            79,
+            64,
+            269,
+            173
+          ],
+          "gpuIds": [
+            100,
+            286,
+            174,
+            98,
+            56,
+            313,
+            79,
+            64,
+            269,
+            173
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            100,
+            286,
+            174,
+            98,
+            56,
+            313,
+            79,
+            64,
+            269,
+            173
+          ],
+          "gpuIds": [
+            100,
+            286,
+            174,
+            98,
+            56,
+            313,
+            79,
+            64,
+            269,
+            173
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        }
+      }
+    },
+    {
+      "userId": 903,
+      "gpuIterations": 22,
+      "gpuResidual": 5.94451819324604e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743163780639e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 3.0094503333799594e-08,
+      "l1Difference": 5.483795746401257e-07,
+      "gpuFloat64StationarityResidual": 3.457322037896897e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            98,
+            174,
+            56,
+            172,
+            258,
+            286,
+            173,
+            168,
+            237,
+            117
+          ],
+          "gpuIds": [
+            98,
+            174,
+            56,
+            172,
+            258,
+            286,
+            173,
+            168,
+            237,
+            117
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            98,
+            174,
+            172,
+            258,
+            286,
+            173,
+            168,
+            237,
+            117,
+            22
+          ],
+          "gpuIds": [
+            98,
+            174,
+            172,
+            258,
+            286,
+            173,
+            168,
+            237,
+            117,
+            22
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        }
+      }
+    },
+    {
+      "userId": 904,
+      "gpuIterations": 21,
+      "gpuResidual": 9.509648180028307e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.53674316437855e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 2.616423411261337e-08,
+      "l1Difference": 7.054872596996722e-08,
+      "gpuFloat64StationarityResidual": 5.026756683846764e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            1,
+            100,
+            258,
+            286,
+            121,
+            127,
+            294,
+            98,
+            313
+          ],
+          "gpuIds": [
+            50,
+            1,
+            100,
+            258,
+            286,
+            121,
+            127,
+            294,
+            98,
+            313
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            1,
+            100,
+            258,
+            286,
+            121,
+            127,
+            294,
+            98,
+            313
+          ],
+          "gpuIds": [
+            50,
+            1,
+            100,
+            258,
+            286,
+            121,
+            127,
+            294,
+            98,
+            313
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 905,
+      "gpuIterations": 21,
+      "gpuResidual": 9.619817546990816e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.53674316249781e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 2.3020026329589882e-08,
+      "l1Difference": 6.637474265487741e-08,
+      "gpuFloat64StationarityResidual": 5.246562753576731e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            286,
+            50,
+            288,
+            269,
+            127,
+            181,
+            1,
+            268,
+            7,
+            272
+          ],
+          "gpuIds": [
+            286,
+            50,
+            288,
+            269,
+            127,
+            181,
+            1,
+            268,
+            7,
+            272
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            286,
+            50,
+            288,
+            269,
+            127,
+            181,
+            1,
+            268,
+            272,
+            340
+          ],
+          "gpuIds": [
+            286,
+            50,
+            288,
+            269,
+            127,
+            181,
+            1,
+            268,
+            272,
+            340
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 906,
+      "gpuIterations": 21,
+      "gpuResidual": 9.542643510940252e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.53674316433357e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.9448284427348028e-08,
+      "l1Difference": 6.022103118275665e-08,
+      "gpuFloat64StationarityResidual": 5.004086384059549e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            258,
+            127,
+            181,
+            1,
+            302,
+            275,
+            269,
+            313,
+            14
+          ],
+          "gpuIds": [
+            50,
+            258,
+            127,
+            181,
+            1,
+            302,
+            275,
+            269,
+            313,
+            14
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            258,
+            127,
+            181,
+            1,
+            302,
+            275,
+            269,
+            313,
+            14
+          ],
+          "gpuIds": [
+            50,
+            258,
+            127,
+            181,
+            1,
+            302,
+            275,
+            269,
+            313,
+            14
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 907,
+      "gpuIterations": 21,
+      "gpuResidual": 9.609414064470911e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743164210292e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 2.4579064672458628e-08,
+      "l1Difference": 6.1191116500244e-08,
+      "gpuFloat64StationarityResidual": 5.204259707467113e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            127,
+            174,
+            7,
+            300,
+            222,
+            56,
+            313,
+            64,
+            22,
+            9
+          ],
+          "gpuIds": [
+            127,
+            174,
+            7,
+            300,
+            222,
+            56,
+            313,
+            64,
+            22,
+            9
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            127,
+            174,
+            7,
+            300,
+            222,
+            56,
+            313,
+            64,
+            22,
+            9
+          ],
+          "gpuIds": [
+            127,
+            174,
+            7,
+            300,
+            222,
+            56,
+            313,
+            64,
+            22,
+            9
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        }
+      }
+    },
+    {
+      "userId": 908,
+      "gpuIterations": 21,
+      "gpuResidual": 9.478238780502579e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743164987473e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.1550704750312724e-09,
+      "l1Difference": 4.310065466339382e-08,
+      "gpuFloat64StationarityResidual": 4.819440270876816e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            1,
+            64,
+            357,
+            22,
+            258,
+            286,
+            168,
+            89,
+            191,
+            176
+          ],
+          "gpuIds": [
+            1,
+            64,
+            357,
+            22,
+            258,
+            286,
+            168,
+            89,
+            191,
+            176
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            1,
+            64,
+            22,
+            258,
+            286,
+            168,
+            89,
+            191,
+            176,
+            210
+          ],
+          "gpuIds": [
+            1,
+            64,
+            22,
+            258,
+            286,
+            168,
+            89,
+            191,
+            176,
+            210
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 909,
+      "gpuIterations": 21,
+      "gpuResidual": 9.626561450204463e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.53674316367911e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 5.3374061836919395e-09,
+      "l1Difference": 4.066788842236167e-08,
+      "gpuFloat64StationarityResidual": 4.944455437991543e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            100,
+            258,
+            288,
+            313,
+            127,
+            181,
+            302,
+            269,
+            333
+          ],
+          "gpuIds": [
+            50,
+            100,
+            258,
+            288,
+            313,
+            127,
+            181,
+            302,
+            269,
+            333
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 910,
+      "gpuIterations": 21,
+      "gpuResidual": 9.375878562423168e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743164473112e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.071759303528097e-08,
+      "l1Difference": 5.389861331297743e-08,
+      "gpuFloat64StationarityResidual": 4.7157444636326804e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            258,
+            98,
+            7,
+            286,
+            172,
+            79,
+            288,
+            64,
+            22,
+            318
+          ],
+          "gpuIds": [
+            258,
+            98,
+            7,
+            286,
+            172,
+            79,
+            288,
+            64,
+            22,
+            318
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            258,
+            7,
+            286,
+            172,
+            79,
+            288,
+            64,
+            22,
+            318,
+            15
+          ],
+          "gpuIds": [
+            258,
+            7,
+            286,
+            172,
+            79,
+            288,
+            64,
+            22,
+            318,
+            15
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 911,
+      "gpuIterations": 21,
+      "gpuResidual": 9.468776624999009e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743163139714e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 2.3261230608362382e-08,
+      "l1Difference": 8.288820960215748e-08,
+      "gpuFloat64StationarityResidual": 5.009415040884507e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            100,
+            181,
+            127,
+            56,
+            1,
+            318,
+            64,
+            79,
+            69
+          ],
+          "gpuIds": [
+            50,
+            100,
+            181,
+            127,
+            56,
+            1,
+            318,
+            64,
+            79,
+            69
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            100,
+            181,
+            127,
+            56,
+            1,
+            318,
+            64,
+            79,
+            69
+          ],
+          "gpuIds": [
+            50,
+            100,
+            181,
+            127,
+            56,
+            1,
+            318,
+            64,
+            79,
+            69
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 912,
+      "gpuIterations": 21,
+      "gpuResidual": 9.62137164606247e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.53674316428533e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.1628797147444914e-08,
+      "l1Difference": 5.7138907967529604e-08,
+      "gpuFloat64StationarityResidual": 5.144310222061915e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            98,
+            174,
+            100,
+            127,
+            181,
+            191,
+            79,
+            1,
+            69
+          ],
+          "gpuIds": [
+            50,
+            98,
+            174,
+            100,
+            127,
+            181,
+            191,
+            79,
+            1,
+            69
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            98,
+            100,
+            127,
+            181,
+            191,
+            79,
+            1,
+            69,
+            89
+          ],
+          "gpuIds": [
+            50,
+            98,
+            100,
+            127,
+            181,
+            191,
+            79,
+            1,
+            69,
+            89
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 913,
+      "gpuIterations": 21,
+      "gpuResidual": 9.515277383798093e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743163892691e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 2.343042704300302e-08,
+      "l1Difference": 1.0532354686045966e-07,
+      "gpuFloat64StationarityResidual": 5.161260754495406e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            127,
+            172,
+            64,
+            258,
+            7,
+            286,
+            195,
+            96,
+            216,
+            117
+          ],
+          "gpuIds": [
+            127,
+            172,
+            64,
+            258,
+            7,
+            286,
+            195,
+            96,
+            216,
+            117
+          ],
+          "numpyHit": 5,
+          "gpuHit": 5
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            127,
+            172,
+            258,
+            286,
+            117,
+            237,
+            135,
+            194,
+            121,
+            427
+          ],
+          "gpuIds": [
+            127,
+            172,
+            258,
+            286,
+            117,
+            237,
+            135,
+            194,
+            121,
+            427
+          ],
+          "numpyHit": 5,
+          "gpuHit": 5
+        }
+      }
+    },
+    {
+      "userId": 914,
+      "gpuIterations": 21,
+      "gpuResidual": 9.715411124489037e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743163267382e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 2.1769720359721134e-08,
+      "l1Difference": 5.8387983757943184e-08,
+      "gpuFloat64StationarityResidual": 5.070491291522241e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            174,
+            100,
+            50,
+            69,
+            79,
+            237,
+            210,
+            98,
+            286,
+            194
+          ],
+          "gpuIds": [
+            174,
+            100,
+            50,
+            69,
+            79,
+            237,
+            210,
+            98,
+            286,
+            194
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            174,
+            100,
+            50,
+            69,
+            79,
+            237,
+            210,
+            98,
+            286,
+            194
+          ],
+          "gpuIds": [
+            174,
+            100,
+            50,
+            69,
+            79,
+            237,
+            210,
+            98,
+            286,
+            194
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 915,
+      "gpuIterations": 21,
+      "gpuResidual": 9.566002745486912e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.53674316414896e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.3882717198043792e-08,
+      "l1Difference": 4.617922294970876e-08,
+      "gpuFloat64StationarityResidual": 4.945558965852341e-07,
+      "top10Agreement": {
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            300,
+            269,
+            272,
+            340,
+            268,
+            294,
+            751,
+            100,
+            690,
+            50
+          ],
+          "gpuIds": [
+            300,
+            269,
+            272,
+            340,
+            268,
+            294,
+            751,
+            100,
+            690,
+            50
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        }
+      }
+    },
+    {
+      "userId": 916,
+      "gpuIterations": 21,
+      "gpuResidual": 9.435323136131046e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.53674316351936e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 4.508946549464099e-09,
+      "l1Difference": 4.726307545605498e-08,
+      "gpuFloat64StationarityResidual": 4.787975740245785e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            127,
+            258,
+            357,
+            191,
+            197,
+            185,
+            275,
+            187,
+            603,
+            479
+          ],
+          "gpuIds": [
+            127,
+            258,
+            357,
+            191,
+            197,
+            185,
+            275,
+            187,
+            603,
+            479
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            127,
+            258,
+            357,
+            191,
+            197,
+            185,
+            275,
+            187,
+            603,
+            479
+          ],
+          "gpuIds": [
+            127,
+            258,
+            357,
+            191,
+            197,
+            185,
+            275,
+            187,
+            603,
+            479
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 917,
+      "gpuIterations": 21,
+      "gpuResidual": 9.38322045840323e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743162698526e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.0894389723681286e-08,
+      "l1Difference": 8.413665118025776e-08,
+      "gpuFloat64StationarityResidual": 4.990227569070851e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            286,
+            258,
+            127,
+            181,
+            7,
+            300,
+            117,
+            288,
+            15,
+            276
+          ],
+          "gpuIds": [
+            286,
+            258,
+            127,
+            181,
+            7,
+            300,
+            117,
+            288,
+            15,
+            276
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            286,
+            258,
+            127,
+            181,
+            7,
+            300,
+            117,
+            288,
+            15,
+            269
+          ],
+          "gpuIds": [
+            286,
+            258,
+            127,
+            181,
+            7,
+            300,
+            117,
+            288,
+            15,
+            269
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 918,
+      "gpuIterations": 21,
+      "gpuResidual": 9.528534405944811e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743165222867e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.3776575880086739e-08,
+      "l1Difference": 4.8836555560356846e-08,
+      "gpuFloat64StationarityResidual": 4.895368897113617e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            100,
+            98,
+            127,
+            286,
+            181,
+            318,
+            56,
+            483,
+            191
+          ],
+          "gpuIds": [
+            50,
+            100,
+            98,
+            127,
+            286,
+            181,
+            318,
+            56,
+            483,
+            191
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            100,
+            98,
+            127,
+            286,
+            181,
+            318,
+            56,
+            483,
+            191
+          ],
+          "gpuIds": [
+            50,
+            100,
+            98,
+            127,
+            286,
+            181,
+            318,
+            56,
+            483,
+            191
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 919,
+      "gpuIterations": 21,
+      "gpuResidual": 9.59063754635281e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743164294744e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.9239626891653927e-08,
+      "l1Difference": 5.5137267421116977e-08,
+      "gpuFloat64StationarityResidual": 4.979350368459644e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            127,
+            286,
+            56,
+            121,
+            313,
+            172,
+            79,
+            269,
+            69,
+            173
+          ],
+          "gpuIds": [
+            127,
+            286,
+            56,
+            121,
+            313,
+            172,
+            79,
+            269,
+            69,
+            173
+          ],
+          "numpyHit": 2,
+          "gpuHit": 2
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            127,
+            56,
+            121,
+            172,
+            79,
+            269,
+            173,
+            357,
+            210,
+            96
+          ],
+          "gpuIds": [
+            127,
+            56,
+            121,
+            172,
+            79,
+            269,
+            173,
+            357,
+            210,
+            96
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 920,
+      "gpuIterations": 21,
+      "gpuResidual": 9.40439917940239e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743162570657e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.447968822620993e-08,
+      "l1Difference": 6.11441513074007e-08,
+      "gpuFloat64StationarityResidual": 5.004068478387668e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            258,
+            269,
+            315,
+            268,
+            100,
+            294,
+            326,
+            50,
+            751,
+            690
+          ],
+          "gpuIds": [
+            258,
+            269,
+            315,
+            268,
+            100,
+            294,
+            326,
+            50,
+            751,
+            690
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            269,
+            315,
+            268,
+            100,
+            294,
+            326,
+            50,
+            751,
+            690,
+            303
+          ],
+          "gpuIds": [
+            269,
+            315,
+            268,
+            100,
+            294,
+            326,
+            50,
+            751,
+            690,
+            303
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 921,
+      "gpuIterations": 21,
+      "gpuResidual": 9.68329914030619e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743164000112e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 2.5916259693836707e-08,
+      "l1Difference": 8.56169623421483e-08,
+      "gpuFloat64StationarityResidual": 5.219415349542792e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            258,
+            300,
+            100,
+            117,
+            174,
+            127,
+            98,
+            286,
+            172,
+            22
+          ],
+          "gpuIds": [
+            258,
+            300,
+            100,
+            117,
+            174,
+            127,
+            98,
+            286,
+            172,
+            22
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            258,
+            300,
+            100,
+            117,
+            127,
+            98,
+            286,
+            172,
+            22,
+            7
+          ],
+          "gpuIds": [
+            258,
+            300,
+            100,
+            117,
+            127,
+            98,
+            286,
+            172,
+            22,
+            7
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        }
+      }
+    },
+    {
+      "userId": 922,
+      "gpuIterations": 21,
+      "gpuResidual": 9.446285389458353e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743164121542e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 2.1539768746414723e-08,
+      "l1Difference": 6.645628655389451e-08,
+      "gpuFloat64StationarityResidual": 5.119300680715678e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            100,
+            79,
+            258,
+            121,
+            64,
+            96,
+            69,
+            7,
+            117,
+            318
+          ],
+          "gpuIds": [
+            100,
+            79,
+            258,
+            121,
+            64,
+            96,
+            69,
+            7,
+            117,
+            318
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            100,
+            79,
+            258,
+            121,
+            64,
+            96,
+            7,
+            117,
+            318,
+            28
+          ],
+          "gpuIds": [
+            100,
+            79,
+            258,
+            121,
+            64,
+            96,
+            7,
+            117,
+            318,
+            28
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        }
+      }
+    },
+    {
+      "userId": 923,
+      "gpuIterations": 21,
+      "gpuResidual": 9.609638027541223e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743163916551e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 2.9032815818119673e-08,
+      "l1Difference": 7.6590774736664e-08,
+      "gpuFloat64StationarityResidual": 5.138547671800965e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            258,
+            127,
+            300,
+            7,
+            286,
+            313,
+            98,
+            15,
+            174,
+            56
+          ],
+          "gpuIds": [
+            258,
+            127,
+            300,
+            7,
+            286,
+            313,
+            98,
+            15,
+            174,
+            56
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            258,
+            127,
+            300,
+            7,
+            286,
+            313,
+            98,
+            15,
+            174,
+            56
+          ],
+          "gpuIds": [
+            258,
+            127,
+            300,
+            7,
+            286,
+            313,
+            98,
+            15,
+            174,
+            56
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        }
+      }
+    },
+    {
+      "userId": 924,
+      "gpuIterations": 21,
+      "gpuResidual": 9.3792550615035e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743163570992e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 6.9126740998015634e-09,
+      "l1Difference": 5.0075940875621817e-08,
+      "gpuFloat64StationarityResidual": 4.805408489384533e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            98,
+            79,
+            483,
+            22,
+            69,
+            357,
+            168,
+            191,
+            204,
+            96
+          ],
+          "gpuIds": [
+            98,
+            79,
+            483,
+            22,
+            69,
+            357,
+            168,
+            191,
+            204,
+            96
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            98,
+            79,
+            483,
+            22,
+            69,
+            357,
+            168,
+            191,
+            204,
+            89
+          ],
+          "gpuIds": [
+            98,
+            79,
+            483,
+            22,
+            69,
+            357,
+            168,
+            191,
+            204,
+            89
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 925,
+      "gpuIterations": 21,
+      "gpuResidual": 9.480414178142382e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743164154871e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 8.953704652703287e-10,
+      "l1Difference": 3.4092051785162364e-08,
+      "gpuFloat64StationarityResidual": 4.7580505142774096e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            258,
+            300,
+            313,
+            50,
+            286,
+            302,
+            100,
+            294,
+            328,
+            181
+          ],
+          "gpuIds": [
+            258,
+            300,
+            313,
+            50,
+            286,
+            302,
+            100,
+            294,
+            328,
+            181
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 926,
+      "gpuIterations": 21,
+      "gpuResidual": 9.519520745016052e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.53674316452071e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 2.397469700543553e-08,
+      "l1Difference": 7.362552538669748e-08,
+      "gpuFloat64StationarityResidual": 5.09763687570776e-07,
+      "top10Agreement": {}
+    },
+    {
+      "userId": 927,
+      "gpuIterations": 21,
+      "gpuResidual": 9.514383236819413e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743163398398e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.5239833617286536e-08,
+      "l1Difference": 5.746473900336055e-08,
+      "gpuFloat64StationarityResidual": 4.911756987017521e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            181,
+            100,
+            121,
+            172,
+            117,
+            98,
+            258,
+            127,
+            173
+          ],
+          "gpuIds": [
+            50,
+            181,
+            100,
+            121,
+            172,
+            117,
+            98,
+            258,
+            127,
+            173
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            181,
+            100,
+            121,
+            172,
+            117,
+            98,
+            258,
+            127,
+            173
+          ],
+          "gpuIds": [
+            50,
+            181,
+            100,
+            121,
+            172,
+            117,
+            98,
+            258,
+            127,
+            173
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        }
+      }
+    },
+    {
+      "userId": 928,
+      "gpuIterations": 21,
+      "gpuResidual": 9.63472643888963e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743164876073e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.9214622226648714e-08,
+      "l1Difference": 7.320425875930091e-08,
+      "gpuFloat64StationarityResidual": 5.161894814457527e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            300,
+            258,
+            313,
+            100,
+            181,
+            174,
+            1,
+            286,
+            127
+          ],
+          "gpuIds": [
+            50,
+            300,
+            258,
+            313,
+            100,
+            181,
+            174,
+            1,
+            286,
+            127
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            300,
+            258,
+            313,
+            100,
+            181,
+            174,
+            1,
+            286,
+            302
+          ],
+          "gpuIds": [
+            50,
+            300,
+            258,
+            313,
+            100,
+            181,
+            174,
+            1,
+            286,
+            302
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 929,
+      "gpuIterations": 21,
+      "gpuResidual": 9.687150850368198e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743163062531e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 2.7251189527177644e-08,
+      "l1Difference": 7.620344486562898e-08,
+      "gpuFloat64StationarityResidual": 5.022403225500504e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            181,
+            56,
+            64,
+            79,
+            357,
+            183,
+            173,
+            168,
+            69,
+            286
+          ],
+          "gpuIds": [
+            181,
+            56,
+            64,
+            79,
+            357,
+            183,
+            173,
+            168,
+            69,
+            286
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            181,
+            56,
+            64,
+            79,
+            357,
+            183,
+            173,
+            168,
+            69,
+            286
+          ],
+          "gpuIds": [
+            181,
+            56,
+            64,
+            79,
+            357,
+            183,
+            173,
+            168,
+            69,
+            286
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        }
+      }
+    },
+    {
+      "userId": 930,
+      "gpuIterations": 21,
+      "gpuResidual": 9.485872851655586e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743163750082e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 2.4528894915221144e-08,
+      "l1Difference": 7.411668135730773e-08,
+      "gpuFloat64StationarityResidual": 5.060403097163727e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            181,
+            258,
+            127,
+            7,
+            98,
+            313,
+            15,
+            9,
+            222,
+            276
+          ],
+          "gpuIds": [
+            181,
+            258,
+            127,
+            7,
+            98,
+            313,
+            15,
+            9,
+            222,
+            276
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 931,
+      "gpuIterations": 21,
+      "gpuResidual": 9.455148983761319e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743164758175e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 6.328100821129112e-09,
+      "l1Difference": 4.659936884446341e-08,
+      "gpuFloat64StationarityResidual": 4.834123835052094e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            286,
+            300,
+            127,
+            288,
+            1,
+            294,
+            275,
+            272,
+            9,
+            328
+          ],
+          "gpuIds": [
+            286,
+            300,
+            127,
+            288,
+            1,
+            294,
+            275,
+            272,
+            9,
+            328
+          ],
+          "numpyHit": 3,
+          "gpuHit": 3
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            286,
+            300,
+            288,
+            1,
+            294,
+            9,
+            328,
+            268,
+            117,
+            7
+          ],
+          "gpuIds": [
+            286,
+            300,
+            288,
+            1,
+            294,
+            9,
+            328,
+            268,
+            117,
+            7
+          ],
+          "numpyHit": 2,
+          "gpuHit": 2
+        }
+      }
+    },
+    {
+      "userId": 932,
+      "gpuIterations": 22,
+      "gpuResidual": 5.041380859438505e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743164790777e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 2.8999069812130074e-08,
+      "l1Difference": 5.090293317477906e-07,
+      "gpuFloat64StationarityResidual": 2.8456578097388074e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            127,
+            181,
+            318,
+            357,
+            79,
+            286,
+            69,
+            12,
+            22
+          ],
+          "gpuIds": [
+            50,
+            127,
+            181,
+            318,
+            357,
+            79,
+            286,
+            69,
+            12,
+            22
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            127,
+            181,
+            318,
+            357,
+            79,
+            286,
+            69,
+            12,
+            22
+          ],
+          "gpuIds": [
+            50,
+            127,
+            181,
+            318,
+            357,
+            79,
+            286,
+            69,
+            12,
+            22
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        }
+      }
+    },
+    {
+      "userId": 933,
+      "gpuIterations": 21,
+      "gpuResidual": 9.374214187118923e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743164164775e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 2.9964731806941813e-09,
+      "l1Difference": 4.598730756067615e-08,
+      "gpuFloat64StationarityResidual": 4.7184781420442917e-07,
+      "top10Agreement": {}
+    },
+    {
+      "userId": 934,
+      "gpuIterations": 21,
+      "gpuResidual": 9.438371080250363e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743163196834e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.644340841266967e-08,
+      "l1Difference": 5.152261341509909e-08,
+      "gpuFloat64StationarityResidual": 4.846418961516031e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            98,
+            127,
+            1,
+            79,
+            64,
+            318,
+            258,
+            357,
+            22,
+            12
+          ],
+          "gpuIds": [
+            98,
+            127,
+            1,
+            79,
+            64,
+            318,
+            258,
+            357,
+            22,
+            12
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            98,
+            127,
+            1,
+            79,
+            64,
+            318,
+            258,
+            357,
+            22,
+            12
+          ],
+          "gpuIds": [
+            98,
+            127,
+            1,
+            79,
+            64,
+            318,
+            258,
+            357,
+            22,
+            12
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 935,
+      "gpuIterations": 21,
+      "gpuResidual": 9.414084161107894e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743163479015e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 2.7660698398435102e-08,
+      "l1Difference": 7.209694762513949e-08,
+      "gpuFloat64StationarityResidual": 4.918536849730505e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            258,
+            222,
+            288,
+            7,
+            294,
+            174,
+            405,
+            275,
+            111
+          ],
+          "gpuIds": [
+            50,
+            258,
+            222,
+            288,
+            7,
+            294,
+            174,
+            405,
+            275,
+            111
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            258,
+            222,
+            288,
+            7,
+            294,
+            174,
+            275,
+            111,
+            25
+          ],
+          "gpuIds": [
+            50,
+            258,
+            222,
+            288,
+            7,
+            294,
+            174,
+            275,
+            111,
+            25
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 936,
+      "gpuIterations": 21,
+      "gpuResidual": 9.707730441732565e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743163409415e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 2.196982096247524e-08,
+      "l1Difference": 5.4069034144794774e-08,
+      "gpuFloat64StationarityResidual": 5.13134501184645e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            286,
+            127,
+            288,
+            302,
+            98,
+            56,
+            15,
+            174,
+            222,
+            25
+          ],
+          "gpuIds": [
+            286,
+            127,
+            288,
+            302,
+            98,
+            56,
+            15,
+            174,
+            222,
+            25
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            286,
+            127,
+            288,
+            302,
+            98,
+            56,
+            15,
+            174,
+            222,
+            172
+          ],
+          "gpuIds": [
+            286,
+            127,
+            288,
+            302,
+            98,
+            56,
+            15,
+            174,
+            222,
+            172
+          ],
+          "numpyHit": 2,
+          "gpuHit": 2
+        }
+      }
+    },
+    {
+      "userId": 937,
+      "gpuIterations": 21,
+      "gpuResidual": 9.729249086376512e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743164695937e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 2.9411878932350533e-08,
+      "l1Difference": 6.834662091819464e-08,
+      "gpuFloat64StationarityResidual": 5.150930334491843e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            127,
+            181,
+            269,
+            302,
+            1,
+            313,
+            237,
+            475,
+            7,
+            98
+          ],
+          "gpuIds": [
+            127,
+            181,
+            269,
+            302,
+            1,
+            313,
+            237,
+            475,
+            7,
+            98
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            127,
+            181,
+            269,
+            302,
+            1,
+            313,
+            475,
+            7,
+            98,
+            276
+          ],
+          "gpuIds": [
+            127,
+            181,
+            269,
+            302,
+            1,
+            313,
+            475,
+            7,
+            98,
+            276
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 938,
+      "gpuIterations": 21,
+      "gpuResidual": 9.379673429066315e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743163011248e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 5.22792522814064e-10,
+      "l1Difference": 3.181415730240427e-08,
+      "gpuFloat64StationarityResidual": 4.738312214353625e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            294,
+            98,
+            174,
+            172,
+            56,
+            475,
+            302,
+            79,
+            22,
+            64
+          ],
+          "gpuIds": [
+            294,
+            98,
+            174,
+            172,
+            56,
+            475,
+            302,
+            79,
+            22,
+            64
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            294,
+            98,
+            174,
+            172,
+            56,
+            475,
+            302,
+            79,
+            22,
+            64
+          ],
+          "gpuIds": [
+            294,
+            98,
+            174,
+            172,
+            56,
+            475,
+            302,
+            79,
+            22,
+            64
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 939,
+      "gpuIterations": 21,
+      "gpuResidual": 9.441287147637922e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743164206388e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 5.464566681101513e-10,
+      "l1Difference": 3.0623510501041183e-08,
+      "gpuFloat64StationarityResidual": 4.6708177490791746e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            181,
+            100,
+            1,
+            117,
+            300,
+            7,
+            294,
+            288,
+            286
+          ],
+          "gpuIds": [
+            50,
+            181,
+            100,
+            1,
+            117,
+            300,
+            7,
+            294,
+            288,
+            286
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            181,
+            100,
+            1,
+            117,
+            300,
+            7,
+            294,
+            288,
+            286
+          ],
+          "gpuIds": [
+            50,
+            181,
+            100,
+            1,
+            117,
+            300,
+            7,
+            294,
+            288,
+            286
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 940,
+      "gpuIterations": 21,
+      "gpuResidual": 9.333873549621785e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.53674316341324e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.7529202755994788e-08,
+      "l1Difference": 6.375613345916612e-08,
+      "gpuFloat64StationarityResidual": 4.83746412681032e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            127,
+            1,
+            288,
+            79,
+            318,
+            64,
+            237,
+            117,
+            22,
+            12
+          ],
+          "gpuIds": [
+            127,
+            1,
+            288,
+            79,
+            318,
+            64,
+            237,
+            117,
+            22,
+            12
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            127,
+            1,
+            288,
+            79,
+            318,
+            64,
+            237,
+            117,
+            22,
+            204
+          ],
+          "gpuIds": [
+            127,
+            1,
+            288,
+            79,
+            318,
+            64,
+            237,
+            117,
+            22,
+            204
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        }
+      }
+    },
+    {
+      "userId": 941,
+      "gpuIterations": 21,
+      "gpuResidual": 9.426574365534179e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743165425918e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 1.631051882444723e-08,
+      "l1Difference": 6.130980200027135e-08,
+      "gpuFloat64StationarityResidual": 4.848203409406236e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            100,
+            1,
+            127,
+            286,
+            288,
+            313,
+            121,
+            237,
+            174
+          ],
+          "gpuIds": [
+            50,
+            100,
+            1,
+            127,
+            286,
+            288,
+            313,
+            121,
+            237,
+            174
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            50,
+            100,
+            1,
+            127,
+            286,
+            288,
+            313,
+            121,
+            237,
+            174
+          ],
+          "gpuIds": [
+            50,
+            100,
+            1,
+            127,
+            286,
+            288,
+            313,
+            121,
+            237,
+            174
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        }
+      }
+    },
+    {
+      "userId": 942,
+      "gpuIterations": 21,
+      "gpuResidual": 9.501122804067563e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743164864147e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 3.302326634369024e-09,
+      "l1Difference": 4.0965471080455436e-08,
+      "gpuFloat64StationarityResidual": 4.956493500443909e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            100,
+            181,
+            286,
+            98,
+            174,
+            127,
+            1,
+            302,
+            288,
+            56
+          ],
+          "gpuIds": [
+            100,
+            181,
+            286,
+            98,
+            174,
+            127,
+            1,
+            302,
+            288,
+            56
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            100,
+            181,
+            286,
+            98,
+            127,
+            1,
+            302,
+            288,
+            56,
+            64
+          ],
+          "gpuIds": [
+            100,
+            181,
+            286,
+            98,
+            127,
+            1,
+            302,
+            288,
+            56,
+            64
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        }
+      }
+    },
+    {
+      "userId": 943,
+      "gpuIterations": 21,
+      "gpuResidual": 9.483294434176059e-07,
+      "gpuConverged": true,
+      "numpyIterations": 21,
+      "numpyResidual": 9.536743162712118e-07,
+      "numpyConverged": true,
+      "maxAbsDifference": 3.2857671028452273e-09,
+      "l1Difference": 3.801053013960048e-08,
+      "gpuFloat64StationarityResidual": 4.803525153799053e-07,
+      "top10Agreement": {
+        "val": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            1,
+            7,
+            258,
+            237,
+            183,
+            176,
+            89,
+            222,
+            357,
+            288
+          ],
+          "gpuIds": [
+            1,
+            7,
+            258,
+            237,
+            183,
+            176,
+            89,
+            222,
+            357,
+            288
+          ],
+          "numpyHit": 0,
+          "gpuHit": 0
+        },
+        "test": {
+          "exactOrder": true,
+          "sameSet": true,
+          "numpyIds": [
+            1,
+            7,
+            258,
+            237,
+            183,
+            176,
+            89,
+            222,
+            357,
+            288
+          ],
+          "gpuIds": [
+            1,
+            7,
+            258,
+            237,
+            183,
+            176,
+            89,
+            222,
+            357,
+            288
+          ],
+          "numpyHit": 1,
+          "gpuHit": 1
+        }
+      }
+    }
+  ],
+  "perUser": {
+    "val": [
+      {
+        "userId": 897,
+        "ids": [
+          50,
+          100,
+          1,
+          79,
+          64,
+          318,
+          258,
+          7,
+          357,
+          191
+        ],
+        "relevant": 13,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 273.3
+      },
+      {
+        "userId": 898,
+        "ids": [
+          269,
+          333,
+          50,
+          268,
+          100,
+          294,
+          340,
+          307,
+          181,
+          127
+        ],
+        "relevant": 2,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 229.3
+      },
+      {
+        "userId": 899,
+        "ids": [
+          100,
+          127,
+          56,
+          22,
+          7,
+          286,
+          210,
+          12,
+          191,
+          183
+        ],
+        "relevant": 6,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 246.8
+      },
+      {
+        "userId": 900,
+        "ids": [
+          50,
+          127,
+          181,
+          1,
+          98,
+          286,
+          174,
+          258,
+          7,
+          56
+        ],
+        "relevant": 2,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 308.7
+      },
+      {
+        "userId": 901,
+        "ids": [
+          100,
+          98,
+          127,
+          79,
+          258,
+          173,
+          69,
+          64,
+          7,
+          300
+        ],
+        "relevant": 12,
+        "hit": 1,
+        "hits": [
+          69
+        ],
+        "recall": 0.08333333333333333,
+        "meanPopularity": 265.5
+      },
+      {
+        "userId": 902,
+        "ids": [
+          100,
+          286,
+          174,
+          98,
+          56,
+          313,
+          79,
+          64,
+          269,
+          173
+        ],
+        "relevant": 3,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 262.7
+      },
+      {
+        "userId": 903,
+        "ids": [
+          98,
+          174,
+          56,
+          172,
+          258,
+          286,
+          173,
+          168,
+          237,
+          117
+        ],
+        "relevant": 10,
+        "hit": 1,
+        "hits": [
+          56
+        ],
+        "recall": 0.1,
+        "meanPopularity": 259.5
+      },
+      {
+        "userId": 904,
+        "ids": [
+          50,
+          1,
+          100,
+          258,
+          286,
+          121,
+          127,
+          294,
+          98,
+          313
+        ],
+        "relevant": 1,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 292.4
+      },
+      {
+        "userId": 905,
+        "ids": [
+          286,
+          50,
+          288,
+          269,
+          127,
+          181,
+          1,
+          268,
+          7,
+          272
+        ],
+        "relevant": 1,
+        "hit": 1,
+        "hits": [
+          7
+        ],
+        "recall": 1.0,
+        "meanPopularity": 257.4
+      },
+      {
+        "userId": 906,
+        "ids": [
+          50,
+          258,
+          127,
+          181,
+          1,
+          302,
+          275,
+          269,
+          313,
+          14
+        ],
+        "relevant": 3,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 259.9
+      },
+      {
+        "userId": 907,
+        "ids": [
+          127,
+          174,
+          7,
+          300,
+          222,
+          56,
+          313,
+          64,
+          22,
+          9
+        ],
+        "relevant": 14,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 238.4
+      },
+      {
+        "userId": 908,
+        "ids": [
+          1,
+          64,
+          357,
+          22,
+          258,
+          286,
+          168,
+          89,
+          191,
+          176
+        ],
+        "relevant": 3,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 229.8
+      },
+      {
+        "userId": 909,
+        "ids": [
+          50,
+          100,
+          258,
+          288,
+          313,
+          127,
+          181,
+          302,
+          269,
+          333
+        ],
+        "relevant": 1,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 273.5
+      },
+      {
+        "userId": 910,
+        "ids": [
+          258,
+          98,
+          7,
+          286,
+          172,
+          79,
+          288,
+          64,
+          22,
+          318
+        ],
+        "relevant": 3,
+        "hit": 1,
+        "hits": [
+          98
+        ],
+        "recall": 0.3333333333333333,
+        "meanPopularity": 251.1
+      },
+      {
+        "userId": 911,
+        "ids": [
+          50,
+          100,
+          181,
+          127,
+          56,
+          1,
+          318,
+          64,
+          79,
+          69
+        ],
+        "relevant": 3,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 291.2
+      },
+      {
+        "userId": 912,
+        "ids": [
+          50,
+          98,
+          174,
+          100,
+          127,
+          181,
+          191,
+          79,
+          1,
+          69
+        ],
+        "relevant": 4,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 301.1
+      },
+      {
+        "userId": 913,
+        "ids": [
+          127,
+          172,
+          64,
+          258,
+          7,
+          286,
+          195,
+          96,
+          216,
+          117
+        ],
+        "relevant": 13,
+        "hit": 5,
+        "hits": [
+          7,
+          64,
+          96,
+          195,
+          216
+        ],
+        "recall": 0.38461538461538464,
+        "meanPopularity": 240.0
+      },
+      {
+        "userId": 914,
+        "ids": [
+          174,
+          100,
+          50,
+          69,
+          79,
+          237,
+          210,
+          98,
+          286,
+          194
+        ],
+        "relevant": 1,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 273.9
+      },
+      {
+        "userId": 916,
+        "ids": [
+          127,
+          258,
+          357,
+          191,
+          197,
+          185,
+          275,
+          187,
+          603,
+          479
+        ],
+        "relevant": 8,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 195.3
+      },
+      {
+        "userId": 917,
+        "ids": [
+          286,
+          258,
+          127,
+          181,
+          7,
+          300,
+          117,
+          288,
+          15,
+          276
+        ],
+        "relevant": 3,
+        "hit": 1,
+        "hits": [
+          276
+        ],
+        "recall": 0.3333333333333333,
+        "meanPopularity": 245.7
+      },
+      {
+        "userId": 918,
+        "ids": [
+          50,
+          100,
+          98,
+          127,
+          286,
+          181,
+          318,
+          56,
+          483,
+          191
+        ],
+        "relevant": 3,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 293.8
+      },
+      {
+        "userId": 919,
+        "ids": [
+          127,
+          286,
+          56,
+          121,
+          313,
+          172,
+          79,
+          269,
+          69,
+          173
+        ],
+        "relevant": 13,
+        "hit": 2,
+        "hits": [
+          286,
+          313
+        ],
+        "recall": 0.15384615384615385,
+        "meanPopularity": 238.4
+      },
+      {
+        "userId": 920,
+        "ids": [
+          258,
+          269,
+          315,
+          268,
+          100,
+          294,
+          326,
+          50,
+          751,
+          690
+        ],
+        "relevant": 1,
+        "hit": 1,
+        "hits": [
+          258
+        ],
+        "recall": 1.0,
+        "meanPopularity": 196.9
+      },
+      {
+        "userId": 921,
+        "ids": [
+          258,
+          300,
+          100,
+          117,
+          174,
+          127,
+          98,
+          286,
+          172,
+          22
+        ],
+        "relevant": 7,
+        "hit": 1,
+        "hits": [
+          174
+        ],
+        "recall": 0.14285714285714285,
+        "meanPopularity": 281.6
+      },
+      {
+        "userId": 922,
+        "ids": [
+          100,
+          79,
+          258,
+          121,
+          64,
+          96,
+          69,
+          7,
+          117,
+          318
+        ],
+        "relevant": 3,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 242.4
+      },
+      {
+        "userId": 923,
+        "ids": [
+          258,
+          127,
+          300,
+          7,
+          286,
+          313,
+          98,
+          15,
+          174,
+          56
+        ],
+        "relevant": 7,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 262.5
+      },
+      {
+        "userId": 924,
+        "ids": [
+          98,
+          79,
+          483,
+          22,
+          69,
+          357,
+          168,
+          191,
+          204,
+          96
+        ],
+        "relevant": 4,
+        "hit": 1,
+        "hits": [
+          96
+        ],
+        "recall": 0.25,
+        "meanPopularity": 216.1
+      },
+      {
+        "userId": 925,
+        "ids": [
+          258,
+          300,
+          313,
+          50,
+          286,
+          302,
+          100,
+          294,
+          328,
+          181
+        ],
+        "relevant": 1,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 272.5
+      },
+      {
+        "userId": 927,
+        "ids": [
+          50,
+          181,
+          100,
+          121,
+          172,
+          117,
+          98,
+          258,
+          127,
+          173
+        ],
+        "relevant": 4,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 299.3
+      },
+      {
+        "userId": 928,
+        "ids": [
+          50,
+          300,
+          258,
+          313,
+          100,
+          181,
+          174,
+          1,
+          286,
+          127
+        ],
+        "relevant": 3,
+        "hit": 1,
+        "hits": [
+          127
+        ],
+        "recall": 0.3333333333333333,
+        "meanPopularity": 311.3
+      },
+      {
+        "userId": 929,
+        "ids": [
+          181,
+          56,
+          64,
+          79,
+          357,
+          183,
+          173,
+          168,
+          69,
+          286
+        ],
+        "relevant": 2,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 237.4
+      },
+      {
+        "userId": 930,
+        "ids": [
+          181,
+          258,
+          127,
+          7,
+          98,
+          313,
+          15,
+          9,
+          222,
+          276
+        ],
+        "relevant": 3,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 240.0
+      },
+      {
+        "userId": 931,
+        "ids": [
+          286,
+          300,
+          127,
+          288,
+          1,
+          294,
+          275,
+          272,
+          9,
+          328
+        ],
+        "relevant": 4,
+        "hit": 3,
+        "hits": [
+          127,
+          272,
+          275
+        ],
+        "recall": 0.75,
+        "meanPopularity": 213.0
+      },
+      {
+        "userId": 932,
+        "ids": [
+          50,
+          127,
+          181,
+          318,
+          357,
+          79,
+          286,
+          69,
+          12,
+          22
+        ],
+        "relevant": 12,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 265.6
+      },
+      {
+        "userId": 934,
+        "ids": [
+          98,
+          127,
+          1,
+          79,
+          64,
+          318,
+          258,
+          357,
+          22,
+          12
+        ],
+        "relevant": 12,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 251.4
+      },
+      {
+        "userId": 935,
+        "ids": [
+          50,
+          258,
+          222,
+          288,
+          7,
+          294,
+          174,
+          405,
+          275,
+          111
+        ],
+        "relevant": 3,
+        "hit": 1,
+        "hits": [
+          405
+        ],
+        "recall": 0.3333333333333333,
+        "meanPopularity": 233.7
+      },
+      {
+        "userId": 936,
+        "ids": [
+          286,
+          127,
+          288,
+          302,
+          98,
+          56,
+          15,
+          174,
+          222,
+          25
+        ],
+        "relevant": 6,
+        "hit": 1,
+        "hits": [
+          25
+        ],
+        "recall": 0.16666666666666666,
+        "meanPopularity": 238.1
+      },
+      {
+        "userId": 937,
+        "ids": [
+          127,
+          181,
+          269,
+          302,
+          1,
+          313,
+          237,
+          475,
+          7,
+          98
+        ],
+        "relevant": 2,
+        "hit": 1,
+        "hits": [
+          237
+        ],
+        "recall": 0.5,
+        "meanPopularity": 246.8
+      },
+      {
+        "userId": 938,
+        "ids": [
+          294,
+          98,
+          174,
+          172,
+          56,
+          475,
+          302,
+          79,
+          22,
+          64
+        ],
+        "relevant": 2,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 236.4
+      },
+      {
+        "userId": 939,
+        "ids": [
+          50,
+          181,
+          100,
+          1,
+          117,
+          300,
+          7,
+          294,
+          288,
+          286
+        ],
+        "relevant": 2,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 282.4
+      },
+      {
+        "userId": 940,
+        "ids": [
+          127,
+          1,
+          288,
+          79,
+          318,
+          64,
+          237,
+          117,
+          22,
+          12
+        ],
+        "relevant": 4,
+        "hit": 1,
+        "hits": [
+          12
+        ],
+        "recall": 0.25,
+        "meanPopularity": 235.5
+      },
+      {
+        "userId": 941,
+        "ids": [
+          50,
+          100,
+          1,
+          127,
+          286,
+          288,
+          313,
+          121,
+          237,
+          174
+        ],
+        "relevant": 2,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 288.2
+      },
+      {
+        "userId": 942,
+        "ids": [
+          100,
+          181,
+          286,
+          98,
+          174,
+          127,
+          1,
+          302,
+          288,
+          56
+        ],
+        "relevant": 6,
+        "hit": 1,
+        "hits": [
+          174
+        ],
+        "recall": 0.16666666666666666,
+        "meanPopularity": 290.2
+      },
+      {
+        "userId": 943,
+        "ids": [
+          1,
+          7,
+          258,
+          237,
+          183,
+          176,
+          89,
+          222,
+          357,
+          288
+        ],
+        "relevant": 4,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 223.2
+      }
+    ],
+    "test": [
+      {
+        "userId": 897,
+        "ids": [
+          50,
+          100,
+          1,
+          79,
+          64,
+          318,
+          258,
+          7,
+          357,
+          191
+        ],
+        "relevant": 13,
+        "hit": 3,
+        "hits": [
+          1,
+          50,
+          79
+        ],
+        "recall": 0.23076923076923078,
+        "meanPopularity": 273.3
+      },
+      {
+        "userId": 898,
+        "ids": [
+          269,
+          333,
+          50,
+          268,
+          100,
+          294,
+          340,
+          307,
+          181,
+          127
+        ],
+        "relevant": 1,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 229.3
+      },
+      {
+        "userId": 899,
+        "ids": [
+          100,
+          127,
+          56,
+          22,
+          7,
+          286,
+          210,
+          12,
+          191,
+          183
+        ],
+        "relevant": 6,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 246.8
+      },
+      {
+        "userId": 900,
+        "ids": [
+          50,
+          127,
+          181,
+          1,
+          98,
+          286,
+          174,
+          258,
+          7,
+          56
+        ],
+        "relevant": 1,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 308.7
+      },
+      {
+        "userId": 901,
+        "ids": [
+          100,
+          98,
+          127,
+          79,
+          258,
+          173,
+          64,
+          7,
+          300,
+          318
+        ],
+        "relevant": 9,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 267.3
+      },
+      {
+        "userId": 902,
+        "ids": [
+          100,
+          286,
+          174,
+          98,
+          56,
+          313,
+          79,
+          64,
+          269,
+          173
+        ],
+        "relevant": 4,
+        "hit": 1,
+        "hits": [
+          79
+        ],
+        "recall": 0.25,
+        "meanPopularity": 262.7
+      },
+      {
+        "userId": 903,
+        "ids": [
+          98,
+          174,
+          172,
+          258,
+          286,
+          173,
+          168,
+          237,
+          117,
+          22
+        ],
+        "relevant": 14,
+        "hit": 1,
+        "hits": [
+          98
+        ],
+        "recall": 0.07142857142857142,
+        "meanPopularity": 254.6
+      },
+      {
+        "userId": 904,
+        "ids": [
+          50,
+          1,
+          100,
+          258,
+          286,
+          121,
+          127,
+          294,
+          98,
+          313
+        ],
+        "relevant": 4,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 292.4
+      },
+      {
+        "userId": 905,
+        "ids": [
+          286,
+          50,
+          288,
+          269,
+          127,
+          181,
+          1,
+          268,
+          272,
+          340
+        ],
+        "relevant": 1,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 243.8
+      },
+      {
+        "userId": 906,
+        "ids": [
+          50,
+          258,
+          127,
+          181,
+          1,
+          302,
+          275,
+          269,
+          313,
+          14
+        ],
+        "relevant": 3,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 259.9
+      },
+      {
+        "userId": 907,
+        "ids": [
+          127,
+          174,
+          7,
+          300,
+          222,
+          56,
+          313,
+          64,
+          22,
+          9
+        ],
+        "relevant": 15,
+        "hit": 1,
+        "hits": [
+          313
+        ],
+        "recall": 0.06666666666666667,
+        "meanPopularity": 238.4
+      },
+      {
+        "userId": 908,
+        "ids": [
+          1,
+          64,
+          22,
+          258,
+          286,
+          168,
+          89,
+          191,
+          176,
+          210
+        ],
+        "relevant": 4,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 229.6
+      },
+      {
+        "userId": 910,
+        "ids": [
+          258,
+          7,
+          286,
+          172,
+          79,
+          288,
+          64,
+          22,
+          318,
+          15
+        ],
+        "relevant": 3,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 236.3
+      },
+      {
+        "userId": 911,
+        "ids": [
+          50,
+          100,
+          181,
+          127,
+          56,
+          1,
+          318,
+          64,
+          79,
+          69
+        ],
+        "relevant": 8,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 291.2
+      },
+      {
+        "userId": 912,
+        "ids": [
+          50,
+          98,
+          100,
+          127,
+          181,
+          191,
+          79,
+          1,
+          69,
+          89
+        ],
+        "relevant": 5,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 289.2
+      },
+      {
+        "userId": 913,
+        "ids": [
+          127,
+          172,
+          258,
+          286,
+          117,
+          237,
+          135,
+          194,
+          121,
+          427
+        ],
+        "relevant": 6,
+        "hit": 5,
+        "hits": [
+          127,
+          172,
+          237,
+          258,
+          427
+        ],
+        "recall": 0.8333333333333334,
+        "meanPopularity": 228.4
+      },
+      {
+        "userId": 914,
+        "ids": [
+          174,
+          100,
+          50,
+          69,
+          79,
+          237,
+          210,
+          98,
+          286,
+          194
+        ],
+        "relevant": 1,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 273.9
+      },
+      {
+        "userId": 915,
+        "ids": [
+          300,
+          269,
+          272,
+          340,
+          268,
+          294,
+          751,
+          100,
+          690,
+          50
+        ],
+        "relevant": 2,
+        "hit": 1,
+        "hits": [
+          268
+        ],
+        "recall": 0.5,
+        "meanPopularity": 193.4
+      },
+      {
+        "userId": 916,
+        "ids": [
+          127,
+          258,
+          357,
+          191,
+          197,
+          185,
+          275,
+          187,
+          603,
+          479
+        ],
+        "relevant": 5,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 195.3
+      },
+      {
+        "userId": 917,
+        "ids": [
+          286,
+          258,
+          127,
+          181,
+          7,
+          300,
+          117,
+          288,
+          15,
+          269
+        ],
+        "relevant": 4,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 249.2
+      },
+      {
+        "userId": 918,
+        "ids": [
+          50,
+          100,
+          98,
+          127,
+          286,
+          181,
+          318,
+          56,
+          483,
+          191
+        ],
+        "relevant": 4,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 293.8
+      },
+      {
+        "userId": 919,
+        "ids": [
+          127,
+          56,
+          121,
+          172,
+          79,
+          269,
+          173,
+          357,
+          210,
+          96
+        ],
+        "relevant": 8,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 227.8
+      },
+      {
+        "userId": 920,
+        "ids": [
+          269,
+          315,
+          268,
+          100,
+          294,
+          326,
+          50,
+          751,
+          690,
+          303
+        ],
+        "relevant": 1,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 174.7
+      },
+      {
+        "userId": 921,
+        "ids": [
+          258,
+          300,
+          100,
+          117,
+          127,
+          98,
+          286,
+          172,
+          22,
+          7
+        ],
+        "relevant": 6,
+        "hit": 1,
+        "hits": [
+          172
+        ],
+        "recall": 0.16666666666666666,
+        "meanPopularity": 273.8
+      },
+      {
+        "userId": 922,
+        "ids": [
+          100,
+          79,
+          258,
+          121,
+          64,
+          96,
+          7,
+          117,
+          318,
+          28
+        ],
+        "relevant": 3,
+        "hit": 1,
+        "hits": [
+          258
+        ],
+        "recall": 0.3333333333333333,
+        "meanPopularity": 239.3
+      },
+      {
+        "userId": 923,
+        "ids": [
+          258,
+          127,
+          300,
+          7,
+          286,
+          313,
+          98,
+          15,
+          174,
+          56
+        ],
+        "relevant": 8,
+        "hit": 1,
+        "hits": [
+          174
+        ],
+        "recall": 0.125,
+        "meanPopularity": 262.5
+      },
+      {
+        "userId": 924,
+        "ids": [
+          98,
+          79,
+          483,
+          22,
+          69,
+          357,
+          168,
+          191,
+          204,
+          89
+        ],
+        "relevant": 3,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 215.8
+      },
+      {
+        "userId": 927,
+        "ids": [
+          50,
+          181,
+          100,
+          121,
+          172,
+          117,
+          98,
+          258,
+          127,
+          173
+        ],
+        "relevant": 11,
+        "hit": 1,
+        "hits": [
+          121
+        ],
+        "recall": 0.09090909090909091,
+        "meanPopularity": 299.3
+      },
+      {
+        "userId": 928,
+        "ids": [
+          50,
+          300,
+          258,
+          313,
+          100,
+          181,
+          174,
+          1,
+          286,
+          302
+        ],
+        "relevant": 2,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 300.7
+      },
+      {
+        "userId": 929,
+        "ids": [
+          181,
+          56,
+          64,
+          79,
+          357,
+          183,
+          173,
+          168,
+          69,
+          286
+        ],
+        "relevant": 3,
+        "hit": 1,
+        "hits": [
+          56
+        ],
+        "recall": 0.3333333333333333,
+        "meanPopularity": 237.4
+      },
+      {
+        "userId": 931,
+        "ids": [
+          286,
+          300,
+          288,
+          1,
+          294,
+          9,
+          328,
+          268,
+          117,
+          7
+        ],
+        "relevant": 7,
+        "hit": 2,
+        "hits": [
+          286,
+          300
+        ],
+        "recall": 0.2857142857142857,
+        "meanPopularity": 212.3
+      },
+      {
+        "userId": 932,
+        "ids": [
+          50,
+          127,
+          181,
+          318,
+          357,
+          79,
+          286,
+          69,
+          12,
+          22
+        ],
+        "relevant": 8,
+        "hit": 1,
+        "hits": [
+          357
+        ],
+        "recall": 0.125,
+        "meanPopularity": 265.6
+      },
+      {
+        "userId": 934,
+        "ids": [
+          98,
+          127,
+          1,
+          79,
+          64,
+          318,
+          258,
+          357,
+          22,
+          12
+        ],
+        "relevant": 5,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 251.4
+      },
+      {
+        "userId": 935,
+        "ids": [
+          50,
+          258,
+          222,
+          288,
+          7,
+          294,
+          174,
+          275,
+          111,
+          25
+        ],
+        "relevant": 4,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 234.2
+      },
+      {
+        "userId": 936,
+        "ids": [
+          286,
+          127,
+          288,
+          302,
+          98,
+          56,
+          15,
+          174,
+          222,
+          172
+        ],
+        "relevant": 11,
+        "hit": 2,
+        "hits": [
+          127,
+          286
+        ],
+        "recall": 0.18181818181818182,
+        "meanPopularity": 250.8
+      },
+      {
+        "userId": 937,
+        "ids": [
+          127,
+          181,
+          269,
+          302,
+          1,
+          313,
+          475,
+          7,
+          98,
+          276
+        ],
+        "relevant": 2,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 240.5
+      },
+      {
+        "userId": 938,
+        "ids": [
+          294,
+          98,
+          174,
+          172,
+          56,
+          475,
+          302,
+          79,
+          22,
+          64
+        ],
+        "relevant": 3,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 236.4
+      },
+      {
+        "userId": 939,
+        "ids": [
+          50,
+          181,
+          100,
+          1,
+          117,
+          300,
+          7,
+          294,
+          288,
+          286
+        ],
+        "relevant": 2,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 282.4
+      },
+      {
+        "userId": 940,
+        "ids": [
+          127,
+          1,
+          288,
+          79,
+          318,
+          64,
+          237,
+          117,
+          22,
+          204
+        ],
+        "relevant": 7,
+        "hit": 1,
+        "hits": [
+          204
+        ],
+        "recall": 0.14285714285714285,
+        "meanPopularity": 235.3
+      },
+      {
+        "userId": 941,
+        "ids": [
+          50,
+          100,
+          1,
+          127,
+          286,
+          288,
+          313,
+          121,
+          237,
+          174
+        ],
+        "relevant": 3,
+        "hit": 1,
+        "hits": [
+          1
+        ],
+        "recall": 0.3333333333333333,
+        "meanPopularity": 288.2
+      },
+      {
+        "userId": 942,
+        "ids": [
+          100,
+          181,
+          286,
+          98,
+          127,
+          1,
+          302,
+          288,
+          56,
+          64
+        ],
+        "relevant": 9,
+        "hit": 0,
+        "hits": [],
+        "recall": 0.0,
+        "meanPopularity": 281.8
+      },
+      {
+        "userId": 943,
+        "ids": [
+          1,
+          7,
+          258,
+          237,
+          183,
+          176,
+          89,
+          222,
+          357,
+          288
+        ],
+        "relevant": 5,
+        "hit": 1,
+        "hits": [
+          237
+        ],
+        "recall": 0.2,
+        "meanPopularity": 223.2
+      }
+    ]
+  },
+  "globalReports": {},
+  "userDetails": [],
+  "numpyVersion": "2.3.5"
+}

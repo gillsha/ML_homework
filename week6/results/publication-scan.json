@@ -1,0 +1,63 @@
+{
+  "filesReviewed": 117,
+  "secretPatternMatches": 0,
+  "personalFilesystemPaths": 0,
+  "privateSessionIdentifiers": 0,
+  "scope": "Only HW6 app code, assignment, setup documentation, portable checks, saved numeric factors and selected evidence. Original Git-status snapshots, host files and session logs excluded.",
+  "nativeRecommendationRows": 100,
+  "nativeRecommendationSettings": [
+    [
+      "1",
+      "mf",
+      ""
+    ],
+    [
+      "1",
+      "pagerank",
+      "0.50"
+    ],
+    [
+      "1",
+      "popularity",
+      ""
+    ],
+    [
+      "1",
+      "ppr",
+      "0.50"
+    ],
+    [
+      "1",
+      "ppr",
+      "0.85"
+    ],
+    [
+      "2",
+      "mf",
+      ""
+    ],
+    [
+      "2",
+      "pagerank",
+      "0.50"
+    ],
+    [
+      "2",
+      "popularity",
+      ""
+    ],
+    [
+      "2",
+      "ppr",
+      "0.50"
+    ],
+    [
+      "2",
+      "ppr",
+      "0.85"
+    ]
+  ],
+  "appUnchanged": true,
+  "weeks1to5FilesPreserved": 196,
+  "datasetPublication": "Raw u.data/u.item omitted; retained locally; direct GroupLens download with tested hashes provided."
+}

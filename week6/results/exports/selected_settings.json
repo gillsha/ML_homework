@@ -1,0 +1,347 @@
+{
+  "selectedAlpha": 0.5,
+  "tieRule": "maximum validation macro Recall@10; exact ties choose smaller alpha",
+  "selection": {
+    "alpha": 0.5,
+    "selectedAt": "2026-10-21T17:35:02.649Z",
+    "tieRule": "maximum validation macro Recall@10; exact ties choose smaller alpha",
+    "rows": [
+      {
+        "alpha": 0.5,
+        "recall": 0.11448315913208877,
+        "cohortSize": 846,
+        "error": null
+      },
+      {
+        "alpha": 0.7,
+        "recall": 0.1047969507641043,
+        "cohortSize": 846,
+        "error": null
+      },
+      {
+        "alpha": 0.85,
+        "recall": 0.09002077155336492,
+        "cohortSize": 846,
+        "error": null
+      },
+      {
+        "alpha": 0.95,
+        "recall": 0.07375030387909676,
+        "cohortSize": 846,
+        "error": null
+      }
+    ]
+  },
+  "userIds": [
+    1,
+    2
+  ],
+  "settings": [
+    {
+      "userId": 1,
+      "method": "popularity",
+      "alpha": null,
+      "purpose": "primary"
+    },
+    {
+      "userId": 1,
+      "method": "pagerank",
+      "alpha": 0.5,
+      "purpose": "primary"
+    },
+    {
+      "userId": 1,
+      "method": "ppr",
+      "alpha": 0.5,
+      "purpose": "primary"
+    },
+    {
+      "userId": 1,
+      "method": "mf",
+      "alpha": null,
+      "purpose": "primary"
+    },
+    {
+      "userId": 2,
+      "method": "popularity",
+      "alpha": null,
+      "purpose": "primary"
+    },
+    {
+      "userId": 2,
+      "method": "pagerank",
+      "alpha": 0.5,
+      "purpose": "primary"
+    },
+    {
+      "userId": 2,
+      "method": "ppr",
+      "alpha": 0.5,
+      "purpose": "primary"
+    },
+    {
+      "userId": 2,
+      "method": "mf",
+      "alpha": null,
+      "purpose": "primary"
+    },
+    {
+      "userId": 1,
+      "method": "ppr",
+      "alpha": 0.85,
+      "purpose": "diagnostic baseline"
+    },
+    {
+      "userId": 2,
+      "method": "ppr",
+      "alpha": 0.85,
+      "purpose": "diagnostic seed-only"
+    },
+    {
+      "userId": 1,
+      "method": "ppr",
+      "alpha": 0.5,
+      "purpose": "diagnostic alpha-only"
+    }
+  ],
+  "uniqueExportSettings": 10,
+  "recommendationRows": 100,
+  "MF": {
+    "factors": 16,
+    "epochs": 30,
+    "learningRate": 0.01,
+    "regularization": 0.05,
+    "batchSize": 512,
+    "seed": 20261013,
+    "backend": "webgl",
+    "checkpoint": 1,
+    "validationRMSE": 1.1829944264078285,
+    "trainedAt": "2026-10-21T17:34:11.667Z",
+    "history": [
+      {
+        "epoch": 1,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 2,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 3,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 4,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 5,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 6,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 7,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 8,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 9,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 10,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 11,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 12,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 13,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 14,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 15,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 16,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 17,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 18,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 19,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 20,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 21,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 22,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 23,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 24,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 25,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 26,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 27,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 28,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 29,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 30,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      }
+    ]
+  },
+  "backend": "webgl",
+  "tfjs": "4.22.0",
+  "memory": {
+    "unreliable": false,
+    "numBytesInGPU": 672640,
+    "numBytesInGPUAllocated": 136374728,
+    "numBytesInGPUFree": 135702088,
+    "numTensors": 10,
+    "numDataBuffers": 10,
+    "numBytes": 672520
+  },
+  "checks": {
+    "passed": 12,
+    "failed": 0,
+    "pending": 0
+  },
+  "nativeConvergenceScope": "PPR native convergence fields describe seed user1. Per-cohort convergence and failures are in propagation evidence.",
+  "nativeExportGaps": [
+    "No hit column in recommendations.csv",
+    "Validation exclusions/runtime not populated by results.csv",
+    "No MF identity/checkpoint columns in results.csv",
+    "Per-user PPR convergence not exported",
+    "Native titles retain starter UTF-8 decoding"
+  ],
+  "exclusions": {
+    "val": {
+      "candidateUsers": 943,
+      "cohortSize": 846,
+      "excludedUnseen": 4,
+      "excludedNoEligible": 97,
+      "excludedNoPositiveEdge": 1,
+      "unseenIds": [
+        814,
+        1106,
+        1526,
+        1653
+      ]
+    },
+    "test": {
+      "candidateUsers": 943,
+      "cohortSize": 861,
+      "excludedUnseen": 13,
+      "excludedNoEligible": 82,
+      "excludedNoPositiveEdge": 1,
+      "unseenIds": [
+        913,
+        1106,
+        1130,
+        1458,
+        1498,
+        1525,
+        1613,
+        1625,
+        1645,
+        1646,
+        1650,
+        1651,
+        1674
+      ]
+    }
+  },
+  "runtimeEvidence": "experiments-20261021-01/runtime-and-memory.json",
+  "suppliedMFTrainingMs": 33416.39999999106,
+  "savedCheckpointSource": "experiments-20261021-01/supplied-mf.json",
+  "unresolvedConvergenceAt095": {
+    "validation": 27,
+    "test": 25,
+    "union": 27
+  },
+  "supplementaryFiles": [
+    "panel_recommendations_with_hits.csv",
+    "ppr_relevant_test_ranks.csv"
+  ],
+  "noFinalReportWritten": true
+}

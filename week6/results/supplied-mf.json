@@ -1,0 +1,216 @@
+{
+  "trainingMs": 33416.39999999106,
+  "info": {
+    "factors": 16,
+    "epochs": 30,
+    "learningRate": 0.01,
+    "regularization": 0.05,
+    "batchSize": 512,
+    "seed": 20261013,
+    "backend": "webgl",
+    "checkpoint": 1,
+    "validationRMSE": 1.1829944264078285,
+    "trainedAt": "2026-10-21T17:34:11.667Z",
+    "history": [
+      {
+        "epoch": 1,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 2,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 3,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 4,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 5,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 6,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 7,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 8,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 9,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 10,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 11,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 12,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 13,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 14,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 15,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 16,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 17,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 18,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 19,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 20,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 21,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 22,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 23,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 24,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 25,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 26,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 27,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 28,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 29,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      },
+      {
+        "epoch": 30,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.1829944264078285
+      }
+    ]
+  },
+  "checkpointValidationRMSE": 1.1829944264078285,
+  "checkpointTestRMSE": 1.2288999214179168,
+  "meanOnlyValidationRMSE": 1.1829947710600353,
+  "meanOnlyTestRMSE": 1.2289001371836759,
+  "meanFactorRowNorms": {
+    "usersAll": 3.5270232702794553e-05,
+    "usersWithoutPadding": 3.525094208757954e-05,
+    "itemsAll": 3.516457869566678e-05,
+    "itemsWithoutPadding": 3.516494627638383e-05
+  },
+  "scoreStats": [
+    {
+      "userId": 1,
+      "candidates": 1611,
+      "mean": 3.5806026458740234,
+      "std": 0,
+      "uniqueScores": 1,
+      "min": 3.5806026458740234,
+      "max": 3.5806026458740234
+    },
+    {
+      "userId": 2,
+      "candidates": 1611,
+      "mean": 3.5806026458740234,
+      "std": 0,
+      "uniqueScores": 1,
+      "min": 3.5806026458740234,
+      "max": 3.5806026458740234
+    }
+  ],
+  "before": {
+    "unreliable": false,
+    "numBytesInGPU": 0,
+    "numBytesInGPUAllocated": 5368252,
+    "numBytesInGPUFree": 5368252,
+    "numTensors": 0,
+    "numDataBuffers": 0,
+    "numBytes": 0
+  },
+  "after": {
+    "unreliable": false,
+    "numBytesInGPU": 672640,
+    "numBytesInGPUAllocated": 53752852,
+    "numBytesInGPUFree": 53080212,
+    "numTensors": 10,
+    "numDataBuffers": 10,
+    "numBytes": 672520
+  },
+  "candidateScoreability": true
+}

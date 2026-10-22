@@ -1,0 +1,17 @@
+{
+  "recordedAt": "2026-10-16T14:32:50.026Z",
+  "criterion": "restored eligible validation RMSE only",
+  "defaultValidationRMSE": 1.18002107464026,
+  "newValidationRMSE": 1.18002107464026,
+  "deltaNewMinusDefault": 0,
+  "numericalTieTolerance": 0.000002,
+  "preference": "neither-demonstrated-improvement",
+  "defaultSelectedEpoch": 1,
+  "newSelectedEpoch": 1,
+  "eligibleValidationRows": 9561,
+  "newModelTestMetricsComputed": false,
+  "newModelRecallComputed": false,
+  "defaultTestAlreadyObserved": true,
+  "blockedEvaluationAttempts": 0,
+  "policy": "This preference is fixed before new-model test metrics/Recall. Test metrics will be disclosed regardless of direction."
+}

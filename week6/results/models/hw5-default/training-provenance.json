@@ -1,0 +1,278 @@
+{
+  "originalExperiment": "default-20261016-01",
+  "config": {
+    "factors": 16,
+    "epochs": 20,
+    "lr": 0.01,
+    "reg": 0.05,
+    "batchSize": 64,
+    "seeds": {
+      "users": 5101,
+      "items": 5102,
+      "shuffle": 5103
+    }
+  },
+  "sourceAndDataSHA256": {
+    "script.js": "7a756fd8a7677e8eede0c9aa3e5b5ee2724f7fe455b5cc8258e877bae1a6173d",
+    "data.js": "e274a1e95c0fccf98bb67407dbde3a99486e35cb0956260db9621b1372083d6d",
+    "index.html": "bc57249c930cd381656fd47cb97f2f1b0369da50389d58d5580054f38d912710",
+    "style.css": "6ce27df0f3cb462d66ebebea5c1c0ee8edf4e3444265608fb2b6caeb46ab0fdc",
+    "readme.md": "85e54120c27265b0b15d416d4897a78a9f72c6e313cf117bf4f2fa1310452c12",
+    "u.data": "06416e597f82b7342361e41163890c81036900f418ad91315590814211dca490",
+    "u.item": "553841ebc7de3a0fd0d6b62a204ea30c1e651aacfb2814c7a6584ac52f2c5701",
+    "verification/correctness.js": "bce624642cad75fc9b4ed77ff3242fd8cfa8a03542956142164e34dbc10def5b",
+    "verification/experiment-diagnostics.js": "5d9ee63378173a4d79f236812823bdc3b771d44ffbaa1371b994f4864eee2f0c",
+    "verification/run-default.cjs": "173a903ee283d4e68a0adc16c7c0b858a5526da207f0d90837476fb04da0b755",
+    "verification/verify-experiment.py": "7db913e59ed6b22c8136f80f941c3e9dc9999c83792cfecbdb02d27e9b86dbea"
+  },
+  "lastRun": {
+    "schemaVersion": 1,
+    "upstreamRevision": "00c032fb58ca5f7bec05218b5bebee01e462e532",
+    "tfjs": "4.22.0",
+    "backend": "webgl",
+    "options": {
+      "epochs": 20,
+      "lr": 0.01,
+      "reg": 0.05,
+      "batchSize": 64
+    },
+    "factors": 16,
+    "seeds": {
+      "users": 5101,
+      "items": 5102,
+      "shuffle": 5103
+    },
+    "loss": "batch-mean raw-prediction MSE + reg * (sum(P^2) + sum(Q^2))",
+    "scoreType": "raw model score",
+    "ratingRMSE": "clipped [1,5], warm-start rows only",
+    "trainingMean": 3.5806026199776437,
+    "selectedEpoch": 1,
+    "bestCheckpoint": {
+      "epoch": 1,
+      "trainRMSE": 1.1052078640164102,
+      "valRMSE": 1.18002107464026
+    },
+    "history": [
+      {
+        "epoch": 1,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 2,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 3,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 4,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 5,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 6,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 7,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 8,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 9,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 10,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 11,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 12,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 13,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 14,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 15,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 16,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 17,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 18,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 19,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      },
+      {
+        "epoch": 20,
+        "trainRMSE": 1.1052078640164102,
+        "valRMSE": 1.18002107464026
+      }
+    ],
+    "splits": {
+      "train": {
+        "rawRows": 79619,
+        "eligibleRows": 79619,
+        "excludedRows": 0,
+        "missingUserRows": 0,
+        "missingItemRows": 0,
+        "missingUserIds": [],
+        "missingItemIds": [],
+        "baselineRMSE": 1.105208514257592,
+        "mfRMSE": 1.1052078640164102
+      },
+      "validation": {
+        "rawRows": 9596,
+        "eligibleRows": 9561,
+        "excludedRows": 35,
+        "missingUserRows": 0,
+        "missingItemRows": 35,
+        "missingUserIds": [],
+        "missingItemIds": [
+          677,
+          814,
+          897,
+          910,
+          957,
+          1106,
+          1408,
+          1453,
+          1460,
+          1494,
+          1508,
+          1526,
+          1543,
+          1546,
+          1565,
+          1569,
+          1571,
+          1575,
+          1576,
+          1579,
+          1584,
+          1586,
+          1588,
+          1603,
+          1614,
+          1633,
+          1637,
+          1653,
+          1659,
+          1667,
+          1668,
+          1679
+        ],
+        "baselineRMSE": 1.1800217293694784,
+        "mfRMSE": 1.18002107464026
+      },
+      "test": {
+        "rawRows": 10785,
+        "eligibleRows": 10732,
+        "excludedRows": 53,
+        "missingUserRows": 0,
+        "missingItemRows": 53,
+        "missingUserIds": [],
+        "missingItemIds": [
+          897,
+          910,
+          913,
+          957,
+          1106,
+          1130,
+          1236,
+          1408,
+          1432,
+          1447,
+          1458,
+          1476,
+          1498,
+          1508,
+          1520,
+          1525,
+          1562,
+          1563,
+          1570,
+          1572,
+          1577,
+          1580,
+          1583,
+          1588,
+          1613,
+          1618,
+          1621,
+          1624,
+          1625,
+          1645,
+          1646,
+          1647,
+          1648,
+          1649,
+          1650,
+          1651,
+          1661,
+          1665,
+          1666,
+          1669,
+          1671,
+          1674,
+          1677,
+          1678,
+          1680,
+          1682
+        ],
+        "baselineRMSE": 1.2257193843348209,
+        "mfRMSE": 1.225719429436268
+      }
+    }
+  },
+  "originalArtifactHashes": {
+    "setup.json": "a40c9d381124f763f2856e59da887b00c95f7bf72145f1559798f0d1f3a80a71",
+    "training.json": "cbee1a8a447613b4a254a4cfa97d19d63c7cafd77a3dd5bcbd860beda3f56992"
+  },
+  "extraction": "Only configuration, metric history and provenance; original filesystem and Git-status metadata omitted."
+}

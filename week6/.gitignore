@@ -1,0 +1,7 @@
+/u.data
+/u.item
+/.venv/
+/node_modules/
+/tools/__pycache__/
+/results/regenerated/
+.DS_Store

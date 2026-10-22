@@ -1,0 +1,25 @@
+{
+  "originalDirectory": "week5/experiments/reg-0005-20261016-01",
+  "files": {
+    "model.json": {
+      "sha256": "d09104c0ddb4de4c0a99de3b40521f003b1f709d80826eed3ea9f8bce366e2e8",
+      "bytes": 370
+    },
+    "user-factors.f32": {
+      "sha256": "f4fe6f0632c0c2f95b33a7454a4cc0dc097c84d67222c0e6f8032c682c385521",
+      "bytes": 60416
+    },
+    "item-factors.f32": {
+      "sha256": "af293f0bf629226a66d3ceefb307578db7ff84b2574a27f5fde43766cbf453f0",
+      "bytes": 107712
+    },
+    "source/script.js": {
+      "sha256": "7a756fd8a7677e8eede0c9aa3e5b5ee2724f7fe455b5cc8258e877bae1a6173d",
+      "bytes": 59431
+    },
+    "source/data.js": {
+      "sha256": "e274a1e95c0fccf98bb67407dbde3a99486e35cb0956260db9621b1372083d6d",
+      "bytes": 6989
+    }
+  }
+}

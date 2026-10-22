@@ -1,0 +1,1071 @@
+{
+  "definitions": "Genre shares count multi-label movies over positive rated movies (131 and32) or over the10 recommendations; not exclusive genre proportions. All descriptive, not causal.",
+  "users": [
+    {
+      "userId": 1,
+      "totalRatings": 217,
+      "positiveRatings": 131,
+      "genreShares": [
+        {
+          "genre": "unknown",
+          "allCount": 1,
+          "shareOfAllRatings": 0.004608294930875576,
+          "positiveCount": 1,
+          "shareOfPositiveRatings": 0.007633587786259542
+        },
+        {
+          "genre": "Action",
+          "allCount": 64,
+          "shareOfAllRatings": 0.29493087557603687,
+          "positiveCount": 36,
+          "shareOfPositiveRatings": 0.2748091603053435
+        },
+        {
+          "genre": "Adventure",
+          "allCount": 34,
+          "shareOfAllRatings": 0.15668202764976957,
+          "positiveCount": 15,
+          "shareOfPositiveRatings": 0.11450381679389313
+        },
+        {
+          "genre": "Animation",
+          "allCount": 9,
+          "shareOfAllRatings": 0.041474654377880185,
+          "positiveCount": 4,
+          "shareOfPositiveRatings": 0.030534351145038167
+        },
+        {
+          "genre": "Children's",
+          "allCount": 18,
+          "shareOfAllRatings": 0.08294930875576037,
+          "positiveCount": 5,
+          "shareOfPositiveRatings": 0.03816793893129771
+        },
+        {
+          "genre": "Comedy",
+          "allCount": 72,
+          "shareOfAllRatings": 0.3317972350230415,
+          "positiveCount": 39,
+          "shareOfPositiveRatings": 0.29770992366412213
+        },
+        {
+          "genre": "Crime",
+          "allCount": 20,
+          "shareOfAllRatings": 0.09216589861751152,
+          "positiveCount": 11,
+          "shareOfPositiveRatings": 0.08396946564885496
+        },
+        {
+          "genre": "Documentary",
+          "allCount": 3,
+          "shareOfAllRatings": 0.013824884792626729,
+          "positiveCount": 3,
+          "shareOfPositiveRatings": 0.022900763358778626
+        },
+        {
+          "genre": "Drama",
+          "allCount": 82,
+          "shareOfAllRatings": 0.3778801843317972,
+          "positiveCount": 61,
+          "shareOfPositiveRatings": 0.46564885496183206
+        },
+        {
+          "genre": "Fantasy",
+          "allCount": 2,
+          "shareOfAllRatings": 0.009216589861751152,
+          "positiveCount": 1,
+          "shareOfPositiveRatings": 0.007633587786259542
+        },
+        {
+          "genre": "Film-Noir",
+          "allCount": 1,
+          "shareOfAllRatings": 0.004608294930875576,
+          "positiveCount": 1,
+          "shareOfPositiveRatings": 0.007633587786259542
+        },
+        {
+          "genre": "Horror",
+          "allCount": 11,
+          "shareOfAllRatings": 0.05069124423963134,
+          "positiveCount": 6,
+          "shareOfPositiveRatings": 0.04580152671755725
+        },
+        {
+          "genre": "Musical",
+          "allCount": 11,
+          "shareOfAllRatings": 0.05069124423963134,
+          "positiveCount": 5,
+          "shareOfPositiveRatings": 0.03816793893129771
+        },
+        {
+          "genre": "Mystery",
+          "allCount": 5,
+          "shareOfAllRatings": 0.02304147465437788,
+          "positiveCount": 3,
+          "shareOfPositiveRatings": 0.022900763358778626
+        },
+        {
+          "genre": "Romance",
+          "allCount": 34,
+          "shareOfAllRatings": 0.15668202764976957,
+          "positiveCount": 22,
+          "shareOfPositiveRatings": 0.16793893129770993
+        },
+        {
+          "genre": "Sci-Fi",
+          "allCount": 36,
+          "shareOfAllRatings": 0.16589861751152074,
+          "positiveCount": 27,
+          "shareOfPositiveRatings": 0.20610687022900764
+        },
+        {
+          "genre": "Thriller",
+          "allCount": 42,
+          "shareOfAllRatings": 0.1935483870967742,
+          "positiveCount": 25,
+          "shareOfPositiveRatings": 0.19083969465648856
+        },
+        {
+          "genre": "War",
+          "allCount": 22,
+          "shareOfAllRatings": 0.10138248847926268,
+          "positiveCount": 13,
+          "shareOfPositiveRatings": 0.09923664122137404
+        },
+        {
+          "genre": "Western",
+          "allCount": 4,
+          "shareOfAllRatings": 0.018433179723502304,
+          "positiveCount": 2,
+          "shareOfPositiveRatings": 0.015267175572519083
+        }
+      ],
+      "denominators": {
+        "allRatings": 217,
+        "positiveRatings": 131,
+        "note": "Multi-label memberships; shares across genres can sum above1."
+      },
+      "meanPopularityOfPositiveMovies": 106.97709923664122,
+      "mostPopularPositive": [
+        {
+          "movieId": 50,
+          "title": "Star Wars (1977)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Romance",
+            "Sci-Fi",
+            "War"
+          ],
+          "rating": 5,
+          "trainingPopularity": 449
+        },
+        {
+          "movieId": 181,
+          "title": "Return of the Jedi (1983)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Romance",
+            "Sci-Fi",
+            "War"
+          ],
+          "rating": 5,
+          "trainingPopularity": 339
+        },
+        {
+          "movieId": 174,
+          "title": "Raiders of the Lost Ark (1981)",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "rating": 5,
+          "trainingPopularity": 312
+        },
+        {
+          "movieId": 98,
+          "title": "Silence of the Lambs, The (1991)",
+          "genres": [
+            "Drama",
+            "Thriller"
+          ],
+          "rating": 4,
+          "trainingPopularity": 308
+        },
+        {
+          "movieId": 127,
+          "title": "Godfather, The (1972)",
+          "genres": [
+            "Action",
+            "Crime",
+            "Drama"
+          ],
+          "rating": 5,
+          "trainingPopularity": 308
+        }
+      ],
+      "leastPopularPositive": [
+        {
+          "movieId": 146,
+          "title": "Unhook the Stars (1996)",
+          "genres": [
+            "Drama"
+          ],
+          "rating": 4,
+          "trainingPopularity": 2
+        },
+        {
+          "movieId": 119,
+          "title": "Maya Lin: A Strong Clear Vision (1994)",
+          "genres": [
+            "Documentary"
+          ],
+          "rating": 5,
+          "trainingPopularity": 3
+        },
+        {
+          "movieId": 84,
+          "title": "Robert A. Heinlein's The Puppet Masters (1994)",
+          "genres": [
+            "Horror",
+            "Sci-Fi"
+          ],
+          "rating": 4,
+          "trainingPopularity": 4
+        },
+        {
+          "movieId": 267,
+          "title": "unknown",
+          "genres": [
+            "unknown"
+          ],
+          "rating": 4,
+          "trainingPopularity": 5
+        },
+        {
+          "movieId": 43,
+          "title": "Disclosure (1994)",
+          "genres": [
+            "Drama",
+            "Thriller"
+          ],
+          "rating": 4,
+          "trainingPopularity": 7
+        }
+      ]
+    },
+    {
+      "userId": 2,
+      "totalRatings": 49,
+      "positiveRatings": 32,
+      "genreShares": [
+        {
+          "genre": "unknown",
+          "allCount": 0,
+          "shareOfAllRatings": 0.0,
+          "positiveCount": 0,
+          "shareOfPositiveRatings": 0.0
+        },
+        {
+          "genre": "Action",
+          "allCount": 6,
+          "shareOfAllRatings": 0.12244897959183673,
+          "positiveCount": 5,
+          "shareOfPositiveRatings": 0.15625
+        },
+        {
+          "genre": "Adventure",
+          "allCount": 2,
+          "shareOfAllRatings": 0.04081632653061224,
+          "positiveCount": 2,
+          "shareOfPositiveRatings": 0.0625
+        },
+        {
+          "genre": "Animation",
+          "allCount": 1,
+          "shareOfAllRatings": 0.02040816326530612,
+          "positiveCount": 1,
+          "shareOfPositiveRatings": 0.03125
+        },
+        {
+          "genre": "Children's",
+          "allCount": 1,
+          "shareOfAllRatings": 0.02040816326530612,
+          "positiveCount": 1,
+          "shareOfPositiveRatings": 0.03125
+        },
+        {
+          "genre": "Comedy",
+          "allCount": 15,
+          "shareOfAllRatings": 0.30612244897959184,
+          "positiveCount": 11,
+          "shareOfPositiveRatings": 0.34375
+        },
+        {
+          "genre": "Crime",
+          "allCount": 7,
+          "shareOfAllRatings": 0.14285714285714285,
+          "positiveCount": 5,
+          "shareOfPositiveRatings": 0.15625
+        },
+        {
+          "genre": "Documentary",
+          "allCount": 0,
+          "shareOfAllRatings": 0.0,
+          "positiveCount": 0,
+          "shareOfPositiveRatings": 0.0
+        },
+        {
+          "genre": "Drama",
+          "allCount": 28,
+          "shareOfAllRatings": 0.5714285714285714,
+          "positiveCount": 18,
+          "shareOfPositiveRatings": 0.5625
+        },
+        {
+          "genre": "Fantasy",
+          "allCount": 0,
+          "shareOfAllRatings": 0.0,
+          "positiveCount": 0,
+          "shareOfPositiveRatings": 0.0
+        },
+        {
+          "genre": "Film-Noir",
+          "allCount": 1,
+          "shareOfAllRatings": 0.02040816326530612,
+          "positiveCount": 1,
+          "shareOfPositiveRatings": 0.03125
+        },
+        {
+          "genre": "Horror",
+          "allCount": 2,
+          "shareOfAllRatings": 0.04081632653061224,
+          "positiveCount": 0,
+          "shareOfPositiveRatings": 0.0
+        },
+        {
+          "genre": "Musical",
+          "allCount": 0,
+          "shareOfAllRatings": 0.0,
+          "positiveCount": 0,
+          "shareOfPositiveRatings": 0.0
+        },
+        {
+          "genre": "Mystery",
+          "allCount": 3,
+          "shareOfAllRatings": 0.061224489795918366,
+          "positiveCount": 0,
+          "shareOfPositiveRatings": 0.0
+        },
+        {
+          "genre": "Romance",
+          "allCount": 14,
+          "shareOfAllRatings": 0.2857142857142857,
+          "positiveCount": 11,
+          "shareOfPositiveRatings": 0.34375
+        },
+        {
+          "genre": "Sci-Fi",
+          "allCount": 4,
+          "shareOfAllRatings": 0.08163265306122448,
+          "positiveCount": 2,
+          "shareOfPositiveRatings": 0.0625
+        },
+        {
+          "genre": "Thriller",
+          "allCount": 8,
+          "shareOfAllRatings": 0.16326530612244897,
+          "positiveCount": 3,
+          "shareOfPositiveRatings": 0.09375
+        },
+        {
+          "genre": "War",
+          "allCount": 3,
+          "shareOfAllRatings": 0.061224489795918366,
+          "positiveCount": 2,
+          "shareOfPositiveRatings": 0.0625
+        },
+        {
+          "genre": "Western",
+          "allCount": 0,
+          "shareOfAllRatings": 0.0,
+          "positiveCount": 0,
+          "shareOfPositiveRatings": 0.0
+        }
+      ],
+      "denominators": {
+        "allRatings": 49,
+        "positiveRatings": 32,
+        "note": "Multi-label memberships; shares across genres can sum above1."
+      },
+      "meanPopularityOfPositiveMovies": 132.78125,
+      "mostPopularPositive": [
+        {
+          "movieId": 50,
+          "title": "Star Wars (1977)",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Romance",
+            "Sci-Fi",
+            "War"
+          ],
+          "rating": 5,
+          "trainingPopularity": 449
+        },
+        {
+          "movieId": 100,
+          "title": "Fargo (1996)",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "rating": 5,
+          "trainingPopularity": 377
+        },
+        {
+          "movieId": 127,
+          "title": "Godfather, The (1972)",
+          "genres": [
+            "Action",
+            "Crime",
+            "Drama"
+          ],
+          "rating": 5,
+          "trainingPopularity": 308
+        },
+        {
+          "movieId": 1,
+          "title": "Toy Story (1995)",
+          "genres": [
+            "Animation",
+            "Children's",
+            "Comedy"
+          ],
+          "rating": 4,
+          "trainingPopularity": 288
+        },
+        {
+          "movieId": 286,
+          "title": "English Patient, The (1996)",
+          "genres": [
+            "Drama",
+            "Romance",
+            "War"
+          ],
+          "rating": 4,
+          "trainingPopularity": 279
+        }
+      ],
+      "leastPopularPositive": [
+        {
+          "movieId": 279,
+          "title": "Once Upon a Time... When We Were Colored (1995)",
+          "genres": [
+            "Drama"
+          ],
+          "rating": 4,
+          "trainingPopularity": 13
+        },
+        {
+          "movieId": 299,
+          "title": "Hoodlum (1997)",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir"
+          ],
+          "rating": 4,
+          "trainingPopularity": 20
+        },
+        {
+          "movieId": 295,
+          "title": "Breakdown (1997)",
+          "genres": [
+            "Action",
+            "Thriller"
+          ],
+          "rating": 4,
+          "trainingPopularity": 27
+        },
+        {
+          "movieId": 251,
+          "title": "Shall We Dance? (1996)",
+          "genres": [
+            "Comedy"
+          ],
+          "rating": 5,
+          "trainingPopularity": 30
+        },
+        {
+          "movieId": 297,
+          "title": "Ulee's Gold (1997)",
+          "genres": [
+            "Drama"
+          ],
+          "rating": 4,
+          "trainingPopularity": 30
+        }
+      ]
+    }
+  ],
+  "primaryAndDiagnostic": {
+    "settings": [
+      {
+        "purpose": "primary",
+        "label": "primary",
+        "method": "popularity",
+        "userId": 1,
+        "alpha": null,
+        "movieIds": [
+          100,
+          258,
+          286,
+          300,
+          288,
+          318,
+          313,
+          302,
+          357,
+          483
+        ],
+        "meanPopularity": 246.8,
+        "hits": [
+          100,
+          258
+        ],
+        "relevant": 19,
+        "recall": 0.10526315789473684,
+        "genres": {
+          "Crime": 2,
+          "Drama": 7,
+          "Thriller": 4,
+          "Sci-Fi": 1,
+          "Romance": 3,
+          "War": 3,
+          "Action": 2,
+          "Horror": 1,
+          "Film-Noir": 1,
+          "Mystery": 1
+        },
+        "genreDenominator": 10,
+        "genreNote": "Multi-label memberships per ten recommended movies; counts can sum above10."
+      },
+      {
+        "purpose": "primary",
+        "label": "primary",
+        "method": "popularity",
+        "userId": 2,
+        "alpha": null,
+        "movieIds": [
+          181,
+          174,
+          98,
+          56,
+          172,
+          7,
+          79,
+          64,
+          318,
+          173
+        ],
+        "meanPopularity": 262.1,
+        "hits": [],
+        "relevant": 2,
+        "recall": 0.0,
+        "genres": {
+          "Action": 5,
+          "Adventure": 4,
+          "Romance": 3,
+          "Sci-Fi": 3,
+          "War": 3,
+          "Drama": 6,
+          "Thriller": 2,
+          "Crime": 1,
+          "Comedy": 1
+        },
+        "genreDenominator": 10,
+        "genreNote": "Multi-label memberships per ten recommended movies; counts can sum above10."
+      },
+      {
+        "purpose": "primary",
+        "label": "primary",
+        "method": "pagerank",
+        "userId": 1,
+        "alpha": 0.5,
+        "movieIds": [
+          258,
+          286,
+          100,
+          313,
+          300,
+          288,
+          302,
+          294,
+          275,
+          222
+        ],
+        "meanPopularity": 239.4,
+        "hits": [
+          100,
+          222,
+          258
+        ],
+        "relevant": 19,
+        "recall": 0.15789473684210525,
+        "genres": {
+          "Drama": 5,
+          "Sci-Fi": 2,
+          "Romance": 3,
+          "War": 1,
+          "Crime": 2,
+          "Thriller": 4,
+          "Action": 3,
+          "Horror": 1,
+          "Film-Noir": 1,
+          "Mystery": 1,
+          "Comedy": 1,
+          "Adventure": 1
+        },
+        "genreDenominator": 10,
+        "genreNote": "Multi-label memberships per ten recommended movies; counts can sum above10."
+      },
+      {
+        "purpose": "primary",
+        "label": "primary",
+        "method": "pagerank",
+        "userId": 2,
+        "alpha": 0.5,
+        "movieIds": [
+          181,
+          174,
+          98,
+          7,
+          56,
+          172,
+          117,
+          121,
+          268,
+          222
+        ],
+        "meanPopularity": 247.4,
+        "hits": [],
+        "relevant": 2,
+        "recall": 0.0,
+        "genres": {
+          "Action": 6,
+          "Adventure": 5,
+          "Romance": 3,
+          "Sci-Fi": 5,
+          "War": 3,
+          "Drama": 5,
+          "Thriller": 2,
+          "Crime": 1
+        },
+        "genreDenominator": 10,
+        "genreNote": "Multi-label memberships per ten recommended movies; counts can sum above10."
+      },
+      {
+        "purpose": "primary",
+        "label": "primary",
+        "method": "ppr",
+        "userId": 1,
+        "alpha": 0.5,
+        "movieIds": [
+          100,
+          258,
+          286,
+          318,
+          357,
+          483,
+          222,
+          475,
+          275,
+          423
+        ],
+        "meanPopularity": 228.4,
+        "hits": [
+          100,
+          222,
+          258
+        ],
+        "relevant": 19,
+        "recall": 0.15789473684210525,
+        "genres": {
+          "Crime": 1,
+          "Drama": 9,
+          "Thriller": 1,
+          "Sci-Fi": 3,
+          "Romance": 3,
+          "War": 3,
+          "Action": 1,
+          "Adventure": 1,
+          "Children's": 1,
+          "Fantasy": 1
+        },
+        "genreDenominator": 10,
+        "genreNote": "Multi-label memberships per ten recommended movies; counts can sum above10."
+      },
+      {
+        "purpose": "primary",
+        "label": "primary",
+        "method": "ppr",
+        "userId": 2,
+        "alpha": 0.5,
+        "movieIds": [
+          181,
+          9,
+          7,
+          117,
+          98,
+          121,
+          174,
+          268,
+          475,
+          15
+        ],
+        "meanPopularity": 226.7,
+        "hits": [],
+        "relevant": 2,
+        "recall": 0.0,
+        "genres": {
+          "Action": 4,
+          "Adventure": 3,
+          "Romance": 2,
+          "Sci-Fi": 3,
+          "War": 2,
+          "Drama": 6,
+          "Thriller": 2
+        },
+        "genreDenominator": 10,
+        "genreNote": "Multi-label memberships per ten recommended movies; counts can sum above10."
+      },
+      {
+        "purpose": "primary",
+        "label": "primary",
+        "method": "mf",
+        "userId": 1,
+        "alpha": null,
+        "movieIds": [
+          5,
+          6,
+          18,
+          20,
+          32,
+          74,
+          100,
+          102,
+          111,
+          129
+        ],
+        "meanPopularity": 72.2,
+        "hits": [
+          6,
+          18,
+          20,
+          32,
+          100,
+          111,
+          129
+        ],
+        "relevant": 19,
+        "recall": 0.3684210526315789,
+        "genres": {
+          "Crime": 3,
+          "Drama": 7,
+          "Thriller": 3,
+          "Romance": 3,
+          "Documentary": 1,
+          "Action": 1,
+          "Comedy": 2,
+          "Animation": 1,
+          "Children's": 1
+        },
+        "genreDenominator": 10,
+        "genreNote": "Multi-label memberships per ten recommended movies; counts can sum above10."
+      },
+      {
+        "purpose": "primary",
+        "label": "primary",
+        "method": "mf",
+        "userId": 2,
+        "alpha": null,
+        "movieIds": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11,
+          12
+        ],
+        "meanPopularity": 111.4,
+        "hits": [],
+        "relevant": 2,
+        "recall": 0.0,
+        "genres": {
+          "Action": 2,
+          "Adventure": 1,
+          "Thriller": 5,
+          "Comedy": 2,
+          "Drama": 6,
+          "Crime": 3,
+          "Sci-Fi": 1,
+          "Children's": 1
+        },
+        "genreDenominator": 10,
+        "genreNote": "Multi-label memberships per ten recommended movies; counts can sum above10."
+      },
+      {
+        "purpose": "diagnostic",
+        "label": "baseline",
+        "method": "ppr",
+        "userId": 1,
+        "alpha": 0.85,
+        "movieIds": [
+          100,
+          258,
+          286,
+          318,
+          357,
+          483,
+          288,
+          300,
+          222,
+          313
+        ],
+        "meanPopularity": 245.5,
+        "hits": [
+          100,
+          222,
+          258
+        ],
+        "relevant": 19,
+        "recall": 0.15789473684210525,
+        "genres": {
+          "Crime": 1,
+          "Drama": 7,
+          "Thriller": 3,
+          "Sci-Fi": 2,
+          "Romance": 3,
+          "War": 3,
+          "Horror": 1,
+          "Action": 3,
+          "Adventure": 1
+        },
+        "genreDenominator": 10,
+        "genreNote": "Multi-label memberships per ten recommended movies; counts can sum above10."
+      },
+      {
+        "purpose": "diagnostic",
+        "label": "seed-only",
+        "method": "ppr",
+        "userId": 2,
+        "alpha": 0.85,
+        "movieIds": [
+          181,
+          98,
+          174,
+          7,
+          56,
+          117,
+          172,
+          9,
+          121,
+          64
+        ],
+        "meanPopularity": 254.9,
+        "hits": [],
+        "relevant": 2,
+        "recall": 0.0,
+        "genres": {
+          "Action": 5,
+          "Adventure": 4,
+          "Romance": 2,
+          "Sci-Fi": 4,
+          "War": 3,
+          "Drama": 6,
+          "Thriller": 2,
+          "Crime": 1
+        },
+        "genreDenominator": 10,
+        "genreNote": "Multi-label memberships per ten recommended movies; counts can sum above10."
+      },
+      {
+        "purpose": "diagnostic",
+        "label": "alpha-only",
+        "method": "ppr",
+        "userId": 1,
+        "alpha": 0.5,
+        "movieIds": [
+          100,
+          258,
+          286,
+          318,
+          357,
+          483,
+          222,
+          475,
+          275,
+          423
+        ],
+        "meanPopularity": 228.4,
+        "hits": [
+          100,
+          222,
+          258
+        ],
+        "relevant": 19,
+        "recall": 0.15789473684210525,
+        "genres": {
+          "Crime": 1,
+          "Drama": 9,
+          "Thriller": 1,
+          "Sci-Fi": 3,
+          "Romance": 3,
+          "War": 3,
+          "Action": 1,
+          "Adventure": 1,
+          "Children's": 1,
+          "Fantasy": 1
+        },
+        "genreDenominator": 10,
+        "genreNote": "Multi-label memberships per ten recommended movies; counts can sum above10."
+      }
+    ],
+    "betweenUserOverlaps": [
+      {
+        "method": "popularity",
+        "users": [
+          1,
+          2
+        ],
+        "sharedMovies": [
+          318
+        ],
+        "count": 1
+      },
+      {
+        "method": "pagerank",
+        "users": [
+          1,
+          2
+        ],
+        "sharedMovies": [
+          222
+        ],
+        "count": 1
+      },
+      {
+        "method": "ppr",
+        "users": [
+          1,
+          2
+        ],
+        "sharedMovies": [
+          475
+        ],
+        "count": 1
+      },
+      {
+        "method": "mf",
+        "users": [
+          1,
+          2
+        ],
+        "sharedMovies": [
+          5,
+          6
+        ],
+        "count": 2
+      }
+    ],
+    "oneFactorComparisons": [
+      {
+        "comparison": "baseline vs seed-only",
+        "commonMovies": [],
+        "overlap": 0,
+        "meanPopularityChange": 9.400000000000006,
+        "hitCounts": [
+          3,
+          0
+        ],
+        "genresBaseline": {
+          "Crime": 1,
+          "Drama": 7,
+          "Thriller": 3,
+          "Sci-Fi": 2,
+          "Romance": 3,
+          "War": 3,
+          "Horror": 1,
+          "Action": 3,
+          "Adventure": 1
+        },
+        "genresChanged": {
+          "Action": 5,
+          "Adventure": 4,
+          "Romance": 2,
+          "Sci-Fi": 4,
+          "War": 3,
+          "Drama": 6,
+          "Thriller": 2,
+          "Crime": 1
+        }
+      },
+      {
+        "comparison": "baseline vs alpha-only",
+        "commonMovies": [
+          100,
+          222,
+          258,
+          286,
+          318,
+          357,
+          483
+        ],
+        "overlap": 7,
+        "meanPopularityChange": -17.099999999999994,
+        "hitCounts": [
+          3,
+          3
+        ],
+        "genresBaseline": {
+          "Crime": 1,
+          "Drama": 7,
+          "Thriller": 3,
+          "Sci-Fi": 2,
+          "Romance": 3,
+          "War": 3,
+          "Horror": 1,
+          "Action": 3,
+          "Adventure": 1
+        },
+        "genresChanged": {
+          "Crime": 1,
+          "Drama": 9,
+          "Thriller": 1,
+          "Sci-Fi": 3,
+          "Romance": 3,
+          "War": 3,
+          "Action": 1,
+          "Adventure": 1,
+          "Children's": 1,
+          "Fantasy": 1
+        }
+      }
+    ],
+    "suppliedDemo": "Saved separately in supplied-demo.json; happens to use the same raw users1/2 and settings."
+  },
+  "observations": [
+    "User1 has217 train ratings/131 positives; user2 has49/32. Both are eligible; IDs fixed in actual HW5 report, not selected from test performance.",
+    "Positive-training Drama shares:61/131 (46.56%) and18/32 (56.25%); Romance22/131 (16.79%) and11/32 (34.38%). Multi-genre shares do not sum to100%.",
+    "At selected alpha.50 PPR lists have Drama9/10 for user1 and6/10 for user2; positive-history mean popularity106.98/132.78 versus recommendation mean228.4/226.7. These are descriptive popularity/genre differences, not demonstrated novelty or intent.",
+    "User1 retrieves3 of19 eligible relevant test movies; user2 retrieves0 of2. The much smaller relevance denominator for user2 limits interpretation.",
+    "Direct saved-list checks: baseline1,.85 versus seed-only2,.85 share0; baseline versus alpha-only1,.50 share7. Lowering alpha reduces user1 mean popularity245.5\u2192228.4 while retaining3 hits; user2 at.85 has mean254.9 and0 hits. No conclusion about user98 is reused."
+  ]
+}

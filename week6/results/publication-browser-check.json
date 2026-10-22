@@ -1,0 +1,263 @@
+{
+  "mode": "comparison",
+  "url": "local HTTP server",
+  "browser": "153.0.8010.12",
+  "initial": {
+    "checks": {
+      "passed": 12,
+      "failed": 0,
+      "pending": 0,
+      "checks": [
+        {
+          "name": "reference graph: uniform alpha=0.85 matches readme 4.1 values",
+          "status": "PASS",
+          "detail": "C>A>B>D; produced by student pageRank(alpha, {transition: REFERENCE_GRAPH.transition}), iterations 28"
+        },
+        {
+          "name": "reference graph: restart at A alpha=0.85 matches readme 4.1 values",
+          "status": "PASS",
+          "detail": "A>C>B>D (D stays 0); produced by student personalizedPageRank(seedNode, alpha, {transition: REFERENCE_GRAPH.transition})"
+        },
+        {
+          "name": "row normalization: every nonzero-degree row sums to 1",
+          "status": "PASS",
+          "detail": "6 positive-degree row(s) sum to 1; 2 dangling row(s) are zero"
+        },
+        {
+          "name": "restart distributions: nonnegative and summing to 1",
+          "status": "PASS",
+          "detail": "uniform + one-hot over 4 nodes"
+        },
+        {
+          "name": "iterations preserve total probability (sum approx 1)",
+          "status": "PASS",
+          "detail": "sum = 1.0000002682 over 3 synthetic nodes (graph.js)"
+        },
+        {
+          "name": "stationary scores are nonnegative",
+          "status": "PASS",
+          "detail": "3 scores nonnegative (graph.js)"
+        },
+        {
+          "name": "one extra update produces approximately the same distribution",
+          "status": "PASS",
+          "detail": "L1 = 7.972e-7"
+        },
+        {
+          "name": "zero-degree node fixture preserves probability mass",
+          "status": "PASS",
+          "detail": "danglingMask [false,true,false,false,true]; mass 1.00000028 / 1.00000000"
+        },
+        {
+          "name": "matrix orientation: probability collects at the pointed-to node, not the source",
+          "status": "PASS",
+          "detail": "p = [0.486486, 0.256757, 0.256757]"
+        },
+        {
+          "name": "recommendTopK: excludes previously rated movies and breaks ties by ascending id",
+          "status": "PASS",
+          "detail": "10 eligible items for user 1"
+        },
+        {
+          "name": "graph mapping: node count equals observed users plus observed movies",
+          "status": "PASS",
+          "detail": "2554 nodes = 943 users + 1611 movies"
+        },
+        {
+          "name": "public surface: every required name is defined",
+          "status": "PASS",
+          "detail": "10 functions + ALPHA_GRID + MF_INFO"
+        }
+      ]
+    },
+    "backend": "webgl",
+    "version": "4.22.0",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+    "memory": {
+      "unreliable": false,
+      "numBytesInGPU": 0,
+      "numBytesInGPUAllocated": 2352,
+      "numBytesInGPUFree": 2352,
+      "numTensors": 0,
+      "numDataBuffers": 0,
+      "numBytes": 0
+    },
+    "mfTrained": false
+  },
+  "appHashes": {
+    "index.html": "3a9317bf06f9ef3fee8da60000b1f96182eaf87d947b54c436bb1ceb73f92db1",
+    "data.js": "eb33f8441f652938cce07e7fc7fe1e36f38acd0b296234074ac90d367e2678cd",
+    "graph.js": "221f4d5466221d591d8d7b9dbcc7e65e13a4040e5e0a19c3f596c370ebbdfecc",
+    "script.js": "966fd11dadb038bbaaeb3a51d35b69207d328f42a70c569373c2d1f5e416a604",
+    "style.css": "ea006b0f213cdd988916c9fea5f4789d89c7348c5627eaad2ef64b899729986b",
+    "u.data": "06416e597f82b7342361e41163890c81036900f418ad91315590814211dca490",
+    "u.item": "553841ebc7de3a0fd0d6b62a204ea30c1e651aacfb2814c7a6584ac52f2c5701",
+    "vendor/d3.min.js": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
+  },
+  "result": {
+    "sweep": {
+      "rows": [
+        {
+          "alpha": 0.5,
+          "recall": 0.11448315913208877,
+          "cohortSize": 846,
+          "error": null
+        },
+        {
+          "alpha": 0.7,
+          "recall": 0.1047969507641043,
+          "cohortSize": 846,
+          "error": null
+        },
+        {
+          "alpha": 0.85,
+          "recall": 0.09002077155336492,
+          "cohortSize": 846,
+          "error": null
+        },
+        {
+          "alpha": 0.95,
+          "recall": 0.07375030387909676,
+          "cohortSize": 846,
+          "error": null
+        }
+      ],
+      "slider": 0.85
+    },
+    "selectedAlpha": 0.5,
+    "comparison": {
+      "rows": [
+        {
+          "method": "popularity",
+          "split": "test",
+          "alpha": null,
+          "recall": 0.07602291343770759,
+          "cohortSize": 861,
+          "excludedUnseen": 13,
+          "excludedNoEligible": 82,
+          "meanPopularity": 271.99686411149816,
+          "iterations": null,
+          "residual": null,
+          "converged": null,
+          "error": null,
+          "note": null
+        },
+        {
+          "method": "pagerank",
+          "split": "test",
+          "alpha": 0.5,
+          "recall": 0.07969324149418144,
+          "cohortSize": 861,
+          "excludedUnseen": 13,
+          "excludedNoEligible": 82,
+          "meanPopularity": 257.820325203252,
+          "iterations": null,
+          "residual": null,
+          "converged": null,
+          "error": null,
+          "note": null
+        },
+        {
+          "method": "ppr",
+          "split": "test",
+          "alpha": 0.5,
+          "recall": 0.11218853219486066,
+          "cohortSize": 861,
+          "excludedUnseen": 13,
+          "excludedNoEligible": 82,
+          "meanPopularity": 244.20673635307733,
+          "iterations": null,
+          "residual": null,
+          "converged": null,
+          "error": null,
+          "note": null
+        },
+        {
+          "method": "mf",
+          "split": "test",
+          "alpha": null,
+          "recall": 0.021137488852036153,
+          "cohortSize": 861,
+          "excludedUnseen": 13,
+          "excludedNoEligible": 82,
+          "meanPopularity": 96.76085946573689,
+          "iterations": null,
+          "residual": null,
+          "converged": null,
+          "error": null,
+          "note": null
+        }
+      ],
+      "slider": 0.5,
+      "memory": {
+        "unreliable": false,
+        "numBytesInGPU": 168128,
+        "numBytesInGPUAllocated": 83748904,
+        "numBytesInGPUFree": 83580776,
+        "numTensors": 2,
+        "numDataBuffers": 2,
+        "numBytes": 168128
+      },
+      "checkpoint": 1
+    },
+    "differences": [
+      {
+        "method": "popularity",
+        "recallDifference": 0,
+        "meanPopularityDifference": 0
+      },
+      {
+        "method": "pagerank",
+        "recallDifference": 0,
+        "meanPopularityDifference": 0
+      },
+      {
+        "method": "ppr",
+        "recallDifference": 0,
+        "meanPopularityDifference": 0
+      },
+      {
+        "method": "mf",
+        "recallDifference": 0,
+        "meanPopularityDifference": 0
+      }
+    ],
+    "checkpointSource": "Packaged unchanged supplied-MF checkpoint1 restored from verified float32 factors; no training.",
+    "memoryBefore": {
+      "unreliable": false,
+      "numBytesInGPU": 0,
+      "numBytesInGPUAllocated": 2352,
+      "numBytesInGPUFree": 2352,
+      "numTensors": 2,
+      "numDataBuffers": 2,
+      "numBytes": 168128
+    },
+    "exports": [
+      {
+        "name": "verification.json",
+        "sha256": "5e47697b8d322fec821ebb5efa8c6248b1203668a60dbd955861f0c89757c952"
+      },
+      {
+        "name": "results.csv",
+        "sha256": "1e0caf16927e87f9b7e6987ae91ad17fdec93ecdc0a632ef37b204845bdcf425"
+      }
+    ]
+  },
+  "timing": [
+    {
+      "job": "validation sweep",
+      "seconds": 32.697
+    },
+    {
+      "job": "test comparison",
+      "seconds": 5.496
+    }
+  ],
+  "errors": [
+    {
+      "type": "console",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ],
+  "elapsedSeconds": 43.436
+}

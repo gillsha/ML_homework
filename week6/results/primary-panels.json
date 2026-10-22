@@ -1,0 +1,956 @@
+{
+  "records": [
+    {
+      "setting": {
+        "method": "popularity",
+        "userId": 1,
+        "alpha": 0.5
+      },
+      "rows": [
+        {
+          "userId": 1,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 1,
+          "movieId": 100,
+          "title": "Fargo (1996)",
+          "genres": "Crime;Drama;Thriller",
+          "score": 377,
+          "trainingPopularity": 377
+        },
+        {
+          "userId": 1,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 2,
+          "movieId": 258,
+          "title": "Contact (1997)",
+          "genres": "Drama;Sci-Fi",
+          "score": 307,
+          "trainingPopularity": 307
+        },
+        {
+          "userId": 1,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 3,
+          "movieId": 286,
+          "title": "English Patient, The (1996)",
+          "genres": "Drama;Romance;War",
+          "score": 279,
+          "trainingPopularity": 279
+        },
+        {
+          "userId": 1,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 4,
+          "movieId": 300,
+          "title": "Air Force One (1997)",
+          "genres": "Action;Thriller",
+          "score": 235,
+          "trainingPopularity": 235
+        },
+        {
+          "userId": 1,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 5,
+          "movieId": 288,
+          "title": "Scream (1996)",
+          "genres": "Horror;Thriller",
+          "score": 226,
+          "trainingPopularity": 226
+        },
+        {
+          "userId": 1,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 6,
+          "movieId": 318,
+          "title": "Schindler's List (1993)",
+          "genres": "Drama;War",
+          "score": 224,
+          "trainingPopularity": 224
+        },
+        {
+          "userId": 1,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 7,
+          "movieId": 313,
+          "title": "Titanic (1997)",
+          "genres": "Action;Drama;Romance",
+          "score": 219,
+          "trainingPopularity": 219
+        },
+        {
+          "userId": 1,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 8,
+          "movieId": 302,
+          "title": "L.A. Confidential (1997)",
+          "genres": "Crime;Film-Noir;Mystery;Thriller",
+          "score": 202,
+          "trainingPopularity": 202
+        },
+        {
+          "userId": 1,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 9,
+          "movieId": 357,
+          "title": "One Flew Over the Cuckoo's Nest (1975)",
+          "genres": "Drama",
+          "score": 202,
+          "trainingPopularity": 202
+        },
+        {
+          "userId": 1,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 10,
+          "movieId": 483,
+          "title": "Casablanca (1942)",
+          "genres": "Drama;Romance;War",
+          "score": 197,
+          "trainingPopularity": 197
+        }
+      ]
+    },
+    {
+      "setting": {
+        "method": "popularity",
+        "userId": 2,
+        "alpha": 0.5
+      },
+      "rows": [
+        {
+          "userId": 2,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 1,
+          "movieId": 181,
+          "title": "Return of the Jedi (1983)",
+          "genres": "Action;Adventure;Romance;Sci-Fi;War",
+          "score": 339,
+          "trainingPopularity": 339
+        },
+        {
+          "userId": 2,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 2,
+          "movieId": 174,
+          "title": "Raiders of the Lost Ark (1981)",
+          "genres": "Action;Adventure",
+          "score": 312,
+          "trainingPopularity": 312
+        },
+        {
+          "userId": 2,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 3,
+          "movieId": 98,
+          "title": "Silence of the Lambs, The (1991)",
+          "genres": "Drama;Thriller",
+          "score": 308,
+          "trainingPopularity": 308
+        },
+        {
+          "userId": 2,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 4,
+          "movieId": 56,
+          "title": "Pulp Fiction (1994)",
+          "genres": "Crime;Drama",
+          "score": 263,
+          "trainingPopularity": 263
+        },
+        {
+          "userId": 2,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 5,
+          "movieId": 172,
+          "title": "Empire Strikes Back, The (1980)",
+          "genres": "Action;Adventure;Drama;Romance;Sci-Fi;War",
+          "score": 261,
+          "trainingPopularity": 261
+        },
+        {
+          "userId": 2,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 6,
+          "movieId": 7,
+          "title": "Twelve Monkeys (1995)",
+          "genres": "Drama;Sci-Fi",
+          "score": 234,
+          "trainingPopularity": 234
+        },
+        {
+          "userId": 2,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 7,
+          "movieId": 79,
+          "title": "Fugitive, The (1993)",
+          "genres": "Action;Thriller",
+          "score": 230,
+          "trainingPopularity": 230
+        },
+        {
+          "userId": 2,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 8,
+          "movieId": 64,
+          "title": "Shawshank Redemption, The (1994)",
+          "genres": "Drama",
+          "score": 228,
+          "trainingPopularity": 228
+        },
+        {
+          "userId": 2,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 9,
+          "movieId": 318,
+          "title": "Schindler's List (1993)",
+          "genres": "Drama;War",
+          "score": 224,
+          "trainingPopularity": 224
+        },
+        {
+          "userId": 2,
+          "method": "popularity",
+          "alpha": "",
+          "rank": 10,
+          "movieId": 173,
+          "title": "Princess Bride, The (1987)",
+          "genres": "Action;Adventure;Comedy;Romance",
+          "score": 222,
+          "trainingPopularity": 222
+        }
+      ]
+    },
+    {
+      "setting": {
+        "method": "pagerank",
+        "userId": 1,
+        "alpha": 0.5
+      },
+      "rows": [
+        {
+          "userId": 1,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 1,
+          "movieId": 258,
+          "title": "Contact (1997)",
+          "genres": "Drama;Sci-Fi",
+          "score": 0.0023751864209771156,
+          "trainingPopularity": 307
+        },
+        {
+          "userId": 1,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 2,
+          "movieId": 286,
+          "title": "English Patient, The (1996)",
+          "genres": "Drama;Romance;War",
+          "score": 0.002291253302246332,
+          "trainingPopularity": 279
+        },
+        {
+          "userId": 1,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 3,
+          "movieId": 100,
+          "title": "Fargo (1996)",
+          "genres": "Crime;Drama;Thriller",
+          "score": 0.002271695528179407,
+          "trainingPopularity": 377
+        },
+        {
+          "userId": 1,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 4,
+          "movieId": 313,
+          "title": "Titanic (1997)",
+          "genres": "Action;Drama;Romance",
+          "score": 0.0020634259562939405,
+          "trainingPopularity": 219
+        },
+        {
+          "userId": 1,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 5,
+          "movieId": 300,
+          "title": "Air Force One (1997)",
+          "genres": "Action;Thriller",
+          "score": 0.0020034192129969597,
+          "trainingPopularity": 235
+        },
+        {
+          "userId": 1,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 6,
+          "movieId": 288,
+          "title": "Scream (1996)",
+          "genres": "Horror;Thriller",
+          "score": 0.0018683733651414514,
+          "trainingPopularity": 226
+        },
+        {
+          "userId": 1,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 7,
+          "movieId": 302,
+          "title": "L.A. Confidential (1997)",
+          "genres": "Crime;Film-Noir;Mystery;Thriller",
+          "score": 0.001798133598640561,
+          "trainingPopularity": 202
+        },
+        {
+          "userId": 1,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 8,
+          "movieId": 294,
+          "title": "Liar Liar (1997)",
+          "genres": "Comedy",
+          "score": 0.0014883464900776744,
+          "trainingPopularity": 182
+        },
+        {
+          "userId": 1,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 9,
+          "movieId": 275,
+          "title": "Sense and Sensibility (1995)",
+          "genres": "Drama;Romance",
+          "score": 0.0012158651370555162,
+          "trainingPopularity": 178
+        },
+        {
+          "userId": 1,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 10,
+          "movieId": 222,
+          "title": "Star Trek: First Contact (1996)",
+          "genres": "Action;Adventure;Sci-Fi",
+          "score": 0.0011928167659789324,
+          "trainingPopularity": 189
+        }
+      ]
+    },
+    {
+      "setting": {
+        "method": "pagerank",
+        "userId": 2,
+        "alpha": 0.5
+      },
+      "rows": [
+        {
+          "userId": 2,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 1,
+          "movieId": 181,
+          "title": "Return of the Jedi (1983)",
+          "genres": "Action;Adventure;Romance;Sci-Fi;War",
+          "score": 0.0019889404065907,
+          "trainingPopularity": 339
+        },
+        {
+          "userId": 2,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 2,
+          "movieId": 174,
+          "title": "Raiders of the Lost Ark (1981)",
+          "genres": "Action;Adventure",
+          "score": 0.0015527261421084404,
+          "trainingPopularity": 312
+        },
+        {
+          "userId": 2,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 3,
+          "movieId": 98,
+          "title": "Silence of the Lambs, The (1991)",
+          "genres": "Drama;Thriller",
+          "score": 0.0015255436301231384,
+          "trainingPopularity": 308
+        },
+        {
+          "userId": 2,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 4,
+          "movieId": 7,
+          "title": "Twelve Monkeys (1995)",
+          "genres": "Drama;Sci-Fi",
+          "score": 0.001373774721287191,
+          "trainingPopularity": 234
+        },
+        {
+          "userId": 2,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 5,
+          "movieId": 56,
+          "title": "Pulp Fiction (1994)",
+          "genres": "Crime;Drama",
+          "score": 0.0013726184843108058,
+          "trainingPopularity": 263
+        },
+        {
+          "userId": 2,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 6,
+          "movieId": 172,
+          "title": "Empire Strikes Back, The (1980)",
+          "genres": "Action;Adventure;Drama;Romance;Sci-Fi;War",
+          "score": 0.0013182985130697489,
+          "trainingPopularity": 261
+        },
+        {
+          "userId": 2,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 7,
+          "movieId": 117,
+          "title": "Rock, The (1996)",
+          "genres": "Action;Adventure;Thriller",
+          "score": 0.0013080037897452712,
+          "trainingPopularity": 215
+        },
+        {
+          "userId": 2,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 8,
+          "movieId": 121,
+          "title": "Independence Day (ID4) (1996)",
+          "genres": "Action;Sci-Fi;War",
+          "score": 0.0012972892727702856,
+          "trainingPopularity": 207
+        },
+        {
+          "userId": 2,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 9,
+          "movieId": 268,
+          "title": "Chasing Amy (1997)",
+          "genres": "Drama;Romance",
+          "score": 0.0012656085891649127,
+          "trainingPopularity": 146
+        },
+        {
+          "userId": 2,
+          "method": "pagerank",
+          "alpha": "0.50",
+          "rank": 10,
+          "movieId": 222,
+          "title": "Star Trek: First Contact (1996)",
+          "genres": "Action;Adventure;Sci-Fi",
+          "score": 0.0011928167659789324,
+          "trainingPopularity": 189
+        }
+      ]
+    },
+    {
+      "setting": {
+        "method": "ppr",
+        "userId": 1,
+        "alpha": 0.5
+      },
+      "rows": [
+        {
+          "userId": 1,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 1,
+          "movieId": 100,
+          "title": "Fargo (1996)",
+          "genres": "Crime;Drama;Thriller",
+          "score": 0.0006855191895738244,
+          "trainingPopularity": 377
+        },
+        {
+          "userId": 1,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 2,
+          "movieId": 258,
+          "title": "Contact (1997)",
+          "genres": "Drama;Sci-Fi",
+          "score": 0.0004398658056743443,
+          "trainingPopularity": 307
+        },
+        {
+          "userId": 1,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 3,
+          "movieId": 286,
+          "title": "English Patient, The (1996)",
+          "genres": "Drama;Romance;War",
+          "score": 0.00043101841583848,
+          "trainingPopularity": 279
+        },
+        {
+          "userId": 1,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 4,
+          "movieId": 318,
+          "title": "Schindler's List (1993)",
+          "genres": "Drama;War",
+          "score": 0.0004038166953250766,
+          "trainingPopularity": 224
+        },
+        {
+          "userId": 1,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 5,
+          "movieId": 357,
+          "title": "One Flew Over the Cuckoo's Nest (1975)",
+          "genres": "Drama",
+          "score": 0.00037716623046435416,
+          "trainingPopularity": 202
+        },
+        {
+          "userId": 1,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 6,
+          "movieId": 483,
+          "title": "Casablanca (1942)",
+          "genres": "Drama;Romance;War",
+          "score": 0.00035968932206742465,
+          "trainingPopularity": 197
+        },
+        {
+          "userId": 1,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 7,
+          "movieId": 222,
+          "title": "Star Trek: First Contact (1996)",
+          "genres": "Action;Adventure;Sci-Fi",
+          "score": 0.00033278539194725454,
+          "trainingPopularity": 189
+        },
+        {
+          "userId": 1,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 8,
+          "movieId": 475,
+          "title": "Trainspotting (1996)",
+          "genres": "Drama",
+          "score": 0.00032809015829116106,
+          "trainingPopularity": 164
+        },
+        {
+          "userId": 1,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 9,
+          "movieId": 275,
+          "title": "Sense and Sensibility (1995)",
+          "genres": "Drama;Romance",
+          "score": 0.00032018491765484214,
+          "trainingPopularity": 178
+        },
+        {
+          "userId": 1,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 10,
+          "movieId": 423,
+          "title": "E.T. the Extra-Terrestrial (1982)",
+          "genres": "Children's;Drama;Fantasy;Sci-Fi",
+          "score": 0.00030566827626898885,
+          "trainingPopularity": 167
+        }
+      ]
+    },
+    {
+      "setting": {
+        "method": "ppr",
+        "userId": 2,
+        "alpha": 0.5
+      },
+      "rows": [
+        {
+          "userId": 2,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 1,
+          "movieId": 181,
+          "title": "Return of the Jedi (1983)",
+          "genres": "Action;Adventure;Romance;Sci-Fi;War",
+          "score": 0.0006973391282372177,
+          "trainingPopularity": 339
+        },
+        {
+          "userId": 2,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 2,
+          "movieId": 9,
+          "title": "Dead Man Walking (1995)",
+          "genres": "Drama",
+          "score": 0.0004976635682396591,
+          "trainingPopularity": 182
+        },
+        {
+          "userId": 2,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 3,
+          "movieId": 7,
+          "title": "Twelve Monkeys (1995)",
+          "genres": "Drama;Sci-Fi",
+          "score": 0.00047437407192774117,
+          "trainingPopularity": 234
+        },
+        {
+          "userId": 2,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 4,
+          "movieId": 117,
+          "title": "Rock, The (1996)",
+          "genres": "Action;Adventure;Thriller",
+          "score": 0.0004563616821542382,
+          "trainingPopularity": 215
+        },
+        {
+          "userId": 2,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 5,
+          "movieId": 98,
+          "title": "Silence of the Lambs, The (1991)",
+          "genres": "Drama;Thriller",
+          "score": 0.00044651018106378615,
+          "trainingPopularity": 308
+        },
+        {
+          "userId": 2,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 6,
+          "movieId": 121,
+          "title": "Independence Day (ID4) (1996)",
+          "genres": "Action;Sci-Fi;War",
+          "score": 0.00043071250547654927,
+          "trainingPopularity": 207
+        },
+        {
+          "userId": 2,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 7,
+          "movieId": 174,
+          "title": "Raiders of the Lost Ark (1981)",
+          "genres": "Action;Adventure",
+          "score": 0.00040285097202286124,
+          "trainingPopularity": 312
+        },
+        {
+          "userId": 2,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 8,
+          "movieId": 268,
+          "title": "Chasing Amy (1997)",
+          "genres": "Drama;Romance",
+          "score": 0.00040181103395298123,
+          "trainingPopularity": 146
+        },
+        {
+          "userId": 2,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 9,
+          "movieId": 475,
+          "title": "Trainspotting (1996)",
+          "genres": "Drama",
+          "score": 0.00040160532807931304,
+          "trainingPopularity": 164
+        },
+        {
+          "userId": 2,
+          "method": "ppr",
+          "alpha": "0.50",
+          "rank": 10,
+          "movieId": 15,
+          "title": "Mr. Holland's Opus (1995)",
+          "genres": "Drama",
+          "score": 0.0004009184194728732,
+          "trainingPopularity": 160
+        }
+      ]
+    },
+    {
+      "setting": {
+        "method": "mf",
+        "userId": 1,
+        "alpha": 0.5
+      },
+      "rows": [
+        {
+          "userId": 1,
+          "method": "mf",
+          "alpha": "",
+          "rank": 1,
+          "movieId": 5,
+          "title": "Copycat (1995)",
+          "genres": "Crime;Drama;Thriller",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 28
+        },
+        {
+          "userId": 1,
+          "method": "mf",
+          "alpha": "",
+          "rank": 2,
+          "movieId": 6,
+          "title": "Shanghai Triad (Yao a yao yao dao waipo qiao) (1995)",
+          "genres": "Drama",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 12
+        },
+        {
+          "userId": 1,
+          "method": "mf",
+          "alpha": "",
+          "rank": 3,
+          "movieId": 18,
+          "title": "White Balloon, The (1995)",
+          "genres": "Drama",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 1
+        },
+        {
+          "userId": 1,
+          "method": "mf",
+          "alpha": "",
+          "rank": 4,
+          "movieId": 20,
+          "title": "Angels and Insects (1995)",
+          "genres": "Drama;Romance",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 31
+        },
+        {
+          "userId": 1,
+          "method": "mf",
+          "alpha": "",
+          "rank": 5,
+          "movieId": 32,
+          "title": "Crumb (1994)",
+          "genres": "Documentary",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 46
+        },
+        {
+          "userId": 1,
+          "method": "mf",
+          "alpha": "",
+          "rank": 6,
+          "movieId": 74,
+          "title": "Faster Pussycat! Kill! Kill! (1965)",
+          "genres": "Action;Comedy;Drama",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 2
+        },
+        {
+          "userId": 1,
+          "method": "mf",
+          "alpha": "",
+          "rank": 7,
+          "movieId": 100,
+          "title": "Fargo (1996)",
+          "genres": "Crime;Drama;Thriller",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 377
+        },
+        {
+          "userId": 1,
+          "method": "mf",
+          "alpha": "",
+          "rank": 8,
+          "movieId": 102,
+          "title": "Aristocats, The (1970)",
+          "genres": "Animation;Children's",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 18
+        },
+        {
+          "userId": 1,
+          "method": "mf",
+          "alpha": "",
+          "rank": 9,
+          "movieId": 111,
+          "title": "Truth About Cats & Dogs, The (1996)",
+          "genres": "Comedy;Romance",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 131
+        },
+        {
+          "userId": 1,
+          "method": "mf",
+          "alpha": "",
+          "rank": 10,
+          "movieId": 129,
+          "title": "Bound (1996)",
+          "genres": "Crime;Drama;Romance;Thriller",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 76
+        }
+      ]
+    },
+    {
+      "setting": {
+        "method": "mf",
+        "userId": 2,
+        "alpha": 0.5
+      },
+      "rows": [
+        {
+          "userId": 2,
+          "method": "mf",
+          "alpha": "",
+          "rank": 1,
+          "movieId": 2,
+          "title": "GoldenEye (1995)",
+          "genres": "Action;Adventure;Thriller",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 41
+        },
+        {
+          "userId": 2,
+          "method": "mf",
+          "alpha": "",
+          "rank": 2,
+          "movieId": 3,
+          "title": "Four Rooms (1995)",
+          "genres": "Thriller",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 27
+        },
+        {
+          "userId": 2,
+          "method": "mf",
+          "alpha": "",
+          "rank": 3,
+          "movieId": 4,
+          "title": "Get Shorty (1995)",
+          "genres": "Action;Comedy;Drama",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 96
+        },
+        {
+          "userId": 2,
+          "method": "mf",
+          "alpha": "",
+          "rank": 4,
+          "movieId": 5,
+          "title": "Copycat (1995)",
+          "genres": "Crime;Drama;Thriller",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 28
+        },
+        {
+          "userId": 2,
+          "method": "mf",
+          "alpha": "",
+          "rank": 5,
+          "movieId": 6,
+          "title": "Shanghai Triad (Yao a yao yao dao waipo qiao) (1995)",
+          "genres": "Drama",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 12
+        },
+        {
+          "userId": 2,
+          "method": "mf",
+          "alpha": "",
+          "rank": 6,
+          "movieId": 7,
+          "title": "Twelve Monkeys (1995)",
+          "genres": "Drama;Sci-Fi",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 234
+        },
+        {
+          "userId": 2,
+          "method": "mf",
+          "alpha": "",
+          "rank": 7,
+          "movieId": 8,
+          "title": "Babe (1995)",
+          "genres": "Children's;Comedy;Drama",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 137
+        },
+        {
+          "userId": 2,
+          "method": "mf",
+          "alpha": "",
+          "rank": 8,
+          "movieId": 9,
+          "title": "Dead Man Walking (1995)",
+          "genres": "Drama",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 182
+        },
+        {
+          "userId": 2,
+          "method": "mf",
+          "alpha": "",
+          "rank": 9,
+          "movieId": 11,
+          "title": "Seven (Se7en) (1995)",
+          "genres": "Crime;Thriller",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 152
+        },
+        {
+          "userId": 2,
+          "method": "mf",
+          "alpha": "",
+          "rank": 10,
+          "movieId": 12,
+          "title": "Usual Suspects, The (1995)",
+          "genres": "Crime;Thriller",
+          "score": 3.5806026458740234,
+          "trainingPopularity": 205
+        }
+      ]
+    }
+  ]
+}

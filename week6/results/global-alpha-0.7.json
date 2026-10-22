@@ -1,0 +1,14 @@
+{
+  "alpha": 0.7,
+  "precision": "float64 NumPy",
+  "spearmanAllTrainingMovieNodes": 0.9926731600635159,
+  "spearmanPositiveDegreeMovies": 0.9878069455518609,
+  "movieCount": 1611,
+  "positiveMovieCount": 1358,
+  "averageTestTop10OverlapCount": 7.64692218350755,
+  "cohort": 861,
+  "iterations": 36,
+  "residual": 7.856980284718566e-07,
+  "massError": 0.0,
+  "definition": "Spearman = Pearson correlation of average ranks including ties. Uniform teleport and dangling redistribution; overlap uses identical test exclusions."
+}
