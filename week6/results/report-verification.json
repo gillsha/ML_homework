@@ -34,12 +34,12 @@
     },
     {
       "page": 5,
-      "bodyBottomPoints": 773.5713691135579,
+      "bodyBottomPoints": 752.5713699885582,
       "horizontalOverflowCharacters": 0
     },
     {
       "page": 6,
-      "bodyBottomPoints": 507.40720539803135,
+      "bodyBottomPoints": 548.1151529431177,
       "horizontalOverflowCharacters": 0
     }
   ],
@@ -48,23 +48,104 @@
   "changedPreexistingFiles": [],
   "protectedHomeworkFilesUnchanged": true,
   "appExperimentSettingsAndWeeks1To5Unchanged": true,
-  "preparedJSONByteIdentical": true,
-  "reportExperimentTextUnchanged": true,
-  "pdfSHA256": "a5eb7d9e24c4f4155211f5932da66b8af6b6454e0d276e65e9b56dec28dc3266",
-  "pdfBytes": 1073215,
+  "serializedRecordsPreserved": true,
+  "primaryMetricTablesAndFirstFourPagesUnchanged": true,
+  "referenceEntriesUnchanged": true,
+  "pdfSHA256": "a9f9565ef95d3b1f2eafd0a40f161d87ca0f7c2193f7ffe54b1d423cc429f3ef",
+  "pdfBytes": 1079946,
   "numberTrace": {
-    "ledgerRows": 4448,
-    "rawNumericMetadataFieldsResolvedAndCompared": 3576,
+    "ledgerRows": 4590,
+    "rawNumericMetadataFieldsResolvedAndCompared": 3712,
     "mismatches": 0,
     "durationClaimsChecked": 10,
     "disclosureCountsVerified": true,
     "source": "submission-json-verification.json"
   },
-  "portableReportRebuild": {
-    "passed": true,
-    "allSixPageTextsMatchFinalPDF": true,
-    "initialSandboxBrowserLaunchFailed": true,
-    "retryWithBrowserPermissionPassed": true,
-    "gpuDisabled": true
-  }
+  "portableReportSourceGeneratedIdenticalHTML": true,
+  "studentReviewConfirmation": {
+    "personallyConfirmedChecks": [
+      "recall calculations",
+      "reference-graph update",
+      "stationarity",
+      "user-ID mapping"
+    ],
+    "reportedOutcome": "All checked results agree with the report.",
+    "verificationMethod": "Not specified; no claim of unaided calculation or independent execution is inferred.",
+    "otherReviewItems": "Unconfirmed; remain pending",
+    "includedInRefreshedSnapshot": true,
+    "source": "Student confirmation recorded in private project evidence; this public summary contains no transcript records."
+  },
+  "exportVerification": {
+    "records": 2466,
+    "jsonBytes": 31372577,
+    "jsonSHA256": "6f3a3b4463d13a041bb9d1c6c3287b5317d363d69c0aba75c60718b2cd2c9f85",
+    "gzipBytes": 19109433,
+    "gzipSHA256": "c737c04cbafcd6c00be5ecdb2b93701977067048ab413b91108848bb6db70b2d",
+    "serializedRecordsByteIdenticalToNativeLines": true,
+    "gzipDecompressesIdentically": true,
+    "firstTimestamp": "2026-10-22T09:39:25.371Z",
+    "lastTimestamp": "2026-10-22T12:54:42.671Z",
+    "nativeParts": 4,
+    "replacements": 0,
+    "redactions": 0,
+    "omittedRecords": 0,
+    "formatChanged": true,
+    "nativeFileByteIdentical": false,
+    "sourceRecordCorrespondence": true,
+    "sourceOrderPreserved": true,
+    "timestampOrderVerified": true,
+    "builtFreshFromNativeFiles": true,
+    "oldExportAppended": false,
+    "description": "Fresh frozen snapshot of native JSONL continuation files, wrapped in original order as a JSON array. Every serialized record is unchanged. Later packaging is outside this cutoff."
+  },
+  "additionalEvidence": {
+    "scope": "Report consistency recheck using independent raw split, set intersections and exact rational arithmetic; supplied isolated-JS evidence read, not re-executed; no GPU or training.",
+    "rawDataHashMatches": true,
+    "relevantAndHitSetsMatch": true,
+    "exactFirstUpdate": [
+      "1/4",
+      "23/160",
+      "91/160",
+      "3/80"
+    ],
+    "splitSizes": {
+      "train": 79619,
+      "val": 9596,
+      "test": 10785
+    },
+    "positiveEdges": 45602,
+    "suppliedStationaryMaxResidual": 3.729655473350135e-17,
+    "currentNumpyStationaryMaxResidual": 3.9898639947466563e-17,
+    "stationaryTolerance": 1e-15,
+    "isolatedSeedEvidenceConsistentWithCurrentIDOrdering": true,
+    "inputEvidenceHashes": {
+      "hw6_independent_recheck.json": "6c8de0e3e2bc4003ff885a61d83c0ec4bef7d131ea505ae3b5b4e06c90e0e5a2",
+      "hw6_seed_contract_recheck.json": "4211b700200fa5e9a301cd27b12b93ba51971f37d384d559053a5018da699110"
+    }
+  },
+  "linkChecks": {
+    "checkedAtUTC": "2026-10-22T12:34:30.994169+00:00",
+    "links": [
+      {
+        "url": "https://github.com/gillsha/ML_homework",
+        "httpStatus": 200,
+        "finalURL": "https://github.com/gillsha/ML_homework",
+        "responseBytes": 254204
+      },
+      {
+        "url": "https://github.com/gillsha/ML_homework/blob/11f356483cd9d08d3be785a2b1ed4125817d68da/week6/tools/README.md",
+        "httpStatus": 200,
+        "finalURL": "https://github.com/gillsha/ML_homework/blob/11f356483cd9d08d3be785a2b1ed4125817d68da/week6/tools/README.md",
+        "responseBytes": 230337
+      },
+      {
+        "url": "https://github.com/gillsha/ML_homework/tree/11f356483cd9d08d3be785a2b1ed4125817d68da/week6/results",
+        "httpStatus": 200,
+        "finalURL": "https://github.com/gillsha/ML_homework/tree/11f356483cd9d08d3be785a2b1ed4125817d68da/week6/results",
+        "responseBytes": 348352
+      }
+    ],
+    "newRecheckSupplements": "local only; not advertised as remotely available"
+  },
+  "currentReportScope": "Disclosure, seed-contract case, pilot recommendation and personal-review attribution; no new training or GPU propagation."
 }

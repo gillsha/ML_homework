@@ -1,0 +1,163 @@
+{
+  "verification_performed_by": "assistant using independent scripts; no student verification claimed",
+  "raw_data_sha256": "06416e597f82b7342361e41163890c81036900f418ad91315590814211dca490",
+  "fixture_incoming": [
+    "1/4",
+    "1/8",
+    "5/8",
+    "0"
+  ],
+  "fixture_first_update": [
+    0.25,
+    0.14375,
+    0.56875,
+    0.0375
+  ],
+  "recall_checks": [
+    {
+      "user": 1,
+      "method": "ppr",
+      "relevant_ids": [
+        6,
+        18,
+        20,
+        32,
+        100,
+        111,
+        129,
+        154,
+        169,
+        171,
+        178,
+        209,
+        221,
+        222,
+        228,
+        242,
+        256,
+        258,
+        270
+      ],
+      "recommended_ids": [
+        100,
+        258,
+        286,
+        318,
+        357,
+        483,
+        222,
+        475,
+        275,
+        423
+      ],
+      "hits": [
+        100,
+        222,
+        258
+      ],
+      "numerator": 3,
+      "denominator": 19,
+      "recall": 0.15789473684210525
+    },
+    {
+      "user": 1,
+      "method": "mf",
+      "relevant_ids": [
+        6,
+        18,
+        20,
+        32,
+        100,
+        111,
+        129,
+        154,
+        169,
+        171,
+        178,
+        209,
+        221,
+        222,
+        228,
+        242,
+        256,
+        258,
+        270
+      ],
+      "recommended_ids": [
+        5,
+        6,
+        18,
+        20,
+        32,
+        74,
+        100,
+        102,
+        111,
+        129
+      ],
+      "hits": [
+        6,
+        18,
+        20,
+        32,
+        100,
+        111,
+        129
+      ],
+      "numerator": 7,
+      "denominator": 19,
+      "recall": 0.3684210526315789
+    },
+    {
+      "user": 2,
+      "method": "ppr",
+      "relevant_ids": [
+        304,
+        316
+      ],
+      "recommended_ids": [
+        181,
+        9,
+        7,
+        117,
+        98,
+        121,
+        174,
+        268,
+        475,
+        15
+      ],
+      "hits": [],
+      "numerator": 0,
+      "denominator": 2,
+      "recall": 0.0
+    },
+    {
+      "user": 2,
+      "method": "mf",
+      "relevant_ids": [
+        304,
+        316
+      ],
+      "recommended_ids": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12
+      ],
+      "hits": [],
+      "numerator": 0,
+      "denominator": 2,
+      "recall": 0.0
+    }
+  ],
+  "positive_edges": 45602,
+  "undamped_stationary_distribution_max_residual": 3.729655473350135e-17,
+  "scope": "Recomputed split and relevant sets from raw ratings; checked exported recommendation lists, not a new full GPU run. Stationarity applies to the undamped undirected walk, not finite-alpha uniform-restart PageRank."
+}

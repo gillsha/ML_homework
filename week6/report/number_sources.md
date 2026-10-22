@@ -4420,6 +4420,138 @@ Paths are relative to project root `repository root`. JSON fields use JSON Point
 | Evidence field | True | week6/results/split-comparison.json | /week6/splits/val/matchesIndependent | Direct evidence; rounded only for presentation. |
 | Evidence field | 10785 | week6/results/split-comparison.json | /week6/splits/test/rows | Direct evidence; rounded only for presentation. |
 | Evidence field | True | week6/results/split-comparison.json | /week6/splits/test/matchesIndependent | Direct evidence; rounded only for presentation. |
+| Evidence field | 0.25 | week6/results/hw6_independent_recheck.json | /fixture_first_update/0 | Direct evidence; rounded only for presentation. |
+| Evidence field | 0.14375 | week6/results/hw6_independent_recheck.json | /fixture_first_update/1 | Direct evidence; rounded only for presentation. |
+| Evidence field | 0.56875 | week6/results/hw6_independent_recheck.json | /fixture_first_update/2 | Direct evidence; rounded only for presentation. |
+| Evidence field | 0.0375 | week6/results/hw6_independent_recheck.json | /fixture_first_update/3 | Direct evidence; rounded only for presentation. |
+| Evidence field | 1 | week6/results/hw6_independent_recheck.json | /recall_checks/0/user | Direct evidence; rounded only for presentation. |
+| Evidence field | 6 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/0 | Direct evidence; rounded only for presentation. |
+| Evidence field | 18 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/1 | Direct evidence; rounded only for presentation. |
+| Evidence field | 20 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/2 | Direct evidence; rounded only for presentation. |
+| Evidence field | 32 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/3 | Direct evidence; rounded only for presentation. |
+| Evidence field | 100 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/4 | Direct evidence; rounded only for presentation. |
+| Evidence field | 111 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/5 | Direct evidence; rounded only for presentation. |
+| Evidence field | 129 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/6 | Direct evidence; rounded only for presentation. |
+| Evidence field | 154 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/7 | Direct evidence; rounded only for presentation. |
+| Evidence field | 169 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/8 | Direct evidence; rounded only for presentation. |
+| Evidence field | 171 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/9 | Direct evidence; rounded only for presentation. |
+| Evidence field | 178 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/10 | Direct evidence; rounded only for presentation. |
+| Evidence field | 209 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/11 | Direct evidence; rounded only for presentation. |
+| Evidence field | 221 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/12 | Direct evidence; rounded only for presentation. |
+| Evidence field | 222 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/13 | Direct evidence; rounded only for presentation. |
+| Evidence field | 228 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/14 | Direct evidence; rounded only for presentation. |
+| Evidence field | 242 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/15 | Direct evidence; rounded only for presentation. |
+| Evidence field | 256 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/16 | Direct evidence; rounded only for presentation. |
+| Evidence field | 258 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/17 | Direct evidence; rounded only for presentation. |
+| Evidence field | 270 | week6/results/hw6_independent_recheck.json | /recall_checks/0/relevant_ids/18 | Direct evidence; rounded only for presentation. |
+| Evidence field | 100 | week6/results/hw6_independent_recheck.json | /recall_checks/0/recommended_ids/0 | Direct evidence; rounded only for presentation. |
+| Evidence field | 258 | week6/results/hw6_independent_recheck.json | /recall_checks/0/recommended_ids/1 | Direct evidence; rounded only for presentation. |
+| Evidence field | 286 | week6/results/hw6_independent_recheck.json | /recall_checks/0/recommended_ids/2 | Direct evidence; rounded only for presentation. |
+| Evidence field | 318 | week6/results/hw6_independent_recheck.json | /recall_checks/0/recommended_ids/3 | Direct evidence; rounded only for presentation. |
+| Evidence field | 357 | week6/results/hw6_independent_recheck.json | /recall_checks/0/recommended_ids/4 | Direct evidence; rounded only for presentation. |
+| Evidence field | 483 | week6/results/hw6_independent_recheck.json | /recall_checks/0/recommended_ids/5 | Direct evidence; rounded only for presentation. |
+| Evidence field | 222 | week6/results/hw6_independent_recheck.json | /recall_checks/0/recommended_ids/6 | Direct evidence; rounded only for presentation. |
+| Evidence field | 475 | week6/results/hw6_independent_recheck.json | /recall_checks/0/recommended_ids/7 | Direct evidence; rounded only for presentation. |
+| Evidence field | 275 | week6/results/hw6_independent_recheck.json | /recall_checks/0/recommended_ids/8 | Direct evidence; rounded only for presentation. |
+| Evidence field | 423 | week6/results/hw6_independent_recheck.json | /recall_checks/0/recommended_ids/9 | Direct evidence; rounded only for presentation. |
+| Evidence field | 100 | week6/results/hw6_independent_recheck.json | /recall_checks/0/hits/0 | Direct evidence; rounded only for presentation. |
+| Evidence field | 222 | week6/results/hw6_independent_recheck.json | /recall_checks/0/hits/1 | Direct evidence; rounded only for presentation. |
+| Evidence field | 258 | week6/results/hw6_independent_recheck.json | /recall_checks/0/hits/2 | Direct evidence; rounded only for presentation. |
+| Evidence field | 3 | week6/results/hw6_independent_recheck.json | /recall_checks/0/numerator | Direct evidence; rounded only for presentation. |
+| Evidence field | 19 | week6/results/hw6_independent_recheck.json | /recall_checks/0/denominator | Direct evidence; rounded only for presentation. |
+| Evidence field | 0.15789473684210525 | week6/results/hw6_independent_recheck.json | /recall_checks/0/recall | Direct evidence; rounded only for presentation. |
+| Evidence field | 1 | week6/results/hw6_independent_recheck.json | /recall_checks/1/user | Direct evidence; rounded only for presentation. |
+| Evidence field | 6 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/0 | Direct evidence; rounded only for presentation. |
+| Evidence field | 18 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/1 | Direct evidence; rounded only for presentation. |
+| Evidence field | 20 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/2 | Direct evidence; rounded only for presentation. |
+| Evidence field | 32 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/3 | Direct evidence; rounded only for presentation. |
+| Evidence field | 100 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/4 | Direct evidence; rounded only for presentation. |
+| Evidence field | 111 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/5 | Direct evidence; rounded only for presentation. |
+| Evidence field | 129 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/6 | Direct evidence; rounded only for presentation. |
+| Evidence field | 154 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/7 | Direct evidence; rounded only for presentation. |
+| Evidence field | 169 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/8 | Direct evidence; rounded only for presentation. |
+| Evidence field | 171 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/9 | Direct evidence; rounded only for presentation. |
+| Evidence field | 178 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/10 | Direct evidence; rounded only for presentation. |
+| Evidence field | 209 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/11 | Direct evidence; rounded only for presentation. |
+| Evidence field | 221 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/12 | Direct evidence; rounded only for presentation. |
+| Evidence field | 222 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/13 | Direct evidence; rounded only for presentation. |
+| Evidence field | 228 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/14 | Direct evidence; rounded only for presentation. |
+| Evidence field | 242 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/15 | Direct evidence; rounded only for presentation. |
+| Evidence field | 256 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/16 | Direct evidence; rounded only for presentation. |
+| Evidence field | 258 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/17 | Direct evidence; rounded only for presentation. |
+| Evidence field | 270 | week6/results/hw6_independent_recheck.json | /recall_checks/1/relevant_ids/18 | Direct evidence; rounded only for presentation. |
+| Evidence field | 5 | week6/results/hw6_independent_recheck.json | /recall_checks/1/recommended_ids/0 | Direct evidence; rounded only for presentation. |
+| Evidence field | 6 | week6/results/hw6_independent_recheck.json | /recall_checks/1/recommended_ids/1 | Direct evidence; rounded only for presentation. |
+| Evidence field | 18 | week6/results/hw6_independent_recheck.json | /recall_checks/1/recommended_ids/2 | Direct evidence; rounded only for presentation. |
+| Evidence field | 20 | week6/results/hw6_independent_recheck.json | /recall_checks/1/recommended_ids/3 | Direct evidence; rounded only for presentation. |
+| Evidence field | 32 | week6/results/hw6_independent_recheck.json | /recall_checks/1/recommended_ids/4 | Direct evidence; rounded only for presentation. |
+| Evidence field | 74 | week6/results/hw6_independent_recheck.json | /recall_checks/1/recommended_ids/5 | Direct evidence; rounded only for presentation. |
+| Evidence field | 100 | week6/results/hw6_independent_recheck.json | /recall_checks/1/recommended_ids/6 | Direct evidence; rounded only for presentation. |
+| Evidence field | 102 | week6/results/hw6_independent_recheck.json | /recall_checks/1/recommended_ids/7 | Direct evidence; rounded only for presentation. |
+| Evidence field | 111 | week6/results/hw6_independent_recheck.json | /recall_checks/1/recommended_ids/8 | Direct evidence; rounded only for presentation. |
+| Evidence field | 129 | week6/results/hw6_independent_recheck.json | /recall_checks/1/recommended_ids/9 | Direct evidence; rounded only for presentation. |
+| Evidence field | 6 | week6/results/hw6_independent_recheck.json | /recall_checks/1/hits/0 | Direct evidence; rounded only for presentation. |
+| Evidence field | 18 | week6/results/hw6_independent_recheck.json | /recall_checks/1/hits/1 | Direct evidence; rounded only for presentation. |
+| Evidence field | 20 | week6/results/hw6_independent_recheck.json | /recall_checks/1/hits/2 | Direct evidence; rounded only for presentation. |
+| Evidence field | 32 | week6/results/hw6_independent_recheck.json | /recall_checks/1/hits/3 | Direct evidence; rounded only for presentation. |
+| Evidence field | 100 | week6/results/hw6_independent_recheck.json | /recall_checks/1/hits/4 | Direct evidence; rounded only for presentation. |
+| Evidence field | 111 | week6/results/hw6_independent_recheck.json | /recall_checks/1/hits/5 | Direct evidence; rounded only for presentation. |
+| Evidence field | 129 | week6/results/hw6_independent_recheck.json | /recall_checks/1/hits/6 | Direct evidence; rounded only for presentation. |
+| Evidence field | 7 | week6/results/hw6_independent_recheck.json | /recall_checks/1/numerator | Direct evidence; rounded only for presentation. |
+| Evidence field | 19 | week6/results/hw6_independent_recheck.json | /recall_checks/1/denominator | Direct evidence; rounded only for presentation. |
+| Evidence field | 0.3684210526315789 | week6/results/hw6_independent_recheck.json | /recall_checks/1/recall | Direct evidence; rounded only for presentation. |
+| Evidence field | 2 | week6/results/hw6_independent_recheck.json | /recall_checks/2/user | Direct evidence; rounded only for presentation. |
+| Evidence field | 304 | week6/results/hw6_independent_recheck.json | /recall_checks/2/relevant_ids/0 | Direct evidence; rounded only for presentation. |
+| Evidence field | 316 | week6/results/hw6_independent_recheck.json | /recall_checks/2/relevant_ids/1 | Direct evidence; rounded only for presentation. |
+| Evidence field | 181 | week6/results/hw6_independent_recheck.json | /recall_checks/2/recommended_ids/0 | Direct evidence; rounded only for presentation. |
+| Evidence field | 9 | week6/results/hw6_independent_recheck.json | /recall_checks/2/recommended_ids/1 | Direct evidence; rounded only for presentation. |
+| Evidence field | 7 | week6/results/hw6_independent_recheck.json | /recall_checks/2/recommended_ids/2 | Direct evidence; rounded only for presentation. |
+| Evidence field | 117 | week6/results/hw6_independent_recheck.json | /recall_checks/2/recommended_ids/3 | Direct evidence; rounded only for presentation. |
+| Evidence field | 98 | week6/results/hw6_independent_recheck.json | /recall_checks/2/recommended_ids/4 | Direct evidence; rounded only for presentation. |
+| Evidence field | 121 | week6/results/hw6_independent_recheck.json | /recall_checks/2/recommended_ids/5 | Direct evidence; rounded only for presentation. |
+| Evidence field | 174 | week6/results/hw6_independent_recheck.json | /recall_checks/2/recommended_ids/6 | Direct evidence; rounded only for presentation. |
+| Evidence field | 268 | week6/results/hw6_independent_recheck.json | /recall_checks/2/recommended_ids/7 | Direct evidence; rounded only for presentation. |
+| Evidence field | 475 | week6/results/hw6_independent_recheck.json | /recall_checks/2/recommended_ids/8 | Direct evidence; rounded only for presentation. |
+| Evidence field | 15 | week6/results/hw6_independent_recheck.json | /recall_checks/2/recommended_ids/9 | Direct evidence; rounded only for presentation. |
+| Evidence field | 0 | week6/results/hw6_independent_recheck.json | /recall_checks/2/numerator | Direct evidence; rounded only for presentation. |
+| Evidence field | 2 | week6/results/hw6_independent_recheck.json | /recall_checks/2/denominator | Direct evidence; rounded only for presentation. |
+| Evidence field | 0.0 | week6/results/hw6_independent_recheck.json | /recall_checks/2/recall | Direct evidence; rounded only for presentation. |
+| Evidence field | 2 | week6/results/hw6_independent_recheck.json | /recall_checks/3/user | Direct evidence; rounded only for presentation. |
+| Evidence field | 304 | week6/results/hw6_independent_recheck.json | /recall_checks/3/relevant_ids/0 | Direct evidence; rounded only for presentation. |
+| Evidence field | 316 | week6/results/hw6_independent_recheck.json | /recall_checks/3/relevant_ids/1 | Direct evidence; rounded only for presentation. |
+| Evidence field | 2 | week6/results/hw6_independent_recheck.json | /recall_checks/3/recommended_ids/0 | Direct evidence; rounded only for presentation. |
+| Evidence field | 3 | week6/results/hw6_independent_recheck.json | /recall_checks/3/recommended_ids/1 | Direct evidence; rounded only for presentation. |
+| Evidence field | 4 | week6/results/hw6_independent_recheck.json | /recall_checks/3/recommended_ids/2 | Direct evidence; rounded only for presentation. |
+| Evidence field | 5 | week6/results/hw6_independent_recheck.json | /recall_checks/3/recommended_ids/3 | Direct evidence; rounded only for presentation. |
+| Evidence field | 6 | week6/results/hw6_independent_recheck.json | /recall_checks/3/recommended_ids/4 | Direct evidence; rounded only for presentation. |
+| Evidence field | 7 | week6/results/hw6_independent_recheck.json | /recall_checks/3/recommended_ids/5 | Direct evidence; rounded only for presentation. |
+| Evidence field | 8 | week6/results/hw6_independent_recheck.json | /recall_checks/3/recommended_ids/6 | Direct evidence; rounded only for presentation. |
+| Evidence field | 9 | week6/results/hw6_independent_recheck.json | /recall_checks/3/recommended_ids/7 | Direct evidence; rounded only for presentation. |
+| Evidence field | 11 | week6/results/hw6_independent_recheck.json | /recall_checks/3/recommended_ids/8 | Direct evidence; rounded only for presentation. |
+| Evidence field | 12 | week6/results/hw6_independent_recheck.json | /recall_checks/3/recommended_ids/9 | Direct evidence; rounded only for presentation. |
+| Evidence field | 0 | week6/results/hw6_independent_recheck.json | /recall_checks/3/numerator | Direct evidence; rounded only for presentation. |
+| Evidence field | 2 | week6/results/hw6_independent_recheck.json | /recall_checks/3/denominator | Direct evidence; rounded only for presentation. |
+| Evidence field | 0.0 | week6/results/hw6_independent_recheck.json | /recall_checks/3/recall | Direct evidence; rounded only for presentation. |
+| Evidence field | 45602 | week6/results/hw6_independent_recheck.json | /positive_edges | Direct evidence; rounded only for presentation. |
+| Evidence field | 3.729655473350135e-17 | week6/results/hw6_independent_recheck.json | /undamped_stationary_distribution_max_residual | Direct evidence; rounded only for presentation. |
+| Evidence field | 1 | week6/results/hw6_seed_contract_recheck.json | /tests/0/rawId | Direct evidence; rounded only for presentation. |
+| Evidence field | 0 | week6/results/hw6_seed_contract_recheck.json | /tests/0/nodeIndex | Direct evidence; rounded only for presentation. |
+| Evidence field | True | week6/results/hw6_seed_contract_recheck.json | /tests/0/pass | Direct evidence; rounded only for presentation. |
+| Evidence field | 2 | week6/results/hw6_seed_contract_recheck.json | /tests/1/rawId | Direct evidence; rounded only for presentation. |
+| Evidence field | 1 | week6/results/hw6_seed_contract_recheck.json | /tests/1/nodeIndex | Direct evidence; rounded only for presentation. |
+| Evidence field | True | week6/results/hw6_seed_contract_recheck.json | /tests/1/pass | Direct evidence; rounded only for presentation. |
+| Evidence field | 685 | week6/results/hw6_seed_contract_recheck.json | /tests/2/rawId | Direct evidence; rounded only for presentation. |
+| Evidence field | 684 | week6/results/hw6_seed_contract_recheck.json | /tests/2/nodeIndex | Direct evidence; rounded only for presentation. |
+| Evidence field | True | week6/results/hw6_seed_contract_recheck.json | /tests/2/pass | Direct evidence; rounded only for presentation. |
+| Evidence field | 943 | week6/results/hw6_seed_contract_recheck.json | /tests/3/rawId | Direct evidence; rounded only for presentation. |
+| Evidence field | 942 | week6/results/hw6_seed_contract_recheck.json | /tests/3/nodeIndex | Direct evidence; rounded only for presentation. |
+| Evidence field | True | week6/results/hw6_seed_contract_recheck.json | /tests/3/pass | Direct evidence; rounded only for presentation. |
+| Evidence field | 0 | week6/results/hw6_seed_contract_recheck.json | /invalidRawIdsRejected/0 | Direct evidence; rounded only for presentation. |
+| Evidence field | 944 | week6/results/hw6_seed_contract_recheck.json | /invalidRawIdsRejected/1 | Direct evidence; rounded only for presentation. |
+| Evidence field | 1.5 | week6/results/hw6_seed_contract_recheck.json | /invalidRawIdsRejected/2 | Direct evidence; rounded only for presentation. |
+| Evidence field | True | week6/results/hw6_seed_contract_recheck.json | /fixtureIndex3Accepted | Direct evidence; rounded only for presentation. |
+| Evidence field | True | week6/results/hw6_seed_contract_recheck.json | /fixtureIndex4Rejected | Direct evidence; rounded only for presentation. |
+| Evidence field | True | week6/results/hw6_seed_contract_recheck.json | /adapterPassesRaw943 | Direct evidence; rounded only for presentation. |
 | Raw dataset counts and sparsity | 943 users;1682 movies;100000 ratings;93.6953% | week6/results/independent_stats.txt | lines6–18,44; /users,/moviesRated,/ratings,/unpaddedSparsity | 1−100000/(943×1682), multiplied by100; no zero-ID padding. |
 | PPR gain vs popularity | 3.62 percentage points;47.6% relative | week6/results/additional-analysis.json | /popularityCoverage/2/recall and /popularityCoverage/0/recall | 100*(PPR−pop) vs100*(PPR/pop−1);2/1 decimals respectively. |
 | Subgroup gains | 5.67pp/75.2%;1.52pp/19.8% | week6/results/additional-analysis.json | /activityGroups/pprVsBaselines/0/light and /heavy | AbsoluteRecallDifference×100; relativeChangePercent directly. |
@@ -4447,18 +4579,28 @@ Paths are relative to project root `repository root`. JSON fields use JSON Point
 | Reference 6 | Y. Koren, R. Bell, and C. Volinsky, “Matrix factorization techniques for recommender systems,” Computer, vol.42, no.8, pp.30–37, Aug.2009. https://doi.org/10.1109/MC.2009.263 | week6/results/references-verified.json | /5 | DOI/source metadata and access status in reference-http-summary.json; 1998 manuscript kept distinct from1999 record. |
 | Reference 7 | D. Smilkov et al., “TensorFlow.js: Machine learning for the Web and beyond,” Proc.Mach.Learn.Syst., vol.1, pp.309–321, 2019. https://proceedings.mlsys.org/paper_files/paper/2019/hash/acd593d2db87a799a8d3da5a860c028e-Abstract.html | week6/results/references-verified.json | /6 | DOI/source metadata and access status in reference-http-summary.json; 1998 manuscript kept distinct from1999 record. |
 | Reference 8 | TensorFlow, “TensorFlow.js API, version4.22.0.” [Online]. Available: https://js.tensorflow.org/api/4.22.0/ | week6/results/references-verified.json | /7 | DOI/source metadata and access status in reference-http-summary.json; 1998 manuscript kept distinct from1999 record. |
-| Submission JSON records | 1804 | week6/results/submission-json-verification.json | /records | Prepared JSON copied unchanged. Four JSONL parts wrapped as one array; serialized record contents unchanged; format changed. |
-| Submission JSON jsonBytes | 16443699 | week6/results/submission-json-verification.json | /jsonBytes | Prepared JSON copied unchanged. Four JSONL parts wrapped as one array; serialized record contents unchanged; format changed. |
-| Submission JSON gzipBytes | 9044260 | week6/results/submission-json-verification.json | /gzipBytes | Prepared JSON copied unchanged. Four JSONL parts wrapped as one array; serialized record contents unchanged; format changed. |
-| Submission JSON firstTimestamp | 2026-10-22T09:39:25.371Z | week6/results/submission-json-verification.json | /firstTimestamp | Prepared JSON copied unchanged. Four JSONL parts wrapped as one array; serialized record contents unchanged; format changed. |
-| Submission JSON lastTimestamp | 2026-10-22T11:44:39.505Z | week6/results/submission-json-verification.json | /lastTimestamp | Prepared JSON copied unchanged. Four JSONL parts wrapped as one array; serialized record contents unchanged; format changed. |
-| Submission JSON nativeParts | 4 | week6/results/submission-json-verification.json | /nativeParts | Prepared JSON copied unchanged. Four JSONL parts wrapped as one array; serialized record contents unchanged; format changed. |
-| Submission JSON replacements | 0 | week6/results/submission-json-verification.json | /replacements | Prepared JSON copied unchanged. Four JSONL parts wrapped as one array; serialized record contents unchanged; format changed. |
-| Submission JSON redactions | 0 | week6/results/submission-json-verification.json | /redactions | Prepared JSON copied unchanged. Four JSONL parts wrapped as one array; serialized record contents unchanged; format changed. |
-| Submission JSON omittedRecords | 0 | week6/results/submission-json-verification.json | /omittedRecords | Prepared JSON copied unchanged. Four JSONL parts wrapped as one array; serialized record contents unchanged; format changed. |
-| Submission JSON formatChanged | True | week6/results/submission-json-verification.json | /formatChanged | Prepared JSON copied unchanged. Four JSONL parts wrapped as one array; serialized record contents unchanged; format changed. |
-| Submission JSON nativeFileByteIdentical | False | week6/results/submission-json-verification.json | /nativeFileByteIdentical | Prepared JSON copied unchanged. Four JSONL parts wrapped as one array; serialized record contents unchanged; format changed. |
-| Submission JSON sourceJSONSHA256 | 2334f7161879aeec9981937710288f844d6bd018fbf05dcfdd17636502635450 | week6/results/submission-json-verification.json | /sourceJSONSHA256 | Prepared JSON copied unchanged. Four JSONL parts wrapped as one array; serialized record contents unchanged; format changed. |
-| Submission JSON destinationJSONSHA256 | 2334f7161879aeec9981937710288f844d6bd018fbf05dcfdd17636502635450 | week6/results/submission-json-verification.json | /destinationJSONSHA256 | Prepared JSON copied unchanged. Four JSONL parts wrapped as one array; serialized record contents unchanged; format changed. |
-| Submission JSON sourceDestinationByteIdentical | True | week6/results/submission-json-verification.json | /sourceDestinationByteIdentical | Prepared JSON copied unchanged. Four JSONL parts wrapped as one array; serialized record contents unchanged; format changed. |
-| Submission JSON serializedRecordsByteIdenticalToNativeLines | True | week6/results/submission-json-verification.json | /serializedRecordsByteIdenticalToNativeLines | Prepared JSON copied unchanged. Four JSONL parts wrapped as one array; serialized record contents unchanged; format changed. |
+| Submission JSON records | 2466 | week6/results/submission-json-verification.json | /records | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Submission JSON jsonBytes | 31372577 | week6/results/submission-json-verification.json | /jsonBytes | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Submission JSON gzipBytes | 19109433 | week6/results/submission-json-verification.json | /gzipBytes | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Submission JSON firstTimestamp | 2026-10-22T09:39:25.371Z | week6/results/submission-json-verification.json | /firstTimestamp | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Submission JSON lastTimestamp | 2026-10-22T12:54:42.671Z | week6/results/submission-json-verification.json | /lastTimestamp | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Submission JSON nativeParts | 4 | week6/results/submission-json-verification.json | /nativeParts | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Submission JSON replacements | 0 | week6/results/submission-json-verification.json | /replacements | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Submission JSON redactions | 0 | week6/results/submission-json-verification.json | /redactions | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Submission JSON omittedRecords | 0 | week6/results/submission-json-verification.json | /omittedRecords | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Submission JSON formatChanged | True | week6/results/submission-json-verification.json | /formatChanged | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Submission JSON nativeFileByteIdentical | False | week6/results/submission-json-verification.json | /nativeFileByteIdentical | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Submission JSON jsonSHA256 | 6f3a3b4463d13a041bb9d1c6c3287b5317d363d69c0aba75c60718b2cd2c9f85 | week6/results/submission-json-verification.json | /jsonSHA256 | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Submission JSON gzipSHA256 | c737c04cbafcd6c00be5ecdb2b93701977067048ab413b91108848bb6db70b2d | week6/results/submission-json-verification.json | /gzipSHA256 | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Submission JSON sourceRecordCorrespondence | True | week6/results/submission-json-verification.json | /sourceRecordCorrespondence | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Submission JSON sourceOrderPreserved | True | week6/results/submission-json-verification.json | /sourceOrderPreserved | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Submission JSON timestampOrderVerified | True | week6/results/submission-json-verification.json | /timestampOrderVerified | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Submission JSON builtFreshFromNativeFiles | True | week6/results/submission-json-verification.json | /builtFreshFromNativeFiles | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Submission JSON oldExportAppended | False | week6/results/submission-json-verification.json | /oldExportAppended | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Submission JSON serializedRecordsByteIdenticalToNativeLines | True | week6/results/submission-json-verification.json | /serializedRecordsByteIdenticalToNativeLines | Fresh frozen native snapshot; every record wrapped once as a JSON array; serialized content and order unchanged; format changed. |
+| Completed seed contract correction | 1→0;685→684;943→942; reject0,944,1.5; fixture3/4 accept/reject | week6/results/hw6_seed_contract_recheck.json | /tests; /invalidRawIdsRejected; /fixtureIndex3Accepted; /fixtureIndex4Rejected; /adapterPassesRaw943 | Actual functions executed with mocked propagation; no GPU convergence inference. |
+| Starter documentation contradiction | node index, not a raw user id | week6/results/contract-inventory.json | /contradictionsAndTensions/0/evidence/0; instructor4b9598b4 week6/graph.js:453–460 | Archived starter quote; current correction graph.js:427–456; unchanged adapter script.js:1432–1464. |
+| Undamped stationarity check | 3.73e−17 | week6/results/hw6_independent_recheck.json | /undamped_stationary_distribution_max_residual | Maximum coordinate residual3.729655473350135e−17 rounded3 significant figures; undamped walk, not finite-alpha PageRank. |
+| Rechecked user recalls | PPR3/19;MF7/19;both user2 0/2 | week6/results/hw6_independent_recheck.json | /recall_checks/{0,1,2,3}/hits,/numerator,/denominator | Raw chronological split reconstructed, then set intersection against saved recommendations; no new ranking experiment. |
+| Rechecked reference arithmetic | (.25,.14375,.56875,.0375) | week6/results/hw6_independent_recheck.json | /fixture_incoming; /fixture_first_update | Exact rational update .85*(1/4,1/8,5/8,0)+.15*(1/4,1/4,1/4,1/4). |
+| Student-confirmed verification | Recall calculations, reference-graph update, stationarity and user-ID mapping: agreement confirmed | week6/results/student-review-confirmation.json | /personallyConfirmedChecks; /reportedOutcome | Direct student confirmation; no inference of unaided calculation, full paper reading or other checks. |

@@ -1,0 +1,80 @@
+{
+  "checks": {
+    "candidateFiles": 14,
+    "filesScanned": 13,
+    "privateContentFindings": [],
+    "publicNumericFieldsResolved": 3712,
+    "noSessionRecordFilesIncluded": true,
+    "noPrivateLogsIncluded": true,
+    "scope": "Report-only allowlist; PDF text/metadata/annotations, JSON-decoded strings and relevant URL/HTML/base64 representations."
+  },
+  "files": [
+    {
+      "path": "A06_submit/gill_elizaveta_a06_report.pdf",
+      "bytes": 1079946,
+      "sha256": "a9f9565ef95d3b1f2eafd0a40f161d87ca0f7c2193f7ffe54b1d423cc429f3ef"
+    },
+    {
+      "path": "week6/report/README.md",
+      "bytes": 1557,
+      "sha256": "ddd6435f59ffec6193c1f340c55c823a97a4f506ba87cc9d209e224125293a2d"
+    },
+    {
+      "path": "week6/report/personal-review-checklist.md",
+      "bytes": 1268,
+      "sha256": "5f172b6f33e2d46e6676ca15f0f979acf6854e75be3bfa26d8446e5458d96576"
+    },
+    {
+      "path": "week6/report/build_report.py",
+      "bytes": 42372,
+      "sha256": "08afe25a4357107ea5ecfb378e0e032f2bfe629bbd45db7f7ef7ea6cbde8d6a1"
+    },
+    {
+      "path": "week6/report/number_sources.json",
+      "bytes": 968275,
+      "sha256": "9a7908aaf9a7ed032d7c9f14ec5d8eb761f0ef6af33d30036236312ef171ebdf"
+    },
+    {
+      "path": "week6/report/number_sources.md",
+      "bytes": 826995,
+      "sha256": "c654b79f032084deeccd1e8888398c9fd7ea62a2445b7372d65b421398164e1b"
+    },
+    {
+      "path": "week6/report/pdf-build.json",
+      "bytes": 821,
+      "sha256": "217c2626e191f964cab878b4997d286fdeccd13b0648e2cf173deebc8af90bc4"
+    },
+    {
+      "path": "week6/report/report.html",
+      "bytes": 32540,
+      "sha256": "3b883edc05448e6831f10dd5bf1dc516ce3f3315f962babb5402c0659742ecde"
+    },
+    {
+      "path": "week6/results/report-verification.json",
+      "bytes": 5476,
+      "sha256": "725f68c9dfe729720f05d18f4f9e306564dff88ceb9bdf9804a49996bf118a34"
+    },
+    {
+      "path": "week6/results/submission-json-verification.json",
+      "bytes": 943,
+      "sha256": "80752daa2fd38e2caaba29248f31b5542665a8b57a4622843b5e133ffc6c3f06"
+    },
+    {
+      "path": "week6/results/hw6_independent_recheck.json",
+      "bytes": 2706,
+      "sha256": "6c8de0e3e2bc4003ff885a61d83c0ec4bef7d131ea505ae3b5b4e06c90e0e5a2"
+    },
+    {
+      "path": "week6/results/hw6_seed_contract_recheck.json",
+      "bytes": 620,
+      "sha256": "4211b700200fa5e9a301cd27b12b93ba51971f37d384d559053a5018da699110"
+    },
+    {
+      "path": "week6/results/student-review-confirmation.json",
+      "bytes": 537,
+      "sha256": "8a9d6fc2c1a399792086a4d4c1d4cbd74380090f6aadd053c77dc8aa8302e1ed"
+    }
+  ],
+  "baseCommit": "11f356483cd9d08d3be785a2b1ed4125817d68da",
+  "note": "Manifest excludes itself to avoid a recursive hash. Only report and supporting verification/documentation files are intended for this commit."
+}

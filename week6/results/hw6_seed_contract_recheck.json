@@ -1,0 +1,33 @@
+{
+  "scope": "Executed the actual seed-mapping and adapter functions with mocked propagation. This verifies indexing and bounds, not GPU arithmetic.",
+  "tests": [
+    {
+      "rawId": 1,
+      "nodeIndex": 0,
+      "pass": true
+    },
+    {
+      "rawId": 2,
+      "nodeIndex": 1,
+      "pass": true
+    },
+    {
+      "rawId": 685,
+      "nodeIndex": 684,
+      "pass": true
+    },
+    {
+      "rawId": 943,
+      "nodeIndex": 942,
+      "pass": true
+    }
+  ],
+  "invalidRawIdsRejected": [
+    0,
+    944,
+    1.5
+  ],
+  "fixtureIndex3Accepted": true,
+  "fixtureIndex4Rejected": true,
+  "adapterPassesRaw943": true
+}
