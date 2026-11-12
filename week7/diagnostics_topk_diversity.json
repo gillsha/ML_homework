@@ -1,0 +1,14 @@
+{
+  "n_evaluated_users": 4508,
+  "k": 10,
+  "distinct_top10_sets": {
+    "popularity": 1,
+    "context_encoder_v1": 29,
+    "context_encoder_v2": 32
+  },
+  "sanity_ndcg_recheck": {
+    "popularity": 0.21669776147318515,
+    "context_encoder_v1": 0.12622653892752964,
+    "context_encoder_v2": 0.20790877541125036
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "split": {
+    "train_cutoff": "2021-06-01",
+    "test_end": "2021-12-01",
+    "n_train_buy_tx": 153950,
+    "n_train_customers": 25126,
+    "n_train_isin": 288,
+    "n_test_buy_tx": 27933,
+    "n_test_customers": 7303,
+    "n_test_isin": 190,
+    "n_candidate_isin": 553,
+    "n_evaluated_users": 4508
+  },
+  "popularity": {
+    "k": 10,
+    "top_k_isin": [
+      "GRS003003035",
+      "GRS015003007",
+      "GRS014003032",
+      "GRS323003012",
+      "GRS434003000",
+      "GRS260333000",
+      "GRS393503008",
+      "GRS419003009",
+      "GRS314003005",
+      "GRS426003000"
+    ],
+    "fit_runtime_sec": 0.012625932693481445,
+    "ndcg_at_k": 0.21669776147318515,
+    "n_evaluated_users": 4508
+  },
+  "context_encoder": {
+    "k": 10,
+    "hyperparams": {
+      "n_sample_customers_requested": 5000,
+      "n_sample_customers_used": 5000,
+      "n_training_pairs": 13421,
+      "n_candidate_items": 553,
+      "emb_dim": 8,
+      "hidden_dim": 64,
+      "out_dim": 32,
+      "lr": 0.001,
+      "batch_size": 1024,
+      "n_epochs": 15,
+      "device": "cpu"
+    },
+    "final_bpr_loss": 0.31494412743128264,
+    "loss_per_epoch": [
+      0.6091594375096835,
+      0.4975797258890592,
+      0.4402036162523123,
+      0.4082615879865793,
+      0.37257492313018215,
+      0.3588372331399184,
+      0.34487301340469945,
+      0.3342153292435866,
+      0.3310348941729619,
+      0.32641191207445586,
+      0.31867386056826663,
+      0.3198716617547549,
+      0.30932191243538487,
+      0.3053711148408743,
+      0.31494412743128264
+    ],
+    "train_runtime_sec": 1.2016401290893555,
+    "scoring_runtime_sec": 0.12501907348632812,
+    "total_runtime_sec": 1.3266592025756836,
+    "ndcg_at_k": 0.12622653892752964,
+    "n_evaluated_users": 4508
+  },
+  "worked_example": {
+    "customerID": "34EED6ADA2B305A938FC",
+    "n_relevant_in_test": 8,
+    "relevant_isins": [
+      "100974271034",
+      "BE0974303357",
+      "GRS239003007",
+      "GRS314003005",
+      "GRS359353000",
+      "GRS426003000",
+      "GRS477003008",
+      "GRS496003005"
+    ],
+    "dcg_at_k": 0.2890648263178879,
+    "idcg_at_k": 3.953464516106477,
+    "ndcg_at_k": 0.07311683844390994,
+    "csv_path": "example_user_ndcg.csv"
+  }
+}
